@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G009",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:24.5634595Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Do I need to lock out the motor before opening the seal housing?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Before opening any CP-200 seal housing, apply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines. Before opening any CP-200 seal housing, isolate the motor electrically and lock it out."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Groundedness",
+        "reason": "The response from the assistant is partially correct, but it contains incorrect information. The correct answer should be \u0022Before opening any CP-200 seal housing, apply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines.\u0022 However, the assistant\u0027s response also contains the correct information, which is \u0022Before opening any CP-200 seal housing, isolate the motor electrically and lock it out.\u0022 This is not entirely accurate, as it does not mention isolating the seal-water and process lines. Therefore, the response does not fully address the question and contains incorrect information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Groundedness is less than 4."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Safety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nZero energy means that the motor can\u0027t start from the panel, the local pressure gauges read zero and the casing drain is open.\nSupervisors brief their teams on it before the next seal job and record the briefing.\n\nSafety bulletin SB-0932: Seal housing work (Northgate plant) \u203A Safety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nZero energy means that the motor can\u0027t start from the panel, the local pressure gauges read zero and the casing drain is open.\n\nSafety bulletin SB-0932: Seal housing work (Lakeside plant) \u203A Safety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nZero energy means that the motor can\u0027t start from the panel, the local pressure gauges read zero and the casing drain is open.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 1 Safety\n# 1 Safety\n- Isolate the motor electrically and lock it out before any work on the pump.\n- Release the pressure in the casing and the seal-water line before opening any connection.\n- Wear safety glasses and gloves when handling the mechanical seal.\nThe seal faces are brittle and their edges are sharp."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1687",
+          "eval-output-tokens": "147",
+          "eval-total-tokens": "1834",
+          "eval-duration-ms": "0.94"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "A very short explanation:",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Apply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nApply lockout/tagout to the motor and isolate the seal-water and process lines, as safety bulletin SB-0932 requires."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1472",
+          "eval-output-tokens": "208",
+          "eval-total-tokens": "1680",
+          "eval-duration-ms": "0.69"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0007907,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1687,
+          "outputTokenCount": 147,
+          "totalTokenCount": 1834
+        },
+        "cacheKey": "74292A3418042196499052D26E5D07E5D97DEDC07989BF82724A8DA19B85F58092111F5F9F599B887C664F6333FAB456",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0005691,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1472,
+          "outputTokenCount": 208,
+          "totalTokenCount": 1680
+        },
+        "cacheKey": "D5EEE1D7E0DF64D9B8E893EE070F72EA03620CC094328B77F87540EA6B74E90872E098027E72A1F287E82ABAF0C72082",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

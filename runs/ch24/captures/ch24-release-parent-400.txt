@@ -1,0 +1,4 @@
+release v4-parent-400 against live v1-shipped
+  build   225 chunks, parent-child-100-400, breadcrumbs on, bge-small-en-v1.5-int8 (4.1 s)
+  gate    dev, 123 questions: change -0.01 [-0.02, +0.00], worse G2-T038, better none: lower bound -0.02 below the allowed drop (20.1 s)
+  stopped: v4-parent-400 is not deployed; live stays v1-shipped

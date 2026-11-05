@@ -1,0 +1,18 @@
+40 parsed documents, every block: patterns for addresses and phone numbers, bert-base-NER for names (score >= 0.9)
+Document type    documents  with PII  emails  phones  names  in the index  names outside Contoso's directory
+asset-record             3         0       0       0      0             0  
+change-notice            3         2       0       0      1             2  
+contract                 1         1       0       0      1             1  
+email                    3         3       4       0      5             2  Pat Lee, Sam, Sam Okafor
+manual                   4         0       0       0      0             0  
+parts-catalog            1         0       0       0      0             0  
+policy                   5         0       0       0      0             0  
+safety-bulletin          7         0       0       0      0             0  
+service-report           6         6       0       0      1             6  
+sop                      3         0       0       0      0             0  
+training                 1         1       0       0      1             1  
+troubleshooting          1         0       0       0      0             0  
+work-instruction         1         0       0       0      0             0  
+work-orders              1         0       0       0      0             0  
+findings: 20, of which 12 reach the index text
+names Chapter 20's redactor leaves in place: Pat Lee (MAIL-2026-1107-PUMPINGSTA), Sam (MAIL-2026-1214-LINE2GEARB), Sam Okafor (MAIL-2026-1214-LINE2GEARB)

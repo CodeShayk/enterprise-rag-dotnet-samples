@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G012",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:00:24.1295013Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Why would a CP-200 shake and get noisy?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Vibration above 4.5 mm/s RMS on the bearing housing needs investigation; above 7.1 mm/s RMS, stop the pump. Excessive vibration may be caused by cavitation, which sounds like gravel rattling in the casing. Excessive vibration may be caused by worn bearings. Excessive vibration may be caused by a damaged or unbalanced impeller."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "4 of 4 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Based on the definitions, I believe the Response is missing most of the necessary and relevant information with respect to the Ground Truth, specifically the cause of excessive vibration mentioned in the Ground Truth (misalignment between the pump and motor shafts after maintenance).",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Misalignment between the pump and motor shafts after maintenance.\nCavitation, which sounds like gravel rattling in the casing."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1469",
+          "eval-output-tokens": "271",
+          "eval-total-tokens": "1740",
+          "eval-duration-ms": "22098.20"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Troubleshooting Guide \u203A 3 Mechanical problems \u203A Troubleshooting: excessive vibration\n# 3 Mechanical problems\n## Troubleshooting: excessive vibration\nVibration above 4.5 mm/s RMS on the bearing housing needs investigation; above 7.1 mm/s RMS, stop the pump.\nLikely causes, in the order to check them:\n- Misalignment between the pump and motor shafts after maintenance.\nCheck the coupling alignment.\n- Cavitation, which sounds like gravel rattling in the casing.\nIt comes from low suction pressure: check that the suction valve is fully open and the suction strainer is clean.\n- Worn bearings.\nBearing noise rises before the vibration does.\n- A damaged or unbalanced impeller.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-104: motor winding temperature high\n## Error E-104: motor winding temperature high\nError E-104 means the motor\u0027s winding temperature exceeded 155 \u00B0C.\nThe controller trips the pump and blocks a restart until the windings cool below 120 \u00B0C.\nCheck the motor\u0027s cooling fan and fan cover for blockages, and measure the supply voltage on all three phases; an unbalance of more than 2 percent overheats the windings.\nFrequent starts also cause E-104: the CP-200 motor allows no more than six starts per hour.\nReset E-104 at the local panel once the temperature has dropped.\nNever bypass the thermistor relay.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 2 Description\n# 2 Description\nThe CP-200 is a single-stage, end-suction centrifugal pump with a closed impeller, designed for clean or slightly contaminated water at up to 90 \u00B0C.\nThe pump and its motor sit on a common baseplate and are joined by a flexible spacer coupling, so the rotating assembly can be removed without disturbing the pipework.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-231: liquid temperature high\nThe controller trips the pump after 10 seconds above the limit.\nCauses, most likely first:\n1. The pump ran against a closed discharge valve.\n2. The process supplies liquid hotter than the pump\u0027s rating.\nLet the casing cool and find out why the liquid overheated before resetting E-231."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 3"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1728",
+          "eval-output-tokens": "188",
+          "eval-total-tokens": "1916",
+          "eval-duration-ms": "45994.56"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 22.0980295,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1469,
+          "outputTokenCount": 271,
+          "totalTokenCount": 1740
+        },
+        "cacheKey": "9D0A4832FBF79ABE113D9A108C7494ACBB81FA87430AB8111BA60EC0655CD1837F1168ED173D5C9F6C971B0A5C48EA98",
+        "cacheHit": false
+      },
+      {
+        "latency": 45.9943423,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1728,
+          "outputTokenCount": 188,
+          "totalTokenCount": 1916
+        },
+        "cacheKey": "8DC27D5778EAA260C92F2B680D9556F2A655704D2D725433D265A788CB5BFABF0A41E2543AA5D13F2CC3F3CCF99E35E3",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

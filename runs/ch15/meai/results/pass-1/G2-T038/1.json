@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T038",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:33:35.6488381Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What does fault F010 on a VD-75 drive mean, and how do I fix it?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Fault F010 on a VD-75 drive means the speed reference on a 4 to 20 mA input fell below 2 mA, which the drive reads as a broken wire. To fix fault F010, check the reference cable and its source."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Based on the definitions, I think the Response should get a Score of 3 because it partially corrects the fault description and provides a recommended action, but it lacks the full context and information provided in the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| F010 | Analog input lost | Speed reference below 2 mA on a 4 to 20 mA input | Check the reference cable and its source |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1452",
+          "eval-output-tokens": "218",
+          "eval-total-tokens": "1670",
+          "eval-duration-ms": "19786.86"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "VD-75 Variable Frequency Drive: Installation and Fault Guide \u203A 4 Faults\nA fault stops the motor and shows its code on the display.\n| F001 | DC bus undervoltage | Supply voltage dip or a missing phase | Check the supply; the drive restarts when the voltage returns |\n| F003 | Heatsink overtemperature | Blocked air flow or a failed fan | Clean the air path; check the fan (F016) |\n| F004 | Earth fault | Damaged motor cable or wet motor | Measure the insulation before resetting |\n| F005 | Motor overload (I\u00B2t) | Motor current above its rating for too long | Check the load; check parameter 1-03 |\n| F010 | Analog input lost | Speed reference below 2 mA on a 4 to 20 mA input | Check the reference cable and its source |\n| F011 | Output short circuit | Short circuit in the motor cable or motor | Disconnect and test the motor cable |\n| F013 | Motor stall | Motor below 5 percent of set speed at full current | Free the jammed load |\n| F015 | Parameter memory error | Corrupt parameters after a power cut during a save | Restore the parameter backup |\n| F016 | Cooling fan failure | Fan blocked or worn out | Replace fan PN-7716-A |\n| F017 | External fault | The external fault input opened | Check the device wired to the input |\n| F018 | Safe torque off active | The safety circuit removed the enable signal | Close the safety circuit, then reset |\n| F021 | Underload | Motor current below 15 percent while running | Check for a broken belt or coupling |\n## Fault F012: output overcurrent\nFault F012 means the drive\u0027s output current exceeded 200 percent of its rating.\nA ramp-up time that is too short also causes F012: raise parameter 2-10 (ramp-up time) from 2 to 5 seconds.\nReset F012 with the STOP/RESET key once the cause is removed.\n## Fault F002: DC bus overvoltage\nFault F002 means the voltage of the drive\u0027s internal DC bus exceeded 800 V.\n## Fault F010: analog input lost\nFault F010 means the speed reference on a 4 to 20 mA input fell below 2 mA, which the drive reads as a broken wire."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1720",
+          "eval-output-tokens": "265",
+          "eval-total-tokens": "1985",
+          "eval-duration-ms": "59739.71"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 19.7766195,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1452,
+          "outputTokenCount": 218,
+          "totalTokenCount": 1670
+        },
+        "cacheKey": "23D96FCA3E2A181973652393711F05D61FF44D2FAB263FF8E877A5BD10E3DDEB39438396BEBE77F8FA4A33FB0F9401DC",
+        "cacheHit": false
+      },
+      {
+        "latency": 59.6457446,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1720,
+          "outputTokenCount": 265,
+          "totalTokenCount": 1985
+        },
+        "cacheKey": "D3CAFAD52458B663E77DAE09919D702F5D97EFB9EB6A004789B6B0C5B7F5D84F213E2E22B657F31D46FF84A5031A3D4F",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

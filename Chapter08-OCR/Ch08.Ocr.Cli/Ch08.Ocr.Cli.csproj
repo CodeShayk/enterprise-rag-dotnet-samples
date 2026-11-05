@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 8: triage every PDF in the generated corpus, prepare and OCR the scanned pages with Tesseract and
+    PaddleOCR on the CPU, rebuild layout, tables and figures with coordinates, and score everything against the
+    truth the scans were rendered from: character and word error rates, layout, cells and retrieval.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch08.Ocr.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Ocr\Contoso.Knowledge.Ocr.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+  </ItemGroup>
+
+</Project>

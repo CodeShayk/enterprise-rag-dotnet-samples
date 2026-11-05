@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 15: the NLI models against an independent tokenizer and runtime (reference/nli.json, made by
+    ../reference/make_reference.py), the deterministic checks, the judge's structured verdicts, the regression rule,
+    citation recall and precision, and the NLI groundedness evaluator. Tests that need the NLI models are skipped until
+    `python eng/get-models.py` has fetched them.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch15.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="reference\nli.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

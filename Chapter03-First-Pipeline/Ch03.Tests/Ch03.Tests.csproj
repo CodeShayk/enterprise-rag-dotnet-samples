@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 3: tests for the walking skeleton. Fakes stand in for the models, so every test is
+    deterministic and offline: chunking, permission-filtered retrieval, a prompt snapshot, the
+    measuring middleware and the streaming endpoint.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch03.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch03.Knowledge\Ch03.Knowledge.csproj" />
+    <ProjectReference Include="..\Ch03.Knowledge.Api\Ch03.Knowledge.Api.csproj" />
+  </ItemGroup>
+
+</Project>

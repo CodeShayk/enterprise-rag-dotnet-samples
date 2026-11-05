@@ -1,0 +1,22 @@
+Using launch settings from Chapter25-Capstone\Ch25.AppHost\Properties\launchSettings.json...
+info: Aspire.Hosting.DistributedApplication[0]
+      Aspire AppHost version: 13.6.4+c89352703f78ae46de90fbf751ed8b52b77b89bf
+info: Aspire.Hosting.DistributedApplication[0]
+      Distributed application starting.
+info: Aspire.Hosting.DistributedApplication[0]
+      Application host directory is: C:\Work\Book-Writing\RAG .NET\sample-code\Chapter25-Capstone\Ch25.AppHost
+warn: Aspire.Hosting.Dcp.DcpHost[0]
+      No trusted Aspire development certificate was found. See https://aka.ms/aspire/devcerts for more information.
+info: Aspire.Hosting.DistributedApplication[0]
+      Now listening on: http://localhost:5252
+info: Aspire.Hosting.DistributedApplication[0]
+      Login to the dashboard at http://localhost:5252/login?t=e5656b33679d1b352a38e41cc7e5701e
+info: Aspire.Hosting.DistributedApplication[0]
+      Aspire Dashboard
+
+      - Dashboard:  http://localhost:5252
+      - Login URL:  http://localhost:5252/login?t=e5656b33679d1b352a38e41cc7e5701e
+      - OTLP/gRPC:  http://localhost:5253
+
+info: Aspire.Hosting.DistributedApplication[0]
+      Distributed application started. Press Ctrl+C to shut down.

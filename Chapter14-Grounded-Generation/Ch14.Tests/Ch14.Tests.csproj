@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 14: context assembly (rows with column names, merging, the abstention threshold, the budget), quote
+    validation and span mapping, markers written from claims, claim text streamed out of partial JSON, the versioned
+    prompt, the generator with a scripted model, replayed recordings, follow-up requests and the streaming endpoint.
+    Deterministic and offline: a fixed retriever and the scripted model stand in for the indexes and llama3.2.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch14.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\Ch14.Knowledge.Api\Ch14.Knowledge.Api.csproj" />
+  </ItemGroup>
+
+</Project>

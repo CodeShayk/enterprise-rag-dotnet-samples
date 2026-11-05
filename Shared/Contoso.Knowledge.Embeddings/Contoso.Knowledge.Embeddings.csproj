@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 10: embedding models running in process on ONNX Runtime behind IEmbeddingGenerator, the exact-search
+    baseline and the vector compression the chapter measures. Chapters 11 to 13 retrieve with these vectors.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Embeddings</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
+    <PackageReference Include="System.Numerics.Tensors" />
+  </ItemGroup>
+
+</Project>

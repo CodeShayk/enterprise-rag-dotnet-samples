@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T047",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:46:28.7541462Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What are the lead time and the net price of PN-3420-A?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "I couldn\u0027t find this in the documents you can read."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0,
+        "name": "NLI groundedness",
+        "reason": "0 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": ""
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1190",
+          "eval-output-tokens": "192",
+          "eval-total-tokens": "1382",
+          "eval-duration-ms": "14301.34"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 2,
+        "name": "Completeness",
+        "reason": "The Response is missing all the necessary and relevant information with respect to the Ground Truth. It does not contain any information about the specific product PN-3420-A, its characteristics, or any other relevant details. The Response only mentions that the information could not be found in the documents, which is not a complete or accurate representation of the Ground Truth.",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| PN-3420-A | Grease, lithium-complex NLGI 2, 400 g cartridge | CP-200 | Litware Bearings | 1 | 60 | 9.80 | 0% | 9.80 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1431",
+          "eval-output-tokens": "97",
+          "eval-total-tokens": "1528",
+          "eval-duration-ms": "24016.29"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 14.2957679,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1190,
+          "outputTokenCount": 192,
+          "totalTokenCount": 1382
+        },
+        "cacheKey": "ECF264ABB4D1CC1A78F646B5BC0CC27830B326E480983D909A84226573BF131E90226B8DF18DFA567C3DFC99FBD6116E",
+        "cacheHit": false
+      },
+      {
+        "latency": 24.0160867,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1431,
+          "outputTokenCount": 97,
+          "totalTokenCount": 1528
+        },
+        "cacheKey": "8617DEF79EA422843E1293F26C30368B0813B1519BF95045A47B7CA8678D21CC463D170E4C27E5D7E8CDE467D6688190",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

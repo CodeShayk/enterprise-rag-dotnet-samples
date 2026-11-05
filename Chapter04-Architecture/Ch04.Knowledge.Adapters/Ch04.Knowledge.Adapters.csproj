@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 4: the adapters that plug the core's ports into real technology: a Markdown folder,
+    a token-based chunker, a vector index on Microsoft.Extensions.VectorData, a BM25 keyword index,
+    a pass-through re-ranker and an answer generator on IChatClient. Every SDK dependency of the
+    assistant lives here or in the composition root, never in the core.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch04.Knowledge.Adapters</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch04.Knowledge.Core\Ch04.Knowledge.Core.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.VectorData.Abstractions" />
+    <PackageReference Include="CommunityToolkit.VectorData.InMemory" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+  </ItemGroup>
+
+</Project>

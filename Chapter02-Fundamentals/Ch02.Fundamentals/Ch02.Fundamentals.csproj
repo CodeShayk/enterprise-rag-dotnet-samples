@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 2: the fundamentals behind every RAG pipeline, with no model downloads.
+      tokens  counts and splits text with two tiktoken encodings and prices Chapter 1's prompt
+      index   builds an inverted index over Contoso's seed documents and ranks them with BM25
+    The vector-similarity code is benchmarked in Ch02.Benchmarks.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch02.Fundamentals</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.Cl100kBase" />
+    <PackageReference Include="System.Numerics.Tensors" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Corpus\Contoso.Corpus.csproj" />
+  </ItemGroup>
+
+</Project>

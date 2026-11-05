@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T070",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:31.0597397Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How soon must Field Services be on site for a P2 call?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "For a P2 call, Field Services must be on site within 1 business day. This response time applies to calls logged outside working hours, which count from 07:00 the next business day."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "SVC-POL-002: Response times for contracted customers\n# SVC-POL-002: Response times for contracted customers\nField Services commits to these response times for customers with a service contract, measured from the time the call is logged:\n| Priority | Definition | On-site response |\n|---|---|---|\n| P1 | Production stopped, or a safety risk | 4 hours |\n| P2 | Production degraded | 1 business day |\n| P3 | Planned or cosmetic work | 5 business days |\nThe dispatcher agrees the priority with the customer when the call is logged.\nEscalate any P1 call that has no engineer assigned after 30 minutes to the Field Services duty manager.\nResponse times are measured from the time the call is logged to the time the engineer arrives on site.\nCalls logged outside working hours count from 07:00 the next business day, except P1 calls, which count from the time they are logged.\n\nField service report SR-2026-1107\n# Field service report SR-2026-1107\nEngineer: Kwame Asante.\nDate: November 7, 2026.\nComplaint: the CP-200 on duty tripped four times in two days with error E-217.\nThe mechanical seal (PN-4471-B) showed early face wear.\nNo further trips in 72 hours of monitoring.\n| Equipment | Site | Report |\n|---|---|---|\n\nField service report SR-2026-1130\n# Field service report SR-2026-1130\nEngineer: Kwame Asante.\nDate: November 30, 2026.\nFindings: the ramp-down time had been set to 1 second after a controller upgrade, too short for the fan\u0027s inertia.\nWork done: raised parameter 2-11 (ramp-down time) to 20 seconds.\nNo further F002 faults in 48 hours of logging.\n| Equipment | Site | Report |\n|---|---|---|\n\nField service report SR-2026-1022\n# Field service report SR-2026-1022\nDate: October 22, 2026.\nDelivery returned to the commissioning value.\n| Equipment | Site | Report |\n|---|---|---|"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1680",
+          "eval-output-tokens": "282",
+          "eval-total-tokens": "1962",
+          "eval-duration-ms": "84.07"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that for a P2 call, Field Services must be on site within 1 business day, which applies to calls logged outside working hours. This statement is partially present in the Ground Truth, which states that P2 calls require a response time of 1 business day. However, the Ground Truth also mentions that this response time applies to calls logged outside working hours, which counts from 07:00 the next business day. The Response does not mention the specific time frame of 07:00 the next business day. Therefore, the Response is missing some minor information, especially the specific time frame, established in the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| P2 | Production degraded | 1 business day |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1421",
+          "eval-output-tokens": "156",
+          "eval-total-tokens": "1577",
+          "eval-duration-ms": "119.15"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0839174,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1680,
+          "outputTokenCount": 282,
+          "totalTokenCount": 1962
+        },
+        "cacheKey": "11FAECC49A9492F7B2ABDA72CBF6797586D1A163A3DF144EE379283382F9EE0B633E658B43C6BA05AB8293476ED63794",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.1190112,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1421,
+          "outputTokenCount": 156,
+          "totalTokenCount": 1577
+        },
+        "cacheKey": "8A28B513BD3C9B24B2FD0C5433DEEF2701E0DD014402D2FD309CEC0CA65C17D4E71A6AD7E7637769439E9869C1945C89",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

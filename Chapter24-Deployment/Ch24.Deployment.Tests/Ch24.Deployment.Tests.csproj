@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 24: the release machinery as tests that run without a model or a container. The alias swaps atomically,
+    keeps the version it replaced and refuses an index embedded with a different model than the service's query
+    encoder; the release gate fails a candidate that loses a must-pass question even when its average improves; and
+    the pipeline file runs every test project and the release step.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch24.Deployment.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Operations\Contoso.Knowledge.Operations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\pipeline\contoso-knowledge.yml" Link="pipeline\contoso-knowledge.yml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,66 @@
+# The Contoso Knowledge Assistant's pipeline for GitHub Actions. Copy it to .github/workflows/ in a repository
+# whose root holds sample-code/. Every step is a command the book runs locally; the workflow itself wasn't run.
+# The companion repository's root is sample-code itself: there, drop working-directory and the sample-code/ prefixes.
+name: contoso-knowledge
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: sample-code
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: sample-code/global.json
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Models, cached by the catalog that records their hashes
+        uses: actions/cache@v6
+        with:
+          path: sample-code/models
+          key: models-${{ hashFiles('sample-code/models/models.json') }}
+      - run: python eng/get-models.py
+      - name: Restore; NuGet audits every package, transitive ones included
+        run: dotnet restore Contoso-Knowledge.slnx
+      - run: dotnet build Contoso-Knowledge.slnx --no-restore
+      - name: Model files against their recorded hashes, and the ML-BOM
+        run: dotnet run --no-build --project Chapter22-Security/Ch22.Security.Cli -- supply
+      - name: Every test project; Testcontainers uses the runner's Docker, recordings stand in for the model
+        run: dotnet test --solution Contoso-Knowledge.slnx --no-build
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ml-bom
+          path: sample-code/runs/ch22/ml-bom.cdx.json
+
+  release:
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: sample-code/global.json
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v6
+        with:
+          path: sample-code/models
+          key: models-${{ hashFiles('sample-code/models/models.json') }}
+      - run: python eng/get-models.py
+      - name: Build the candidate index, gate it on dev, swap, check test through the alias, roll back on a regression
+        run: dotnet run --project Chapter24-Deployment/Ch24.Deployment.Cli -- release ${{ vars.INDEX_CANDIDATE || 'shipped' }}

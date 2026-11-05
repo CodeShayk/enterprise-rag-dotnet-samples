@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G045",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:46:04.7281379Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "p2 response time"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Response times for customers with a service contract are measured from the time the call is logged to the time the engineer arrives on site. For P2 calls, response times are 1 business day."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| P2 | Production degraded | 1 business day |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1419",
+          "eval-output-tokens": "170",
+          "eval-total-tokens": "1589",
+          "eval-duration-ms": "14446.25"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "SVC-POL-002: Response times for contracted customers\n# SVC-POL-002: Response times for contracted customers\nField Services commits to these response times for customers with a service contract, measured from the time the call is logged:\n| Priority | Definition | On-site response |\n|---|---|---|\n| P1 | Production stopped, or a safety risk | 4 hours |\n| P2 | Production degraded | 1 business day |\n| P3 | Planned or cosmetic work | 5 business days |\nEscalate any P1 call that has no engineer assigned after 30 minutes to the Field Services duty manager.\nResponse times are measured from the time the call is logged to the time the engineer arrives on site.\nCalls logged outside working hours count from 07:00 the next business day, except P1 calls, which count from the time they are logged.\n\nVD-75 Variable Frequency Drive: Installation and Fault Guide \u203A 4 Faults\n|---|---|---|---|\n| F002 | DC bus overvoltage | Ramp-down time too short for the load\u0027s inertia | Raise parameter 2-11 or fit a brake resistor |\n| F008 | Fieldbus timeout | No message from the controller for 2 seconds | Check the network cable and the controller |\n| F016 | Cooling fan failure | Fan blocked or worn out | Replace fan PN-7716-A |\n\nField service report SR-2026-1130\nDate: November 30, 2026.\nComplaint: the evaporator fan drive stopped several times a night with fault F002.\nFindings: the ramp-down time had been set to 1 second after a controller upgrade, too short for the fan\u0027s inertia.\nWork done: raised parameter 2-11 (ramp-down time) to 20 seconds.\nNo further F002 faults in 48 hours of logging.\n| Equipment | Site | Report |\n|---|---|---|\n\nField service report SR-2026-1107\nDate: November 7, 2026.\nComplaint: the CP-200 on duty tripped four times in two days with error E-217.\nNo further trips in 72 hours of monitoring.\n|---|---|---|"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1663",
+          "eval-output-tokens": "181",
+          "eval-total-tokens": "1844",
+          "eval-duration-ms": "34818.79"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 14.4460913,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1419,
+          "outputTokenCount": 170,
+          "totalTokenCount": 1589
+        },
+        "cacheKey": "BAB3EE06006D4DE7ECCD657FBBE4B3EC11D192E50E139D9DB8CD8A9E2B50995C61ABD1EBF07BBD50095D3B63AFDB6FD6",
+        "cacheHit": false
+      },
+      {
+        "latency": 34.8186024,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1663,
+          "outputTokenCount": 181,
+          "totalTokenCount": 1844
+        },
+        "cacheKey": "16EA7D1937C6CC734239F2112B8F0C42D58373A144ED1212CB4F1B3FD4F34F17EA6FF76A838727DDA6CF79611B9088B1",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

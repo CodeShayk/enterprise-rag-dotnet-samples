@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G2-T045",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:04:58.1243349Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What is the maximum torque of an RX coupling of size 90?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The maximum torque of an RX coupling of size 90 is 2,800 N\u00B7m. The RX coupling sizes are: 50 mm, 70 mm, and 90 mm, with maximum torques of 450 N\u00B7m, 1,250 N\u00B7m, and 2,800 N\u00B7m, respectively."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "The response provides the maximum torque of an RX coupling of size 90, which is 2,800 N\u00B7m, and lists the RX coupling sizes with their corresponding maximum torques. The ground truth also provides the same information, including the size and maximum torque of the 90 mm RX coupling. The response accurately includes all the necessary and relevant information from the ground truth, including the size and maximum torque of the RX coupling. However, it does not provide any additional information or context that is not present in the ground truth. Therefore, I believe the response is mostly complete, but not fully complete, since it does not include all the information present in the ground truth.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| 90 | 90 mm | 2,800 N\u00B7m | PN-5190-A |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1459",
+          "eval-output-tokens": "163",
+          "eval-total-tokens": "1622",
+          "eval-duration-ms": "14880.73"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "RX flexible coupling: installation and alignment\n# RX flexible coupling: installation and alignment\nPermissible misalignment for RX couplings up to size 90:\nRX coupling sizes\n| Size | Maximum bore | Maximum torque | Elastomer element |\n| 50 | 50 mm | 450 N\u00B7m | PN-5120-A |\n| 70 | 70 mm | 1,250 N\u00B7m | PN-5170-A |\n| 90 | 90 mm | 2,800 N\u00B7m | PN-5190-A |\nFor couplings above size 90, halve the permissible misalignment in the table above.\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Motion Systems\nPart \u203A Part number: PN-5190-A; Part \u203A Description: Elastomer element, RX coupling size 90; Part \u203A Fits: RX 90; Supply \u203A Supplier: Contoso stores; Supply \u203A Lead time (weeks): 2; Supply \u203A Stock at Riverside: 6; Price (USD) \u203A List price: 121.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 121.00\nPart \u203A Part number: PN-5210-A; Part \u203A Description: Elastomer element, RX coupling size 110; Part \u203A Fits: RX 110; Supply \u203A Supplier: Contoso stores; Supply \u203A Lead time (weeks): 3; Supply \u203A Stock at Riverside: 2; Price (USD) \u203A List price: 176.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 176.00\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 6 Assembly and disassembly \u203A 6.3 Flange bolt torque\n## 6.3 Flange bolt torque\nTable 6-2 gives the tightening torque for the CP-200 flange bolts.\n| Bolt size | Torque |\nApply the torque in a cross pattern in three passes: 30 N\u00B7m, 60 N\u00B7m, then 85 N\u00B7m.\n\nHG-400 Helical Gearbox Operating Manual \u203A 2 Product description \u203A 2.1 Type designation\n| 5.6 | 2 | 4,200 N\u00B7m | 55 kW |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1723",
+          "eval-output-tokens": "227",
+          "eval-total-tokens": "1950",
+          "eval-duration-ms": "40972.42"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 14.8805518,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1459,
+          "outputTokenCount": 163,
+          "totalTokenCount": 1622
+        },
+        "cacheKey": "7C7D11D4774A1675AD773D23679770D7A495888C51BAE8DFEA38123D406422AB6FA9CD6DAFA39F20F47C84BCBB22C152",
+        "cacheHit": false
+      },
+      {
+        "latency": 40.9722134,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1723,
+          "outputTokenCount": 227,
+          "totalTokenCount": 1950
+        },
+        "cacheKey": "CC74A97E5B7449C2D10B61BD64FFE6D50197CDB82F821B93991DF4A7915FD3B4993CBD376EBB3DA2A7215788CFEF3D33",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 5: tests for the evaluation library (every metric against hand-computed values, the
+    overlap and sufficiency rules, the statistics) and for the golden set itself.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch05.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+  </ItemGroup>
+
+</Project>

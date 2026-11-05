@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T015",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:59.0336131Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How often should you replace the bearings on a CP-200?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The bearings on a CP-200 should be replaced every 32,000 operating hours. The intervals for bearings can be halved for pumps that handle abrasive liquids or run above 60 \u00B0C. The intervals for bearings are not specified for pumps that do not handle abrasive liquids or run below 60 \u00B0C."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response provides information about the replacement intervals for bearings in pumps, which is partially related to the Ground Truth. However, the Response does not mention the conditions under which the intervals can be halved, which is an important detail in the Ground Truth. Additionally, the Response does not provide the same level of detail as the Ground Truth regarding the specific conditions for pumps that handle abrasive liquids or run above 60 \u00B0C. Therefore, the Response is not fully complete, but it does contain some relevant information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Replace the bearings | 32,000 h |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1442",
+          "eval-output-tokens": "128",
+          "eval-total-tokens": "1570",
+          "eval-duration-ms": "1.59"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 7 Maintenance \u203A 7.2 Service intervals\n## 7.2 Service intervals\nInspect the mechanical seal and the bearings every 2,000 operating hours or six months, whichever comes first.\nReplace mechanical seal PN-4471-B every 8,000 operating hours.\n| Task | Interval |\n|---|---|\n| Inspect the mechanical seal and the bearings | 2,000 h or 6 months |\n| Regrease the bearings (lithium-complex grease, 15 g per bearing) | 4,000 h |\n| Check the coupling alignment | 12 months |\n| Replace mechanical seal PN-4471-B | 8,000 h |\n| Replace the bearings | 32,000 h |\nHalve the intervals for pumps that handle abrasive liquids or run above 60 \u00B0C.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Fitting PN-4471-C\n## Fitting PN-4471-C\n- Fit the cartridge without tilting it\n- Don\u0027t mix PN-4471-B and PN-4471-C parts\nThe old torque of 22 N\u00B7m applied to PN-4471-B.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 2 Description\n# 2 Description\nThe CP-200 is a single-stage, end-suction centrifugal pump with a closed impeller, designed for clean or slightly contaminated water at up to 90 \u00B0C.\nTwo grease-lubricated ball bearings in the bearing housing carry the shaft.\nA controller on the pump skid monitors the motor, the bearing temperatures and the seal-water pressure and trips the pump when a limit is exceeded.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 9 Troubleshooting\n# 9 Troubleshooting\nThe controller shows an error code for most faults; the CP-200 troubleshooting guide explains each code.\nTable 9-1 Troubleshooting\n|---|---|---|\n| High bearing temperature | Too much or too little grease | Regrease as section 7.3 describes |\n| Seal leaks steadily | Worn seal faces | Replace the mechanical seal (section 8.1) |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1706",
+          "eval-output-tokens": "237",
+          "eval-total-tokens": "1943",
+          "eval-duration-ms": "44.35"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0.6666666666666666,
+        "name": "NLI groundedness",
+        "reason": "2 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "average",
+          "failed": true
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0013476,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1442,
+          "outputTokenCount": 128,
+          "totalTokenCount": 1570
+        },
+        "cacheKey": "E6463A030627A2CE0252583479F29E6BA5CCBA156B1DBE4D69CAD4A28F17A6E8959668A11DCE4DA94FB95006AFB26BAD",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0442156,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1706,
+          "outputTokenCount": 237,
+          "totalTokenCount": 1943
+        },
+        "cacheKey": "45657E63CC9CFA6B797BAEED7C163996656ACCEEF06E313A6C26B2404D6881397F02ED85932D437F0FE62FE82EB97F97",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

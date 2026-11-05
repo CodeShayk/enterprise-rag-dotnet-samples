@@ -1,0 +1,20 @@
+paragraph (header): SOP-FS-014 · Revision 3 · Controlled copy
+heading: # SOP-FS-014: Mechanical seal replacement on CP-200 pumps
+paragraph: Revision 3, effective September 14, 2026. This revision replaces PN-4471-B with PN-4471-C, following ECN-2291.
+listitem: 1. Apply lockout/tagout to the motor and isolate the seal-water and process lines, as safety bulletin SB-0932 requires. Verify zero energy.
+listitem: 2. Drain the casing and remove the coupling guard.
+listitem: 3. Remove the seal housing and the old seal. Inspect the shaft sleeve for scoring.
+listitem: 4. Fit mechanical seal PN-4471-C. Don't mix PN-4471-B and PN-4471-C parts.
+listitem: 5. Tighten the seal gland nuts evenly to 25 N·m.
+listitem: 6. Refit the coupling guard, remove the locks and tags, and start the pump as described in section 5.4 of the manual.
+listitem: 7. Record the seal's part number and the operating hours in the work order.
+heading: ## Purpose and scope
+paragraph: This procedure describes how to replace the cartridge mechanical seal on CP-200 pumps safely and without damaging the new seal. It applies to every CP-200 pump at Contoso plants and to Field Services work on customers' CP-200 pumps.
+heading: ## Tools and parts
+listitem: - Mechanical seal cartridge (see step 4) and new casing gaskets.
+listitem: - Torque wrench covering 5 to 60 N·m.
+listitem: - Lockout padlocks and tags for each person working on the pump.
+heading: ## Records
+paragraph: Record the seal's part number, the pump's operating hours and the names of the people who did the work in the work order. Return the old seal to the stores for failure analysis if it failed before 8,000 hours.
+paragraph (footer): Uncontrolled when printed. Check the SOP library for the current revision.
+paragraph (comment): Fabrikam Seals confirmed 25 N·m for the PN-4471-C gland nuts.

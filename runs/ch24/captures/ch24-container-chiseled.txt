@@ -1,0 +1,14 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Contoso.Knowledge.Documents -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Documents\bin\Release\net10.0\Contoso.Knowledge.Documents.dll
+  Contoso.AI -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.AI\bin\Release\net10.0\Contoso.AI.dll
+  Contoso.Knowledge.Embeddings -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Embeddings\bin\Release\net10.0\Contoso.Knowledge.Embeddings.dll
+  Contoso.Corpus -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Corpus\bin\Release\net10.0\Contoso.Corpus.dll
+  Contoso.Knowledge.Parsing -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Parsing\bin\Release\net10.0\Contoso.Knowledge.Parsing.dll
+  Contoso.Knowledge.Chunking -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Chunking\bin\Release\net10.0\Contoso.Knowledge.Chunking.dll
+  Contoso.Knowledge.Retrieval -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Retrieval\bin\Release\net10.0\Contoso.Knowledge.Retrieval.dll
+  Contoso.Knowledge.Generation -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Generation\bin\Release\net10.0\Contoso.Knowledge.Generation.dll
+  Ch14.Knowledge.Api -> C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Api\bin\Release\net10.0\linux-x64\Ch14.Knowledge.Api.dll
+  Ch14.Knowledge.Api -> C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Api\bin\Release\net10.0\linux-x64\publish\
+  Building image 'contoso/knowledge-api' with tags 'ch24-chiseled' on top of base image 'mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra'.
+  Pushed image 'contoso/knowledge-api:ch24-chiseled' to local registry via 'docker'.

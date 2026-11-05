@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G029",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:01:01.6375339Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How do the service intervals change for a CP-200 pumping abrasive liquids?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The service intervals for a CP-200 pump are halved when it handles abrasive liquids. The CP-200 pump is not designed to handle abrasive liquids."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0,
+        "name": "NLI groundedness",
+        "reason": "0 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Halve the intervals for pumps that handle abrasive liquids or run above 60 \u00B0C."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1417",
+          "eval-output-tokens": "169",
+          "eval-total-tokens": "1586",
+          "eval-duration-ms": "14522.09"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 7 Maintenance \u203A 7.2 Service intervals\n## 7.2 Service intervals\n| Task | Interval |\nHalve the intervals for pumps that handle abrasive liquids or run above 60 \u00B0C.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 2 Description\nThe CP-200 is a single-stage, end-suction centrifugal pump with a closed impeller, designed for clean or slightly contaminated water at up to 90 \u00B0C.\nThe pump and its motor sit on a common baseplate and are joined by a flexible spacer coupling, so the rotating assembly can be removed without disturbing the pipework.\nA controller on the pump skid monitors the motor, the bearing temperatures and the seal-water pressure and trips the pump when a limit is exceeded.\n\nEngineering change notice ECN-2291: CP-200 mechanical seal \u203A Engineering change notice ECN-2291\n| Title | CP-200 mechanical seal |\n| Product | CP-200 centrifugal pump, all sizes |\nEffective September 14, 2026, mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps.\nAffected documents: CP-200 manual (2009) sections 7.2 and 8.1, and SOP-FS-014.\nAffected parts\n\nEngineering change notice ECN-2240: CP-200 casing wear ring material \u203A Engineering change notice ECN-2240\n| Change notice | ECN-2240 |\n| Title | CP-200 casing wear ring material |\n| Product | CP-200 centrifugal pump, all sizes |\nEffective March 1, 2025, casing wear ring PN-2840-A (bronze) is superseded by PN-2840-B (carbon-filled PTFE composite) on all CP-200 pumps.\nThe bronze rings in stock may be used up on pumps that handle liquids above 80 \u00B0C, where the composite ring is not approved.\n| PN-2840-A | PN-2840-B | Use up stock on pumps above 80 \u00B0C only |\nAffected documents: CP-200 manual (2009) sections 6.2 and 8.1."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1665",
+          "eval-output-tokens": "201",
+          "eval-total-tokens": "1866",
+          "eval-duration-ms": "37486.35"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 14.5219056,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1417,
+          "outputTokenCount": 169,
+          "totalTokenCount": 1586
+        },
+        "cacheKey": "2B64B299E3EEDFE1F0B2A0699CA8AA69DFB7D3BABEE0F2C43AB66A70D68AC2AE3565CA5288462F525B16B521DCEF8D81",
+        "cacheHit": false
+      },
+      {
+        "latency": 37.4860591,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1665,
+          "outputTokenCount": 201,
+          "totalTokenCount": 1866
+        },
+        "cacheKey": "9BC600BD51AA0053A6F1316B0A6B92206BA18D9F43A23D38D0C7543DDA42EA285D53CBA199C854E37B239AD9FA6377AD",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

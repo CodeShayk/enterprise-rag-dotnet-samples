@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 21: the assistant's latency and cost, measured. A profile of every stage from Chapter 14's recordings,
+    ONNX Runtime tuning for the re-ranker, prompt layouts against Ollama's prefix cache, caching layers on a simulated
+    workload (with a key that leaks), semantic caching with and without an identifier guard, HybridCache over Redis in
+    a container, a cascade from llama3.2 1B to 3B, a closed-loop load test, the cost model and per-tenant limits.
+    Answers replay from Chapter 14's recordings; new model calls need Ollama with llama3.2 and llama3.2:1b.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch21.Performance.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Performance\Contoso.Knowledge.Performance.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" />
+    <PackageReference Include="OllamaSharp" />
+    <PackageReference Include="Testcontainers.Redis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data\**\*.jsonl" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

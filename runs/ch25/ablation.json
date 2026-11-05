@@ -1,0 +1,369 @@
+[
+  {
+    "name": "shipped",
+    "chapter": "",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 154.2,
+    "dev": 0.976,
+    "devChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "devLost": [],
+    "test": 0.972,
+    "testChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": []
+  },
+  {
+    "name": "- ingestion hygiene",
+    "chapter": "6",
+    "chunks": 271,
+    "buildSeconds": 4.4,
+    "p50Ms": 157.3,
+    "dev": 0.943,
+    "devChange": {
+      "mean": -0.032520325203252036,
+      "low": -0.06504065040650407,
+      "high": -0.008130081300813009,
+      "clear": true
+    },
+    "devLost": [
+      "G041",
+      "G2-T001",
+      "G2-T004",
+      "G2-T007"
+    ],
+    "test": 0.958,
+    "testChange": {
+      "mean": -0.013888888888888888,
+      "low": -0.041666666666666664,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": [
+      "G2-T002"
+    ]
+  },
+  {
+    "name": "- parent-child chunks",
+    "chapter": "9",
+    "chunks": 123,
+    "buildSeconds": 2.2,
+    "p50Ms": 130.1,
+    "dev": 0.862,
+    "devChange": {
+      "mean": -0.11382113821138211,
+      "low": -0.17886178861788618,
+      "high": -0.04878048780487805,
+      "clear": true
+    },
+    "devLost": [
+      "G003",
+      "G012",
+      "G028",
+      "G041",
+      "G2-H003",
+      "G2-H008",
+      "G2-H018",
+      "G2-H025",
+      "G2-T004",
+      "G2-T007",
+      "G2-T010",
+      "G2-T011",
+      "G2-T012",
+      "G2-T013",
+      "G2-T038",
+      "G2-T056"
+    ],
+    "test": 0.806,
+    "testChange": {
+      "mean": -0.16666666666666666,
+      "low": -0.25,
+      "high": -0.08333333333333333,
+      "clear": true
+    },
+    "testLost": [
+      "G004",
+      "G015",
+      "G032",
+      "G042",
+      "G2-H002",
+      "G2-H009",
+      "G2-H030",
+      "G2-T002",
+      "G2-T005",
+      "G2-T028",
+      "G2-T048",
+      "G2-T060"
+    ]
+  },
+  {
+    "name": "- breadcrumbs",
+    "chapter": "9",
+    "chunks": 219,
+    "buildSeconds": 2.6,
+    "p50Ms": 148.5,
+    "dev": 0.894,
+    "devChange": {
+      "mean": -0.08130081300813008,
+      "low": -0.13821138211382114,
+      "high": -0.024390243902439025,
+      "clear": true
+    },
+    "devLost": [
+      "G012",
+      "G028",
+      "G041",
+      "G2-H003",
+      "G2-H008",
+      "G2-H021",
+      "G2-T010",
+      "G2-T011",
+      "G2-T012",
+      "G2-T015",
+      "G2-T038",
+      "G2-T040"
+    ],
+    "test": 0.861,
+    "testChange": {
+      "mean": -0.1111111111111111,
+      "low": -0.19444444444444445,
+      "high": -0.027777777777777776,
+      "clear": true
+    },
+    "testLost": [
+      "G004",
+      "G015",
+      "G032",
+      "G2-H006",
+      "G2-H020",
+      "G2-T002",
+      "G2-T014",
+      "G2-T028",
+      "G2-T039"
+    ]
+  },
+  {
+    "name": "- INT8 (FP32 model)",
+    "chapter": "10",
+    "chunks": 219,
+    "buildSeconds": 5.5,
+    "p50Ms": 160.7,
+    "dev": 0.951,
+    "devChange": {
+      "mean": -0.024390243902439025,
+      "low": -0.056910569105691054,
+      "high": 0,
+      "clear": false
+    },
+    "devLost": [
+      "G012",
+      "G041",
+      "G2-T004"
+    ],
+    "test": 0.958,
+    "testChange": {
+      "mean": -0.013888888888888888,
+      "low": -0.041666666666666664,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": [
+      "G2-T005"
+    ]
+  },
+  {
+    "name": "- dense search",
+    "chapter": "10",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 155.4,
+    "dev": 0.959,
+    "devChange": {
+      "mean": -0.016260162601626018,
+      "low": -0.04065040650406504,
+      "high": 0,
+      "clear": false
+    },
+    "devLost": [
+      "G012",
+      "G2-T004"
+    ],
+    "test": 0.958,
+    "testChange": {
+      "mean": -0.013888888888888888,
+      "low": -0.041666666666666664,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": [
+      "G2-T005"
+    ]
+  },
+  {
+    "name": "- keyword search",
+    "chapter": "11",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 159.8,
+    "dev": 0.967,
+    "devChange": {
+      "mean": -0.008130081300813009,
+      "low": -0.04065040650406504,
+      "high": 0.016260162601626018,
+      "clear": false
+    },
+    "devLost": [
+      "G2-T004",
+      "G2-T007"
+    ],
+    "test": 0.972,
+    "testChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": []
+  },
+  {
+    "name": "- identifier analyzer",
+    "chapter": "11",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 159,
+    "dev": 0.959,
+    "devChange": {
+      "mean": -0.016260162601626018,
+      "low": -0.04878048780487805,
+      "high": 0.016260162601626018,
+      "clear": false
+    },
+    "devLost": [
+      "G012",
+      "G041",
+      "G2-T004"
+    ],
+    "test": 0.986,
+    "testChange": {
+      "mean": 0.013888888888888888,
+      "low": -0.027777777777777776,
+      "high": 0.06944444444444445,
+      "clear": false
+    },
+    "testLost": [
+      "G2-T002"
+    ]
+  },
+  {
+    "name": "- re-ranking",
+    "chapter": "12",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 9.6,
+    "dev": 0.967,
+    "devChange": {
+      "mean": -0.008130081300813009,
+      "low": -0.04065040650406504,
+      "high": 0.016260162601626018,
+      "clear": false
+    },
+    "devLost": [
+      "G012",
+      "G2-T007"
+    ],
+    "test": 1,
+    "testChange": {
+      "mean": 0.027777777777777776,
+      "low": 0,
+      "high": 0.06944444444444445,
+      "clear": false
+    },
+    "testLost": []
+  },
+  {
+    "name": "- graph route",
+    "chapter": "19",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 157.4,
+    "dev": 0.976,
+    "devChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "devLost": [],
+    "test": 0.972,
+    "testChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": []
+  },
+  {
+    "name": "- permissions in the search",
+    "chapter": "22",
+    "chunks": 219,
+    "buildSeconds": 4.2,
+    "p50Ms": 165.2,
+    "dev": 0.976,
+    "devChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "devLost": [],
+    "test": 0.972,
+    "testChange": {
+      "mean": 0,
+      "low": 0,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": []
+  },
+  {
+    "name": "- work-order export",
+    "chapter": "17, 22",
+    "chunks": 212,
+    "buildSeconds": 2.6,
+    "p50Ms": 152.6,
+    "dev": 0.935,
+    "devChange": {
+      "mean": -0.04065040650406504,
+      "low": -0.08130081300813008,
+      "high": -0.008130081300813009,
+      "clear": true
+    },
+    "devLost": [
+      "G2-T058",
+      "G2-T059",
+      "G2-T061",
+      "G2-T062",
+      "G2-T063"
+    ],
+    "test": 0.958,
+    "testChange": {
+      "mean": -0.013888888888888888,
+      "low": -0.041666666666666664,
+      "high": 0,
+      "clear": false
+    },
+    "testLost": [
+      "G2-T060"
+    ]
+  }
+]

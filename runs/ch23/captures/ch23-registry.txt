@@ -1,0 +1,13 @@
+Registry: 5 entries
+  prompt    grounded-f04881ce          approved  by Riley Chen on 2026-11-02 Chapter 14 dev and test runs; Chapter 15 regression baseline; Ch14.Tests pins the version
+  model     llama3.2@a80c4f17acd5      approved  by Riley Chen on 2026-11-02 Chapter 14 dev and test runs; Chapter 15 regression baseline
+  model     llama3.2:1b@baf6a787fdff   evaluated                             Chapter 21 cascade: key values -0.10 [-0.18, -0.04]; not approved to answer
+  embedding sha256:bf64d05457cb        approved  by Riley Chen on 2026-11-01 ADR-0005 (Chapter 10)
+  re-ranker sha256:5d3e70fd0c9f        approved  by Riley Chen on 2026-11-01 ADR-0007 (Chapter 12)
+132 provenance records checked: 0 violations
+after a prompt edit (grounded-4fe34460) and two answers from the 1B model:
+  record 11: model llama3.2:1b@baf6a787fdff: status evaluated
+  record 12: model llama3.2:1b@baf6a787fdff: status evaluated
+  record 130: prompt grounded-4fe34460: not in the registry
+  record 131: prompt grounded-4fe34460: not in the registry
+  record 132: prompt grounded-4fe34460: not in the registry

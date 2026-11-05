@@ -1,0 +1,27 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.4">
+
+  <!--
+    Chapter 25: one AppHost, two deployment profiles, chosen by the Profile setting. The local profile (the default) runs everything on this machine's
+    CPU: Ollama started with every GPU hidden, and the API beside it. The hybrid profile keeps retrieval, re-ranking,
+    the indexes and the records in Contoso's network, sends generation to a cloud model named by two parameters except
+    for evidence from HR and Procurement collections, which Ollama answers, and runs two API replicas that share
+    answers through Redis. Both start the same API project with different settings.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch25.AppHost</RootNamespace>
+    <!-- As in Chapter 3: the orchestrator and the dashboard come from NuGet, not from an installed Aspire CLI. -->
+    <AspireUseCliBundle>false</AspireUseCliBundle>
+    <NoWarn>$(NoWarn);ASPIRE010</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="Aspire.Hosting.Redis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch25.Knowledge.Api\Ch25.Knowledge.Api.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 10: the ONNX embedding generator against reference vectors from an independent pipeline (Hugging Face
+    tokenizers and ONNX Runtime for Python), INT8 against full precision, the exact-search baseline, vector
+    compression, and the same records and permission filter in pgvector and Qdrant (Testcontainers, skipped when
+    Docker isn't running). Needs `python eng/get-models.py` for the bge-small-en-v1.5 files.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch10.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="reference\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

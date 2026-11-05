@@ -1,0 +1,21 @@
+<Project>
+
+  <!--
+    Shared build settings for every project in the companion code of
+    "From Problems to Patterns: Enterprise RAG Engineering with .NET". The book targets .NET 10 (LTS) and C# 14.
+  -->
+  <PropertyGroup>
+    <ContosoTargetFramework>net10.0</ContosoTargetFramework>
+    <TargetFramework Condition="'$(TargetFramework)' == '' and '$(TargetFrameworks)' == ''">$(ContosoTargetFramework)</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- A newly published package advisory stays a warning, so it can't break a reader's build. The Package audit
+         workflow clears this property, which turns those warnings back into errors. -->
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
+    <IsPackable>false</IsPackable>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+</Project>

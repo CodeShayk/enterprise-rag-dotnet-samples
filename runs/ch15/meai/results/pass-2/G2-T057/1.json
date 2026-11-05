@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T057",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:12.7006972Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What replaced PN-6120-A, and under which change notice?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "PN-6120-A was replaced by PN-6120-B. This replacement was announced under change notice ECN-2305."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Contoso parts catalog 2027 \u203A Superseded parts\n| Old part | Replaced by | Change notice | Effective | Instruction |\n| PN-6120-A | PN-6120-B | ECN-2305 | 2026-12-01 | Replace at the next oil change |\n\nEngineering change notice ECN-2240: CP-200 casing wear ring material \u203A Engineering change notice ECN-2240\n# Engineering change notice ECN-2240\n|---|---|\n| Change notice | ECN-2240 |\nEffective March 1, 2025, casing wear ring PN-2840-A (bronze) is superseded by PN-2840-B (carbon-filled PTFE composite) on all CP-200 pumps.\nFit PN-2840-B whenever a wear ring is replaced.\nAffected parts\n\nEngineering change notice ECN-2291: CP-200 mechanical seal \u203A Engineering change notice ECN-2291\n# Engineering change notice ECN-2291\n| Change notice | ECN-2291 |\nFit PN-4471-C at the next seal replacement and quarantine remaining PN-4471-B stock.\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Motion Systems\nPart \u203A Part number: PN-6120-A; Part \u203A Description: Breather plug, open (superseded by PN-6120-B, ECN-2305); Part \u203A Fits: HG-400; Supply \u203A Supplier: Proseware Castings; Supply \u203A Lead time (weeks): 2; Supply \u203A Stock at Riverside: 4; Price (USD) \u203A List price: 18.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 18.00\nPart \u203A Part number: PN-6125-A; Part \u203A Description: Desiccant cartridge for PN-6120-B; Part \u203A Fits: HG-400; Supply \u203A Supplier: Proseware Castings; Supply \u203A Lead time (weeks): 2; Supply \u203A Stock at Riverside: 30; Price (USD) \u203A List price: 12.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 12.00"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1667",
+          "eval-output-tokens": "216",
+          "eval-total-tokens": "1883",
+          "eval-duration-ms": "18.26"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that PN-6120-A was replaced by PN-6120-B, and this replacement was announced under change notice ECN-2305. However, the Response does not mention the date of the replacement or the reason for the change. The Ground Truth provides this information, stating that the replacement was announced on 2026-12-01 and that it should be done at the next oil change. The Response is missing some crucial information, such as the date and reason for the change, which are present in the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| PN-6120-A | PN-6120-B | ECN-2305 | 2026-12-01 | Replace at the next oil change |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1429",
+          "eval-output-tokens": "137",
+          "eval-total-tokens": "1566",
+          "eval-duration-ms": "15.73"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0181016,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1667,
+          "outputTokenCount": 216,
+          "totalTokenCount": 1883
+        },
+        "cacheKey": "51371EC25A57EBE48CCC1722AE6BCE568574AA7F6A3F9B52E683BEF9EB766164CB5231E6664B1F3A45B4666D827CD476",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.015569,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1429,
+          "outputTokenCount": 137,
+          "totalTokenCount": 1566
+        },
+        "cacheKey": "5D02049BB20CB4CA3324EE97E98177CB71FB99C891FABAA9F9E8F706BDE606217B4686E3856DA40E0C5B2566EC314D23",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

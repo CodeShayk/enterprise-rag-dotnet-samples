@@ -1,0 +1,50 @@
+[
+  {
+    "first": "What torque applies to the M12 flange bolts on P-201?",
+    "second": "G009"
+  },
+  {
+    "first": "What does error E-104 mean?",
+    "second": "G031"
+  },
+  {
+    "first": "Which mechanical seal should I fit on P-201 now?",
+    "second": "G053"
+  },
+  {
+    "first": "What torque do the seal gland nuts need?",
+    "second": "G059"
+  },
+  {
+    "first": "What does drive fault F012 mean?",
+    "second": "G011"
+  },
+  {
+    "first": "What noise was the Woodgrove Foods gearbox making?",
+    "second": "G020"
+  },
+  {
+    "first": "How do I stop a VD-75 drive from tripping with F012 during start-up?",
+    "second": "G037"
+  },
+  {
+    "first": "What is the reason for the change from PN-4471-B to PN-4471-C on CP-200 pumps?",
+    "second": "G028"
+  },
+  {
+    "first": "How do the service intervals change for a CP-200 pumping abrasive liquids?",
+    "second": "G026"
+  },
+  {
+    "first": "Above what amount does a purchase need a second sign-off?",
+    "second": "G038"
+  },
+  {
+    "first": "How long does Fabrikam Seals have to report a quality incident?",
+    "second": "G039"
+  },
+  {
+    "first": "What does a new supplier need before Contoso can buy from it?",
+    "second": "G018"
+  }
+]

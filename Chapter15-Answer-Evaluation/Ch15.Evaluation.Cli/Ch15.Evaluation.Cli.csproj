@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 15: evaluating the answers Chapter 14 recorded (runs/ch14/answers; run Chapter 14's `answer` commands
+    first). Deterministic checks, NLI support against labels, citation tests, a local judge and its biases,
+    Microsoft.Extensions.AI.Evaluation with response caching and an HTML report, regression comparisons and error
+    analysis. The judge uses llama3.2 through Ollama on the CPU; its calls are recorded in runs/ch15. Needs
+    `python eng/get-models.py` for the NLI models.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch15.Evaluation.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI.Evaluation.Quality" />
+    <PackageReference Include="Microsoft.Extensions.AI.Evaluation.Reporting" />
+    <PackageReference Include="OllamaSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="labels\*.jsonl" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

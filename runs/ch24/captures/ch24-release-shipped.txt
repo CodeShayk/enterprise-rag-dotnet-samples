@@ -1,0 +1,5 @@
+release v4-shipped against live v1-shipped; gate: lower bound above -0.03, no must-pass question lost
+  build   219 chunks, parent-child-100-600, breadcrumbs on, bge-small-en-v1.5-int8 (3.5 s)
+  gate    dev, 123 answerable questions: change +0.000 [+0.000, +0.000], worse none, better none: passed (24.5 s)
+  swap    live: v1-shipped -> v4-shipped (4.3 ms)
+  check   test, 72 answerable questions through the live alias: change +0.000 [+0.000, +0.000], worse none, better none: passed (13.0 s)

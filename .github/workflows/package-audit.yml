@@ -1,0 +1,38 @@
+# Fail when any package the solution restores, transitive ones included, has a known advisory.
+#
+# Directory.Build.props keeps NU1901 to NU1904 as warnings, so a newly published advisory can't break a reader's build
+# or the build-and-test workflow. Clearing WarningsNotAsErrors here turns them back into errors. It runs on every change
+# and once a week, because an advisory arrives without a commit.
+
+name: Package audit
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  SOLUTION: Contoso-Knowledge.slnx
+
+jobs:
+  audit:
+    name: Audit packages
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Restore with advisories as errors
+        run: dotnet restore ${{ env.SOLUTION }} -p:WarningsNotAsErrors=

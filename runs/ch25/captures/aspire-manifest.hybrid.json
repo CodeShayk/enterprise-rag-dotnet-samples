@@ -1,0 +1,121 @@
+{
+  "resources": {
+    "ollama": {
+      "type": "executable.v0",
+      "workingDirectory": "../../../Chapter25-Capstone/Ch25.AppHost",
+      "command": "ollama",
+      "args": [
+        "serve"
+      ],
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "-1",
+        "GGML_VK_VISIBLE_DEVICES": "-1",
+        "OLLAMA_HOST": "127.0.0.1:11434"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http",
+          "targetPort": 11434
+        }
+      }
+    },
+    "api": {
+      "type": "project.v0",
+      "path": "../../../Chapter25-Capstone/Ch25.Knowledge.Api/Ch25.Knowledge.Api.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true",
+        "HTTP_PORTS": "{api.bindings.http.targetPort}",
+        "ConnectionStrings__cache": "{cache.connectionString}",
+        "CACHE_HOST": "{cache.bindings.tcp.host}",
+        "CACHE_PORT": "{cache.bindings.tcp.port}",
+        "CACHE_PASSWORD": "{cache-password.value}",
+        "CACHE_URI": "{cache.bindings.tcp.scheme}://:{cache-password-uri-encoded.value}@{cache.bindings.tcp.host}:{cache.bindings.tcp.port}",
+        "AI__Provider": "AzureOpenAI",
+        "AI__Endpoint": "{model-endpoint.value}",
+        "AI__Model": "{model-deployment.value}",
+        "AI__Restricted__Provider": "Ollama",
+        "AI__Restricted__OllamaEndpoint": "{ollama.bindings.http.url}",
+        "AI__Restricted__OllamaModel": "llama3.2"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http"
+        },
+        "https": {
+          "scheme": "https",
+          "protocol": "tcp",
+          "transport": "http"
+        }
+      }
+    },
+    "model-endpoint": {
+      "type": "parameter.v0",
+      "value": "{model-endpoint.inputs.value}",
+      "inputs": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "model-deployment": {
+      "type": "parameter.v0",
+      "value": "{model-deployment.inputs.value}",
+      "inputs": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "cache": {
+      "type": "container.v0",
+      "connectionString": "{cache.bindings.tcp.host}:{cache.bindings.tcp.port},password={cache-password.value}{cond-cache-bindings-tcp-tlsenabled-3eddb73a.connectionString}",
+      "image": "docker.io/library/redis:8.6",
+      "entrypoint": "/bin/sh",
+      "args": [
+        "-c",
+        "redis-server --requirepass $REDIS_PASSWORD"
+      ],
+      "env": {
+        "REDIS_PASSWORD": "{cache-password.value}"
+      },
+      "bindings": {
+        "tcp": {
+          "scheme": "redis",
+          "protocol": "tcp",
+          "transport": "tcp",
+          "targetPort": 6379
+        }
+      }
+    },
+    "cache-password": {
+      "type": "parameter.v0",
+      "value": "{cache-password.inputs.value}",
+      "inputs": {
+        "value": {
+          "type": "string",
+          "secret": true,
+          "default": {
+            "generate": {
+              "minLength": 22,
+              "special": false
+            }
+          }
+        }
+      }
+    },
+    "cache-password-uri-encoded": {
+      "type": "annotated.string",
+      "value": "{cache-password.value}",
+      "filter": "uri"
+    },
+    "cond-cache-bindings-tcp-tlsenabled-3eddb73a": {
+      "type": "value.v0",
+      "connectionString": ""
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "scenarioName": "G024",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:26.6116935Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Where is P-201 installed, and when was it commissioned?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "P-201 is installed at Riverside. P-201 was commissioned in May 2011."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "The response provides relevant information about the installation location and commissioning date of pump P-201, which directly addresses the query. However, it does not provide specific details about the mechanical seal replacement, which is mentioned in the context. Additionally, the response does not mention the pump\u0027s running hours, which is also mentioned in the context. Despite these omissions, the response is mostly accurate and relevant to the query.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Asset record: pump P-201\n# Asset record: pump P-201\n| Tag | P-201 |\n| Commissioned | May 2011 |\n| Mechanical seal | PN-4471-C since work order WO-88412 (November 2026) |\nP-201 runs continuously, about 8,400 hours a year.\n\nAsset record: pump P-202\n# Asset record: pump P-202\n| Tag | P-202 |\n| Duty | Cooling-water transfer, standby for P-201 |\n| Commissioned | May 2011 |\n| Mechanical seal | PN-4471-B, fitted August 2019; replace with PN-4471-C at the next seal change (ECN-2291) |\nP-202 is the standby pump for P-201 and runs about 1,200 hours a year, mostly while P-201 is maintained.\n\nAsset record: pump P-301\n# Asset record: pump P-301\n| Tag | P-301 |\n| Commissioned | March 2015 |\nP-301 runs about 6,000 hours a year.\n\nWork orders, July 2026 to January 2027 (export)\nwork_order: WO-88412; asset_tag: P-201; site: Riverside; type: CM; priority: P2; description: chg mech seal PN-4471-B -\u003E PN-4471-C per ECN-2291, LOTO per SOP-FS-007, gland nuts 25Nm; status: closed; opened: 2026-11-16; due: 2026-11-20; completed: 2026-11-19; technician: tsilva; updated_at: 2026-11-19T16:00:00Z\nwork_order: WO-88448; asset_tag: P-201; site: Riverside; type: PM; priority: P3; description: PM 2000h insp mech seal \u002B brgs, ok; status: closed; opened: 2026-11-29; due: 2026-12-13; completed: 2026-12-10; technician: aking; updated_at: 2026-12-10T16:00:00Z"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1666",
+          "eval-output-tokens": "110",
+          "eval-total-tokens": "1776",
+          "eval-duration-ms": "0.76"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "A short explanation:",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Site | Riverside plant, cooling-water building |\n| Commissioned | May 2011 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1406",
+          "eval-output-tokens": "187",
+          "eval-total-tokens": "1593",
+          "eval-duration-ms": "0.59"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0006345,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1666,
+          "outputTokenCount": 110,
+          "totalTokenCount": 1776
+        },
+        "cacheKey": "0CAFFD6E585E3AC80FD2F11C25551400388D6291B6606425A330773F9F5BDE8080D6BF6FE81451E382322AFCE564D670",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0004839,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1406,
+          "outputTokenCount": 187,
+          "totalTokenCount": 1593
+        },
+        "cacheKey": "D42435BD5E14AC807DD13037F13CA54B01ADBF73A757F826016483AB71A5C1FE3FB7181F9E044AAD61746DA453794636",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

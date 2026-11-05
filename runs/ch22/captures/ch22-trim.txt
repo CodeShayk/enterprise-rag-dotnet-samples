@@ -1,0 +1,8 @@
+Each of 129 dev questions asked by each person: hybrid retrieval, top 4
+Asker           trimmed: unreadable  unfiltered top 4 held unreadable  post-filter < 4  post-filter 0
+nadia.rahman                      0                                65               65             36
+tomas.silva                       0                                65               65             36
+kwame.asante                      0                                41               41              9
+grace.liu                         0                               113              113             86
+daniel.mensah                     0                               122              122             88
+riley.chen                        0                               122              122             97

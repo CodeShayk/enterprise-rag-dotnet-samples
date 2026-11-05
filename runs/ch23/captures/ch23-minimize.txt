@@ -1,0 +1,6 @@
+Shipped retriever (hybrid, re-ranked, top 4), 129 dev questions; indexed text masked before embedding and keyword indexing
+Indexed text                       chunks changed sufficient   against the text as it is
+as it is                                        0       0.98
+addresses and phone numbers masked              0       0.98   +0.00 [+0.00, +0.00]
+names masked too                               14       0.98   +0.00 [+0.00, +0.00]
+questions that lost their evidence with names masked: none

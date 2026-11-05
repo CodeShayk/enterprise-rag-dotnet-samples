@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 5: the evaluation harness every later chapter uses. A JSONL golden-set format with
+    span-level labels, TREC qrels export, retrieval and context metrics, a harness that scores any
+    retrieval configuration, paired bootstrap intervals, a power calculation and Cohen's kappa.
+    Chapter 15 adds answer metrics: deterministic checks, NLI support on ONNX Runtime, a local judge with structured
+    verdicts and an NLI groundedness evaluator for Microsoft.Extensions.AI.Evaluation.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Evaluation</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Corpus\Contoso.Corpus.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.AI.Evaluation" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+  </ItemGroup>
+
+</Project>

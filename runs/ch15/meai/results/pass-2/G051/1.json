@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G051",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:15.7231082Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How does the 2027 parental leave policy differ from the 2024 one?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The 2027 parental leave policy increases the paid leave from 16 to 20 weeks. The 2027 policy allows taking the leave in up to three blocks, whereas the 2024 policy requires one continuous block within 12 months. The 2027 policy does not change the six-month service requirement or the full pay for the leave."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Parental leave policy (2024)\n# Parental leave policy (2024)\nEmployees with at least six months of service receive 16 weeks of paid parental leave after the birth or adoption of a child.\nThe leave must be taken in one continuous block within 12 months of the birth or adoption, at 100 percent of base salary.\nEmployees agree the start date with their manager at least eight weeks in advance.\nEmployees on parental leave keep their pension contributions and accrue annual leave as if they were working.\n\nHR guidance: parental leave changes for 2027\n# HR guidance: parental leave changes for 2027\nThis guidance is restricted to HR and people managers until the change is announced on February 15, 2027.\nFrom March 1, 2027, paid parental leave increases from 16 to 20 weeks and can be taken in up to three blocks.\nThe six-month service requirement and full pay are unchanged.\nEmployees whose leave starts before March 1, 2027 stay on the 2024 policy.\nManagers should send questions to their HR business partner.\n## Questions managers may hear\nEmployees may ask whether they can split leave they have already started.\nThey can\u0027t: the three-block rule applies only to leave that starts on or after March 1, 2027.\nEmployees on fixed-term contracts receive the same leave if their contract runs for at least six months beyond the start of the leave.\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Fluid Systems\n## Parts catalog 2027: Fluid Systems"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1565",
+          "eval-output-tokens": "237",
+          "eval-total-tokens": "1802",
+          "eval-duration-ms": "0.79"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The response mentions that the 2027 parental leave policy increases the paid leave from 16 to 20 weeks and allows taking the leave in up to three blocks, which is partially accurate. However, it does not mention the six-month service requirement or the full pay for the leave, which are crucial details. Additionally, the response states that the leave must be taken in one continuous block within 12 months, whereas the ground truth states that it must be taken in one continuous block within 12 months of the birth or adoption. This discrepancy suggests that the response is not fully complete.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "From March 1, 2027, paid parental leave increases from 16 to 20 weeks and can be taken in up to three blocks.\nThe leave must be taken in one continuous block within 12 months of the birth or adoption, at 100 percent of base salary."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1495",
+          "eval-output-tokens": "144",
+          "eval-total-tokens": "1639",
+          "eval-duration-ms": "0.70"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0.6666666666666666,
+        "name": "NLI groundedness",
+        "reason": "2 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "average",
+          "failed": true
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0006369,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1565,
+          "outputTokenCount": 237,
+          "totalTokenCount": 1802
+        },
+        "cacheKey": "66F61860C35682C5F8F7271066E8D3C34FA87D36177D5EEAE40B0F211EFE82EAF6CF9DE0062F546BEEDABF4CF2E6EF3A",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0005818,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1495,
+          "outputTokenCount": 144,
+          "totalTokenCount": 1639
+        },
+        "cacheKey": "56A68A365A0B1754F37BC5276E3EAE3D0440B07992DC19590596218511959B9FCED842EF2391317719C3C8699A854835",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 6: the ingestion worker. Connectors with change detection for the file share, the intranet
+    (crawled over HTTP with ETags), SharePoint (Microsoft Graph delta queries, against a local stand-in),
+    the service mailbox and the work-order database; a pipeline of stages joined by bounded channels;
+    a data contract per source; versions with effective dates; exact and near-duplicate detection;
+    stable chunk IDs; a SQLite store for documents, chunks and lineage (PostgreSQL as an option) with
+    OpenLineage-style events; retries, quarantine, tombstones and backfills.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch06.Ingestion.Worker</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Corpus\Contoso.Corpus.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Resilience" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <PackageReference Include="Npgsql" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.DataIngestion" />
+    <PackageReference Include="CommunityToolkit.VectorData.InMemory" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G2-T013",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:49:50.2774212Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How often should you inspect the mechanical seal and the bearings on a CP-200?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Inspect the mechanical seal and the bearings every 2,000 operating hours or six months, whichever comes first. The inspection of the mechanical seal and the bearings should be performed every 2,000 operating hours or six months, whichever comes first. The inspection of the mechanical seal and the bearings should be performed every 2,000 operating hours or six months, whichever comes first."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 7 Maintenance \u203A 7.2 Service intervals\n## 7.2 Service intervals\nInspect the mechanical seal and the bearings every 2,000 operating hours or six months, whichever comes first.\nReplace mechanical seal PN-4471-B every 8,000 operating hours.\n| Task | Interval |\n|---|---|\n| Inspect the mechanical seal and the bearings | 2,000 h or 6 months |\n| Regrease the bearings (lithium-complex grease, 15 g per bearing) | 4,000 h |\n| Check the coupling alignment | 12 months |\n| Replace mechanical seal PN-4471-B | 8,000 h |\n| Replace the bearings | 32,000 h |\nRecord every inspection in the maintenance log with the operating hours from the hour meter.\n\nSOP-FS-014: Mechanical seal replacement on CP-200 pumps\n# SOP-FS-014: Mechanical seal replacement on CP-200 pumps\n1. Apply lockout/tagout to the motor and isolate the seal-water and process lines, as safety bulletin SB-0932 requires.\nVerify zero energy.\n3. Remove the seal housing and the old seal.\nInspect the shaft sleeve for scoring.\n4. Fit mechanical seal PN-4471-C.\n7. Record the seal\u0027s part number and the operating hours in the work order.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Removing the old seal\n## Removing the old seal\n- Remove the seal housing and the old seal\n- Inspect the shaft sleeve for scoring\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 8 Spare parts \u203A 8.1 Mechanical seal and recommended spares\n## 8.1 Mechanical seal and recommended spares\nThe CP-200 uses cartridge mechanical seal PN-4471-B, supplied by Fabrikam Seals.\nKeep the spares in Table 8-1 at every site that runs CP-200 pumps.\n| Mechanical seal | PN-4471-B | 1 |\n| Ball bearing, pump end | PN-3310-A | 1 |\n| Ball bearing, drive end | PN-3311-A | 1 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 5"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1721",
+          "eval-output-tokens": "183",
+          "eval-total-tokens": "1904",
+          "eval-duration-ms": "23656.58"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Inspect the mechanical seal and the bearings | 2,000 h or 6 months |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1465",
+          "eval-output-tokens": "144",
+          "eval-total-tokens": "1609",
+          "eval-duration-ms": "36752.34"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 23.6562899,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1721,
+          "outputTokenCount": 183,
+          "totalTokenCount": 1904
+        },
+        "cacheKey": "B4B84520598A097D9C2BF639D3DF2355A437BA61ECD5ED156DB9F9A7307C8C0A08ED73151C11CF7DB44115EC88FAA9D6",
+        "cacheHit": false
+      },
+      {
+        "latency": 36.7521679,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1465,
+          "outputTokenCount": 144,
+          "totalTokenCount": 1609
+        },
+        "cacheKey": "D2AA9C777B7663B4203E88DB2E9A1539665D83936BB9A86EB1B4ACFA455C5E7EED196D30EB7CF17B8C0CCAA32CC26318",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 10: embeddings on CPU with ONNX Runtime, dense retrieval on golden set v2, throughput, compressed
+    vectors, approximate indexes and filtered search in pgvector and Qdrant (Testcontainers, so Docker must run),
+    Microsoft.Extensions.VectorData over both stores, and re-embedding behind an alias.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch10.Embeddings.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
+    <PackageReference Include="Npgsql" />
+    <PackageReference Include="Pgvector" />
+    <PackageReference Include="Qdrant.Client" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+    <PackageReference Include="Testcontainers.Qdrant" />
+    <PackageReference Include="CommunityToolkit.VectorData.PgVector" />
+    <PackageReference Include="CommunityToolkit.VectorData.Qdrant" />
+  </ItemGroup>
+
+</Project>

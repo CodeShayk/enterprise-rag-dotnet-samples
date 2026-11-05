@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 19: the graph library on its own and on the generated corpus. Identifier patterns and the gazetteer,
+    table and subject rules on real documents, the schema-bound model's reply parsing with a scripted model,
+    provenance and cascading deletes, permission views, entity resolution and its refusals, PageRank, paths,
+    Louvain, and the recursive CTE on DuckDB. Deterministic and offline: no model is called.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch19.GraphRAG.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="DuckDB.NET.Data.Full" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Graph\Contoso.Knowledge.Graph.csproj" />
+  </ItemGroup>
+
+</Project>

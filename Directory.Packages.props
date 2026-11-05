@@ -1,0 +1,145 @@
+<Project>
+
+  <!--
+    Central package versions: the source of truth for the versions the book targets.
+    Book-Bible.md section 8 mirrors it. Verified on NuGet on 2026-10-30.
+  -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <!-- Microsoft.Extensions.AI and model providers -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.AI" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.AI.OpenAI" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Evaluation" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Evaluation.Quality" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Evaluation.Reporting" Version="10.11.0" />
+    <PackageVersion Include="OpenAI" Version="2.14.0" />
+    <PackageVersion Include="OllamaSharp" Version="5.5.0" />
+    <PackageVersion Include="Azure.Identity" Version="1.21.0" />
+  </ItemGroup>
+
+  <!-- Microsoft Agent Framework (Chapter 16 on) -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Agents.AI.Workflows" Version="1.27.0" />
+    <PackageVersion Include="Microsoft.Agents.AI" Version="1.27.0" />
+  </ItemGroup>
+
+  <!-- Tools, structured data and MCP (Chapter 17). Verified on NuGet on 2026-11-02. DuckDB.NET.Data.Full bundles the
+       native DuckDB library for each platform. -->
+  <ItemGroup>
+    <PackageVersion Include="DuckDB.NET.Data.Full" Version="1.5.6.1" />
+    <PackageVersion Include="ModelContextProtocol" Version="2.3.0" />
+    <PackageVersion Include="ModelContextProtocol.AspNetCore" Version="2.3.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Identity.Web" Version="4.16.1" />
+    <PackageVersion Include="HtmlSanitizer" Version="10.0.1120" />
+  </ItemGroup>
+
+  <!-- Tokens and vector math (Chapter 2 on) -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.ML.Tokenizers" Version="2.0.1" />
+    <PackageVersion Include="Microsoft.ML.Tokenizers.Data.O200kBase" Version="2.0.1" />
+    <PackageVersion Include="Microsoft.ML.Tokenizers.Data.Cl100kBase" Version="2.0.1" />
+    <PackageVersion Include="System.Numerics.Tensors" Version="10.0.14" />
+  </ItemGroup>
+
+  <!-- Vector store abstraction and connectors (Chapter 3 on). The connectors moved from
+       Microsoft.SemanticKernel.Connectors.* to CommunityToolkit.VectorData.* in 2026. -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.VectorData.Abstractions" Version="10.11.0" />
+    <PackageVersion Include="CommunityToolkit.VectorData.InMemory" Version="1.0.1" />
+    <PackageVersion Include="CommunityToolkit.VectorData.PgVector" Version="1.0.2" />
+    <PackageVersion Include="CommunityToolkit.VectorData.Qdrant" Version="1.0.1" />
+    <PackageVersion Include="Qdrant.Client" Version="1.20.0" />
+    <!-- Chapter 11: keyword search. Lucene.NET 4.8 is still a beta on NuGet; beta00018 is from June 2026. -->
+    <PackageVersion Include="Lucene.Net" Version="4.8.0-beta00018" />
+    <PackageVersion Include="Lucene.Net.Analysis.Common" Version="4.8.0-beta00018" />
+    <PackageVersion Include="Lucene.Net.Queries" Version="4.8.0-beta00018" />
+    <PackageVersion Include="Pgvector" Version="0.3.2" />
+  </ItemGroup>
+
+  <!-- Hosting, caching and Aspire (Chapter 3 on) -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.14" />
+    <PackageVersion Include="System.Threading.RateLimiting" Version="10.0.14" />
+    <PackageVersion Include="Aspire.Hosting.AppHost" Version="13.6.4" />
+    <PackageVersion Include="Aspire.Hosting.Redis" Version="13.6.4" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.11.0" />
+    <PackageVersion Include="OpenTelemetry" Version="1.20.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.InMemory" Version="1.20.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.20.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.20.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.20.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.20.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.20.1" />
+  </ItemGroup>
+
+  <!-- Configuration for console tools -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.CommandLine" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.14" />
+  </ItemGroup>
+
+  <!-- Documents and parsing (Chapters 6 to 8). Verified on NuGet on 2026-10-31. PdfPig's package ID is
+       PdfPig; its namespaces start with UglyToad.PdfPig. -->
+  <ItemGroup>
+    <PackageVersion Include="PdfPig" Version="0.1.16" />
+    <PackageVersion Include="AngleSharp" Version="1.9.0" />
+    <PackageVersion Include="SmartReader" Version="0.11.1" />
+    <PackageVersion Include="Markdig" Version="1.5.1" />
+    <PackageVersion Include="DocumentFormat.OpenXml" Version="3.5.1" />
+    <PackageVersion Include="ClosedXML" Version="0.105.1" />
+    <PackageVersion Include="ExcelDataReader" Version="3.9.0" />
+    <PackageVersion Include="MimeKit" Version="4.18.2" />
+    <PackageVersion Include="MsgReader" Version="6.2.0" />
+    <PackageVersion Include="SkiaSharp" Version="4.154.0" />
+  </ItemGroup>
+
+  <!-- Scans and OCR on the CPU (Chapter 8). Verified on NuGet on 2026-10-31. OpenCvSharp4.runtime.win and
+       TesseractOCR ship Windows native libraries; Linux needs OpenCvSharp4.official.runtime.linux-x64 and a
+       system Tesseract. RapidOcrNet bundles the PP-OCRv5 Latin models. -->
+  <ItemGroup>
+    <PackageVersion Include="PDFtoImage" Version="5.4.0" />
+    <PackageVersion Include="OpenCvSharp4" Version="4.13.0.20260627" />
+    <PackageVersion Include="OpenCvSharp4.runtime.win" Version="4.13.0.20260627" />
+    <PackageVersion Include="TesseractOCR" Version="5.5.2" />
+    <PackageVersion Include="RapidOcrNet" Version="4.2.0" />
+    <PackageVersion Include="Microsoft.ML.OnnxRuntime" Version="1.31.1" />
+  </ItemGroup>
+
+  <!-- Ingestion pipeline (Chapter 6). Microsoft.Extensions.DataIngestion is a preview. -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.DataIngestion" Version="10.11.0-preview.1.26513.7" />
+    <PackageVersion Include="Microsoft.Extensions.DataIngestion.Abstractions" Version="10.11.0-preview.1.26513.7" />
+    <PackageVersion Include="Microsoft.Extensions.Resilience" Version="10.11.0" />
+    <PackageVersion Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+    <PackageVersion Include="Npgsql" Version="10.0.3" />
+    <PackageVersion Include="Testcontainers" Version="4.16.0" />
+    <PackageVersion Include="Testcontainers.PostgreSql" Version="4.16.0" />
+    <PackageVersion Include="Testcontainers.Qdrant" Version="4.16.0" />
+    <PackageVersion Include="Testcontainers.Redis" Version="4.16.0" />
+  </ItemGroup>
+
+  <!-- Testing and benchmarking -->
+  <ItemGroup>
+    <PackageVersion Include="xunit.v3" Version="4.0.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="10.0.14" />
+    <PackageVersion Include="BenchmarkDotNet" Version="0.15.8" />
+  </ItemGroup>
+
+</Project>

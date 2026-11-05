@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Contoso Industrial's facts, people and documents (Book Bible section 7). It starts with a
+    handful of seed documents as text; later chapters add generators for the full corpus
+    (PDF, DOCX, HTML, XLSX, CSV, EML and simulated scans). No AI dependencies.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Corpus</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+    Chapter 3: the Markdown edition of the corpus and the 25-question smoke set. Both are copied
+    to corpus/ next to every app that references this library.
+  -->
+  <ItemGroup>
+    <None Include="Markdown\*.md" Link="corpus\markdown\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="smoke-set.json" Link="corpus\smoke-set.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Chapter 5: the golden set, with span-level labels. -->
+    <None Include="golden-set.v1.jsonl" Link="corpus\golden-set.v1.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Chapter 9: golden set v2, over the full generated corpus. -->
+    <None Include="golden-set.v2.jsonl" Link="corpus\golden-set.v2.jsonl" CopyToOutputDirectory="PreserveNewest" Condition="Exists('golden-set.v2.jsonl')" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-H036",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:43.681474Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How long is a hot work permit valid?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "A hot work permit is valid for one shift."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Safety bulletin SB-0947: Hot work permits\n# Safety bulletin SB-0947: Hot work permits\nWelding, grinding and cutting outside the workshops need a hot work permit from the shift supervisor.\nRemove or cover combustible material within 10 meters, keep a fire extinguisher at the work site and post a fire watch for 60 minutes after the work ends.\nHot work on a line that has carried oil or solvent also needs a gas test before the permit is signed.\nThe permit is valid for one shift.\nIf the work isn\u0027t finished by the end of the shift, the next shift supervisor issues a new permit after checking the site again.\n\nSafety bulletin SB-0901: Confined space entry\n# Safety bulletin SB-0901: Confined space entry\nEnter one only with a confined space permit, a gas test that shows at least 19.5 percent oxygen and no flammable or toxic gas, and an attendant who stays outside.\n\nSafety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nVerify zero energy before work starts.\nSupervisors brief their teams on it before the next seal job and record the briefing.\nAt the Riverside plant, report any seal-water line that can\u0027t be isolated or drained to the Riverside maintenance planner on extension 4410 before work starts.\n\nSafety bulletin SB-0932: Seal housing work (Northgate plant) \u203A Safety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nVerify zero energy before work starts.\nSupervisors brief their teams on it before the next seal job and record the briefing.\nAt the Northgate plant, report any seal-water line that can\u0027t be isolated or drained to the Northgate maintenance planner on extension 5417 before work starts."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 4"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1645",
+          "eval-output-tokens": "206",
+          "eval-total-tokens": "1851",
+          "eval-duration-ms": "116.91"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that a hot work permit is valid for one shift, which is partially correct as it states the permit is valid for one shift. However, it misses the crucial information that if the work isn\u0027t finished by the end of the shift, the next shift supervisor issues a new permit after checking the site again. This indicates that the Response is missing some relevant information, especially the condition for issuing a new permit.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "The permit is valid for one shift. If the work isn\u0027t finished by the end of the shift, the next shift supervisor issues a new permit after checking the site again."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1413",
+          "eval-output-tokens": "111",
+          "eval-total-tokens": "1524",
+          "eval-duration-ms": "23.30"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.1167475,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1645,
+          "outputTokenCount": 206,
+          "totalTokenCount": 1851
+        },
+        "cacheKey": "A9698BF41D974181F9E021F04213B47A2BBF19E5C212FC4408BBDB588FBDF66363E15D6B5D5E1DC34CE31C58DAB9AEF1",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0231896,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1413,
+          "outputTokenCount": 111,
+          "totalTokenCount": 1524
+        },
+        "cacheKey": "C8F2189E08EB3270B4F80BDF03FE422DACE1F7EF5B195315653CC73EAFAD2C56EEA7EE34C3037AA73480B81C6C029F77",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

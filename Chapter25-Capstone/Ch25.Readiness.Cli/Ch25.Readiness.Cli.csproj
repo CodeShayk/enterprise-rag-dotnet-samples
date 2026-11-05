@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 25: the readiness review and the ablation. `review` runs the reference implementation (Ch25.Knowledge.Api)
+    in process and applies the quality, security, governance and operability checklists to it, then writes the
+    scorecard as Markdown and JSON under runs/ch25/readiness. `ablation` takes one technique at a time out of the
+    shipped retrieval and measures what each one contributed on golden set v2 and what it cost.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch25.Readiness.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch25.Knowledge.Api\Ch25.Knowledge.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="OpenTelemetry.Exporter.InMemory" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-F005",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:09:29.1154653Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Which valve supplies seal water to pump P-202?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The seal-water valve that supplies seal water to pump P-202 is valve V-115. This valve is not the one to close for pump isolation. The manual for pump P-202 is the CP-200 Centrifugal Pump Manual (2009)."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The response mentions the seal-water valve that supplies seal water to pump P-202 as valve V-115, which is not the one to close for pump isolation. However, it does not mention the manual for pump P-202, which is the CP-200 Centrifugal Pump Manual (2009). This indicates that the response is missing some relevant information, especially claims and statements established in the ground truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Seal-water valve | V-115 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1429",
+          "eval-output-tokens": "110",
+          "eval-total-tokens": "1539",
+          "eval-duration-ms": "11652.52"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Asset record: pump P-202\n# Asset record: pump P-202\n| Field | Value |\n|---|---|\n| Tag | P-202 |\n| Model | CP-200 centrifugal pump |\n| Duty | Cooling-water transfer, standby for P-201 |\n| Seal-water valve | V-115 |\n| Mechanical seal | PN-4471-B, fitted August 2019; replace with PN-4471-C at the next seal change (ECN-2291) |\nP-202 is the standby pump for P-201 and runs about 1,200 hours a year, mostly while P-201 is maintained.\nIts manual is the CP-200 Centrifugal Pump Manual (2009).\n\nSOP-FS-007: Pump isolation and lockout \u203A Seal-water valves at Riverside\n## Seal-water valves at Riverside\nAt the Riverside plant, the seal-water valve for each pump carries the pump\u0027s tag with the prefix V: valve V-114 feeds pump P-201.\nDon\u0027t close V-114 itself for isolation; close the isolation valve upstream of the strainer, so that V-114\u0027s setting is kept.\n\nAsset record: pump P-301\n# Asset record: pump P-301\n|---|---|\n| Tag | P-301 |\n| Model | CP-200 centrifugal pump |\n| Duty | Process-water supply, 120 m\u00B3/h at 40 m head |\n| Seal-water valve | V-311 |\n| Mechanical seal | PN-4471-C since work order WO-88454 (December 2026) |\nP-301 runs about 6,000 hours a year.\nIts seal water comes from the plant\u0027s softened-water ring main, so its strainer rarely blocks.\n\nAsset record: pump P-201\n# Asset record: pump P-201\n|---|---|\n| Tag | P-201 |\n| Model | CP-200 centrifugal pump |\n| Duty | Cooling-water transfer, 180 m\u00B3/h at 32 m head |\n| Seal-water valve | V-114 |\n| Mechanical seal | PN-4471-C since work order WO-88412 (November 2026) |\nP-201 runs continuously, about 8,400 hours a year.\nIts manual is the CP-200 Centrifugal Pump Manual (2009)."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1704",
+          "eval-output-tokens": "255",
+          "eval-total-tokens": "1959",
+          "eval-duration-ms": "38894.32"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 11.6524139,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1429,
+          "outputTokenCount": 110,
+          "totalTokenCount": 1539
+        },
+        "cacheKey": "BD9D0FBBFE6FA4302B2DDE8C0DA45CCB776F0DF6E1A7DAF8B0BB47EEDDC5A6C60145566551F23B9F7BB151B66D60413B",
+        "cacheHit": false
+      },
+      {
+        "latency": 38.8745917,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1704,
+          "outputTokenCount": 255,
+          "totalTokenCount": 1959
+        },
+        "cacheKey": "BC9B7394631078FE4B9DE3F9DB04466DAC03A31ECB6CC3C6A0A0CB23DD07897527AF9E35F9F778AB68EA8609AB4E501A",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

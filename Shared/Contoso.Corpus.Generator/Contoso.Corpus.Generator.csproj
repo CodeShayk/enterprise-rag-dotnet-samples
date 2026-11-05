@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Part III: writes Contoso's corpus in its real formats into sample-code/corpus (git-ignored).
+    Every file is rendered from a canonical document (the "truth"), which is saved next to it so that
+    Chapter 7 can score parsers against what was actually written. Seed sentences from
+    Contoso.Corpus/Markdown appear verbatim inside the longer documents.
+    Run from the sample-code folder:  dotnet run - -project Shared/Contoso.Corpus.Generator
+    (written with a space after the first hyphen because XML comments can't contain two hyphens).
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Contoso.Corpus.Generator</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Corpus\Contoso.Corpus.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PdfPig" />
+    <PackageReference Include="DocumentFormat.OpenXml" />
+    <PackageReference Include="ClosedXML" />
+    <PackageReference Include="MimeKit" />
+    <PackageReference Include="SkiaSharp" />
+  </ItemGroup>
+
+</Project>

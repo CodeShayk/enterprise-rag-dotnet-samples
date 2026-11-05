@@ -1,0 +1,22 @@
+  Determining projects to restore...
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Corpus\Contoso.Corpus.csproj (in 123 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj (in 123 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj (in 285 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.AI\Contoso.AI.csproj (in 292 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj (in 295 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj (in 294 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj (in 305 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj (in 305 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Api\Ch14.Knowledge.Api.csproj (in 1.78 sec).
+  Contoso.Knowledge.Documents -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Documents\bin\Release\net10.0\Contoso.Knowledge.Documents.dll
+  Contoso.Knowledge.Embeddings -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Embeddings\bin\Release\net10.0\Contoso.Knowledge.Embeddings.dll
+  Contoso.AI -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.AI\bin\Release\net10.0\Contoso.AI.dll
+  Contoso.Corpus -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Corpus\bin\Release\net10.0\Contoso.Corpus.dll
+  Contoso.Knowledge.Parsing -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Parsing\bin\Release\net10.0\Contoso.Knowledge.Parsing.dll
+  Contoso.Knowledge.Chunking -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Chunking\bin\Release\net10.0\Contoso.Knowledge.Chunking.dll
+  Contoso.Knowledge.Retrieval -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Retrieval\bin\Release\net10.0\Contoso.Knowledge.Retrieval.dll
+  Contoso.Knowledge.Generation -> C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Generation\bin\Release\net10.0\Contoso.Knowledge.Generation.dll
+  Ch14.Knowledge.Api -> C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Api\bin\Release\net10.0\linux-x64\Ch14.Knowledge.Api.dll
+  Ch14.Knowledge.Api -> C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Api\bin\Release\net10.0\linux-x64\publish\
+  Building image 'contoso/knowledge-api' with tags 'ch24-linux-x64' on top of base image 'mcr.microsoft.com/dotnet/aspnet:10.0'.
+  Pushed image 'contoso/knowledge-api:ch24-linux-x64' to local registry via 'docker'.

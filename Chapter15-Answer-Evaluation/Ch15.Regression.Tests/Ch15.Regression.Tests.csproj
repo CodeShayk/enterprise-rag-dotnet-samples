@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 15: the regression suite. Groundedness of the generator's dev answers, by question type, against the
+    checked-in baseline (baseline/groundedness.dev.json, which the CLI's regress command writes when asked to).
+    Point CONTOSO_ANSWERS at a JSONL file of answers in Chapter 14's format to test a candidate; by default it tests
+    Chapter 14's shipped answers in runs/ch14. Skipped until `python eng/get-models.py` has fetched the NLI model.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch15.Regression.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch15.Evaluation.Cli\Ch15.Evaluation.Cli.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="baseline\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

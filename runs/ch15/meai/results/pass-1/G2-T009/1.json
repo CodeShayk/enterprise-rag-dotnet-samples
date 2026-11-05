@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T009",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:35:34.8663825Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What is the flow range of a CP-200 pump?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The flow range of a CP-200 pump is 40 to 240 m\u00B3/h."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation:",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 2 Description\n# 2 Description\nThe CP-200 is a single-stage, end-suction centrifugal pump with a closed impeller, designed for clean or slightly contaminated water at up to 90 \u00B0C.\nThe pump and its motor sit on a common baseplate and are joined by a flexible spacer coupling, so the rotating assembly can be removed without disturbing the pipework.\nA controller on the pump skid monitors the motor, the bearing temperatures and the seal-water pressure and trips the pump when a limit is exceeded.\n# 3 Technical data\nTable 3-1 Technical data\n| Item | Value |\n|---|---|\n| Flow range | 40 to 240 m\u00B3/h |\n| Head range | 15 to 55 m |\n| Maximum casing pressure | 16 bar |\n| Maximum liquid temperature | 90 \u00B0C |\n| Speed | 1,480 rpm at 50 Hz |\n| Motor power | 15 to 45 kW |\n| Seal-water pressure | 2.0 to 3.0 bar |\n| Weight of the pump without motor | 310 kg |\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-204: flow low\n## Error E-204: flow low\nError E-204 means the flow fell below 40 m\u00B3/h, the pump\u0027s minimum continuous flow.\nThe controller warns at once and trips the pump after 2 minutes of low flow.\n1. The discharge valve is throttled too far.\n2. The process no longer needs the pump.\nOpen the discharge valve or stop the pump, then reset E-204.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 5 Commissioning \u203A 5.4 Start-up\n## 5.4 Start-up\nBefore the first start, and after any work on the seal or the impeller, prime the pump and check the seal-water supply.\n3. Open the seal-water supply and confirm a pressure of 2.0 to 3.0 bar at the seal flush connection.\nThe seal-water pressure must exceed the suction pressure by at least 1 bar.\n4. Open the discharge valve about one quarter.\n6. Start the pump, then open the discharge valve slowly to the duty point within two minutes."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 5"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1669",
+          "eval-output-tokens": "214",
+          "eval-total-tokens": "1883",
+          "eval-duration-ms": "24818.34"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response provides a specific range for the flow of a CP-200 pump, which is 40 to 240 m\u00B3/h. This information is directly mentioned in the Ground Truth, indicating that the Response accurately includes all the necessary and relevant information. However, the Response does not provide any additional context or details about the pump\u0027s functionality, limitations, or any other relevant aspects. Therefore, it can be considered as a basic, yet accurate, representation of the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Flow range | 40 to 240 m\u00B3/h |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1400",
+          "eval-output-tokens": "122",
+          "eval-total-tokens": "1522",
+          "eval-duration-ms": "35586.91"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 24.8179714,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1669,
+          "outputTokenCount": 214,
+          "totalTokenCount": 1883
+        },
+        "cacheKey": "D91140DA97469DC47BE1C6589C99894A19DB37365F2E428EB9E455CB696ACA4BD44D8564811CF9A78CD92F6E2EA369B9",
+        "cacheHit": false
+      },
+      {
+        "latency": 35.5864918,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1400,
+          "outputTokenCount": 122,
+          "totalTokenCount": 1522
+        },
+        "cacheKey": "63BFDD572C786074F70ED4EF5F2135D6E8BDF618EB2EAC6518231A20D717550CAFC192C7040B9083C52481A72F63B8B5",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

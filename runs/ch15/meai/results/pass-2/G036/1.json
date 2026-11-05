@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G036",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:55.61177Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How do I stop a VD-75 drive from tripping with F012 during start-up?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "To stop a VD-75 drive from tripping with F012 during start-up, raise parameter 2-10 (ramp-up time) from 2 to 5 seconds. Reset F012 with the STOP/RESET key once the cause is removed."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "VD-75 Variable Frequency Drive: Installation and Fault Guide \u203A 4 Faults\n| F001 | DC bus undervoltage | Supply voltage dip or a missing phase | Check the supply; the drive restarts when the voltage returns |\n| F002 | DC bus overvoltage | Ramp-down time too short for the load\u0027s inertia | Raise parameter 2-11 or fit a brake resistor |\n| F003 | Heatsink overtemperature | Blocked air flow or a failed fan | Clean the air path; check the fan (F016) |\n| F009 | Brake resistor overload | Too many fast stops | Lengthen the ramp-down time |\n| F010 | Analog input lost | Speed reference below 2 mA on a 4 to 20 mA input | Check the reference cable and its source |\n| F011 | Output short circuit | Short circuit in the motor cable or motor | Disconnect and test the motor cable |\n| F013 | Motor stall | Motor below 5 percent of set speed at full current | Free the jammed load |\n| F015 | Parameter memory error | Corrupt parameters after a power cut during a save | Restore the parameter backup |\n| F016 | Cooling fan failure | Fan blocked or worn out | Replace fan PN-7716-A |\n| F017 | External fault | The external fault input opened | Check the device wired to the input |\n| F018 | Safe torque off active | The safety circuit removed the enable signal | Close the safety circuit, then reset |\n## Fault F012: output overcurrent\nFault F012 means the drive\u0027s output current exceeded 200 percent of its rating.\nThe drive stops the motor at once to protect its output stage.\nA ramp-up time that is too short also causes F012: raise parameter 2-10 (ramp-up time) from 2 to 5 seconds.\nReset F012 with the STOP/RESET key once the cause is removed.\nFault F002 means the voltage of the drive\u0027s internal DC bus exceeded 800 V.\nIt happens when the motor feeds energy back into the drive faster than the drive can absorb it, usually during a fast stop of a heavy load.\nFault F010 means the speed reference on a 4 to 20 mA input fell below 2 mA, which the drive reads as a broken wire.\nThe drive stops the motor rather than run at an unknown speed."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 5"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1718",
+          "eval-output-tokens": "230",
+          "eval-total-tokens": "1948",
+          "eval-duration-ms": "15.38"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "A short explanation:",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "raise parameter 2-10 (ramp-up time) from 2 to 5 seconds."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1441",
+          "eval-output-tokens": "200",
+          "eval-total-tokens": "1641",
+          "eval-duration-ms": "16.03"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0152144,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1718,
+          "outputTokenCount": 230,
+          "totalTokenCount": 1948
+        },
+        "cacheKey": "87F2A8129893BD64247C8D6B81F2C58A97F8D65C676F3F2C32C2B94C52ED82B5CFDCDBE5A36F59C6BD70B7ADBEEB08F3",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0158945,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1441,
+          "outputTokenCount": 200,
+          "totalTokenCount": 1641
+        },
+        "cacheKey": "4E951075FE5FE458572BEFC70DCF31B0CFE2640654C06E250E37553002A68BFE553AD558F5D68C703DBC2F6F11436BD8",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

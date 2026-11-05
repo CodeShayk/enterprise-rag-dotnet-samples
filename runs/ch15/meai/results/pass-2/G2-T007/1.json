@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G2-T007",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:32.8933683Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What does error E-303 mean on a CP-200, and does it trip the pump?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Error E-303 means one of the bearing temperature sensors TE-21 and TE-22 reports an open circuit. Error E-303 does not trip the pump."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-303: bearing temperature sensor fault\n## Error E-303: bearing temperature sensor fault\nError E-303 means one of the bearing temperature sensors TE-21 and TE-22 reports an open circuit.\nReseat the connector; replace the sensor if E-303 returns.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-231: liquid temperature high\n## Error E-231: liquid temperature high\nError E-231 means the liquid temperature in the casing exceeded 90 \u00B0C.\nThe controller trips the pump after 10 seconds above the limit.\n1. The pump ran against a closed discharge valve.\nLet the casing cool and find out why the liquid overheated before resetting E-231.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes\n# 2 Controller error codes\nTable 2-1 Error codes at a glance\n| Code | Meaning | Trips the pump |\n|---|---|---|\n| E-102 | Supply phase missing | Yes |\n| E-103 | Wrong phase sequence | No |\n| E-201 | Suction pressure low | Yes |\n| E-202 | Discharge pressure high | Yes |\n| E-203 | Dry running | Yes |\n| E-204 | Flow low | Yes |\n| E-211 | Seal leakage detected | No |\n| E-217 | Seal-water pressure low | Yes |\n| E-222 | Vibration high | Yes |\n| E-301 | Suction pressure sensor fault | No |\n| E-302 | Seal-water pressure switch fault | No |\n| E-303 | Bearing temperature sensor fault | No |\n| E-305 | Controller memory error | No |\n| E-310 | Communication lost | No |\n| E-320 | Emergency stop | Yes |\n| E-330 | Clock battery low | No |\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-204: flow low\n## Error E-204: flow low\nError E-204 means the flow fell below 40 m\u00B3/h, the pump\u0027s minimum continuous flow.\nThe controller warns at once and trips the pump after 2 minutes of low flow.\n2. The process no longer needs the pump.\nOpen the discharge valve or stop the pump, then reset E-204."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1702",
+          "eval-output-tokens": "211",
+          "eval-total-tokens": "1913",
+          "eval-duration-ms": "0.99"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions \u0022Error E-303 means one of the bearing temperature sensors TE-21 and TE-22 reports an open circuit.\u0022 This statement is partially present in the Ground Truth, which states \u0022E-303 | Bearing temperature sensor fault | No |\u0022. The Response does not mention the absence of a fault (i.e., \u0022No\u0022) in the Ground Truth, which is an important detail. Additionally, the Response does not provide any information about the implications of the error or the actions to be taken, which is also present in the Ground Truth. Therefore, the Response is missing some crucial information compared to the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| E-303 | Bearing temperature sensor fault | No |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1413",
+          "eval-output-tokens": "153",
+          "eval-total-tokens": "1566",
+          "eval-duration-ms": "0.64"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0.5,
+        "name": "NLI groundedness",
+        "reason": "1 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "average",
+          "failed": true
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0007496,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1702,
+          "outputTokenCount": 211,
+          "totalTokenCount": 1913
+        },
+        "cacheKey": "E021FFD60E15D1819146EF0906E7C6BBD611DE88A42BD8039ECEBD2663EB539B95A7F968F16D73FCB40D1E56BD42530A",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0005258,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1413,
+          "outputTokenCount": 153,
+          "totalTokenCount": 1566
+        },
+        "cacheKey": "5D017393ECD40316F2370E94FAE9B1334A6FFF778495A4B5B34EC7D50F1C9BBE9ED410276131B94BFC208C1C85769574",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

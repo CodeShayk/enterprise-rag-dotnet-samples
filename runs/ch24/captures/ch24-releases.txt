@@ -1,0 +1,16 @@
+initial deployment: live -> v1-shipped (3.3 s)
+release v2-child-200 against live v1-shipped; gate: lower bound above -0.03, no must-pass question lost
+  build   154 chunks, parent-child-200-600, breadcrumbs on, bge-small-en-v1.5-int8 (3.4 s)
+  gate    dev, 123 answerable questions: change +0.000 [-0.024, +0.024], worse G2-T004, better G2-T020: passed (47.7 s)
+  swap    live: v1-shipped -> v2-child-200 (2.5 ms)
+  check   test, 72 answerable questions through the live alias: change -0.014 [-0.042, +0.000], worse G2-T005, better none: lower bound -0.042 below the allowed drop (26.2 s)
+  rollback live: v2-child-200 -> v1-shipped (2.5 ms); v2-child-200 kept for diagnosis
+release v3-no-breadcrumbs against live v1-shipped; gate: lower bound above -0.03, no must-pass question lost
+  build   219 chunks, parent-child-100-600, breadcrumbs off, bge-small-en-v1.5-int8 (3.1 s)
+  gate    dev, 123 answerable questions: change -0.081 [-0.138, -0.024], worse G012 G028 G041 G2-T010 G2-T011 G2-T012 G2-T015 G2-T038 G2-T040 G2-H003 G2-H008 G2-H021, better G048 G2-T020: lower bound -0.138 below the allowed drop (23.0 s)
+  stopped: v3-no-breadcrumbs is not deployed; live stays v1-shipped
+release v4-shipped against live v1-shipped; gate: lower bound above -0.03, no must-pass question lost
+  build   219 chunks, parent-child-100-600, breadcrumbs on, bge-small-en-v1.5-int8 (3.5 s)
+  gate    dev, 123 answerable questions: change +0.000 [+0.000, +0.000], worse none, better none: passed (24.5 s)
+  swap    live: v1-shipped -> v4-shipped (4.3 ms)
+  check   test, 72 answerable questions through the live alias: change +0.000 [+0.000, +0.000], worse none, better none: passed (13.0 s)

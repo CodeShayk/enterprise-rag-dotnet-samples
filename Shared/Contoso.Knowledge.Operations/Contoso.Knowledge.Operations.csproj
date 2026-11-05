@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 24: releasing indexes and judging releases. Versioned indexes on disk, each with a manifest of what built
+    it, and an alias that names the live one and swaps atomically, with the previous version kept for rollback; a
+    release gate that compares a candidate with the live version question by question, so a regression can't hide in
+    an improved average.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Operations</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+  </ItemGroup>
+
+</Project>

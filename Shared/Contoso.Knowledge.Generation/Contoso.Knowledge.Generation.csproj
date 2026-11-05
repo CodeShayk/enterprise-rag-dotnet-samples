@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 14: from retrieved parents to a grounded, typed answer. Context assembly under a token budget,
+    extractive compression, the versioned grounding prompt, quote-backed citations and their validation, abstention,
+    conversation history and streaming. Later chapters grade (15, 16), route (17) and serve (25) these answers.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Generation</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 11: rank fusion arithmetic, Contoso's analyzer on identifiers and the glossary, permissions and metadata
+    filters inside Lucene.NET, and the hybrid retriever's time limits and degradation with fake sources.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch11.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+  </ItemGroup>
+
+</Project>

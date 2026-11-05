@@ -1,0 +1,143 @@
+{
+  "scenarioName": "G2-T059",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:17.9247421Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What was work order WO-88112 for, and when was it completed?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Work order WO-88112 was for a PM 2000h insp mech seal \u002B brgs, ok. Work order WO-88112 was completed on 2026-08-12."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "The response provides the correct asset tag and site for work order WO-88112, which is P-201 and Riverside, respectively. However, it does not provide the correct completion date, stating it was completed on 2026-08-12, whereas the actual completion date is 2026-08-15. Additionally, the response does not provide the correct technician, which is mokoro, but the response does mention the technician, mokoro, in the context of the work order. The response also provides the correct description of the work order, which is PM 2000h insp mech seal \u002B brgs, ok.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Work orders, July 2026 to January 2027 (export)\nwork_order: WO-88112; asset_tag: P-201; site: Riverside; type: PM; priority: P3; description: PM 2000h insp mech seal \u002B brgs, ok; status: closed; opened: 2026-08-01; due: 2026-08-15; completed: 2026-08-12; technician: mokoro; updated_at: 2026-08-12T16:00:00Z\nwork_order: WO-88171; asset_tag: CNV-12; site: Lakeside; type: PM; priority: P3; description: PM VD-75 fan \u002B filters, see notes; status: closed; opened: 2026-08-22; due: 2026-09-05; completed: 2026-09-28; technician: mokoro; updated_at: 2026-09-28T16:00:00Z\n\nWork orders, July 2026 to January 2027 (export)\nwork_order: WO-88403; asset_tag: HG-1102; site: Eastfield; type: PM; priority: P3; description: PM oil lvl \u002B leaks, clean fins, ok; status: closed; opened: 2026-11-13; due: 2026-11-27; completed: 2026-11-25; technician: mokoro; updated_at: 2026-11-25T16:00:00Z\nwork_order: WO-88462; asset_tag: V-114; site: Riverside; type: PM; priority: P3; description: PM chk SW valve \u002B Y-strainer 100um, see notes; status: closed; opened: 2026-12-04; due: 2026-12-18; completed: 2026-12-15; technician: aking; updated_at: 2026-12-15T16:00:00Z"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1661",
+          "eval-output-tokens": "158",
+          "eval-total-tokens": "1819",
+          "eval-duration-ms": "18.19"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "The Response seems to contain most of the necessary and relevant information with respect to the Ground Truth, but it misses some minor details. For example, the Response does not mention the specific date range for the work order completion (2026-08-01 to 2026-08-15) and the location (Riverside). However, it does contain the correct information about the work order WO-88112 being completed on 2026-08-12.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| WO-88112 | P-201 | Riverside | PM | P3 | PM 2000h insp mech seal \u002B brgs, ok | closed | 2026-08-01 | 2026-08-15 | 2026-08-12 | mokoro | 2026-08-12T16:00:00Z |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1487",
+          "eval-output-tokens": "122",
+          "eval-total-tokens": "1609",
+          "eval-duration-ms": "14.15"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0180299,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1661,
+          "outputTokenCount": 158,
+          "totalTokenCount": 1819
+        },
+        "cacheKey": "05BB31D247EC1F79285308301FED3C2A2036F0145DFA9C51AC02C9E629529BF0F71B496E9323897B15E48EF2AE86EDC7",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.013973,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1487,
+          "outputTokenCount": 122,
+          "totalTokenCount": 1609
+        },
+        "cacheKey": "5E6CF0C056BB3A1395F47298C3D06A457B75034A90683B232770F57B696BC84468062EED1088E3569B1571E6B738369C",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

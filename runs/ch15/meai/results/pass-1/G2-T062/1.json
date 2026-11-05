@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G2-T062",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:07:16.248335Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What was work order WO-88403 for, and when was it completed?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Work order WO-88403 was for PM oil lvl \u002B leaks, clean fins, ok. Work order WO-88403 was completed on 2026-11-25."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "The Response seems to contain most of the necessary and relevant information with respect to the Ground Truth, but it misses some minor details. For example, the Response does not mention the specific date range for the work order completion, which is mentioned in the Ground Truth. However, it does contain the essential information about the work order completion, which is a key aspect of the Ground Truth.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| WO-88403 | HG-1102 | Eastfield | PM | P3 | PM oil lvl \u002B leaks, clean fins, ok | closed | 2026-11-13 | 2026-11-27 | 2026-11-25 | mokoro | 2026-11-25T16:00:00Z |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1482",
+          "eval-output-tokens": "103",
+          "eval-total-tokens": "1585",
+          "eval-duration-ms": "11267.02"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Groundedness",
+        "reason": "The response provides the description of work order WO-88403, which is \u0022PM oil lvl \u002B leaks, clean fins, ok\u0022. However, it does not directly answer the question of what the work order was for, which is specified in the context as \u0022PM oil lvl \u002B leaks, clean fins, ok\u0022. The response also provides the completion date of the work order, which is not directly related to the question asked. Therefore, the response does not fully address the question and provides incorrect information by not specifying what the work order was for.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Groundedness is less than 4."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Work orders, July 2026 to January 2027 (export)\nwork_order: WO-88403; asset_tag: HG-1102; site: Eastfield; type: PM; priority: P3; description: PM oil lvl \u002B leaks, clean fins, ok; status: closed; opened: 2026-11-13; due: 2026-11-27; completed: 2026-11-25; technician: mokoro; updated_at: 2026-11-25T16:00:00Z\nwork_order: WO-88448; asset_tag: P-201; site: Riverside; type: PM; priority: P3; description: PM 2000h insp mech seal \u002B brgs, ok; status: closed; opened: 2026-11-29; due: 2026-12-13; completed: 2026-12-10; technician: aking; updated_at: 2026-12-10T16:00:00Z\nwork_order: WO-88462; asset_tag: V-114; site: Riverside; type: PM; priority: P3; description: PM chk SW valve \u002B Y-strainer 100um, see notes; status: closed; opened: 2026-12-04; due: 2026-12-18; completed: 2026-12-15; technician: aking; updated_at: 2026-12-15T16:00:00Z\n\nWork orders, July 2026 to January 2027 (export)\nwork_order: WO-88171; asset_tag: CNV-12; site: Lakeside; type: PM; priority: P3; description: PM VD-75 fan \u002B filters, see notes; status: closed; opened: 2026-08-22; due: 2026-09-05; completed: 2026-09-28; technician: mokoro; updated_at: 2026-09-28T16:00:00Z"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1656",
+          "eval-output-tokens": "137",
+          "eval-total-tokens": "1793",
+          "eval-duration-ms": "30131.84"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 11.2668667,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1482,
+          "outputTokenCount": 103,
+          "totalTokenCount": 1585
+        },
+        "cacheKey": "A827DA0C17380AA2B9E4674CC921245E3C4D707CCBFF4714961745637743D0F435D1D6F9432CE69B0A556398E6C55536",
+        "cacheHit": false
+      },
+      {
+        "latency": 30.1316079,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1656,
+          "outputTokenCount": 137,
+          "totalTokenCount": 1793
+        },
+        "cacheKey": "53DE5C425F1F73336CF0A310E5BF7E0AC854187DD2CCC1AD129217C673277097459D109B7CC86873AF1165F19C698992",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

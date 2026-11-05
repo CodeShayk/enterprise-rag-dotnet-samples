@@ -1,0 +1,6 @@
+SC-2024-118 shared with every employee by mistake; Tomás asks G017
+  index built from scratch (219 chunks embedded, 4823 ms): SC-2024-118 in Tomás's hits
+ACL change 1: SC-2024-118 -> procurement only
+  stale index: SC-2024-118 in Tomás's hits; verified against live ACLs: 2 blocked, 2 passed
+  permission-only update (0 chunks embedded, 210 ms): SC-2024-118 not in Tomás's hits
+leakage test after the update: 6 people x 129 dev questions, 3096 hits, 0 unreadable

@@ -1,0 +1,293 @@
+{
+  "description": "Models the chapters download with `python eng/get-models.py`. Everything under models/ except this file is git-ignored.",
+  "models": [
+    {
+      "name": "tesseract-eng-fast",
+      "chapter": 8,
+      "path": "tesseract/fast/eng.traineddata",
+      "url": "https://github.com/tesseract-ocr/tessdata_fast/raw/main/eng.traineddata",
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "license": "Apache-2.0",
+      "notes": "Tesseract 4/5 LSTM model for English, integer weights: the fast variant."
+    },
+    {
+      "name": "tesseract-eng-best",
+      "chapter": 8,
+      "path": "tesseract/best/eng.traineddata",
+      "url": "https://github.com/tesseract-ocr/tessdata_best/raw/main/eng.traineddata",
+      "sha256": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "license": "Apache-2.0",
+      "notes": "Tesseract 4/5 LSTM model for English, float weights: the most accurate variant."
+    },
+    {
+      "name": "bge-small-en-v1.5-vocab",
+      "chapter": 10,
+      "path": "bge-small-en-v1.5/vocab.txt",
+      "url": "https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "license": "MIT",
+      "notes": "WordPiece vocabulary (30,522 tokens, lowercase) for bge-small-en-v1.5."
+    },
+    {
+      "name": "bge-small-en-v1.5-tokenizer",
+      "chapter": 10,
+      "path": "bge-small-en-v1.5/tokenizer.json",
+      "url": "https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "license": "MIT",
+      "notes": "Hugging Face fast-tokenizer file; only the Python reference script in Chapter10-Embeddings/reference uses it."
+    },
+    {
+      "name": "bge-small-en-v1.5-fp32",
+      "chapter": 10,
+      "path": "bge-small-en-v1.5/model.onnx",
+      "url": "https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/onnx/model.onnx",
+      "sha256": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+      "license": "MIT",
+      "notes": "BAAI's ONNX export, 32-bit weights: 384 dimensions, [CLS] pooling, 512 tokens."
+    },
+    {
+      "name": "bge-small-en-v1.5-int8",
+      "chapter": 10,
+      "path": "bge-small-en-v1.5/model_int8.onnx",
+      "url": "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/ea104dacec62c0de699686887e3f920caeb4f3e3/onnx/model_int8.onnx",
+      "sha256": "bf64d05457cb391fa88d045faf5927a15ea36d96228ddf23ea970087afdc1197",
+      "license": "MIT (BAAI/bge-small-en-v1.5; INT8 conversion by Xenova)",
+      "notes": "The same model with INT8 weights, converted for Transformers.js; its model card shows mean pooling, but BGE pools [CLS]."
+    },
+    {
+      "name": "splade-pp-en-v1-vocab",
+      "chapter": 11,
+      "path": "splade-pp-en-v1/vocab.txt",
+      "url": "https://huggingface.co/prithivida/Splade_PP_en_v1/resolve/762be6a7206e2f299182705972a65e5c46e62be2/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "license": "Apache-2.0",
+      "notes": "bert-base-uncased WordPiece vocabulary (30,522 tokens), identical to bge-small-en-v1.5's."
+    },
+    {
+      "name": "splade-pp-en-v1",
+      "chapter": 11,
+      "path": "splade-pp-en-v1/model.onnx",
+      "url": "https://huggingface.co/prithivida/Splade_PP_en_v1/resolve/762be6a7206e2f299182705972a65e5c46e62be2/onnx/model.onnx",
+      "sha256": "0934583a27a031a66b2e847cbc260fbbef29689e969f500436460ef5146a43f2",
+      "license": "Apache-2.0",
+      "notes": "SPLADE++ (BERT base, 110M parameters, 32-bit weights, 532 MB): log(1 + ReLU(logits)) max-pooled over tokens into one weight per vocabulary term."
+    },
+    {
+      "name": "ms-marco-minilm-l6-v2-vocab",
+      "chapter": 12,
+      "path": "ms-marco-MiniLM-L6-v2/vocab.txt",
+      "url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "license": "Apache-2.0",
+      "notes": "bert-base-uncased WordPiece vocabulary, identical to bge-small-en-v1.5's; the L12 model uses the same."
+    },
+    {
+      "name": "ms-marco-minilm-l6-v2",
+      "chapter": 12,
+      "path": "ms-marco-MiniLM-L6-v2/model.onnx",
+      "url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/onnx/model.onnx",
+      "sha256": "5d3e70fd0c9ff14b9b5169a51e957b7a9c74897afd0a35ce4bd318150c1d4d4a",
+      "license": "Apache-2.0",
+      "notes": "Cross-encoder (MiniLM, 6 layers, 22.7M parameters, 32-bit weights) trained on MS MARCO: one relevance logit per question-passage pair."
+    },
+    {
+      "name": "ms-marco-minilm-l6-v2-int8",
+      "chapter": 12,
+      "path": "ms-marco-MiniLM-L6-v2/model_quint8_avx2.onnx",
+      "url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/onnx/model_quint8_avx2.onnx",
+      "sha256": "c80a8b34256ea453093d612e3ac48d3d965a0c0a48c7906709af8b8e28461bf9",
+      "license": "Apache-2.0",
+      "notes": "The same model quantized to 8-bit integers for CPUs with AVX2."
+    },
+    {
+      "name": "ms-marco-minilm-l12-v2",
+      "chapter": 12,
+      "path": "ms-marco-MiniLM-L12-v2/model.onnx",
+      "url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L12-v2/resolve/7b0235231ca2674cb8ca8f022859a6eba2b1c968/onnx/model.onnx",
+      "sha256": "2ac389ab6abe08dcbddf2c41a69b6a18853e0dca440adbc2abc1adfcee46483f",
+      "license": "Apache-2.0",
+      "notes": "The 12-layer sibling (33.4M parameters, 32-bit weights), for the size comparison."
+    },
+    {
+      "name": "nli-deberta-v3-xsmall",
+      "chapter": 15,
+      "path": "nli-deberta-v3-xsmall/model.onnx",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/onnx/model.onnx",
+      "sha256": "7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4",
+      "license": "Apache-2.0",
+      "notes": "NLI cross-encoder (DeBERTa-v3 xsmall, 22M backbone, 128K SentencePiece vocabulary) trained on SNLI and MultiNLI: logits for contradiction, entailment and neutral. Inputs input_ids and attention_mask."
+    },
+    {
+      "name": "nli-deberta-v3-xsmall-spm",
+      "chapter": 15,
+      "path": "nli-deberta-v3-xsmall/spm.model",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/spm.model",
+      "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "license": "Apache-2.0",
+      "notes": "The SentencePiece model the NLI cross-encoder tokenizes with."
+    },
+    {
+      "name": "nli-deberta-v3-xsmall-config",
+      "chapter": 15,
+      "path": "nli-deberta-v3-xsmall/config.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/config.json",
+      "sha256": "8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342",
+      "license": "Apache-2.0",
+      "notes": "The model's configuration, with its label order (id2label)."
+    },
+    {
+      "name": "nli-deberta-v3-xsmall-tokenizer",
+      "chapter": 15,
+      "path": "nli-deberta-v3-xsmall/tokenizer.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/tokenizer.json",
+      "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+      "license": "Apache-2.0",
+      "notes": "The Hugging Face tokenizer file, used only by Chapter15-Answer-Evaluation/reference/make_reference.py."
+    },
+    {
+      "name": "deberta-v3-xsmall-nli-binary",
+      "chapter": 15,
+      "path": "deberta-v3-xsmall-nli-binary/model.onnx",
+      "url": "https://huggingface.co/MoritzLaurer/DeBERTa-v3-xsmall-mnli-fever-anli-ling-binary/resolve/b80e2b3219194b8685948dedfb73d594ed088732/onnx/model.onnx",
+      "sha256": "7a0a3d4e02a3775a182177b42380b61da65bc632c76fb5795b25ba28c22e7066",
+      "license": "MIT",
+      "notes": "Binary NLI cross-encoder (DeBERTa-v3 xsmall) trained on 782,357 pairs from MultiNLI, Fever-NLI, LingNLI and ANLI: logits for entailment and not_entailment. Inputs input_ids and attention_mask."
+    },
+    {
+      "name": "deberta-v3-xsmall-nli-binary-spm",
+      "chapter": 15,
+      "path": "deberta-v3-xsmall-nli-binary/spm.model",
+      "url": "https://huggingface.co/MoritzLaurer/DeBERTa-v3-xsmall-mnli-fever-anli-ling-binary/resolve/b80e2b3219194b8685948dedfb73d594ed088732/spm.model",
+      "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "license": "MIT",
+      "notes": "Its SentencePiece model (the same file as the other DeBERTa-v3 model's)."
+    },
+    {
+      "name": "deberta-v3-xsmall-nli-binary-config",
+      "chapter": 15,
+      "path": "deberta-v3-xsmall-nli-binary/config.json",
+      "url": "https://huggingface.co/MoritzLaurer/DeBERTa-v3-xsmall-mnli-fever-anli-ling-binary/resolve/b80e2b3219194b8685948dedfb73d594ed088732/config.json",
+      "sha256": "568aff30490850aebc333551cd40ca9255d2ad755616dbe69f37031a5a4ddfd8",
+      "license": "MIT",
+      "notes": "The model's configuration, with its label order (id2label)."
+    },
+    {
+      "name": "deberta-v3-xsmall-nli-binary-tokenizer",
+      "chapter": 15,
+      "path": "deberta-v3-xsmall-nli-binary/tokenizer.json",
+      "url": "https://huggingface.co/MoritzLaurer/DeBERTa-v3-xsmall-mnli-fever-anli-ling-binary/resolve/b80e2b3219194b8685948dedfb73d594ed088732/tokenizer.json",
+      "sha256": "05402ffae6dd382a8491b1d29bfc139bec5d332662e86a026f433ce54c25c202",
+      "license": "MIT",
+      "notes": "The Hugging Face tokenizer file, used only by the reference script."
+    },
+    {
+      "name": "nli-deberta-v3-base",
+      "chapter": 15,
+      "path": "nli-deberta-v3-base/model.onnx",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/onnx/model.onnx",
+      "sha256": "369ebf04fce8206c83b8fd62e9dc860144f10351a7f885ed3076beb17b7c6dda",
+      "license": "Apache-2.0",
+      "notes": "NLI cross-encoder (DeBERTa-v3 base, 86M backbone, 128K SentencePiece vocabulary), trained on SNLI and MultiNLI; labels contradiction, entailment, neutral. Chapter 15 compares it with the xsmall models."
+    },
+    {
+      "name": "nli-deberta-v3-base-quint8",
+      "chapter": 15,
+      "path": "nli-deberta-v3-base/model_quint8_avx2.onnx",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/onnx/model_quint8_avx2.onnx",
+      "sha256": "36784d97274ef019db9f54fd16812f9a460e787703658b0f3b2200999692680b",
+      "license": "Apache-2.0",
+      "notes": "The same model with weights quantized to unsigned 8-bit integers for AVX2 CPUs."
+    },
+    {
+      "name": "nli-deberta-v3-base-spm",
+      "chapter": 15,
+      "path": "nli-deberta-v3-base/spm.model",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/spm.model",
+      "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "license": "Apache-2.0",
+      "notes": "Its SentencePiece model (the same file as the xsmall models')."
+    },
+    {
+      "name": "nli-deberta-v3-base-config",
+      "chapter": 15,
+      "path": "nli-deberta-v3-base/config.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/config.json",
+      "sha256": "897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47",
+      "license": "Apache-2.0",
+      "notes": "The model's configuration, with its label order (id2label)."
+    },
+    {
+      "name": "clip-vit-base-patch32-text-int8",
+      "chapter": 18,
+      "path": "clip-vit-base-patch32/text_model_quantized.onnx",
+      "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/6b7c523703ae26e39be4b03774966f8571c7f523/onnx/text_model_quantized.onnx",
+      "sha256": "73baab855d406190da9faa498cfedf65f15cf309f4cc7385b7b032e6d08e5c3a",
+      "license": "MIT (openai/clip-vit-base-patch32; ONNX conversion by Xenova)",
+      "notes": "CLIP's text encoder with 8-bit weights: input_ids (77 tokens, BPE), text_embeds [batch, 512]."
+    },
+    {
+      "name": "clip-vit-base-patch32-vision-int8",
+      "chapter": 18,
+      "path": "clip-vit-base-patch32/vision_model_quantized.onnx",
+      "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/6b7c523703ae26e39be4b03774966f8571c7f523/onnx/vision_model_quantized.onnx",
+      "sha256": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299",
+      "license": "MIT (openai/clip-vit-base-patch32; ONNX conversion by Xenova)",
+      "notes": "CLIP's image encoder (ViT-B/32) with 8-bit weights: pixel_values [batch, 3, 224, 224], image_embeds [batch, 512]."
+    },
+    {
+      "name": "clip-vit-base-patch32-vocab",
+      "chapter": 18,
+      "path": "clip-vit-base-patch32/vocab.json",
+      "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/6b7c523703ae26e39be4b03774966f8571c7f523/vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "license": "MIT (openai/clip-vit-base-patch32; ONNX conversion by Xenova)",
+      "notes": "CLIP's byte-level BPE vocabulary (49,408 tokens)."
+    },
+    {
+      "name": "clip-vit-base-patch32-merges",
+      "chapter": 18,
+      "path": "clip-vit-base-patch32/merges.txt",
+      "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/6b7c523703ae26e39be4b03774966f8571c7f523/merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "license": "MIT (openai/clip-vit-base-patch32; ONNX conversion by Xenova)",
+      "notes": "CLIP's BPE merges."
+    },
+    {
+      "name": "clip-vit-base-patch32-preprocessor",
+      "chapter": 18,
+      "path": "clip-vit-base-patch32/preprocessor_config.json",
+      "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/6b7c523703ae26e39be4b03774966f8571c7f523/preprocessor_config.json",
+      "sha256": "6f638fb9401a6d6296feff533ee7efe657b787c49f954f82f5906b36ef2a1b1f",
+      "license": "MIT (openai/clip-vit-base-patch32; ONNX conversion by Xenova)",
+      "notes": "Image preprocessing: shortest side 224 (bicubic), center crop 224, CLIP mean and standard deviation."
+    },
+    {
+      "name": "bert-base-ner-int8",
+      "chapter": 19,
+      "path": "bert-base-ner/model_quantized.onnx",
+      "url": "https://huggingface.co/Xenova/bert-base-NER/resolve/8e892123e8b7c2c0c2bd1dcb598b7d244c4e53aa/onnx/model_quantized.onnx",
+      "sha256": "caaee70a5518ec7f9e46e5308fcc9263a8c227703a9ce46cf61c69a552349648",
+      "license": "MIT (dslim/bert-base-NER; ONNX conversion by Xenova)",
+      "notes": "Cased BERT-base fine-tuned on CoNLL-2003, 8-bit weights: input_ids, attention_mask, token_type_ids; logits [batch, tokens, 9] over O and B-/I- PER, ORG, LOC, MISC."
+    },
+    {
+      "name": "bert-base-ner-vocab",
+      "chapter": 19,
+      "path": "bert-base-ner/vocab.txt",
+      "url": "https://huggingface.co/Xenova/bert-base-NER/resolve/8e892123e8b7c2c0c2bd1dcb598b7d244c4e53aa/vocab.txt",
+      "sha256": "eeaa9875b23b04b4c54ef759d03db9d1ba1554838f8fb26c5d96fa551df93d02",
+      "license": "MIT (dslim/bert-base-NER; ONNX conversion by Xenova)",
+      "notes": "Cased WordPiece vocabulary (28,996 tokens)."
+    },
+    {
+      "name": "bert-base-ner-config",
+      "chapter": 19,
+      "path": "bert-base-ner/config.json",
+      "url": "https://huggingface.co/Xenova/bert-base-NER/resolve/8e892123e8b7c2c0c2bd1dcb598b7d244c4e53aa/config.json",
+      "sha256": "a73a2eccc921bbdea95a94b49a157d3694b5c2abbae7a6f3000e14404a9c31a8",
+      "license": "MIT (dslim/bert-base-NER; ONNX conversion by Xenova)",
+      "notes": "id2label: the nine BIO labels."
+    }
+  ]
+}

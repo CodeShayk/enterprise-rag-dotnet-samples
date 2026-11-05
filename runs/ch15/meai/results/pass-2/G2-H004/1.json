@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-H004",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:49.4045982Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What clearance should there be between a CP-200 impeller and the casing wear ring?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The recommended clearance between a CP-200 impeller and the casing wear ring is 0.3 to 0.5 mm. The minimum clearance between a CP-200 impeller and the casing wear ring is 0.25 mm."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 6 Assembly and disassembly \u203A 6.2 Impeller clearance\n## 6.2 Impeller clearance\nSet the clearance between the impeller and the casing wear ring to 0.3 to 0.5 mm.\nReplace the wear ring when the clearance exceeds 1.0 mm.\n\nEngineering change notice ECN-2240: CP-200 casing wear ring material \u203A Engineering change notice ECN-2240\n|---|---|\n| Title | CP-200 casing wear ring material |\nEffective March 1, 2025, casing wear ring PN-2840-A (bronze) is superseded by PN-2840-B (carbon-filled PTFE composite) on all CP-200 pumps.\nThe composite ring tolerates brief dry running without seizing, and its smaller running clearance of 0.25 mm improves efficiency by about 2 percent.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 9 Troubleshooting\n| Delivery falls off over weeks | Worn wear ring or impeller | Check the impeller clearance (section 6.2) |\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Fluid Systems\nPart \u203A Part number: PN-2840-A; Part \u203A Description: Casing wear ring, bronze (superseded by PN-2840-B, ECN-2240); Part \u203A Fits: CP-200; Supply \u203A Supplier: Proseware Castings; Supply \u203A Lead time (weeks): 8; Supply \u203A Stock at Riverside: 3; Price (USD) \u203A List price: 210.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 210.00\nPart \u203A Part number: PN-2840-B; Part \u203A Description: Casing wear ring, carbon-filled PTFE; Part \u203A Fits: CP-200; Supply \u203A Supplier: Proseware Castings; Supply \u203A Lead time (weeks): 5; Supply \u203A Stock at Riverside: 9; Price (USD) \u203A List price: 265.00; Price (USD) \u203A Discount: 5%; Price (USD) \u203A Net price: 251.75"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1692",
+          "eval-output-tokens": "241",
+          "eval-total-tokens": "1933",
+          "eval-duration-ms": "18.68"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "A brief explanation:",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Set the clearance between the impeller and the casing wear ring to 0.3 to 0.5 mm. Replace the wear ring when the clearance exceeds 1.0 mm."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1455",
+          "eval-output-tokens": "268",
+          "eval-total-tokens": "1723",
+          "eval-duration-ms": "18.71"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0185511,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1692,
+          "outputTokenCount": 241,
+          "totalTokenCount": 1933
+        },
+        "cacheKey": "6F3A107FE7213557FFC9039003062D96F80D16E8C6CFFE4905DB9D247C26A69051144F23EB05ECD9F8B0B385F7949F0F",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0184996,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1455,
+          "outputTokenCount": 268,
+          "totalTokenCount": 1723
+        },
+        "cacheKey": "38DE15B951A04E3536C3163EE4228F5194D34C6B0789F48F51D05B9FF8A17A6CE57407DD4A6273E10FBEF7D17C8880F6",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

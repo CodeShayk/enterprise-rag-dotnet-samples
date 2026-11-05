@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 23: governance as code. A provenance record for every dev answer of the shipped pipeline (llama3.2,
+    replayed from Chapter 14's recordings) in a hash-chained log, with tamper checks and queries; personal data found
+    at ingestion; an erasure request carried through every store the assistant keeps (documents, keyword and vector
+    indexes, the graph, two cache nodes, the content store, the golden set, the provenance log) and proven, with a
+    tombstone, a legal hold and retention; and a model and prompt registry checked against every answer.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch23.Governance.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Graph\Contoso.Knowledge.Graph.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Observability\Contoso.Knowledge.Observability.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Governance\Contoso.Knowledge.Governance.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+    <PackageReference Include="OllamaSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

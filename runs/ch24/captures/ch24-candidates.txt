@@ -1,0 +1,7 @@
+Hybrid, re-ranked, top 4; sufficiency on the answerable dev (123) and test (72) questions; changes against the shipped index
+Index           chunks   dev  test  dev: worse/better  test: worse/better
+shipped            219  0.98  0.97                0/0                 0/0
+child-200          154  0.98  0.96                1/1                 1/0
+parent-400         225  0.97  0.97                1/0                 0/0
+no-breadcrumbs     219  0.89  0.86               12/2                 9/1
+bge-fp32           219  0.95  0.96                3/0                 1/0

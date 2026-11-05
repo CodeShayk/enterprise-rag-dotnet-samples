@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 17: the records views and the SQL guard (on the generated work orders and parts workbook), the typed
+    work-order tool, the tool policy, the agent loop with a scripted model (a refused tool, an approval, a budget),
+    tool review for remote tools and the MCP server's trust boundary through an in-memory test server. Deterministic
+    and offline: no model is called.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch17.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch17.Knowledge.Mcp\Ch17.Knowledge.Mcp.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Agents\Contoso.Knowledge.Agents.csproj" />
+  </ItemGroup>
+
+</Project>

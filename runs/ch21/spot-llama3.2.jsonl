@@ -1,0 +1,12 @@
+{"id":"G001","liveFirst":0.9382208000000001,"liveTotal":11.5522158,"recFirst":10.036654500000001,"recTotal":21.3978724,"evidence":0.8466866,"app":3.609375,"modelCpu":106.734375}
+{"id":"G002","liveFirst":5.4375846,"liveTotal":7.659336100000001,"recFirst":5.892561300000001,"recTotal":8.150638800000001,"evidence":0.5913361,"app":2.171875,"modelCpu":70.109375}
+{"id":"G003","liveFirst":9.1649923,"liveTotal":16.9804219,"recFirst":10.8741263,"recTotal":18.6663402,"evidence":0.7571631999999999,"app":2.78125,"modelCpu":161.203125}
+{"id":"G005","liveFirst":9.3136267,"liveTotal":20.6565462,"recFirst":9.999399299999999,"recTotal":21.8217176,"evidence":0.7645786,"app":3.171875,"modelCpu":198.40625}
+{"id":"G006","liveFirst":7.6108842,"liveTotal":17.2229126,"recFirst":3.5890733,"recTotal":14.0997389,"evidence":0.7718478,"app":3.140625,"modelCpu":162.796875}
+{"id":"G009","liveFirst":8.9664021,"liveTotal":15.7977401,"recFirst":9.601536099999999,"recTotal":16.600155899999997,"evidence":0.5953236000000001,"app":2.65625,"modelCpu":150.734375}
+{"id":"G010","liveFirst":8.3973005,"liveTotal":19.808819200000002,"recFirst":9.27185,"recTotal":21.1221967,"evidence":0.5592843000000001,"app":2.953125,"modelCpu":191.046875}
+{"id":"G011","liveFirst":8.7513474,"liveTotal":21.2363595,"recFirst":9.7404807,"recTotal":22.5343295,"evidence":0.47194389999999997,"app":2.703125,"modelCpu":206.34375}
+{"id":"G012","liveFirst":8.4942526,"liveTotal":21.8470351,"recFirst":9.062395700000001,"recTotal":21.769432600000002,"evidence":0.4013981,"app":2.09375,"modelCpu":212.828125}
+{"id":"G013","liveFirst":7.9198498,"liveTotal":17.890938900000002,"recFirst":7.814645699999999,"recTotal":18.2076739,"evidence":1.0602795,"app":4.234375,"modelCpu":166.71875}
+{"id":"G017","liveFirst":9.2217427,"liveTotal":18.0791402,"recFirst":9.5166555,"recTotal":18.5306167,"evidence":0.7238616,"app":2.84375,"modelCpu":172.515625}
+{"id":"G018","liveFirst":8.6954182,"liveTotal":15.2019329,"recFirst":9.501133900000001,"recTotal":16.1542985,"evidence":0.4485592,"app":2.046875,"modelCpu":146.625}

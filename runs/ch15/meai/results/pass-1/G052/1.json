@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G052",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:39:12.6988413Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "An employee\u0027s leave starts on February 20, 2027. Which parental leave policy applies?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The employee whose leave starts on February 20, 2027, stays on the 2024 policy. The 2027 policy does not apply to leave that starts before March 1, 2027."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0.5,
+        "name": "NLI groundedness",
+        "reason": "1 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "average",
+          "failed": true
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HR guidance: parental leave changes for 2027\n# HR guidance: parental leave changes for 2027\nThis guidance is restricted to HR and people managers until the change is announced on February 15, 2027.\nFrom March 1, 2027, paid parental leave increases from 16 to 20 weeks and can be taken in up to three blocks.\nThe six-month service requirement and full pay are unchanged.\nEmployees whose leave starts before March 1, 2027 stay on the 2024 policy.\nManagers should send questions to their HR business partner.\n## Questions managers may hear\nEmployees may ask whether they can split leave they have already started.\nThey can\u0027t: the three-block rule applies only to leave that starts on or after March 1, 2027.\nEmployees on fixed-term contracts receive the same leave if their contract runs for at least six months beyond the start of the leave.\n\nParental leave policy (2024)\n# Parental leave policy (2024)\nEmployees with at least six months of service receive 16 weeks of paid parental leave after the birth or adoption of a child.\nThe leave must be taken in one continuous block within 12 months of the birth or adoption, at 100 percent of base salary.\nEmployees agree the start date with their manager at least eight weeks in advance.\nEmployees on parental leave keep their pension contributions and accrue annual leave as if they were working.\n\nSafety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nVerify zero energy before work starts.\nZero energy means that the motor can\u0027t start from the panel, the local pressure gauges read zero and the casing drain is open.\nEach person working on the pump fits their own lock.\nThis bulletin applies to every pump with a mechanical seal flushed by seal water, not only to the CP-200.\nSupervisors brief their teams on it before the next seal job and record the briefing.\nAt the Riverside plant, report any seal-water line that can\u0027t be isolated or drained to the Riverside maintenance planner on extension 4410 before work starts."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1686",
+          "eval-output-tokens": "159",
+          "eval-total-tokens": "1845",
+          "eval-duration-ms": "21417.60"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response and Ground Truth are provided. To assess the Completeness of the Response, I need to evaluate if it accurately represents the information in the Ground Truth. I will analyze the Response and Ground Truth statement by statement to determine if the Response includes all relevant information and if the information is correct.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Employees whose leave starts before March 1, 2027 stay on the 2024 policy."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1431",
+          "eval-output-tokens": "400",
+          "eval-total-tokens": "1831",
+          "eval-duration-ms": "49660.93"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 21.4170008,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1686,
+          "outputTokenCount": 159,
+          "totalTokenCount": 1845
+        },
+        "cacheKey": "72DC2781BD4E3D79D374F2B60125C739D3CCA8C32758AE5A63AB27DD843D23F36A82445C16348B5D828B3C1E630F90F1",
+        "cacheHit": false
+      },
+      {
+        "latency": 49.6605915,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1431,
+          "outputTokenCount": 400,
+          "totalTokenCount": 1831
+        },
+        "cacheKey": "A61716897B9A3E6CCA82C263D7CC3FA3C9C068B7EA39A6C641840510D7C514A87AAB3761CAE39DC72899BBCD91167ECE",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

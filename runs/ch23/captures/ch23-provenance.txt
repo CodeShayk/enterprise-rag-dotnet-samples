@@ -1,0 +1,67 @@
+132 answers (127 model calls replayed, 0 live), 132 provenance records, 996 bytes a record
+  appending took 648 µs a record; verifying the chain 2.5 ms: intact
+Record 17:
+{
+  "sequence": 17,
+  "at": "2026-12-10T09:12:00+00:00",
+  "requestId": "req-20261210-0017",
+  "asker": "13e72c4bbf453084",
+  "tenant": "service",
+  "questionSha": "1ef037f1edd9aa2d31e0412f0a0fa20becf1e86feeedba5c01c744db5d25a055",
+  "indexVersion": "idx-595ad0717074",
+  "retriever": "hybrid, re-ranked",
+  "evidence": [
+    {
+      "documentId": "SR-2026-1107",
+      "version": "1",
+      "start": 0,
+      "end": 788,
+      "textSha": "10af549049f1e8eb"
+    },
+    {
+      "documentId": "MAIL-2026-1107-PUMPINGSTA",
+      "version": "1",
+      "start": 0,
+      "end": 347,
+      "textSha": "caeb9541c4ae5b71"
+    },
+    {
+      "documentId": "SR-2027-0112",
+      "version": "1",
+      "start": 0,
+      "end": 672,
+      "textSha": "605c32d9fa9ca39a"
+    },
+    {
+      "documentId": "SR-2026-1022",
+      "version": "1",
+      "start": 0,
+      "end": 727,
+      "textSha": "c1021dc4d23de4df"
+    }
+  ],
+  "promptVersion": "grounded-f04881ce",
+  "model": "llama3.2@a80c4f17acd5",
+  "status": "Answered",
+  "answerSha": "779e32417357f615",
+  "claims": [
+    {
+      "documentId": "SR-2026-1107",
+      "quoteFound": true
+    },
+    {
+      "documentId": "SR-2026-1107",
+      "quoteFound": false
+    },
+    {
+      "documentId": "SR-2026-1107",
+      "quoteFound": false
+    }
+  ],
+  "previousHash": "fe4092a1e61dacbd494a252191a9b38555b5970bfea195c20e88792ed2f947fd",
+  "hash": "fe1728ba47726a8fed03c7e858a429b1eb16aabb820d2cd8a3cd80dfdd2c2015"
+}
+record 42's status changed in a copy: chain broken at 42
+record 17 removed from a copy: chain broken at 18
+answers whose evidence included MAIL-2026-1107-PUMPINGSTA: 2, shown to 1 person (req-20261210-0017, req-20270112-0090)
+answers whose evidence included HR-PL-2024: 5, shown to 1 person (req-20261205-0005, req-20261219-0038, req-20261220-0039, req-20270128-0125, req-20270129-0126)

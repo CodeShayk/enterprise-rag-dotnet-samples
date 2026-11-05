@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 6: tests for fingerprints (MinHash, SimHash, normalization), stable chunk IDs, the data
+    contract, change detection and tombstones on a small workspace, the Graph delta connector against
+    its local stand-in, as-of windows, and the PostgreSQL lineage store (only when Docker is running).
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch06.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch06.Ingestion.Worker\Ch06.Ingestion.Worker.csproj" />
+  </ItemGroup>
+
+</Project>

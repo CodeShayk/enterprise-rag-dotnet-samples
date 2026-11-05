@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G2-T043",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:08:50.1865806Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What is the permissible axial gap misalignment for an RX coupling?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The permissible axial gap misalignment for an RX coupling is 3 mm \u00B1 0.5 mm."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "RX flexible coupling: installation and alignment\n# RX flexible coupling: installation and alignment\nPermissible misalignment for RX couplings up to size 90:\n| Misalignment | Limit |\n|---|---|\n| Parallel offset | 0.05 mm |\n| Angular | 0.05 mm per 100 mm |\n| Axial gap | 3 mm \u00B1 0.5 mm |\nRX coupling sizes\n|---|---|---|---|\n| 50 | 50 mm | 450 N\u00B7m | PN-5120-A |\n| 70 | 70 mm | 1,250 N\u00B7m | PN-5170-A |\n| 110 | 110 mm | 5,200 N\u00B7m | PN-5210-A |\nFor couplings above size 90, halve the permissible misalignment in the table above.\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Motion Systems\nPart \u203A Part number: PN-5190-A; Part \u203A Description: Elastomer element, RX coupling size 90; Part \u203A Fits: RX 90; Supply \u203A Supplier: Contoso stores; Supply \u203A Lead time (weeks): 2; Supply \u203A Stock at Riverside: 6; Price (USD) \u203A List price: 121.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 121.00\nPart \u203A Part number: PN-5210-A; Part \u203A Description: Elastomer element, RX coupling size 110; Part \u203A Fits: RX 110; Supply \u203A Supplier: Contoso stores; Supply \u203A Lead time (weeks): 3; Supply \u203A Stock at Riverside: 2; Price (USD) \u203A List price: 176.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 176.00\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-222: vibration high\nError E-222 means the vibration on the bearing housing exceeded 7.1 mm/s RMS.\nCauses, most likely first:\n1. Misalignment after maintenance.\n2. Cavitation.\n\nHG-400 Helical Gearbox Operating Manual \u203A 3 Installation \u203A 3.3 Shaft connections\n## 3.3 Shaft connections"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1672",
+          "eval-output-tokens": "150",
+          "eval-total-tokens": "1822",
+          "eval-duration-ms": "20181.50"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Completeness",
+        "reason": "The Response provides the permissible axial gap misalignment for an RX coupling, which is 3 mm \u00B1 0.5 mm. This information is identical to the Ground Truth, which also states the same value. The Response does not miss any information and accurately reflects the Ground Truth. Therefore, the Response is fully complete.",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Axial gap | 3 mm \u00B1 0.5 mm |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1404",
+          "eval-output-tokens": "91",
+          "eval-total-tokens": "1495",
+          "eval-duration-ms": "29084.97"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 20.1812239,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1672,
+          "outputTokenCount": 150,
+          "totalTokenCount": 1822
+        },
+        "cacheKey": "E4638D24EE2E860876173399EA7E41129A392864E85F7ECB71B216A4C18750C5043C2B0850C85A8CB9EFA27A6B31679E",
+        "cacheHit": false
+      },
+      {
+        "latency": 29.0846846,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1404,
+          "outputTokenCount": 91,
+          "totalTokenCount": 1495
+        },
+        "cacheKey": "05B612EA6F4F22BEB8B03153C81A47D372FF41B2556763F9F95E3EB040F90C6B8FC0CA79B1EFF2D25895D61ABFB40FCF",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

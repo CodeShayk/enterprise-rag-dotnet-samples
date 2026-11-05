@@ -1,0 +1,34 @@
+Ch25.Knowledge.Api in process: index v1-shipped (219 chunks), model llama3.2@a80c4f17acd5, prompt grounded-f04881ce, configuration 6279a302f5ae
+PASS     Q1  Retrieval on golden set v2: dev 0.98 (123 answerable), test 0.97 (72 answerable) on v1-shipped; the bar is 0.95
+PASS     Q2  Must-pass questions: all 6 sufficient (G001, G003, G004, G005, G006, G017)
+PASS     Q3  Signature questions end to end: G001, G003, G004, G005 and G006 answered, every claim verified, the labeled value stated; G007 and G008 declined
+WARN     Q4  Questions that need records or a graph: records step and graph route not assembled; signature questions 3 and 5 answered from the index alone (answered, answered)
+WARN     Q5  Golden set coverage: 204 questions, 0 about figures, 0 follow-ups: golden set v3 is due
+PASS     S1  Requests without a valid token: no token 401, signature altered 401, signed with another key 401, another Entra tenant 403
+PASS     S2  The asker comes from the token: G006 with Kwame's token and Daniel named in the body: not_found; with Daniel's token: answered
+PASS     S3  No unreadable chunk in anyone's results: 774 searches (6 people x 129 dev questions), 0 unreadable hits
+PASS     S4  Live permissions over a stale index: HR-PL-2027 revoked at the source: Daniel's answer cited HR-PL-2024, PARTS-CAT-2027; restored: HR-PL-2027, HR-PL-2024, PARTS-CAT-2027
+PASS     S5  Planted instructions quarantined at ingestion: 4 of 4 planted documents quarantined, 0 of 40 corpus documents
+PASS     S6  No remote images or untrusted links rendered: 2 removed (an image carrying data, an unknown host), the intranet link kept; 13 answers without an image or a script
+PASS     S7  Model files and digests match their records: 32 of 32 model files match their SHA-256; llama3.2@a80c4f17acd5 is the approved digest
+WARN     S8  Rate limits per tenant across instances: limit 3 a minute: one instance served 3 of 4, two served 6 of 8; the hybrid profile's replicas double a tenant's limit
+FAIL     S9  Search and the system of record agree on access: Nadia (fluid) reads 7 GBX-07 work-order rows (motion); the export grants fluid, motion and service, the CMMS each unit its own
+PASS     S10 HR and Procurement evidence stays inside Contoso: the cloud stand-in received G001 only; G006 and G017, citing HR and Procurement documents, went to the restricted model
+PASS     G1  A provenance record for every answer: 13 answers, 13 records, 13 with index, prompt, model and configuration 6279a302f5ae
+PASS     G2  The provenance chain verifies: 13 records intact; record 7 changed in a copy breaks the chain at 7
+PASS     G3  Prompt and models in the registry: 0 violations; the index's embedding model is approved
+PASS     G4  Erasure reaches cached answers: G017 cached on its second ask: True; SC-2024-118 erased by its tag, the next ask cached: False
+WARN     G5  Stores with question text have a retention rule: the escalation queue keeps the question and the asker's ID (Question, Asker, Reason, Sources, At) with no retention or erasure rule
+PASS     G6  Personal data in the indexed text: 0 email addresses or phone numbers in 219 chunks; 11 name Contoso staff, kept for now (Chapter 23)
+PASS     O1  Healthy only with an index whose encoder matches: /health Healthy; live -> v1-shipped, 219 chunks, bge-small-en-v1.5-int8 (bf64d05457cb)
+PASS     O2  Rollback is one swap: swap 2.9 ms, next answer from v2-rebuild; rollback 6.2 ms, next from v1-shipped
+PASS     O3  Keyword-only when the embedding model fails: embedding model failing: G003 answered, degraded: dense: HttpRequestException
+PASS     O4  Sources without an answer when the model fails: answer model failing: not_found, 4 sources listed instead of an answer
+FAIL     O5  Answer latency against the 15-second SLO: 13 answers from llama3.2@a80c4f17acd5 on the CPU: p50 19.7 s, p95 49.4 s; 4 within 15 s; 0 first-token timeouts retried
+PASS     O6  A trace for every answer, without content: 29 answer traces, 29 with retrieval spans, 15 with model spans; 0 spans with messages
+NOT RUN  N1  Hybrid profile with a cloud model: no cloud subscription here; published as a manifest only
+NOT RUN  N2  Sign-in through a Microsoft Entra ID tenant: Entra-shaped tokens signed with a key made for the run
+NOT RUN  N3  The pipeline on a hosted runner: Chapter 24's workflow ran locally only
+NOT RUN  N4  Load across replicas with a shared cache: Chapter 21's load test ran on one instance
+21 pass, 4 warn, 2 fail, 4 not run; decision: not ready: every FAIL blocks the release
+Scorecard: C:\Work\Book-Writing\RAG .NET\sample-code\runs\ch25\readiness\scorecard.md

@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 17: agentic RAG measured on the agent task set (tasks/agent-tasks.v1.jsonl). The records database in DuckDB
+    with per-person views and the SQL guard, Text-to-SQL against reference queries, the single pass, a deterministic
+    workflow and a tool-calling agent (also hosted by Microsoft Agent Framework), with trajectories and guardrails.
+    Generation uses llama3.2 through Ollama on the CPU; calls are recorded in runs/ch17. Needs `python eng/get-models.py`
+    for bge-small and the MiniLM-L6 cross-encoder.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch17.Agents.Cli</RootNamespace>
+    <UserSecretsId>contoso-ch17-agents-cli</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Agents\Contoso.Knowledge.Agents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="tasks\*.jsonl" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Agents.AI" />
+    <PackageReference Include="ModelContextProtocol" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" />
+    <PackageReference Include="OllamaSharp" />
+  </ItemGroup>
+
+</Project>

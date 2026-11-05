@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 9: each chunking strategy on small documents built in code (budgets, boundaries, breadcrumbs, table
+    rows, semantic breakpoints with a fake embedder, parent and window spans, summary nodes), entity tags, and a
+    check that every span in golden set v2 is found in the corpus and readable by its asker.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch09.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+  </ItemGroup>
+
+</Project>

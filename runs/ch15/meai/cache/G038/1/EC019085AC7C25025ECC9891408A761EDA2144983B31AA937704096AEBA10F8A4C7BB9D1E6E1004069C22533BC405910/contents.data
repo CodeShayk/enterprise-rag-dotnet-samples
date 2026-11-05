@@ -1,0 +1,30 @@
+{
+  "messages": [
+    {
+      "createdAt": "2026-11-02T16:56:20.0243709+00:00",
+      "role": "assistant",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "<S0>Let's think step by step:</S0>\n\n1. The context provides information about the supplier contract SC-2024-118: Fabrikam Seals, including the terms and conditions of the agreement.\n2. The query asks how long Fabrikam Seals has to report a quality incident.\n3. The response from the assistant states that Fabrikam Seals reports any quality incident that affects delivered parts within five business days.\n4. Based on the definition of Groundedness, the response is partially correct, as it provides a correct answer to the question, but it lacks specific details mentioned in the context.\n\n<S1>Explanation</S1>\n\nThe response is partially correct because it provides a correct answer to the question, but it does not fully address the context. The definition of Groundedness requires the answer to be fully anchored in the context, and this response only mentions the time frame for reporting quality incidents without referencing the specific contract terms.\n\n<S2>Score</S2>\n\n4"
+        }
+      ],
+      "messageId": "2026-11-02T16:56:20.0243709Z"
+    }
+  ],
+  "responseId": "2026-11-02T16:56:20.0243709Z",
+  "modelId": "llama3.2",
+  "createdAt": "2026-11-02T16:56:20.0243709+00:00",
+  "finishReason": "stop",
+  "usage": {
+    "inputTokenCount": 1484,
+    "outputTokenCount": 206,
+    "totalTokenCount": 1690
+  },
+  "additionalProperties": {
+    "load_duration": "00:00:00.0138738",
+    "total_duration": "00:00:21.1567044",
+    "prompt_eval_duration": "00:00:08.8767050",
+    "eval_duration": "00:00:12.2423320"
+  }
+}

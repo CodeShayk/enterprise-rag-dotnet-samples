@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G2-T065",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:01:46.9691602Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What are the unit price and the minimum order of PN-4471-C under the Fabrikam Seals contract?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The unit price of PN-4471-C is 1,340 USD. The minimum order of PN-4471-C is four. The minimum order of PN-4471-C is four, as per the agreement with Fabrikam Seals."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| PN-4471-C | Cartridge mechanical seal for CP-200, silicon-carbide face | 1,340 USD | 4 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1450",
+          "eval-output-tokens": "205",
+          "eval-total-tokens": "1655",
+          "eval-duration-ms": "17539.29"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Supplier contract SC-2024-118: Fabrikam Seals \u203A 2 Products and prices\n## 2 Products and prices\n| Part number | Description | Unit price | Minimum order |\n|---|---|---|---|\n| PN-4471-B | Cartridge mechanical seal for CP-200 (until September 13, 2026) | 1,180 USD | 4 |\n| PN-4471-C | Cartridge mechanical seal for CP-200, silicon-carbide face | 1,340 USD | 4 |\n\nSeal kits for Woodgrove and Tailspin\nFor Tailspin\u0027s four, our agreement with Fabrikam gives us 1,340 USD per seal at a minimum order of four, so we can offer them 8 percent below the catalog price.\nGrace\n\nSupplier contract SC-2024-118: Fabrikam Seals\n# Supplier contract SC-2024-118: Fabrikam Seals\nContoso Industrial and Fabrikam Seals agree on the supply of mechanical seals for CP-200 pumps: PN-4471-B and, from September 2026, PN-4471-C.\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Fluid Systems\nPart \u203A Part number: PN-4471-B; Part \u203A Description: Mechanical seal cartridge, carbon face (superseded by PN-4471-C, ECN-2291); Part \u203A Fits: CP-200; Supply \u203A Supplier: Fabrikam Seals; Supply \u203A Lead time (weeks): 6; Supply \u203A Stock at Riverside: 0; Price (USD) \u203A List price: 1,280.00; Price (USD) \u203A Discount: 8%; Price (USD) \u203A Net price: 1,177.60\nPart \u203A Part number: PN-4471-C; Part \u203A Description: Mechanical seal cartridge, silicon-carbide face; Part \u203A Fits: CP-200; Supply \u203A Supplier: Fabrikam Seals; Supply \u203A Lead time (weeks): 6; Supply \u203A Stock at Riverside: 7; Price (USD) \u203A List price: 1,450.00; Price (USD) \u203A Discount: 8%; Price (USD) \u203A Net price: 1,334.00"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1711",
+          "eval-output-tokens": "258",
+          "eval-total-tokens": "1969",
+          "eval-duration-ms": "45330.65"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 17.539181,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1450,
+          "outputTokenCount": 205,
+          "totalTokenCount": 1655
+        },
+        "cacheKey": "979CE9966116D945E3986CA876BBEA5BFA51031DBF6E5FD5C73CC3899171522CB48368818FC5BB23F0D99CF588B427ED",
+        "cacheHit": false
+      },
+      {
+        "latency": 45.330408,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1711,
+          "outputTokenCount": 258,
+          "totalTokenCount": 1969
+        },
+        "cacheKey": "954CC4870EE72B0862D5C7EC481F08B2D9CD562AE0E376CA7AF6563AEEEEBFBC7046AFA93D1F0BD72B8D8D9FF296CBB1",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

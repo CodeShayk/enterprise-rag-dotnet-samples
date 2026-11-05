@@ -1,0 +1,4 @@
+release v3-no-breadcrumbs against live v1-shipped; gate: lower bound above -0.03, no must-pass question lost
+  build   219 chunks, parent-child-100-600, breadcrumbs off, bge-small-en-v1.5-int8 (3.1 s)
+  gate    dev, 123 answerable questions: change -0.081 [-0.138, -0.024], worse G012 G028 G041 G2-T010 G2-T011 G2-T012 G2-T015 G2-T038 G2-T040 G2-H003 G2-H008 G2-H021, better G048 G2-T020: lower bound -0.138 below the allowed drop (23.0 s)
+  stopped: v3-no-breadcrumbs is not deployed; live stays v1-shipped

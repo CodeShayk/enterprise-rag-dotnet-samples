@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Chapter 17: Contoso's document search as a Model Context Protocol server (Streamable HTTP, stateless) at
+    http://localhost:5172/mcp, behind JWT bearer authentication. The caller's token decides whose permissions the
+    search uses. Needs `python eng/get-models.py` for bge-small and the MiniLM-L6 cross-encoder.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch17.Knowledge.Mcp</RootNamespace>
+    <UserSecretsId>9878db1a-a8b4-4ed6-822d-098bc8d5f465</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+
+</Project>

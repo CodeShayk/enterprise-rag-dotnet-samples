@@ -1,0 +1,132 @@
+{"id": "G2-T038", "claim": 0, "text": "Fault F010 on a VD-75 drive means the speed reference on a 4 to 20 mA input fell below 2 mA, which the drive reads as a broken wire.", "source": "S1", "supported": true}
+{"id": "G2-T038", "claim": 1, "text": "To fix fault F010, check the reference cable and its source.", "source": "S1", "supported": true}
+{"id": "G2-T055", "claim": 0, "text": "PN-2840-A was replaced by PN-2840-B.", "source": "S2", "supported": true}
+{"id": "G2-T055", "claim": 1, "text": "The replacement was made under change notice ECN-2240.", "source": "S2", "supported": true}
+{"id": "G054", "claim": 0, "text": "The reason for the change from PN-4471-B to PN-4471-C on CP-200 pumps is wear of the carbon face at seal-water temperatures above 60 °C.", "source": "S4", "supported": true}
+{"id": "G054", "claim": 1, "text": "PN-4471-C has a silicon-carbide face rated for higher seal-water temperatures.", "source": "S1", "supported": true}
+{"id": "G2-T009", "claim": 0, "text": "The flow range of a CP-200 pump is 40 to 240 m³/h.", "source": "S1", "supported": true}
+{"id": "G2-T024", "claim": 0, "text": "The HG-400 has a 25 to 1 ratio", "source": "S1", "supported": true}
+{"id": "G2-T024", "claim": 1, "text": "The thermal rating of an HG-400 with a 25 to 1 ratio is 28 kW", "source": "S1", "supported": true}
+{"id": "G2-T024", "claim": 2, "text": "The output torque of an HG-400 with a 25 to 1 ratio is 4,800 N·m", "source": "S1", "supported": true}
+{"id": "G011", "claim": 0, "text": "The permissible misalignment for RX couplings up to size 90 is 0.05 mm for parallel offset, 0.05 mm per 100 mm for angular misalignment, and 3 mm ± 0.5 mm for axial gap.", "source": "S1", "supported": true}
+{"id": "G011", "claim": 1, "text": "For couplings above size 90, the permissible misalignment is halved compared to the values for couplings up to size 90.", "source": "S1", "supported": true}
+{"id": "G2-H025", "claim": 0, "text": "The flush connection should show a pressure of 2.0 to 3.0 bar when a CP-200 restarts after a seal change.", "source": "S3", "supported": true}
+{"id": "G2-H025", "claim": 1, "text": "The seal-water pressure must exceed the suction pressure by at least 1 bar.", "source": "S3", "supported": true}
+{"id": "G2-H025", "claim": 2, "text": "The flush connection should show a pressure of at least 2.0 bar to prevent error E-217.", "source": "S4", "supported": false, "note": "S4 says 2.0 bar clears E-217, not that it prevents it."}
+{"id": "G2-T057", "claim": 0, "text": "PN-6120-A was replaced by PN-6120-B.", "source": "S1", "supported": true}
+{"id": "G2-T057", "claim": 1, "text": "This replacement was announced under change notice ECN-2305.", "source": "S1", "supported": true}
+{"id": "G052", "claim": 0, "text": "The employee whose leave starts on February 20, 2027, stays on the 2024 policy.", "source": "S2", "supported": false, "note": "Cites the 2024 policy, which doesn't say it; the rule is in the 2027 guidance, S1."}
+{"id": "G052", "claim": 1, "text": "The 2027 policy does not apply to leave that starts before March 1, 2027.", "source": "S1", "supported": true}
+{"id": "G2-H019", "claim": 0, "text": "To prove that an isolated pump can't start, try to start the pump from the local panel.", "source": "S1", "supported": true}
+{"id": "G2-H019", "claim": 1, "text": "The local pressure gauges on the pump should read zero.", "source": "S1", "supported": true}
+{"id": "G2-H017", "claim": 0, "text": "The isolation is removed in the reverse order once everyone has removed their lock.", "source": "S1", "supported": true}
+{"id": "G2-H017", "claim": 1, "text": "The last person to remove a lock checks that the coupling guard is fitted and that no tools are left on the skid.", "source": "S1", "supported": true}
+{"id": "G2-T059", "claim": 0, "text": "Work order WO-88112 was for a PM 2000h insp mech seal + brgs, ok.", "source": "S1", "supported": true}
+{"id": "G2-T059", "claim": 1, "text": "Work order WO-88112 was completed on 2026-08-12.", "source": "S1", "supported": true}
+{"id": "G2-T034", "claim": 0, "text": "The default value of VD-75 parameter 2-11, ramp-down time, is 2 seconds.", "source": "S1", "supported": true}
+{"id": "G2-T034", "claim": 1, "text": "The range of VD-75 parameter 2-11, ramp-down time, is 0.1 to 600 seconds.", "source": "S1", "supported": true}
+{"id": "G2-T034", "claim": 2, "text": "The range of VD-75 parameter 2-11, ramp-down time, is 0.1 to 600 seconds.", "source": "S2", "supported": false, "note": "S2 is the F012 and F002 faults; it has no range for 2-11."}
+{"id": "G2-T034", "claim": 3, "text": "The range of VD-75 parameter 2-11, ramp-down time, is 0.1 to 600 seconds.", "source": "S3", "supported": false, "note": "S3 is a service report that set 2-11 to 20 s; it has no range."}
+{"id": "G017", "claim": 0, "text": "The supplier that provides the PN-4471-C seals is Fabrikam Seals.", "source": "S1", "supported": true}
+{"id": "G017", "claim": 1, "text": "The contract for the PN-4471-C seals ends on September 13, 2026.", "source": "S2", "supported": false, "note": "September 13, 2026 is PN-4471-B's last date in the price list, not the contract's end."}
+{"id": "G017", "claim": 2, "text": "The contract for the PN-4471-C seals ends on September 13, 2026, and is superseded by PN-4471-C.", "source": "S4", "supported": false, "note": "The catalog doesn't give the contract's end."}
+{"id": "G2-H026", "claim": 0, "text": "For storage longer than six months, fill the gearbox completely with oil.", "source": "S1", "supported": true}
+{"id": "G2-H026", "claim": 1, "text": "The oil level should be checked weekly.", "source": "S4", "supported": true}
+{"id": "G2-H026", "claim": 2, "text": "The oil should be changed as specified in the maintenance schedule.", "source": "S4", "supported": true}
+{"id": "G005", "claim": 0, "text": "The recommended mechanical seal to fit on P-201 is PN-4471-C.", "source": "S3", "supported": true}
+{"id": "G005", "claim": 1, "text": "The old torque of 22 N·m applied to PN-4471-B.", "source": "S2", "supported": true}
+{"id": "G005", "claim": 2, "text": "Fabrikam Seals confirmed 25 N·m for PN-4471-C.", "source": "S2", "supported": true}
+{"id": "G005", "claim": 3, "text": "Tighten the seal gland nuts evenly to 25 N·m.", "source": "S3", "supported": true}
+{"id": "G025", "claim": 0, "text": "The Woodgrove Foods gearbox was making a whining noise that rose with speed.", "source": "S3", "supported": false, "note": "S3 is the manual's general rule; the complaint is in the service report, S1."}
+{"id": "G025", "claim": 1, "text": "The noise was caused by low oil level or worn gear teeth.", "source": "S4", "supported": false, "note": "The e-mail reports a low oil level and pitting but doesn't say they caused the noise."}
+{"id": "G2-T070", "claim": 0, "text": "For a P2 call, Field Services must be on site within 1 business day.", "source": "S1", "supported": true}
+{"id": "G2-T070", "claim": 1, "text": "This response time applies to calls logged outside working hours, which count from 07:00 the next business day.", "source": "S1", "supported": true, "note": "Loosely worded, but the 07:00 rule is in the source."}
+{"id": "G058", "claim": 0, "text": "The model of pump P-201 is CP-200 centrifugal pump.", "source": "S1", "supported": true}
+{"id": "G058", "claim": 1, "text": "The model of pump P-201 is CP-200 centrifugal pump.", "source": "S2", "supported": false, "note": "S2 is P-202's asset record; it doesn't give P-201's model."}
+{"id": "G045", "claim": 0, "text": "Response times for customers with a service contract are measured from the time the call is logged to the time the engineer arrives on site.", "source": "S1", "supported": true}
+{"id": "G045", "claim": 1, "text": "For P2 calls, response times are 1 business day.", "source": "S1", "supported": true}
+{"id": "G2-H003", "claim": 0, "text": "An isolation valve, a strainer and a pressure gauge must be fitted in the seal-water line of a CP-200.", "source": "S1", "supported": true}
+{"id": "G2-H003", "claim": 1, "text": "The seal-water pressure must exceed the suction pressure by at least 1 bar whenever the pump runs.", "source": "S1", "supported": true}
+{"id": "G2-T031", "claim": 0, "text": "Oil leaks at a shaft may be caused by a worn shaft seal or a blocked breather.", "source": "S2", "supported": true, "note": "The row is in S2; a leading # in the quote broke the match."}
+{"id": "G2-T031", "claim": 1, "text": "Oil leaks at a shaft may also be caused by a problem with the cooling fins.", "source": "S2", "supported": false, "note": "Dirty cooling fins cause a high oil temperature, the next row, not leaks."}
+{"id": "G006", "claim": 0, "text": "Paid parental leave increases from 16 to 20 weeks, starting from March 1, 2027.", "source": "S1", "supported": true}
+{"id": "G006", "claim": 1, "text": "The six-month service requirement and full pay remain unchanged.", "source": "S1", "supported": true}
+{"id": "G006", "claim": 2, "text": "Employees whose leave starts before March 1, 2027, stay on the 2024 policy.", "source": "S1", "supported": true}
+{"id": "G2-H048", "claim": 0, "text": "Either party may end the agreement for material breach that is not remedied within 30 days of written notice.", "source": "S1", "supported": true}
+{"id": "G2-H048", "claim": 1, "text": "The contract runs from July 1, 2024 to June 30, 2027 and renews for one year unless either party gives notice 90 days before it ends.", "source": "S2", "supported": true}
+{"id": "G2-T013", "claim": 0, "text": "Inspect the mechanical seal and the bearings every 2,000 operating hours or six months, whichever comes first.", "source": "S1", "supported": true}
+{"id": "G2-T013", "claim": 1, "text": "The inspection of the mechanical seal and the bearings should be performed every 2,000 operating hours or six months, whichever comes first.", "source": "S2", "supported": false, "note": "S2 is the seal procedure; its quote is about the shaft sleeve."}
+{"id": "G2-T013", "claim": 2, "text": "The inspection of the mechanical seal and the bearings should be performed every 2,000 operating hours or six months, whichever comes first.", "source": "S3", "supported": false, "note": "S3 is the training's removal step; its quote is about the shaft sleeve."}
+{"id": "G2-H036", "claim": 0, "text": "A hot work permit is valid for one shift.", "source": "S1", "supported": true}
+{"id": "G2-H029", "claim": 0, "text": "The transport plug in the breather position must be replaced with the breather plug supplied before filling the gearbox with oil.", "source": "S1", "supported": true}
+{"id": "G2-H029", "claim": 1, "text": "The breather plug must be refitted after the oil change.", "source": "S4", "supported": true}
+{"id": "G2-H016", "claim": 0, "text": "The pump keeps running at its last set point.", "source": "S1", "supported": true}
+{"id": "G2-H016", "claim": 1, "text": "Error E-310 clears itself when communication returns.", "source": "S1", "supported": true}
+{"id": "G2-H023", "claim": 0, "text": "An HG-400 gearbox is filled with 18 liters of ISO VG 220 mineral gear oil at the factory.", "source": "S1", "supported": true}
+{"id": "G2-H023", "claim": 1, "text": "The oil grade for an HG-400 gearbox is ISO VG 220.", "source": "S1", "supported": true}
+{"id": "G2-H004", "claim": 0, "text": "The recommended clearance between a CP-200 impeller and the casing wear ring is 0.3 to 0.5 mm.", "source": "S1", "supported": true}
+{"id": "G2-H004", "claim": 1, "text": "The minimum clearance between a CP-200 impeller and the casing wear ring is 0.25 mm.", "source": "S2", "supported": false, "note": "The 0.25 mm is the composite ring's running clearance, not a minimum."}
+{"id": "G039", "claim": 0, "text": "A new supplier needs to be qualified after a quality audit and a credit check.", "source": "S3", "supported": true}
+{"id": "G039", "claim": 1, "text": "A new supplier needs to be approved by the approver, the plant controller, and the CFO for orders above 250,000 USD.", "source": "S3", "supported": false, "note": "The approvals are for purchase orders, not for new suppliers."}
+{"id": "G039", "claim": 2, "text": "A new supplier needs to sign a contract with Contoso, including the supplier contract SC-2024-118.", "source": "S4", "supported": false, "note": "One contract's signatures aren't a requirement for new suppliers."}
+{"id": "G039", "claim": 3, "text": "A new supplier needs to be approved by an approver other than the requester for orders up to 25,000 USD.", "source": "S3", "supported": false, "note": "The approver rule is for purchase orders, not for new suppliers."}
+{"id": "G2-H040", "claim": 0, "text": "A Lakeside technician calls the Lakeside shift supervisor on extension 6102 before work starts.", "source": "S1", "supported": true}
+{"id": "G2-H040", "claim": 1, "text": "A Riverside technician calls the Riverside maintenance planner on extension 4410 before work starts.", "source": "S2", "supported": true}
+{"id": "G2-H040", "claim": 2, "text": "A Northgate technician calls the Northgate maintenance planner on extension 5417 before work starts.", "source": "S3", "supported": true}
+{"id": "G036", "claim": 0, "text": "To stop a VD-75 drive from tripping with F012 during start-up, raise parameter 2-10 (ramp-up time) from 2 to 5 seconds.", "source": "S1", "supported": true}
+{"id": "G036", "claim": 1, "text": "Reset F012 with the STOP/RESET key once the cause is removed.", "source": "S1", "supported": true}
+{"id": "G038", "claim": 0, "text": "Fabrikam Seals reports any quality incident that affects delivered parts within five business days.", "source": "S2", "supported": false, "note": "S2 is the contract's quality section; the five business days are in S1."}
+{"id": "G2-T015", "claim": 0, "text": "The bearings on a CP-200 should be replaced every 32,000 operating hours.", "source": "S3", "supported": false, "note": "S3 is the pump's description; the 32,000 h is in S1's table."}
+{"id": "G2-T015", "claim": 1, "text": "The intervals for bearings can be halved for pumps that handle abrasive liquids or run above 60 °C.", "source": "S1", "supported": true}
+{"id": "G2-T015", "claim": 2, "text": "The intervals for bearings are not specified for pumps that do not handle abrasive liquids or run below 60 °C.", "source": "S1", "supported": false, "note": "S1 doesn't say this; it only halves the intervals for abrasive or hot service."}
+{"id": "G2-F006", "claim": 0, "text": "The mechanical seal fitted to pump P-202 is PN-4471-B.", "source": "S1", "supported": true}
+{"id": "G2-F006", "claim": 1, "text": "The mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps, effective September 14, 2026.", "source": "S3", "supported": true}
+{"id": "G2-F006", "claim": 2, "text": "The next seal change for pump P-202 should use PN-4471-C.", "source": "S1", "supported": true}
+{"id": "G047", "claim": 0, "text": "A blocked seal-water strainer causes Error E-217: seal-water pressure low.", "source": "S2", "supported": true}
+{"id": "G047", "claim": 1, "text": "The seal-water pressure that clears Error E-217 is at least 2.0 bar.", "source": "S2", "supported": true}
+{"id": "G028", "claim": 0, "text": "The CP-200 bearings should be regreased every 4,000 operating hours.", "source": "S1", "supported": true}
+{"id": "G028", "claim": 1, "text": "The CP-200 bearings should be regreased after the first hours after regreasing, while excess grease is pushed out.", "source": "S2", "supported": false, "note": "S2 says bearings run hottest after regreasing, not when to regrease."}
+{"id": "G028", "claim": 2, "text": "The CP-200 controller trips the pump at 95 °C, and the bearings should be checked and regreased after this temperature is reached.", "source": "S3", "supported": false, "note": "S3 trips at 95 °C but says to let the bearings cool and check the grease, not to regrease."}
+{"id": "G028", "claim": 3, "text": "The CP-200 bearings should be regreased if there is too much or too little grease.", "source": "S4", "supported": true}
+{"id": "G012", "claim": 0, "text": "Vibration above 4.5 mm/s RMS on the bearing housing needs investigation; above 7.1 mm/s RMS, stop the pump.", "source": "S1", "supported": true}
+{"id": "G012", "claim": 1, "text": "Excessive vibration may be caused by cavitation, which sounds like gravel rattling in the casing.", "source": "S1", "supported": true}
+{"id": "G012", "claim": 2, "text": "Excessive vibration may be caused by worn bearings.", "source": "S1", "supported": true}
+{"id": "G012", "claim": 3, "text": "Excessive vibration may be caused by a damaged or unbalanced impeller.", "source": "S1", "supported": true}
+{"id": "G029", "claim": 0, "text": "The service intervals for a CP-200 pump are halved when it handles abrasive liquids.", "source": "S1", "supported": true}
+{"id": "G029", "claim": 1, "text": "The CP-200 pump is not designed to handle abrasive liquids.", "source": "S2", "supported": false, "note": "An inference the manual doesn't make; it gives intervals for abrasive service."}
+{"id": "G2-T065", "claim": 0, "text": "The unit price of PN-4471-C is 1,340 USD.", "source": "S2", "supported": false, "note": "The e-mail gives 1,340 USD per seal but doesn't name the part."}
+{"id": "G2-T065", "claim": 1, "text": "The minimum order of PN-4471-C is four.", "source": "S1", "supported": true, "note": "The row gives 4; the quote joins a header and a cell."}
+{"id": "G2-T065", "claim": 2, "text": "The minimum order of PN-4471-C is four, as per the agreement with Fabrikam Seals.", "source": "S3", "supported": false, "note": "S3 is the contract's opening sentence; the minimum order is in S1."}
+{"id": "G2-H012", "claim": 0, "text": "The CP-200 controller warns at 4.5 mm/s RMS and trips at 7.1 mm/s RMS.", "source": "S1", "supported": true}
+{"id": "G2-H012", "claim": 1, "text": "The CP-200 controller trips at 7.1 mm/s RMS.", "source": "S1", "supported": true}
+{"id": "G051", "claim": 0, "text": "The 2027 parental leave policy increases the paid leave from 16 to 20 weeks.", "source": "S2", "supported": true}
+{"id": "G051", "claim": 1, "text": "The 2027 policy allows taking the leave in up to three blocks, whereas the 2024 policy requires one continuous block within 12 months.", "source": "S2", "supported": false, "note": "S2 has the three blocks; the 2024 rule of one continuous block is in S1."}
+{"id": "G051", "claim": 2, "text": "The 2027 policy does not change the six-month service requirement or the full pay for the leave.", "source": "S2", "supported": true}
+{"id": "G2-H007", "claim": 0, "text": "Contoso doesn't stock seal faces separately.", "source": "S1", "supported": true}
+{"id": "G2-H042", "claim": 0, "text": "This policy does not address splitting a purchase order to stay under an approval limit.", "source": "S1", "supported": false, "note": "Its own quote says the opposite: splitting is a breach."}
+{"id": "G2-T045", "claim": 0, "text": "The maximum torque of an RX coupling of size 90 is 2,800 N·m.", "source": "S1", "supported": true}
+{"id": "G2-T045", "claim": 1, "text": "The RX coupling sizes are: 50 mm, 70 mm, and 90 mm, with maximum torques of 450 N·m, 1,250 N·m, and 2,800 N·m, respectively.", "source": "S1", "supported": true}
+{"id": "G2-T040", "claim": 0, "text": "Fault F018 on a VD-75 drive means the safety circuit removed the enable signal.", "source": "S1", "supported": true}
+{"id": "G2-T040", "claim": 1, "text": "To fix F018, close the safety circuit, then reset the drive.", "source": "S1", "supported": true}
+{"id": "G2-H008", "claim": 0, "text": "During the first hour after starting a CP-200, check that the bearing temperatures stay below 80 °C.", "source": "S1", "supported": true}
+{"id": "G2-H008", "claim": 1, "text": "Listen for cavitation noise during the first hour after starting a CP-200.", "source": "S1", "supported": true}
+{"id": "G2-H008", "claim": 2, "text": "Watch the seal for the first hour after starting a CP-200.", "source": "S2", "supported": true}
+{"id": "G009", "claim": 0, "text": "Before opening any CP-200 seal housing, apply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines.", "source": "S1", "supported": true}
+{"id": "G009", "claim": 1, "text": "Before opening any CP-200 seal housing, isolate the motor electrically and lock it out.", "source": "S4", "supported": true}
+{"id": "G2-T062", "claim": 0, "text": "Work order WO-88403 was for PM oil lvl + leaks, clean fins, ok.", "source": "S1", "supported": true}
+{"id": "G2-T062", "claim": 1, "text": "Work order WO-88403 was completed on 2026-11-25.", "source": "S1", "supported": true}
+{"id": "G024", "claim": 0, "text": "P-201 is installed at Riverside.", "source": "S1", "supported": false, "note": "The compressed asset record has no site row; Riverside comes from the work orders in S4."}
+{"id": "G024", "claim": 1, "text": "P-201 was commissioned in May 2011.", "source": "S1", "supported": true}
+{"id": "G2-F010", "claim": 0, "text": "Engineering change notice ECN-2291 was raised on August 21, 2026.", "source": "S1", "supported": true}
+{"id": "G2-T043", "claim": 0, "text": "The permissible axial gap misalignment for an RX coupling is 3 mm ± 0.5 mm.", "source": "S1", "supported": true}
+{"id": "G2-F005", "claim": 0, "text": "The seal-water valve that supplies seal water to pump P-202 is valve V-115.", "source": "S1", "supported": true}
+{"id": "G2-F005", "claim": 1, "text": "This valve is not the one to close for pump isolation.", "source": "S2", "supported": false, "note": "S2 is about V-114, P-201's valve."}
+{"id": "G2-F005", "claim": 2, "text": "The manual for pump P-202 is the CP-200 Centrifugal Pump Manual (2009).", "source": "S1", "supported": true}
+{"id": "G2-T007", "claim": 0, "text": "Error E-303 means one of the bearing temperature sensors TE-21 and TE-22 reports an open circuit.", "source": "S1", "supported": true}
+{"id": "G2-T007", "claim": 1, "text": "Error E-303 does not trip the pump.", "source": "S3", "supported": true}
+{"id": "G2-T029", "claim": 0, "text": "The cooling fins on an HG-400 gearbox should be cleaned every 3 months.", "source": "S1", "supported": true}
+{"id": "G2-T029", "claim": 1, "text": "The cooling fins on an HG-400 gearbox are located on both sides of the housing.", "source": "S4", "supported": true}
+{"id": "G059", "claim": 0, "text": "Grinding a bracket outside the workshop needs a hot work permit.", "source": "S1", "supported": true}
+{"id": "G059", "claim": 1, "text": "The permit is valid for one shift.", "source": "S1", "supported": true}
+{"id": "G2-T011", "claim": 0, "text": "The speed of a CP-200 pump is 1,480 rpm.", "source": "S1", "supported": true}
+{"id": "G2-T011", "claim": 1, "text": "This speed is specified for the pump at 50 Hz.", "source": "S1", "supported": true}

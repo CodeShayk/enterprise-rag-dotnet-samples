@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <title>Contoso Knowledge Assistant</title>
+    <style>
+        body { font-family: "Segoe UI", sans-serif; max-width: 52rem; margin: 2rem auto; padding: 0 1rem; color: #1f1f1f; }
+        form { display: flex; gap: .5rem; margin-bottom: 1rem; }
+        input { flex: 1; padding: .5rem; }
+        select, button { padding: .5rem; }
+        .answer { white-space: pre-wrap; line-height: 1.5; min-height: 3rem; }
+        .sources { color: #4a4a4a; font-size: .9rem; }
+    </style>
+    <HeadOutlet @rendermode="InteractiveServer" />
+</head>
+<body>
+    <Routes @rendermode="InteractiveServer" />
+    <script src="@Assets["_framework/blazor.web.js"]"></script>
+</body>
+</html>

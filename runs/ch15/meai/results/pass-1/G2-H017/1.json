@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G2-H017",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:40:23.6808989Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "In what order is a pump\u0027s isolation removed after the work?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The isolation is removed in the reverse order once everyone has removed their lock. The last person to remove a lock checks that the coupling guard is fitted and that no tools are left on the skid."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "The response directly addresses the question about the order of pump isolation removal, which is a specific detail mentioned in the context. The answer is accurate and complete, as it mentions the reverse order of removal and the checks performed by the last person to remove a lock. However, it does not provide additional information or context beyond what is necessary to answer the question. Therefore, the response is partially correct but lacks specific details mentioned in the context.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "SOP-FS-007: Pump isolation and lockout\n# SOP-FS-007: Pump isolation and lockout\nRevision 5, effective May 12, 2025.\nThis procedure isolates a pump so that it can\u0027t start, can\u0027t be pressurized and can\u0027t move while people work on it.\nIt implements safety bulletin SB-0932 for Fluid Systems pumps.\n## Isolation steps\n1. Tell the control room which pump you are isolating and why.\n2. Stop the pump from the local panel and open the motor\u0027s isolator.\n3. Fit your own padlock and tag to the isolator.\nEveryone who works on the pump fits their own lock.\n4. Close the suction and discharge valves and lock them closed.\n5. Close the seal-water isolation valve upstream of the strainer and open the blow-down valve.\n6. Open the casing drain and wait until it stops flowing.\n7. Try to start the pump from the local panel to prove that it can\u0027t start, then return the switch to off.\n8. Check that every pressure gauge on the pump reads zero.\n## Removing the isolation\nRemove the isolation in the reverse order once everyone has removed their lock.\nThe last person to remove a lock checks that the coupling guard is fitted and that no tools are left on the skid.\n## Seal-water valves at Riverside\nAt the Riverside plant, the seal-water valve for each pump carries the pump\u0027s tag with the prefix V: valve V-114 feeds pump P-201.\nDon\u0027t close V-114 itself for isolation; close the isolation valve upstream of the strainer, so that V-114\u0027s setting is kept."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1554",
+          "eval-output-tokens": "114",
+          "eval-total-tokens": "1668",
+          "eval-duration-ms": "15880.72"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Based on the definitions, I think the Response should get a Score of 3, as it partially corrects the information but also introduces incorrect information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Remove the isolation in the reverse order once everyone has removed their lock. The last person to remove a lock checks that the coupling guard is fitted and that no tools are left on the skid."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1447",
+          "eval-output-tokens": "176",
+          "eval-total-tokens": "1623",
+          "eval-duration-ms": "30964.92"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 15.8804659,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1554,
+          "outputTokenCount": 114,
+          "totalTokenCount": 1668
+        },
+        "cacheKey": "BFDABBBCD178D9AA3D002907EC8FBBF6B7DA9310A6EA416A6704112021D1942268D173E0F27C4C39CE883210033DFFFB",
+        "cacheHit": false
+      },
+      {
+        "latency": 30.9646958,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1447,
+          "outputTokenCount": 176,
+          "totalTokenCount": 1623
+        },
+        "cacheKey": "45FDBA52D5E7E36CB972FB9CE158070DD3B7E1B50DAC84DB003EE0E229DBF50CCE592618035B50DD4A2FEE801DF63EA2",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

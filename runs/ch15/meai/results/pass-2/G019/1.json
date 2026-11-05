@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G019",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:56.2777407Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Am I allowed to paste a pump manual into a public chatbot?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The sources do not contain information about pasting pump manuals into public chatbots."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "IT policy IT-POL-003: Using AI tools\n# IT policy IT-POL-003: Using AI tools\nDon\u0027t paste Contoso documents, drawings, customer data or personal data into public AI chatbots or translation sites.\nTheir providers may store what you type.\nUse the Contoso Knowledge Assistant for questions about Contoso\u0027s documents.\nIt answers from documents you\u0027re allowed to read and shows its sources.\nReport any document you pasted into a public tool by mistake to the IT service desk, so that the security team can assess it.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual\n# CP-200 Centrifugal Pump Operating and Maintenance Manual\nEdition 2009.\nContoso Industrial, Fluid Systems division.\nKeep this manual with the pump for the life of the equipment and pass it on with the pump if it is moved or sold.\n# 1 Safety\nRead this manual before installing, operating or servicing the pump.\nWork on the pump only when you are trained for the task and the pump is isolated as your site\u0027s procedures require.\n- Isolate the motor electrically and lock it out before any work on the pump.\n- Release the pressure in the casing and the seal-water line before opening any connection.\n- Wear safety glasses and gloves when handling the mechanical seal.\nThe seal faces are brittle and their edges are sharp.\n- Never run the pump dry or against a closed suction valve.\n- Lift the pump only by the lifting lugs on the baseplate, never by the motor eyebolt.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 5 Commissioning \u203A 5.1 Checks before the first start\n# 5 Commissioning\n## 5.1 Checks before the first start\n1. Check that the rotating assembly turns freely by hand.\n2. Check the coupling alignment and fit the coupling guard.\n3. Check that the bearings are greased; pumps leave the factory greased for 4,000 hours.\n4. Flush the suction pipe and the seal-water line before connecting them."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1606",
+          "eval-output-tokens": "215",
+          "eval-total-tokens": "1821",
+          "eval-duration-ms": "20.60"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "A short explanation:",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Don\u0027t paste Contoso documents, drawings, customer data or personal data into public AI chatbots or translation sites."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1407",
+          "eval-output-tokens": "202",
+          "eval-total-tokens": "1609",
+          "eval-duration-ms": "16.18"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0,
+        "name": "NLI groundedness",
+        "reason": "0 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0204494,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1606,
+          "outputTokenCount": 215,
+          "totalTokenCount": 1821
+        },
+        "cacheKey": "D06A75833B6AE062F00FCDAA1C434197F5CE3038E2A75BABF6D35D10ED888C3CA1AAD43E49ABFF0ADFD885ECD0D23CBE",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.016056,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1407,
+          "outputTokenCount": 202,
+          "totalTokenCount": 1609
+        },
+        "cacheKey": "0F5769AE7F82468785F0705A97F930D51DB260987E84D5C8ED1EA69E653B8FB3F0909435B84C7B0EA238BEC05478ACBF",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

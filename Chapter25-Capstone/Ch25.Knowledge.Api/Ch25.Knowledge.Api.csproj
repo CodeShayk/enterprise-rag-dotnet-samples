@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Chapter 25: the Contoso Knowledge Assistant assembled from the shared libraries. POST /ask takes a bearer token and
+    a question and returns a verified answer with safe HTML and a provenance record; GET /health reports the live index.
+    The request path: the asker from the validated token (Chapter 22), a rate limit per tenant, Chapter 13's intent
+    check when a model can confirm its declines, hybrid retrieval with re-ranking on the index version the live alias
+    names (Chapters 11, 12 and 24), the graph's passages first for questions that chain relations (Chapter 19), every
+    hit checked against the live permissions, a guarded query's rows for questions about the records (Chapter 17, with a
+    live model), Chapter 14's grounded answer inside
+    Chapter 16's verification and regeneration (by the model inside Contoso's network when the evidence comes from HR or
+    Procurement, ADR-0001), the evidence-keyed answer cache (Chapter 21), safe rendering, a
+    hash-chained provenance record (Chapter 23) and OpenTelemetry (Chapter 20). Listens on http://localhost:5250.
+    Runs offline with the scripted model; Ch25.AppHost starts it in the local or the hybrid profile.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch25.Knowledge.Api</RootNamespace>
+    <UserSecretsId>contoso-ch25-knowledge-api</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Query\Contoso.Knowledge.Query.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Observability\Contoso.Knowledge.Observability.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Performance\Contoso.Knowledge.Performance.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Security\Contoso.Knowledge.Security.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Governance\Contoso.Knowledge.Governance.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Operations\Contoso.Knowledge.Operations.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Agents\Contoso.Knowledge.Agents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Graph\Contoso.Knowledge.Graph.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="OllamaSharp" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

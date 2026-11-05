@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 16: corrective RAG measured on golden set v2. Evidence graders on the CPU and with llama3.2, correction
+    strategies, verification and citation repair, the corrective loop with a two-retry budget and abstention, adaptive
+    routing and the quality-latency-cost comparison, plus the loop as a Microsoft Agent Framework workflow. Generation
+    uses llama3.2 through Ollama on the CPU; calls are recorded in runs/ch16 (seeded from Chapter 14's recordings, so
+    an unchanged single pass replays). Needs `python eng/get-models.py` for bge-small, the MiniLM-L6 cross-encoder and
+    the NLI model.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch16.Corrective.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows" />
+    <PackageReference Include="OllamaSharp" />
+  </ItemGroup>
+
+</Project>

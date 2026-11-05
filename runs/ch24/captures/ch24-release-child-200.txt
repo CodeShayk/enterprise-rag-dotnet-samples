@@ -1,0 +1,7 @@
+initial deployment: live -> v1-shipped (3.3 s)
+release v2-child-200 against live v1-shipped; gate: lower bound above -0.03, no must-pass question lost
+  build   154 chunks, parent-child-200-600, breadcrumbs on, bge-small-en-v1.5-int8 (3.4 s)
+  gate    dev, 123 answerable questions: change +0.000 [-0.024, +0.024], worse G2-T004, better G2-T020: passed (47.7 s)
+  swap    live: v1-shipped -> v2-child-200 (2.5 ms)
+  check   test, 72 answerable questions through the live alias: change -0.014 [-0.042, +0.000], worse G2-T005, better none: lower bound -0.042 below the allowed drop (26.2 s)
+  rollback live: v2-child-200 -> v1-shipped (2.5 ms); v2-child-200 kept for diagnosis

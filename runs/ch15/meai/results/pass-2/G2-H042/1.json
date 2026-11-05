@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G2-H042",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:17.5016164Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Can I split a purchase order to stay under an approval limit?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "This policy does not address splitting a purchase order to stay under an approval limit."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Procurement policy PROC-POL-007: Purchase approvals\n# Procurement policy PROC-POL-007: Purchase approvals\nEvery purchase order needs an approver other than the requester.\nOrders above 25,000 USD need a second approval from the plant controller, and orders above 250,000 USD need the CFO\u0027s approval.\nBuy only from qualified suppliers.\nA new supplier is qualified after a quality audit and a credit check, and Procurement re-qualifies each supplier every three years.\nApproval limits\n| Order value | Approvals needed |\n|---|---|\n| Up to 25,000 USD | One approver other than the requester |\n| 25,000 to 250,000 USD | The approver and the plant controller |\n| Above 250,000 USD | The approver, the plant controller and the CFO |\nSplitting an order to stay under an approval limit is a breach of this policy.\nEmergency orders outside working hours may be placed by the duty manager and approved on the next business day.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 6 Termination\n## 6 Termination\nEither party may end the agreement for material breach that is not remedied within 30 days of written notice.\nOrders placed before termination are delivered on the agreed terms.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 3 Delivery\n## 3 Delivery\nThe supplier delivers to the Contoso plant named in each order, carriage paid.\nLate deliveries earn the buyer a credit of 1 percent of the order value per week of delay, up to 10 percent.\n\nSafety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nVerify zero energy before work starts.\nZero energy means that the motor can\u0027t start from the panel, the local pressure gauges read zero and the casing drain is open.\nEach person working on the pump fits their own lock."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1653",
+          "eval-output-tokens": "204",
+          "eval-total-tokens": "1857",
+          "eval-duration-ms": "0.71"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Splitting an order to stay under an approval limit is a breach of this policy. Emergency orders outside working hours may be placed by the duty manager and approved on the next business day."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1421",
+          "eval-output-tokens": "166",
+          "eval-total-tokens": "1587",
+          "eval-duration-ms": "0.76"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 0,
+        "name": "NLI groundedness",
+        "reason": "0 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0005881,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1653,
+          "outputTokenCount": 204,
+          "totalTokenCount": 1857
+        },
+        "cacheKey": "B8BFC6FDC9F7BA572BBBB83DDA04A9B200BA4C325B442576B64B264B678CA74E2A73BF007FE8D943DBF9DB8A684CFB91",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0006607,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1421,
+          "outputTokenCount": 166,
+          "totalTokenCount": 1587
+        },
+        "cacheKey": "FC5FEA296593B5B0F3DA8912E5601092B6E067F064C34C36F5C22910FA0955F397A4D86066F546434A00FFCE96A5E8C7",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

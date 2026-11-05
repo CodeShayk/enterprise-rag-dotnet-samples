@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-H023",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:52:11.0019618Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How much oil does an HG-400 take at an oil change, and which grade?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "An HG-400 gearbox is filled with 18 liters of ISO VG 220 mineral gear oil at the factory. The oil grade for an HG-400 gearbox is ISO VG 220."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HG-400 Helical Gearbox Operating Manual \u203A 4 Lubrication \u203A 4.1 Lubrication\nThe HG-400 is filled at the factory with 18 liters of ISO VG 220 mineral gear oil.\nChange the oil after the first 500 operating hours, then every 5,000 operating hours or every 12 months, whichever comes first.\nCheck the oil level weekly at the sight glass with the gearbox stopped.\nIn operation, the oil temperature must not exceed 90 \u00B0C.\n## 4.2 Approved oils\nTable 4-1 Approved oils\n| Oil type | Viscosity grade | Change interval |\n|---|---|---|\n| Mineral gear oil | ISO VG 220 | 5,000 h or 12 months |\n| Synthetic PAO gear oil | ISO VG 220 | 10,000 h or 24 months |\n| Food-grade gear oil (NSF H1) | ISO VG 220 | 5,000 h or 12 months |\nWhen changing from one type to the other, flush the gearbox with the new oil first.\n\nSOP-MS-003: Oil change on HG-400 gearboxes\n# SOP-MS-003: Oil change on HG-400 gearboxes\nThis procedure applies the oil change in section 4.3 of the HG-400 manual at Contoso plants and adds the checks that the plants\u0027 oil analysis program needs.\n4. Refill with ISO VG 220 oil of the type on the gearbox\u0027s lubrication label: 18 liters for an HG-400.\nGearbox GBX-07 on the Lakeside packaging line runs on synthetic PAO oil, so its change interval is 10,000 hours.\n\nField service report SR-2026-1213\nComplaint: a whining noise from the HG-400 gearbox that rose with speed.\nFindings: the oil level was below the sight glass and the oil had darkened; the last oil change was 14 months earlier.\nWork done: drained and flushed the gearbox, refilled it with 18 liters of ISO VG 220 oil and replaced a leaking output shaft seal.\nRecommended an oil analysis every six months.\n|---|---|---|\n| HG-400 gearbox | Woodgrove Foods, Packaging line 2 | SR-2026-1213 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1695",
+          "eval-output-tokens": "200",
+          "eval-total-tokens": "1895",
+          "eval-duration-ms": "24121.12"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response provides information about the oil grade for an HG-400 gearbox, which is ISO VG 220, and the recommended amount of oil to be filled, which is 18 liters. This information is consistent with the Ground Truth, which also states that the oil grade for an HG-400 gearbox is ISO VG 220 and recommends 18 liters of oil. However, the Response does not provide any additional information about the type of oil or its properties, which is mentioned in the Ground Truth. Additionally, the Response does not mention the lubrication label, which is also mentioned in the Ground Truth. Despite these minor omissions, the Response provides the most relevant and accurate information compared to the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "4. Refill with ISO VG 220 oil of the type on the gearbox\u0027s lubrication label: 18 liters for an HG-400."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1437",
+          "eval-output-tokens": "169",
+          "eval-total-tokens": "1606",
+          "eval-duration-ms": "38821.04"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 24.1209183,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1695,
+          "outputTokenCount": 200,
+          "totalTokenCount": 1895
+        },
+        "cacheKey": "4EC132909555C8F89B40C8807DD4ED646458A10D7438ED4FD09BE0248A3FB169F18E04561097A9EBD9C8941A1B490143",
+        "cacheHit": false
+      },
+      {
+        "latency": 38.8208996,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1437,
+          "outputTokenCount": 169,
+          "totalTokenCount": 1606
+        },
+        "cacheKey": "9CE46D391E3AE4B538268849F926452C575217867A3F7670D1147FF217E40A3A56D35D140EAC0D1BFF57E61A6EB21DC6",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

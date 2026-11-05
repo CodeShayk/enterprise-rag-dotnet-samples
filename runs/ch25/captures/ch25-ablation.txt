@@ -1,0 +1,13 @@
+Golden set v2 (c2b62ddc4923), sufficient top 4 on 123 answerable dev and 72 test questions; i7-12700H, CPU only
+Configuration                Ch  chunks build s p50 ms   dev          change on dev  test         change on test
+shipped                             219     3.1    161  0.98                  +0.00  0.97                  +0.00
+- ingestion hygiene          6      271     4.4    152  0.94   -0.03 [-0.07, -0.01]  0.96   -0.01 [-0.04, +0.00]
+- parent-child chunks        9      123     1.8    126  0.86   -0.11 [-0.18, -0.05]  0.81   -0.17 [-0.25, -0.08]
+- breadcrumbs                9      219     2.6    153  0.89   -0.08 [-0.14, -0.02]  0.86   -0.11 [-0.19, -0.03]
+- INT8 (FP32 model)          10     219     6.6    168  0.95   -0.02 [-0.06, +0.00]  0.96   -0.01 [-0.04, +0.00]
+- dense search               10     219     3.1    153  0.96   -0.02 [-0.04, +0.00]  0.96   -0.01 [-0.04, +0.00]
+- keyword search             11     219     3.1    165  0.97   -0.01 [-0.04, +0.02]  0.97                  +0.00
+- identifier analyzer        11     219     3.1    172  0.96   -0.02 [-0.05, +0.02]  0.99   +0.01 [-0.03, +0.07]
+- re-ranking                 12     219     3.1     10  0.97   -0.01 [-0.04, +0.02]  1.00   +0.03 [+0.00, +0.07]
+- permissions in the search  22     219     3.1    172  0.98                  +0.00  0.97                  +0.00
+- work-order export          17, 22    212     2.7    169  0.93   -0.04 [-0.08, -0.01]  0.96   -0.01 [-0.04, +0.00]

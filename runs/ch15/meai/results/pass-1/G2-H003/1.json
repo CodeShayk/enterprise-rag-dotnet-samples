@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-H003",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:47:10.0088143Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What has to be fitted in the seal-water line of a CP-200?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "An isolation valve, a strainer and a pressure gauge must be fitted in the seal-water line of a CP-200. The seal-water pressure must exceed the suction pressure by at least 1 bar whenever the pump runs."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 4 Installation \u203A 4.3 Seal-water connection\n## 4.3 Seal-water connection\nConnect the seal-water supply to the flush connection marked SW on the seal housing.\nFit an isolation valve, a strainer and a pressure gauge in the line.\nThe seal-water pressure must exceed the suction pressure by at least 1 bar whenever the pump runs.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 2 Description\n# 2 Description\nThe CP-200 is a single-stage, end-suction centrifugal pump with a closed impeller, designed for clean or slightly contaminated water at up to 90 \u00B0C.\nThe shaft is sealed by a cartridge mechanical seal flushed with clean seal water from an external supply.\nA controller on the pump skid monitors the motor, the bearing temperatures and the seal-water pressure and trips the pump when a limit is exceeded.\n\nSOP-FS-014: Mechanical seal replacement on CP-200 pumps\n# SOP-FS-014: Mechanical seal replacement on CP-200 pumps\n1. Apply lockout/tagout to the motor and isolate the seal-water and process lines, as safety bulletin SB-0932 requires.\n2. Drain the casing and remove the coupling guard.\n3. Remove the seal housing and the old seal.\n4. Fit mechanical seal PN-4471-C.\n5. Tighten the seal gland nuts evenly to 25 N\u00B7m.\n7. Record the seal\u0027s part number and the operating hours in the work order.\n\nSafety bulletin SB-0932: Seal housing work\n# Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nEach person working on the pump fits their own lock.\nThis bulletin applies to every pump with a mechanical seal flushed by seal water, not only to the CP-200.\nAt the Riverside plant, report any seal-water line that can\u0027t be isolated or drained to the Riverside maintenance planner on extension 4410 before work starts."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 5"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1687",
+          "eval-output-tokens": "213",
+          "eval-total-tokens": "1900",
+          "eval-duration-ms": "24826.32"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Apart from the minor inaccuracies, the Response contains most of the necessary and relevant information with respect to the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Connect the seal-water supply to the flush connection marked SW on the seal housing. Fit an isolation valve, a strainer and a pressure gauge in the line. The seal-water pressure must exceed the suction pressure by at least 1 bar whenever the pump runs."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1465",
+          "eval-output-tokens": "193",
+          "eval-total-tokens": "1658",
+          "eval-duration-ms": "41251.95"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 24.8261119,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1687,
+          "outputTokenCount": 213,
+          "totalTokenCount": 1900
+        },
+        "cacheKey": "3603F558D7B8ED41D7E2197D76F67D7CC7E201CA479C5F3DF38A32FFD6EE5CA93AF92E72CAB21C239509BE52590B6532",
+        "cacheHit": false
+      },
+      {
+        "latency": 41.2517724,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1465,
+          "outputTokenCount": 193,
+          "totalTokenCount": 1658
+        },
+        "cacheKey": "96E3DFD0B6B8240280EB8EE34CFACDFE4AA7FCAE5A0FBCD2F5E59AF4ADBFD817F6EEB912381AFA0C2D09A1038688CD6E",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

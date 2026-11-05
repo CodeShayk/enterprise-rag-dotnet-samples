@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 12: the cross-encoder's pair encoding and ordering on real text, MMR's picks, the per-document cap and
+    Platt scaling. Needs `python eng/get-models.py` for the ms-marco-MiniLM-L6-v2 files.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch12.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+  </ItemGroup>
+
+</Project>

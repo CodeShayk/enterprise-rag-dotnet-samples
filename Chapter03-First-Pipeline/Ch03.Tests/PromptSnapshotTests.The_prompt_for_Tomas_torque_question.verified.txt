@@ -1,0 +1,41 @@
+system:
+You are the Contoso Knowledge Assistant. Answer only from the numbered sources. Cite each source you use as [n]. If the sources don't answer the question, say that you don't know.
+
+user:
+Sources:
+[1] CP-200 Centrifugal Pump Manual (2009), section 6.3: Flange bolt torque (CP200-MAN-2009-6.3)
+# 6.3 Flange bolt torque
+Table 6-2 gives the tightening torque for the CP-200 flange bolts. The values apply to bolts of property class 8.8, lightly oiled, with the spiral-wound gaskets supplied with the pump.
+| Bolt size | Torque |
+|---|---|
+| M10 | 49 N·m |
+| M12 | 85 N·m |
+| M16 | 210 N·m |
+Tighten
+
+[2] CP-200 Centrifugal Pump Manual (2009), section 6.3: Flange bolt torque (CP200-MAN-2009-6.3)
+| 85 N·m |
+| M16 | 210 N·m |
+Tighten the M12 flange bolts (property class 8.8, lightly oiled) to 85 N·m. Apply the torque in a cross pattern in three passes: 30 N·m, 60 N·m, then 85 N·m. Re-check the torque after the first 24 hours of operation.
+Don't reuse spiral-wound gaskets. A gasket that has been
+
+[3] Asset record: pump P-201 (P201-ASSET)
+# Asset record: pump P-201
+| Field | Value |
+|---|---|
+| Tag | P-201 |
+| Model | CP-200 centrifugal pump |
+| Site | Riverside plant, cooling-water building |
+| Duty | Cooling-water transfer, 180 m³/h at 32 m head |
+| Motor | 30 kW, 1,480 rpm |
+| Commissioned | May 2011 |
+| Seal-water valve | V-114 |
+| Mechanical seal | PN
+
+[4] WI-FS-031: Cleaning the seal-water strainer upstream of V-114 (WI-FS-031)
+# WI-FS-031: Cleaning the seal-water strainer upstream of V-114
+The seal-water line to pump P-201 has a Y-strainer with a 100-micron screen upstream of valve V-114. A blocked screen is the most common cause of error E-217 at the Riverside plant.
+1. Stop P-201 and close the isolation valve upstream of the strainer. Leave V-114 open.
+2. Put a bucket under the strainer and release the
+
+Question: What torque applies to the M12 flange bolts on P-201?

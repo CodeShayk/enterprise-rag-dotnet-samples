@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 17: agentic RAG. Contoso's maintenance records as a read-only DuckDB database with per-person views, a
+    guard for model-written SQL, retrieval and records as tools, the evidence ledger that turns tool results into
+    citable sources, tool policies, approvals, budgets and the trajectory log.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Agents</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="DuckDB.NET.Data.Full" />
+  </ItemGroup>
+
+</Project>

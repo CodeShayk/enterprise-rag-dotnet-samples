@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G2-H040",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:54:34.0889042Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Whom does a Lakeside technician call when a seal-water line can\u0027t be isolated?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "A Lakeside technician calls the Lakeside shift supervisor on extension 6102 before work starts. A Riverside technician calls the Riverside maintenance planner on extension 4410 before work starts. A Northgate technician calls the Northgate maintenance planner on extension 5417 before work starts."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Safety bulletin SB-0932: Seal housing work (Lakeside plant) \u203A Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nVerify zero energy before work starts.\nThis bulletin applies to every pump with a mechanical seal flushed by seal water, not only to the CP-200.\nAt the Lakeside plant, report any seal-water line that can\u0027t be isolated or drained to the Lakeside shift supervisor on extension 6102 before work starts.\n\nSafety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nThis bulletin applies to every pump with a mechanical seal flushed by seal water, not only to the CP-200.\nAt the Riverside plant, report any seal-water line that can\u0027t be isolated or drained to the Riverside maintenance planner on extension 4410 before work starts.\n\nSafety bulletin SB-0932: Seal housing work (Northgate plant) \u203A Safety bulletin SB-0932: Seal housing work\nIssued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nAt the Northgate plant, report any seal-water line that can\u0027t be isolated or drained to the Northgate maintenance planner on extension 5417 before work starts.\n\nSOP-FS-007: Pump isolation and lockout \u203A Seal-water valves at Riverside\n## Seal-water valves at Riverside\nAt the Riverside plant, the seal-water valve for each pump carries the pump\u0027s tag with the prefix V: valve V-114 feeds pump P-201."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1691",
+          "eval-output-tokens": "268",
+          "eval-total-tokens": "1959",
+          "eval-duration-ms": "28827.84"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "At the Lakeside plant, report any seal-water line that can\u0027t be isolated or drained to the Lakeside shift supervisor on extension 6102 before work starts."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1456",
+          "eval-output-tokens": "271",
+          "eval-total-tokens": "1727",
+          "eval-duration-ms": "50048.20"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 28.8275743,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1691,
+          "outputTokenCount": 268,
+          "totalTokenCount": 1959
+        },
+        "cacheKey": "E316470717936A17971187FFAD035399C17FF3EB5FB01D8E0F24127EBBE328AF7B1205193FF7C16E61D4C8755DDFA5F3",
+        "cacheHit": false
+      },
+      {
+        "latency": 50.0480658,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1456,
+          "outputTokenCount": 271,
+          "totalTokenCount": 1727
+        },
+        "cacheKey": "DB35ACF3C3252413DBE9CE7FBB1DE01E396AEDEAEC33637E03C16523D440FDF746998F503B9A506F18B77748F3B47B48",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

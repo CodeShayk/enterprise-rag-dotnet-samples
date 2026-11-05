@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Chapter 3: the walking skeleton over HTTP. POST /ask returns a JSON answer; POST /ask/stream
+    returns server-sent events: the sources first, then the answer as the model writes it.
+    Listens on http://localhost:5030.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch03.Knowledge.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch03.Knowledge\Ch03.Knowledge.csproj" />
+    <ProjectReference Include="..\Ch03.ServiceDefaults\Ch03.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

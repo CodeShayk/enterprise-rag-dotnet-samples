@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 10: the cost of one embedding call, measured with BenchmarkDotNet: full-precision and INT8 weights, one
+    text against a batch of 32 of equal length, one ONNX Runtime thread. Always run it in the Release configuration;
+    Section 10.4 of the chapter gives the command.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch10.Benchmarks</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+  </ItemGroup>
+
+</Project>

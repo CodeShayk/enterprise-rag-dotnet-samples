@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-H012",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:02:27.6713104Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "At what vibration levels does the CP-200 controller warn and trip?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The CP-200 controller warns at 4.5 mm/s RMS and trips at 7.1 mm/s RMS. The CP-200 controller trips at 7.1 mm/s RMS."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-222: vibration high\n## Error E-222: vibration high\nError E-222 means the vibration on the bearing housing exceeded 7.1 mm/s RMS.\nThe controller warns at 4.5 mm/s RMS and trips the pump at 7.1 mm/s RMS.\nCauses, most likely first:\n2. Cavitation.\n3. Worn bearings or a damaged impeller.\nDon\u0027t restart the pump repeatedly after E-222.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-201: suction pressure low\n## Error E-201: suction pressure low\nError E-201 means the suction pressure fell below 0.3 bar.\nThe controller warns for 20 seconds before it trips the pump, to ride through short dips.\nCauses, most likely first:\n2. The suction strainer is blocked.\n3. The level in the suction tank is too low.\nOpen the suction valve fully, clean the suction strainer and check the tank level before resetting E-201.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-204: flow low\n## Error E-204: flow low\nError E-204 means the flow fell below 40 m\u00B3/h, the pump\u0027s minimum continuous flow.\nThe controller warns at once and trips the pump after 2 minutes of low flow.\nCauses, most likely first:\n1. The discharge valve is throttled too far.\nOpen the discharge valve or stop the pump, then reset E-204.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-104: motor winding temperature high\n## Error E-104: motor winding temperature high\nError E-104 means the motor\u0027s winding temperature exceeded 155 \u00B0C.\nThe controller trips the pump and blocks a restart until the windings cool below 120 \u00B0C.\nCheck the motor\u0027s cooling fan and fan cover for blockages, and measure the supply voltage on all three phases; an unbalance of more than 2 percent overheats the windings.\nFrequent starts also cause E-104: the CP-200 motor allows no more than six starts per hour.\nReset E-104 at the local panel once the temperature has dropped.\nNever bypass the thermistor relay."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1698",
+          "eval-output-tokens": "195",
+          "eval-total-tokens": "1893",
+          "eval-duration-ms": "24170.75"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 2,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Error E-222 means the vibration on the bearing housing exceeded 7.1 mm/s RMS. The controller warns at 4.5 mm/s RMS and trips the pump at 7.1 mm/s RMS."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1452",
+          "eval-output-tokens": "208",
+          "eval-total-tokens": "1660",
+          "eval-duration-ms": "40692.47"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 24.1705005,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1698,
+          "outputTokenCount": 195,
+          "totalTokenCount": 1893
+        },
+        "cacheKey": "C7B6601FE3CF3B95547D8B7ECEDA3D0BA828F3BC1D6458CE4D4824544BD2666BFC572213C290B25FADC532A109CFDB50",
+        "cacheHit": false
+      },
+      {
+        "latency": 40.6922727,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1452,
+          "outputTokenCount": 208,
+          "totalTokenCount": 1660
+        },
+        "cacheKey": "E11BEDAA1E1C6EA59412AE8ED77065323FE767C9F72A227081B63CE6F66337FFD433288075AA42F6F43CF348D9E7AE23",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

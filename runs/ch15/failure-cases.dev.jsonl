@@ -1,0 +1,34 @@
+{"id":"G017","kind":"wrong answer","stage":"compression dropped it (FP3)","note":"Gives September 13, 2026 as the contract\u0027s end; the contract runs to June 30, 2027."}
+{"id":"G2-H026","kind":"wrong answer","stage":"in context, answered wrongly or in part (FP4/FP7)","note":"Misses turning the input shaft by hand every month."}
+{"id":"G2-T047","kind":"wrong answer","stage":"retrieval: not in the top four (FP2)","note":"Declined, though the catalog row gives both."}
+{"id":"G006","kind":"wrong answer","stage":"in context, answered wrongly or in part (FP4/FP7)","note":"Misses that the leave can be taken in up to three blocks."}
+{"id":"G019","kind":"wrong answer","stage":"declined with the fact in context (FP4)","note":"Declined; the AI-use policy forbids pasting company documents into public chatbots."}
+{"id":"G2-H042","kind":"wrong answer","stage":"declined with the fact in context (FP4)","note":"Says the policy doesn\u0027t address splitting; it calls splitting a breach."}
+{"id":"G2-H025","kind":"unsupported claim","claim":2,"stage":"no block supports it; its quote is real","note":"S4 says 2.0 bar clears E-217, not that it prevents it."}
+{"id":"G052","kind":"unsupported claim","claim":0,"stage":"no block supports it; its quote isn\u0027t in its source","note":"Cites the 2024 policy, which doesn\u0027t say it; the rule is in the 2027 guidance, S1."}
+{"id":"G2-T034","kind":"unsupported claim","claim":2,"stage":"another block supports it: wrong citation","note":"S2 is the F012 and F002 faults; it has no range for 2-11."}
+{"id":"G2-T034","kind":"unsupported claim","claim":3,"stage":"another block supports it: wrong citation","note":"S3 is a service report that set 2-11 to 20 s; it has no range."}
+{"id":"G017","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote is real","note":"September 13, 2026 is PN-4471-B\u0027s last date in the price list, not the contract\u0027s end."}
+{"id":"G017","kind":"unsupported claim","claim":2,"stage":"another block supports it: wrong citation","note":"The catalog doesn\u0027t give the contract\u0027s end."}
+{"id":"G025","kind":"unsupported claim","claim":0,"stage":"another block supports it: wrong citation","note":"S3 is the manual\u0027s general rule; the complaint is in the service report, S1."}
+{"id":"G025","kind":"unsupported claim","claim":1,"stage":"another block supports it: wrong citation","note":"The e-mail reports a low oil level and pitting but doesn\u0027t say they caused the noise."}
+{"id":"G058","kind":"unsupported claim","claim":1,"stage":"another block supports it: wrong citation","note":"S2 is P-202\u0027s asset record; it doesn\u0027t give P-201\u0027s model."}
+{"id":"G2-T031","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote isn\u0027t in its source","note":"Dirty cooling fins cause a high oil temperature, the next row, not leaks."}
+{"id":"G2-T013","kind":"unsupported claim","claim":1,"stage":"another block supports it: wrong citation","note":"S2 is the seal procedure; its quote is about the shaft sleeve."}
+{"id":"G2-T013","kind":"unsupported claim","claim":2,"stage":"another block supports it: wrong citation","note":"S3 is the training\u0027s removal step; its quote is about the shaft sleeve."}
+{"id":"G2-H004","kind":"unsupported claim","claim":1,"stage":"another block supports it: wrong citation","note":"The 0.25 mm is the composite ring\u0027s running clearance, not a minimum."}
+{"id":"G039","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote is real","note":"The approvals are for purchase orders, not for new suppliers."}
+{"id":"G039","kind":"unsupported claim","claim":2,"stage":"another block supports it: wrong citation","note":"One contract\u0027s signatures aren\u0027t a requirement for new suppliers."}
+{"id":"G039","kind":"unsupported claim","claim":3,"stage":"no block supports it; its quote is real","note":"The approver rule is for purchase orders, not for new suppliers."}
+{"id":"G038","kind":"unsupported claim","claim":0,"stage":"another block supports it: wrong citation","note":"S2 is the contract\u0027s quality section; the five business days are in S1."}
+{"id":"G2-T015","kind":"unsupported claim","claim":0,"stage":"another block supports it: wrong citation","note":"S3 is the pump\u0027s description; the 32,000 h is in S1\u0027s table."}
+{"id":"G2-T015","kind":"unsupported claim","claim":2,"stage":"no block supports it; its quote is real","note":"S1 doesn\u0027t say this; it only halves the intervals for abrasive or hot service."}
+{"id":"G028","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote is real","note":"S2 says bearings run hottest after regreasing, not when to regrease."}
+{"id":"G028","kind":"unsupported claim","claim":2,"stage":"no block supports it; its quote is real","note":"S3 trips at 95 \u00B0C but says to let the bearings cool and check the grease, not to regrease."}
+{"id":"G029","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote is real","note":"An inference the manual doesn\u0027t make; it gives intervals for abrasive service."}
+{"id":"G2-T065","kind":"unsupported claim","claim":0,"stage":"another block supports it: wrong citation","note":"The e-mail gives 1,340 USD per seal but doesn\u0027t name the part."}
+{"id":"G2-T065","kind":"unsupported claim","claim":2,"stage":"another block supports it: wrong citation","note":"S3 is the contract\u0027s opening sentence; the minimum order is in S1."}
+{"id":"G051","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote isn\u0027t in its source","note":"S2 has the three blocks; the 2024 rule of one continuous block is in S1."}
+{"id":"G2-H042","kind":"unsupported claim","claim":0,"stage":"no block supports it; its quote is real","note":"Its own quote says the opposite: splitting is a breach."}
+{"id":"G024","kind":"unsupported claim","claim":0,"stage":"no block supports it; its quote is real","note":"The compressed asset record has no site row; Riverside comes from the work orders in S4."}
+{"id":"G2-F005","kind":"unsupported claim","claim":1,"stage":"no block supports it; its quote is real","note":"S2 is about V-114, P-201\u0027s valve."}

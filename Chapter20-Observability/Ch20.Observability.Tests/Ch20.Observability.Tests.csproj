@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 20: the telemetry on a small fixture with a scripted model. Spans nest from the request through retrieval,
+    the generator's stages and the model call, across the generator's yields; baggage reaches every span; an answer
+    record reads back from its trace; quality metrics count; redaction, pseudonyms, failure points, drift and burn
+    rates compute as the chapter says; a tool call becomes a span, and an agent's refused tool an event on it.
+    Deterministic and offline: no model is called.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch20.Observability.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="OpenTelemetry" />
+    <PackageReference Include="OpenTelemetry.Exporter.InMemory" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Observability\Contoso.Knowledge.Observability.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Agents\Contoso.Knowledge.Agents.csproj" />
+  </ItemGroup>
+
+</Project>

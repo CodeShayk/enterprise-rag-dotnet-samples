@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-H019",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:39:52.7129937Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How do I prove that an isolated pump can\u0027t start?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "To prove that an isolated pump can\u0027t start, try to start the pump from the local panel. The local pressure gauges on the pump should read zero."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "SOP-FS-007: Pump isolation and lockout\n# SOP-FS-007: Pump isolation and lockout\nThis procedure isolates a pump so that it can\u0027t start, can\u0027t be pressurized and can\u0027t move while people work on it.\n## Isolation steps\n1. Tell the control room which pump you are isolating and why.\n2. Stop the pump from the local panel and open the motor\u0027s isolator.\nEveryone who works on the pump fits their own lock.\n4. Close the suction and discharge valves and lock them closed.\n5. Close the seal-water isolation valve upstream of the strainer and open the blow-down valve.\n6. Open the casing drain and wait until it stops flowing.\n7. Try to start the pump from the local panel to prove that it can\u0027t start, then return the switch to off.\n8. Check that every pressure gauge on the pump reads zero.\n\nSafety bulletin SB-0932: Seal housing work (Northgate plant) \u203A Safety bulletin SB-0932: Seal housing work\nApply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing.\nVerify zero energy before work starts.\nZero energy means that the motor can\u0027t start from the panel, the local pressure gauges read zero and the casing drain is open.\nEach person working on the pump fits their own lock.\nAt the Northgate plant, report any seal-water line that can\u0027t be isolated or drained to the Northgate maintenance planner on extension 5417 before work starts.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 5 Commissioning \u203A 5.4 Start-up\n## 5.4 Start-up\nBefore the first start, and after any work on the seal or the impeller, prime the pump and check the seal-water supply.\n1. Open the suction valve fully.\nNever throttle the suction side.\n3. Open the seal-water supply and confirm a pressure of 2.0 to 3.0 bar at the seal flush connection.\n4. Open the discharge valve about one quarter.\n5. Jog the motor and confirm the direction of rotation against the arrow on the bearing housing.\n6. Start the pump, then open the discharge valve slowly to the duty point within two minutes."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1676",
+          "eval-output-tokens": "205",
+          "eval-total-tokens": "1881",
+          "eval-duration-ms": "25478.56"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions starting the pump from the local panel to prove that it can\u0027t start, which is the opposite of what the Ground Truth states. The Ground Truth instructs to start the pump from the local panel to prove that it can\u0027t start, then return the switch to off. This indicates that the Response is missing the crucial step of returning the switch to off, which is a key piece of information in the Ground Truth. Additionally, the Response provides a misleading statement by implying that the pump cannot start when started from the local panel, whereas the Ground Truth explicitly states that starting the pump from the local panel proves that it can\u0027t start. This suggests that the Response is not fully complete in terms of providing accurate and relevant information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "7. Try to start the pump from the local panel to prove that it can\u0027t start, then return the switch to off."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1427",
+          "eval-output-tokens": "174",
+          "eval-total-tokens": "1601",
+          "eval-duration-ms": "40008.28"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 25.4782677,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1676,
+          "outputTokenCount": 205,
+          "totalTokenCount": 1881
+        },
+        "cacheKey": "69A28A8F9D3E1E9E306D005A920DDD152AAB7A6E7848D48602BE5DAF31D434CDE2228F999819B205252C65A4A0603AE2",
+        "cacheHit": false
+      },
+      {
+        "latency": 40.008028,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1427,
+          "outputTokenCount": 174,
+          "totalTokenCount": 1601
+        },
+        "cacheKey": "D6BFAB46EFCDDEBEE220DEB7E55002A5222875791DE6F1E5033C0A74FA451571B4A598B64A05D4A0F2E208F9C679F332",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 24: releasing the assistant's index. Candidate index configurations measured on the dev and test
+    splits; a release that builds a candidate version beside the live one, gates it on the dev questions, swaps the
+    alias, checks the held-out test questions through the live alias and rolls back on its own when they regress;
+    and the hybrid retriever's keyword-only mode when the embedding model fails or is slow. ModelClientSetup.cs is the
+    model client's own resilience pipeline, compiled but not run against a model here.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch24.Deployment.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Operations\Contoso.Knowledge.Operations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+    <PackageReference Include="OllamaSharp" />
+  </ItemGroup>
+
+</Project>

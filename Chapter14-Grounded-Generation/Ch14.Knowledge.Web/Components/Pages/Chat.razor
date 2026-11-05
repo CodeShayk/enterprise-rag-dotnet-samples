@@ -1,0 +1,181 @@
+@page "/"
+@inject KnowledgeClient Knowledge
+
+<PageTitle>Contoso Knowledge Assistant</PageTitle>
+
+<div class="layout">
+    <main>
+        <h1>Contoso Knowledge Assistant</h1>
+        <p class="notice">Answers are AI-generated. Check them against their sources.</p>
+
+        @foreach (var turn in turns)
+        {
+            <div class="question">@turn.Question</div>
+            <div class="answer">
+                @if (turn.Answer is { } answer)
+                {
+                    <span class="status @answer.Status">@Label(answer.Status)</span>
+                    @foreach (var (text, source) in Parts(answer.Text))
+                    {
+                        if (source is null)
+                        {
+                            @text
+                        }
+                        else
+                        {
+                            <button class="marker" @onclick="() => Select(turn, source)" aria-label="Show source @source">@source</button>
+                        }
+                    }
+
+                    @if (answer.Claims.Any(c => c.Source.Length > 0 && !c.Verified))
+                    {
+                        <p class="warning">A claim's quote wasn't found in its source; check it before relying on it.</p>
+                    }
+
+                    <div class="feedback">
+                        @if (turn.Rated)
+                        {
+                            <span>Thanks, your rating was sent with the answer's sources.</span>
+                        }
+                        else
+                        {
+                            <button @onclick='() => RateAsync(turn, answer, "up")' aria-label="Helpful">👍</button>
+                            <button @onclick='() => RateAsync(turn, answer, "down")' aria-label="Not helpful">👎</button>
+                        }
+                    </div>
+                }
+                else
+                {
+                    @turn.Streaming
+                }
+            </div>
+
+            @if (turn.Degraded.Count > 0)
+            {
+                <p class="warning">Part of the search didn't respond (@string.Join(", ", turn.Degraded)), so this answer may be missing evidence.</p>
+            }
+        }
+
+        <form @onsubmit="AskAsync">
+            <select @bind="user" aria-label="Ask as">
+                @foreach (var person in People.All)
+                {
+                    <option value="@person.Id">@person.Name</option>
+                }
+            </select>
+            <input @bind="question" placeholder="Ask about Contoso's documents" aria-label="Question" />
+            <button type="submit" disabled="@busy">Ask</button>
+        </form>
+    </main>
+
+    <aside class="sources">
+        <h2>Sources</h2>
+        @if (selected is not null)
+        {
+            @foreach (var source in selected.Sources)
+            {
+                <article class="source @(source.Id == selectedSource ? "active" : "")" @onclick="() => Select(selected, source.Id)">
+                    <div><b>@source.Id</b> @source.Title</div>
+                    <div class="section">@source.Section</div>
+                    <div class="meta">@source.DocumentId · relevance @source.Probability.ToString("0.00")</div>
+                    @if (source.Id == selectedSource)
+                    {
+                        var (before, quote, after) = Highlight(source, selected.Answer);
+                        <p>@before<mark>@quote</mark>@after</p>
+                    }
+                </article>
+            }
+        }
+    </aside>
+</div>
+
+@code {
+    private static readonly JsonSerializerOptions Json = JsonSerializerOptions.Web;
+
+    private readonly string conversationId = Guid.NewGuid().ToString("N");
+    private readonly List<TurnView> turns = [];
+    private string user = People.Kwame.Id;
+    private string question = "";
+    private bool busy;
+    private TurnView? selected;
+    private string? selectedSource;
+
+    private sealed class TurnView(string question)
+    {
+        public string Question { get; } = question;
+        public string Streaming { get; set; } = "";
+        public IReadOnlyList<SourceView> Sources { get; set; } = [];
+        public IReadOnlyList<string> Degraded { get; set; } = [];
+        public AnswerView? Answer { get; set; }
+        public bool Rated { get; set; }
+    }
+
+    private async Task AskAsync()
+    {
+        if (busy || string.IsNullOrWhiteSpace(question)) return;
+        busy = true;
+        var turn = new TurnView(question.Trim());
+        (question, selected, selectedSource) = ("", turn, null);
+        turns.Add(turn);
+
+        // The sources arrive first, then the text as the model writes it, then the validated answer replaces the text.
+        await foreach (var item in Knowledge.AskAsync(user, turn.Question, conversationId))
+        {
+            switch (item.EventType)
+            {
+                case "sources":
+                    var sources = JsonSerializer.Deserialize<SourcesView>(item.Data, Json)!;
+                    (turn.Sources, turn.Degraded) = (sources.Sources, sources.Degraded);
+                    break;
+                case "delta":
+                    turn.Streaming += JsonSerializer.Deserialize<Delta>(item.Data, Json)!.Text;
+                    break;
+                case "answer":
+                    turn.Answer = JsonSerializer.Deserialize<AnswerView>(item.Data, Json);
+                    break;
+            }
+
+            StateHasChanged();
+        }
+
+        busy = false;
+    }
+
+    private void Select(TurnView turn, string source) => (selected, selectedSource) = (turn, source);
+
+    private async Task RateAsync(TurnView turn, AnswerView answer, string rating)
+    {
+        await Knowledge.RateAsync(user, turn.Question, rating, answer, conversationId);
+        turn.Rated = true;
+    }
+
+    private static string Label(string status) => status switch
+    {
+        "answered" => "Answered from the sources",
+        "partial" => "Partly answered",
+        "clarify" => "Needs a clarification",
+        _ => "Not in the sources",
+    };
+
+    /// <summary>The answer's text cut at its markers: plain text, and the source ids to show as links.</summary>
+    private static IEnumerable<(string Text, string? Source)> Parts(string text)
+    {
+        var at = 0;
+        foreach (Match m in Regex.Matches(text, @"\[(S\d+)\]"))
+        {
+            yield return (text[at..m.Index], null);
+            yield return ("", m.Groups[1].Value);
+            at = m.Index + m.Length;
+        }
+
+        yield return (text[at..], null);
+    }
+
+    /// <summary>The source's text with the first verified quote that cites it marked.</summary>
+    private static (string Before, string Quote, string After) Highlight(SourceView source, AnswerView? answer)
+    {
+        var quote = answer?.Claims.FirstOrDefault(c => c.Source == source.Id && c.Verified)?.Quote.Trim().TrimEnd('.');
+        var at = string.IsNullOrEmpty(quote) ? -1 : source.Text.IndexOf(quote, StringComparison.OrdinalIgnoreCase);
+        return at < 0 ? (source.Text, "", "") : (source.Text[..at], source.Text.Substring(at, quote!.Length), source.Text[(at + quote.Length)..]);
+    }
+}

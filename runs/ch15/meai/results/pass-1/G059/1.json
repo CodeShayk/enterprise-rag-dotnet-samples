@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G059",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:11:22.9354829Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Do I need a permit to grind a bracket outside the workshop?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Grinding a bracket outside the workshop needs a hot work permit. The permit is valid for one shift."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Welding, grinding and cutting outside the workshops need a hot work permit from the shift supervisor."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1407",
+          "eval-output-tokens": "177",
+          "eval-total-tokens": "1584",
+          "eval-duration-ms": "15081.58"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Safety bulletin SB-0947: Hot work permits\n# Safety bulletin SB-0947: Hot work permits\nWelding, grinding and cutting outside the workshops need a hot work permit from the shift supervisor.\nRemove or cover combustible material within 10 meters, keep a fire extinguisher at the work site and post a fire watch for 60 minutes after the work ends.\nHot work on a line that has carried oil or solvent also needs a gas test before the permit is signed.\nThe permit is valid for one shift.\nIf the work isn\u0027t finished by the end of the shift, the next shift supervisor issues a new permit after checking the site again.\n\nSafety bulletin SB-0950: Chemical cleaning of strainers\n# Safety bulletin SB-0950: Chemical cleaning of strainers\nSome sites descale seal-water strainer screens with citric acid solution.\nWear chemical goggles and nitrile gloves, and mix the solution in the workshop, never at the pump.\nRinse the screen with clean water before refitting it; acid left on the screen attacks the mechanical seal\u0027s elastomers.\nWI-FS-031 describes the strainer cleaning itself.\n\nSafety bulletin SB-0901: Confined space entry\n# Safety bulletin SB-0901: Confined space entry\nPump pits, tanks and valve chambers are confined spaces.\nEnter one only with a confined space permit, a gas test that shows at least 19.5 percent oxygen and no flammable or toxic gas, and an attendant who stays outside.\nThe attendant keeps a log of everyone inside and calls the emergency team if anyone inside stops responding.\nThe attendant never goes in to rescue.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-301: suction pressure sensor fault\n## Error E-301: suction pressure sensor fault\nError E-301 means the signal from suction pressure transmitter PT-11 is outside 4 to 20 mA.\nThe pump keeps running without low-suction protection, so the controller raises an alarm.\nCauses, most likely first:\n1. A broken transmitter cable.\n2. A failed transmitter.\nCheck the cable and replace PT-11 if its output stays out of range."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1643",
+          "eval-output-tokens": "243",
+          "eval-total-tokens": "1886",
+          "eval-duration-ms": "41355.46"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 15.0814252,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1407,
+          "outputTokenCount": 177,
+          "totalTokenCount": 1584
+        },
+        "cacheKey": "7BF7B825332A637E4F4E4D725265C25BBC3E0907C2FEAF1C4FB35D765130521C4F7795077B26E22359C28A2FBAF9CEE2",
+        "cacheHit": false
+      },
+      {
+        "latency": 41.3551436,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1643,
+          "outputTokenCount": 243,
+          "totalTokenCount": 1886
+        },
+        "cacheKey": "66EA8703F80DA36FB9346725BF841F385080A917A2F45EB5226DA2FE8B31B632616262CD5C4F7C18A709C24C799754ED",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

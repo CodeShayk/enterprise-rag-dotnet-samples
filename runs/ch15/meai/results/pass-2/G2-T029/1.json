@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T029",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:34.1202956Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How often should you clean the cooling fins on an HG-400 gearbox?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The cooling fins on an HG-400 gearbox should be cleaned every 3 months. The cooling fins on an HG-400 gearbox are located on both sides of the housing."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HG-400 Helical Gearbox Operating Manual \u203A 6 Maintenance\n# 6 Maintenance\nTable 6-1 Maintenance schedule\n| Task | Interval |\n|---|---|\n| Check the oil level at the sight glass | Weekly |\n| Check for leaks and unusual noise | Weekly |\n| Clean the cooling fins | Every 3 months |\n| Oil analysis for viscosity, water and metal particles | Every 6 months |\n| Change the oil | As Table 4-1 |\n| Replace the shaft seals | Every 20,000 h or when leaking |\n\nHG-400 Helical Gearbox Operating Manual \u203A 7 Troubleshooting\n# 7 Troubleshooting\nTable 7-1 Troubleshooting\n| Symptom | Possible cause | Remedy |\n|---|---|---|\n| Whining noise that rises with speed | Low oil level or worn gear teeth | Top up the oil; inspect the gears if the noise stays |\n| Knocking noise once per revolution | Damaged gear tooth | Stop the gearbox and inspect the gears |\n| Oil leaks at a shaft | Worn shaft seal or blocked breather | Clean the breather; replace the seal |\n| Oil temperature above 90 \u00B0C | Overload, wrong oil or dirty cooling fins | Check the load and the oil; clean the fins |\n\nHG-400 Helical Gearbox Operating Manual \u203A 4 Lubrication \u203A 4.1 Lubrication\n# 4 Lubrication\n## 4.1 Lubrication\nThe HG-400 is filled at the factory with 18 liters of ISO VG 220 mineral gear oil.\nChange the oil after the first 500 operating hours, then every 5,000 operating hours or every 12 months, whichever comes first.\nSynthetic PAO oil of the same viscosity extends the interval to 10,000 hours.\nCheck the oil level weekly at the sight glass with the gearbox stopped.\nIn operation, the oil temperature must not exceed 90 \u00B0C.\n\nHG-400 Helical Gearbox Operating Manual \u203A 2 Product description\n# 2 Product description\nThe HG-400 is a foot-mounted helical gearbox with parallel input and output shafts.\nHardened and ground helical gears run in an oil bath, and tapered roller bearings carry the shafts.\nThe housing is cast iron with cooling fins on both sides."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1692",
+          "eval-output-tokens": "208",
+          "eval-total-tokens": "1900",
+          "eval-duration-ms": "0.76"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that the cooling fins on an HG-400 gearbox should be cleaned every 3 months, which is partially correct. However, it also states that the cooling fins are located on both sides of the housing, which is incorrect. The Ground Truth only mentions that the cooling fins should be cleaned every 3 months, without specifying their location. Therefore, the Response is missing some relevant information, especially the location of the cooling fins.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Clean the cooling fins | Every 3 months |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1414",
+          "eval-output-tokens": "115",
+          "eval-total-tokens": "1529",
+          "eval-duration-ms": "0.49"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0006425,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1692,
+          "outputTokenCount": 208,
+          "totalTokenCount": 1900
+        },
+        "cacheKey": "A7FE575F918EA2D7AD576FEF9E6A7ADCCB326C677907C552B3F54BFAE135F0ADEEB2DA8CCF27751992672ED19CB37F56",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0003833,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1414,
+          "outputTokenCount": 115,
+          "totalTokenCount": 1529
+        },
+        "cacheKey": "3D4DF4F7A0E123FB3B77927F100A54F44C31EACFDD63B6E09B83BCDEF7534DC5D5F279325F4AFE7BFCE80B5AA0872878",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

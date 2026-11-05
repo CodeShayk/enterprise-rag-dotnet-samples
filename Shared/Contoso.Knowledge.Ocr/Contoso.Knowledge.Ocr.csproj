@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 8: text, layout, tables and figures from pages without a text layer, on the CPU. Triage decides
+    which pages need OCR; OpenCV prepares the page images; Tesseract or PaddleOCR (on ONNX Runtime) reads them;
+    a scan layout pass rebuilds blocks, tables and figures with page coordinates and confidences, in the same
+    canonical model the digital parsers produce. Models come from sample-code/models (eng/get-models.py) and,
+    for PaddleOCR, from the RapidOcrNet package.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Ocr</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PdfPig" />
+    <PackageReference Include="PDFtoImage" />
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="OpenCvSharp4" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" />
+    <PackageReference Include="TesseractOCR" />
+    <!-- PrivateAssets="none" lets the package's build targets flow to every project that references this one,
+         so that the PP-OCRv5 models are copied next to each application, not only next to this library. -->
+    <PackageReference Include="RapidOcrNet" PrivateAssets="none" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" />
+  </ItemGroup>
+
+</Project>

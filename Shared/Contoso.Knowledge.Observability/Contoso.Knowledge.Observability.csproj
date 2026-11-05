@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 20: what the assistant records about every answer. Spans for retrieval and re-ranking at the seams
+    (decorators), quality metrics from each answer, tenant and a pseudonymous user carried as baggage onto every span,
+    content-capture modes with redaction, and the answer record that a replay harness reads. The generator's own spans
+    live in Contoso.Knowledge.Generation; model calls follow the OpenTelemetry GenAI conventions through
+    Microsoft.Extensions.AI.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Observability</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTelemetry" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,317 @@
+{
+  "reviewed": "2026-11-04T16:12:20.3528281\u002B00:00",
+  "header": "Ch25.Knowledge.Api in process: index v1-shipped (219 chunks), model llama3.2@a80c4f17acd5, prompt grounded-f04881ce, configuration d0fb3eb74c69",
+  "decision": "not ready: every FAIL blocks the release",
+  "checks": [
+    {
+      "id": "Q1",
+      "area": "quality",
+      "name": "Retrieval on golden set v2",
+      "status": "PASS",
+      "evidence": "dev 0.98 (123 answerable), test 0.97 (72 answerable) on v1-shipped; the bar is 0.95",
+      "chapters": "5, 9-12",
+      "owner": "Knowledge Assistant team",
+      "seconds": 36.7
+    },
+    {
+      "id": "Q2",
+      "area": "quality",
+      "name": "Must-pass questions",
+      "status": "PASS",
+      "evidence": "all 6 sufficient (G001, G003, G004, G005, G006, G017)",
+      "chapters": "24",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "Q3",
+      "area": "quality",
+      "name": "Signature questions end to end",
+      "status": "PASS",
+      "evidence": "G001, G003, G004, G005 and G006 answered, every claim verified, the labeled value stated; G007 and G008 declined",
+      "chapters": "14-16",
+      "owner": "Knowledge Assistant team",
+      "seconds": 142.8
+    },
+    {
+      "id": "Q4",
+      "area": "quality",
+      "name": "Questions that need records or a graph",
+      "status": "WARN",
+      "evidence": "records step and graph route assembled. Signature question 3: answered, rows in the evidence, count right, interval wrong. Signature question 5: answered, supplier named",
+      "chapters": "17, 19",
+      "owner": "Knowledge Assistant team",
+      "seconds": 68.5
+    },
+    {
+      "id": "Q5",
+      "area": "quality",
+      "name": "Golden set coverage",
+      "status": "WARN",
+      "evidence": "204 questions, 0 about figures, 0 follow-ups: golden set v3 is due",
+      "chapters": "5, 24",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "S1",
+      "area": "security",
+      "name": "Requests without a valid token",
+      "status": "PASS",
+      "evidence": "no token 401, signature altered 401, signed with another key 401, another Entra tenant 403",
+      "chapters": "22",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "S2",
+      "area": "security",
+      "name": "The asker comes from the token",
+      "status": "PASS",
+      "evidence": "G006 with Kwame\u0027s token and Daniel named in the body: not_found; with Daniel\u0027s token: answered",
+      "chapters": "22",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0.6
+    },
+    {
+      "id": "S3",
+      "area": "security",
+      "name": "No unreadable chunk in anyone\u0027s results",
+      "status": "PASS",
+      "evidence": "774 searches (6 people x 129 dev questions), 0 unreadable hits",
+      "chapters": "4, 22",
+      "owner": "Knowledge Assistant team",
+      "seconds": 126.5
+    },
+    {
+      "id": "S4",
+      "area": "security",
+      "name": "Live permissions over a stale index",
+      "status": "PASS",
+      "evidence": "HR-PL-2027 revoked at the source: Daniel\u0027s answer cited HR-PL-2024, PARTS-CAT-2027; restored: HR-PL-2027, HR-PL-2024, PARTS-CAT-2027",
+      "chapters": "22",
+      "owner": "Knowledge Assistant team",
+      "seconds": 26.2
+    },
+    {
+      "id": "S5",
+      "area": "security",
+      "name": "Planted instructions quarantined at ingestion",
+      "status": "PASS",
+      "evidence": "4 of 4 planted documents quarantined, 0 of 40 corpus documents",
+      "chapters": "22",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "S6",
+      "area": "security",
+      "name": "No remote images or untrusted links rendered",
+      "status": "PASS",
+      "evidence": "2 removed (an image carrying data, an unknown host), the intranet link kept; 13 answers without an image or a script",
+      "chapters": "22",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "S7",
+      "area": "security",
+      "name": "Model files and digests match their records",
+      "status": "PASS",
+      "evidence": "32 of 32 model files match their SHA-256; llama3.2@a80c4f17acd5 is the approved digest",
+      "chapters": "22, 23",
+      "owner": "Knowledge Assistant team",
+      "seconds": 5.4
+    },
+    {
+      "id": "S8",
+      "area": "security",
+      "name": "Rate limits per tenant across instances",
+      "status": "WARN",
+      "evidence": "limit 3 a minute: one instance served 3 of 4, two served 6 of 8; the hybrid profile\u0027s replicas double a tenant\u0027s limit",
+      "chapters": "21, 22",
+      "owner": "Platform team",
+      "seconds": 14.8
+    },
+    {
+      "id": "S9",
+      "area": "security",
+      "name": "Search and the system of record agree on access",
+      "status": "FAIL",
+      "evidence": "Nadia (fluid) reads 7 GBX-07 work-order rows (motion); the export grants fluid, motion and service, the CMMS each unit its own",
+      "chapters": "17, 22",
+      "owner": "Maintenance systems",
+      "seconds": 0.2
+    },
+    {
+      "id": "S10",
+      "area": "security",
+      "name": "HR and Procurement evidence stays inside Contoso",
+      "status": "PASS",
+      "evidence": "the cloud stand-in received G001 only; G006 and G017, citing HR and Procurement documents, went to the restricted model",
+      "chapters": "4, 25",
+      "owner": "Knowledge Assistant team",
+      "seconds": 7.9
+    },
+    {
+      "id": "G1",
+      "area": "governance",
+      "name": "A provenance record for every answer",
+      "status": "PASS",
+      "evidence": "13 answers, 13 records, 13 with index, prompt, model and configuration d0fb3eb74c69",
+      "chapters": "23",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "G2",
+      "area": "governance",
+      "name": "The provenance chain verifies",
+      "status": "PASS",
+      "evidence": "13 records intact; record 7 changed in a copy breaks the chain at 7",
+      "chapters": "23",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "G3",
+      "area": "governance",
+      "name": "Prompt and models in the registry",
+      "status": "PASS",
+      "evidence": "0 violations; the index\u0027s embedding model is approved",
+      "chapters": "23",
+      "owner": "Riley Chen (approver)",
+      "seconds": 0
+    },
+    {
+      "id": "G4",
+      "area": "governance",
+      "name": "Erasure reaches cached answers",
+      "status": "PASS",
+      "evidence": "G017 cached on its second ask: True; SC-2024-118 erased by its tag, the next ask cached: False",
+      "chapters": "21, 23",
+      "owner": "Knowledge Assistant team",
+      "seconds": 57.5
+    },
+    {
+      "id": "G5",
+      "area": "governance",
+      "name": "Stores with question text have a retention rule",
+      "status": "WARN",
+      "evidence": "the escalation queue keeps the question and the asker\u0027s ID (Question, Asker, Reason, Sources, At) with no retention or erasure rule",
+      "chapters": "16, 23",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "G6",
+      "area": "governance",
+      "name": "Personal data in the indexed text",
+      "status": "PASS",
+      "evidence": "0 email addresses or phone numbers in 219 chunks; 11 name Contoso staff, kept for now (Chapter 23)",
+      "chapters": "23",
+      "owner": "Privacy office",
+      "seconds": 0
+    },
+    {
+      "id": "O1",
+      "area": "operability",
+      "name": "Healthy only with an index whose encoder matches",
+      "status": "PASS",
+      "evidence": "/health Healthy; live -\u003E v1-shipped, 219 chunks, bge-small-en-v1.5-int8 (bf64d05457cb)",
+      "chapters": "24",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "O2",
+      "area": "operability",
+      "name": "Rollback is one swap",
+      "status": "PASS",
+      "evidence": "swap 2.2 ms, next answer from v2-rebuild; rollback 4.0 ms, next from v1-shipped",
+      "chapters": "24",
+      "owner": "Knowledge Assistant team",
+      "seconds": 8.6
+    },
+    {
+      "id": "O3",
+      "area": "operability",
+      "name": "Keyword-only when the embedding model fails",
+      "status": "PASS",
+      "evidence": "embedding model failing: G003 answered, degraded: dense: HttpRequestException",
+      "chapters": "11, 24",
+      "owner": "Knowledge Assistant team",
+      "seconds": 6.9
+    },
+    {
+      "id": "O4",
+      "area": "operability",
+      "name": "Sources without an answer when the model fails",
+      "status": "PASS",
+      "evidence": "answer model failing: not_found, 4 sources listed instead of an answer",
+      "chapters": "16, 24",
+      "owner": "Knowledge Assistant team",
+      "seconds": 6.5
+    },
+    {
+      "id": "O5",
+      "area": "operability",
+      "name": "Answer latency against the 15-second SLO",
+      "status": "FAIL",
+      "evidence": "13 answers from llama3.2@a80c4f17acd5 on the CPU: p50 19.5 s, p95 48.3 s; 3 within 15 s; 0 first-token timeouts retried",
+      "chapters": "20, 21",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "O6",
+      "area": "operability",
+      "name": "A trace for every answer, without content",
+      "status": "PASS",
+      "evidence": "29 answer traces, 29 with retrieval spans, 16 with model spans; 0 spans with messages",
+      "chapters": "20",
+      "owner": "Knowledge Assistant team",
+      "seconds": 0
+    },
+    {
+      "id": "N1",
+      "area": "operability",
+      "name": "Hybrid profile with a cloud model",
+      "status": "NOT RUN",
+      "evidence": "no cloud subscription here; published as a manifest only",
+      "chapters": "25",
+      "owner": "Platform team",
+      "seconds": 0
+    },
+    {
+      "id": "N2",
+      "area": "operability",
+      "name": "Sign-in through a Microsoft Entra ID tenant",
+      "status": "NOT RUN",
+      "evidence": "Entra-shaped tokens signed with a key made for the run",
+      "chapters": "22",
+      "owner": "Identity team",
+      "seconds": 0
+    },
+    {
+      "id": "N3",
+      "area": "operability",
+      "name": "The pipeline on a hosted runner",
+      "status": "NOT RUN",
+      "evidence": "Chapter 24\u0027s workflow ran locally only",
+      "chapters": "24",
+      "owner": "Platform team",
+      "seconds": 0
+    },
+    {
+      "id": "N4",
+      "area": "operability",
+      "name": "Load across replicas with a shared cache",
+      "status": "NOT RUN",
+      "evidence": "Chapter 21\u0027s load test ran on one instance",
+      "chapters": "21",
+      "owner": "Platform team",
+      "seconds": 0
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 18: evidence that lives in pages, tables and figures, on the CPU. CLIP ViT-B/32 on ONNX Runtime for text
+    and images in one space, the words on a page with their boxes (PdfPig for born-digital pages, Chapter 8's OCR for
+    scans), quotes located on the page, highlighted page renders and deep links for visual citations, and a check
+    that numbers and units in a claim are the ones its source states. Models come from sample-code/models
+    (eng/get-models.py).
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Vision</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Ocr\Contoso.Knowledge.Ocr.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" />
+    <PackageReference Include="System.Numerics.Tensors" />
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="PDFtoImage" />
+    <PackageReference Include="PdfPig" />
+  </ItemGroup>
+
+</Project>

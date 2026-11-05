@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 21: what a cache lookup costs, measured with BenchmarkDotNet: an exact key (a SHA-256 hash of the prompt
+    version, model, question and evidence) against a semantic lookup that scans every cached question's vector.
+    Always run it in the Release configuration; Section 21.3 of the chapter gives the command.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch21.Benchmarks</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Performance\Contoso.Knowledge.Performance.csproj" />
+  </ItemGroup>
+
+</Project>

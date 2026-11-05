@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 14: grounded generation measured on golden set v2. Context assembly and its token cost, budgets, ordering,
+    extractive compression, the grounding prompt with quote-backed citations against Chapter 3's prompt, abstention,
+    follow-ups with conversation history and streaming. Generation uses llama3.2 through Ollama on the CPU; every call
+    is recorded with its timings in runs/ch14 and replayed on reruns. Needs `python eng/get-models.py` for bge-small and
+    the MiniLM-L6 cross-encoder.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch14.Generation.Cli</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="OllamaSharp" />
+  </ItemGroup>
+
+</Project>

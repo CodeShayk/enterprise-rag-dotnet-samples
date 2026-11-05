@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T034",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:20.6250576Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What are the default and the range of VD-75 parameter 2-11, ramp-down time?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The default value of VD-75 parameter 2-11, ramp-down time, is 2 seconds. The range of VD-75 parameter 2-11, ramp-down time, is 0.1 to 600 seconds. The range of VD-75 parameter 2-11, ramp-down time, is 0.1 to 600 seconds. The range of VD-75 parameter 2-11, ramp-down time, is 0.1 to 600 seconds."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "VD-75 Variable Frequency Drive: Installation and Fault Guide \u203A 3 Key parameters\n# 3 Key parameters\nTable 3-1 Key parameters\n| Parameter | Name | Default | Range |\n|---|---|---|---|\n| 1-03 | Motor rated current | Drive rating | 0.2 to 1.5 times the drive rating |\n| 1-04 | Motor rated speed | 1,450 rpm | 100 to 6,000 rpm |\n| 2-10 | Ramp-up time | 2 s | 0.1 to 600 s |\n| 2-11 | Ramp-down time | 2 s | 0.1 to 600 s |\n| 3-01 | Maximum frequency | 50 Hz | 5 to 200 Hz |\n| 4-05 | Automatic restart attempts | 3 | 0 to 10 |\n\nVD-75 Variable Frequency Drive: Installation and Fault Guide \u203A 4 Faults \u203A Fault F012: output overcurrent\n## Fault F012: output overcurrent\nFault F012 means the drive\u0027s output current exceeded 200 percent of its rating.\nThe drive stops the motor at once to protect its output stage.\nA ramp-up time that is too short also causes F012: raise parameter 2-10 (ramp-up time) from 2 to 5 seconds.\n## Fault F002: DC bus overvoltage\nFault F002 means the voltage of the drive\u0027s internal DC bus exceeded 800 V.\nRaise parameter 2-11 (ramp-down time), or fit a brake resistor if the process needs fast stops.\n\nField service report SR-2026-1130\n# Field service report SR-2026-1130\nEngineer: Kwame Asante.\nDate: November 30, 2026.\nFindings: the ramp-down time had been set to 1 second after a controller upgrade, too short for the fan\u0027s inertia.\nWork done: raised parameter 2-11 (ramp-down time) to 20 seconds.\nNo further F002 faults in 48 hours of logging.\n| Equipment | Site | Report |\n|---|---|---|\n| VD-75 drive | Woodgrove Foods, Cold store 1 | SR-2026-1130 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1763",
+          "eval-output-tokens": "207",
+          "eval-total-tokens": "1970",
+          "eval-duration-ms": "17.24"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response and Ground Truth provided seem to be related to the VD-75 parameter 2-11, ramp-down time. The Response contains the same information as the Ground Truth, including the default value, range, and unit of the ramp-down time. However, the Response also contains redundant information, repeating the same values multiple times. This suggests that the Response is not missing any key information, but it is not providing the most concise or efficient way of conveying the information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| 2-11 | Ramp-down time | 2 s | 0.1 to 600 s |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1495",
+          "eval-output-tokens": "123",
+          "eval-total-tokens": "1618",
+          "eval-duration-ms": "17.05"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "4 of 4 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0170763,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1763,
+          "outputTokenCount": 207,
+          "totalTokenCount": 1970
+        },
+        "cacheKey": "45F99ABE0052A46F108C09018D94E312581D469FF0DF83DF8224722C52E2A32EF6C582CF61CE52327373377F5971A4DA",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0168794,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1495,
+          "outputTokenCount": 123,
+          "totalTokenCount": 1618
+        },
+        "cacheKey": "87ABE5EE27323A60CB0FAF9F471FB40B28B4CF36103E7557FAC29AF5AC8F2CAE463E1568B813941462BC6C67D14ED33B",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

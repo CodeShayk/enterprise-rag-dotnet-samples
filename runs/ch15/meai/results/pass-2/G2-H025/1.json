@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G2-H025",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:11.6367373Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What seal-water pressure should the flush connection show when a CP-200 restarts after a seal change?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The flush connection should show a pressure of 2.0 to 3.0 bar when a CP-200 restarts after a seal change. The seal-water pressure must exceed the suction pressure by at least 1 bar. The flush connection should show a pressure of at least 2.0 bar to prevent error E-217."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Replacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Restarting the pump\n## Restarting the pump\n- Vent the casing\n- Open the seal-water supply: 2.0 to 3.0 bar at the flush connection\nWatch the seal for the first hour.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 4 Installation \u203A 4.3 Seal-water connection\n## 4.3 Seal-water connection\nConnect the seal-water supply to the flush connection marked SW on the seal housing.\nFit an isolation valve, a strainer and a pressure gauge in the line.\nThe seal-water pressure must exceed the suction pressure by at least 1 bar whenever the pump runs.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 5 Commissioning \u203A 5.4 Start-up\n## 5.4 Start-up\nBefore the first start, and after any work on the seal or the impeller, prime the pump and check the seal-water supply.\n3. Open the seal-water supply and confirm a pressure of 2.0 to 3.0 bar at the seal flush connection.\nThe seal-water pressure must exceed the suction pressure by at least 1 bar.\nDuring the first hour, check that the bearing temperatures stay below 80 \u00B0C and listen for cavitation noise.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-217: seal-water pressure low\n## Error E-217: seal-water pressure low\nError E-217 means seal-water pressure low.\nThe controller trips the pump when seal-water pressure stays below 1.5 bar for 10 seconds, to protect the mechanical seal.\nCheck that seal-water valve V-114 is open and that its strainer is clean, then reset the alarm at the local panel.\n1. Seal-water valve V-114 left closed or partly closed after maintenance.\n3. A failed pressure switch PS-31.\nCompare its reading with the local gauge.\nTo clear E-217, restore the seal-water pressure to at least 2.0 bar, wait until the alarm light stops flashing, then press RESET on the local panel.\nIf the alarm returns within an hour, don\u0027t restart the pump again; raise a work order for the seal-water system."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1722",
+          "eval-output-tokens": "248",
+          "eval-total-tokens": "1970",
+          "eval-duration-ms": "21.29"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "- Open the seal-water supply: 2.0 to 3.0 bar at the flush connection"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1457",
+          "eval-output-tokens": "199",
+          "eval-total-tokens": "1656",
+          "eval-duration-ms": "18.53"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0210151,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1722,
+          "outputTokenCount": 248,
+          "totalTokenCount": 1970
+        },
+        "cacheKey": "CD3BE28117A758554EFB72108B3F6ACA00E6AB3F4C9691897166F114C085A6EF75C4D4467E8337DA099DD4F41FB30973",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0184053,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1457,
+          "outputTokenCount": 199,
+          "totalTokenCount": 1656
+        },
+        "cacheKey": "CB06C2A98C3DC6814E8743BE986AFD924730964E1BF3D6CEB987D9E39A9656D1F0314A9D26CC891C6458A5AC8800BA7C",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

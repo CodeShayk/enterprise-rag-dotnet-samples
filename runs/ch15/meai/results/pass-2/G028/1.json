@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G028",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:06.5059764Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How often should the CP-200 bearings be regreased?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The CP-200 bearings should be regreased every 4,000 operating hours. The CP-200 bearings should be regreased after the first hours after regreasing, while excess grease is pushed out. The CP-200 controller trips the pump at 95 \u00B0C, and the bearings should be checked and regreased after this temperature is reached. The CP-200 bearings should be regreased if there is too much or too little grease."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 7 Maintenance \u203A 7.2 Service intervals\n## 7.2 Service intervals\nInspect the mechanical seal and the bearings every 2,000 operating hours or six months, whichever comes first.\nReplace mechanical seal PN-4471-B every 8,000 operating hours.\n| Task | Interval |\n|---|---|\n| Inspect the mechanical seal and the bearings | 2,000 h or 6 months |\n| Regrease the bearings (lithium-complex grease, 15 g per bearing) | 4,000 h |\n| Check the coupling alignment | 12 months |\n| Replace mechanical seal PN-4471-B | 8,000 h |\n| Replace the bearings | 32,000 h |\nRecord every inspection in the maintenance log with the operating hours from the hour meter.\nHalve the intervals for pumps that handle abrasive liquids or run above 60 \u00B0C.\n\nCP-200 Troubleshooting Guide \u203A 3 Mechanical problems \u203A Bearing overheating\n## Bearing overheating\nBearings run hottest in the first hours after regreasing, while excess grease is pushed out.\nA bearing that stays above 85 \u00B0C has too much grease, too little grease, a misaligned coupling or wear.\nCheck the alignment and the amount of grease before replacing the bearing.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-221: bearing temperature high\n## Error E-221: bearing temperature high\nError E-221 means a bearing temperature exceeded 95 \u00B0C.\nThe controller warns at 85 \u00B0C and trips the pump at 95 \u00B0C.\nCauses, most likely first:\n1. Too much grease after regreasing.\n3. A worn bearing.\nLet the bearings cool, check the alignment and the amount of grease, then reset E-221.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 9 Troubleshooting\n# 9 Troubleshooting\nThe controller shows an error code for most faults; the CP-200 troubleshooting guide explains each code.\nTable 9-1 Troubleshooting\n| Symptom | Possible cause | Remedy |\n|---|---|---|\n| High bearing temperature | Too much or too little grease | Regrease as section 7.3 describes |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 2"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1747",
+          "eval-output-tokens": "289",
+          "eval-total-tokens": "2036",
+          "eval-duration-ms": "0.79"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "The response provides information about regreasing the CP-200 bearings, including the frequency and conditions under which it should be done. It also mentions the temperature at which the pump trips and the importance of checking and regreasing the bearings at that point. The response seems to cover most of the necessary information, but it does not provide the exact type of grease to use (lithium-complex grease) or the amount of grease per bearing (15 g). However, it does provide the correct frequency and conditions for regreasing, which is a crucial aspect of maintaining the bearings.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Regrease the bearings (lithium-complex grease, 15 g per bearing) | 4,000 h |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1489",
+          "eval-output-tokens": "145",
+          "eval-total-tokens": "1634",
+          "eval-duration-ms": "0.56"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "4 of 4 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0006453,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1747,
+          "outputTokenCount": 289,
+          "totalTokenCount": 2036
+        },
+        "cacheKey": "5F02197FCD9D9A9A832158A60CD7D6DDB371AE8E02406E5EFDB2D035B06174FD8192CD69DCC0EF85FA1A85D52E37F0E7",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0004528,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1489,
+          "outputTokenCount": 145,
+          "totalTokenCount": 1634
+        },
+        "cacheKey": "7DF0295FF3D755FB930CAFEB031A19120F740499A2CEA80C92382D91AFC6DAE634A94A562BE96152E388DDD1979F26F4",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

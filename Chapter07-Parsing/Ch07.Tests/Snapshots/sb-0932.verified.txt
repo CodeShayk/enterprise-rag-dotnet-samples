@@ -1,0 +1,6 @@
+heading: # Safety bulletin SB-0932: Seal housing work
+paragraph: Issued after a near miss at the Riverside plant in 2026, when a seal housing was opened on a pump that was still under seal-water pressure.
+paragraph: Apply lockout/tagout (LOTO) to the motor and isolate the seal-water and process lines before opening any CP-200 seal housing. Verify zero energy before work starts.
+paragraph: Zero energy means that the motor can't start from the panel, the local pressure gauges read zero and the casing drain is open. Each person working on the pump fits their own lock.
+paragraph: This bulletin applies to every pump with a mechanical seal flushed by seal water, not only to the CP-200. Supervisors brief their teams on it before the next seal job and record the briefing.
+paragraph: At the Riverside plant, report any seal-water line that can't be isolated or drained to the Riverside maintenance planner on extension 4410 before work starts.

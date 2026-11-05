@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Chapter 18: the document viewer that visual citations link to. /documents/{id}/pages/{page}?box=left,top,width,height
+    shows the page with the cited region marked over it, and /documents/{id}/pages/{page}.png renders the page with the
+    region highlighted, for an answer to embed or print. Every page is served only to a person who may read its
+    document. Listens on http://localhost:5181.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch18.Knowledge.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Corpus\Contoso.Corpus.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Vision\Contoso.Knowledge.Vision.csproj" />
+  </ItemGroup>
+
+</Project>

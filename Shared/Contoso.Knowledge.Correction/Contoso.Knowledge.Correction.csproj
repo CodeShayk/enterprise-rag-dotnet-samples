@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 16: corrective retrieval-augmented generation. Graders for the evidence and the answer, correction
+    strategies, verification with citation repair, a per-request budget, abstention with an escalation queue, an
+    adaptive router and the loop that ties them together as an explicit state machine around Chapter 14's generator.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Correction</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Query\Contoso.Knowledge.Query.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+  </ItemGroup>
+
+</Project>

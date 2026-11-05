@@ -1,0 +1,12 @@
+{"id":"G001","liveFirst":0.8518008,"liveTotal":7.2648204,"recFirst":9.7845217,"recTotal":30.8047733,"evidence":0.7888584,"app":4.734375,"modelCpu":64.78125}
+{"id":"G002","liveFirst":3.0064011,"liveTotal":6.8362755,"recFirst":3.2577841000000003,"recTotal":7.4194701,"evidence":0.4409477,"app":2.390625,"modelCpu":65.328125}
+{"id":"G003","liveFirst":5.0180791,"liveTotal":6.5514411,"recFirst":5.8528541,"recTotal":7.5292855,"evidence":0.6349448,"app":2.75,"modelCpu":58.796875}
+{"id":"G005","liveFirst":5.0371543,"liveTotal":7.041048300000001,"recFirst":5.5637534,"recTotal":7.8013593,"evidence":0.7807628,"app":3.375,"modelCpu":62.265625}
+{"id":"G006","liveFirst":2.0601026,"liveTotal":5.963468799999999,"recFirst":5.2808386,"recTotal":9.563023200000002,"evidence":0.6801304,"app":3.34375,"modelCpu":52.546875}
+{"id":"G009","liveFirst":0.7787545,"liveTotal":4.4466604,"recFirst":5.1243149,"recTotal":9.0572581,"evidence":0.6941765000000001,"app":2.703125,"modelCpu":37.515625}
+{"id":"G010","liveFirst":3.3286609,"liveTotal":9.0828788,"recFirst":4.9404116,"recTotal":10.748812000000001,"evidence":0.6755437,"app":2.84375,"modelCpu":83.625}
+{"id":"G011","liveFirst":3.8760168,"liveTotal":6.053009,"recFirst":5.5441437,"recTotal":7.7664013,"evidence":0.4688777,"app":2.640625,"modelCpu":56.03125}
+{"id":"G012","liveFirst":4.5751687,"liveTotal":6.9191598,"recFirst":4.8840246,"recTotal":7.274932300000001,"evidence":0.3794441,"app":2.15625,"modelCpu":65.34375}
+{"id":"G013","liveFirst":4.3651079,"liveTotal":8.279618399999999,"recFirst":4.877144,"recTotal":8.7954111,"evidence":1.0455314,"app":4.453125,"modelCpu":72.15625}
+{"id":"G017","liveFirst":4.7837483,"liveTotal":12.3716016,"recFirst":5.6236755,"recTotal":13.0605859,"evidence":0.5647152,"app":3.109375,"modelCpu":117.734375}
+{"id":"G018","liveFirst":2.9116280999999997,"liveTotal":5.2018645,"recFirst":5.1467302,"recTotal":7.4932007,"evidence":0.362074,"app":2,"modelCpu":48.25}

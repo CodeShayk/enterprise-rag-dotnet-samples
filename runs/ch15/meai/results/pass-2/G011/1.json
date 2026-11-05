@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G011",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:09.1484245Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How well must the RX coupling be aligned?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The permissible misalignment for RX couplings up to size 90 is 0.05 mm for parallel offset, 0.05 mm per 100 mm for angular misalignment, and 3 mm \u00B1 0.5 mm for axial gap. For couplings above size 90, the permissible misalignment is halved compared to the values for couplings up to size 90."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "RX flexible coupling: installation and alignment\n# RX flexible coupling: installation and alignment\nAlign the shafts with a dial indicator or a laser alignment tool after the gearbox and the motor are bolted down.\nPermissible misalignment for RX couplings up to size 90:\n| Misalignment | Limit |\n|---|---|\n| Parallel offset | 0.05 mm |\n| Angular | 0.05 mm per 100 mm |\n| Axial gap | 3 mm \u00B1 0.5 mm |\nRe-check the alignment after the first 100 hours of operation, because the foundation settles.\nRX coupling sizes\n|---|---|---|---|\n| 50 | 50 mm | 450 N\u00B7m | PN-5120-A |\n| 70 | 70 mm | 1,250 N\u00B7m | PN-5170-A |\n| 90 | 90 mm | 2,800 N\u00B7m | PN-5190-A |\n| 110 | 110 mm | 5,200 N\u00B7m | PN-5210-A |\nFor couplings above size 90, halve the permissible misalignment in the table above.\n\nHG-400 Helical Gearbox Operating Manual \u203A 3 Installation \u203A 3.2 Mounting\n## 3.2 Mounting\nMount the HG-400 on a flat, rigid base; the mounting surface must be flat to within 0.1 mm.\nUse the four M16 foot bolts of property class 8.8 and tighten them to 195 N\u00B7m in a cross pattern.\nAfter mounting, align the input and output couplings as their installation instructions describe, and check that the breather plug on top of the housing is fitted and open.\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 5 Commissioning \u203A 5.1 Checks before the first start\n# 5 Commissioning\n## 5.1 Checks before the first start\n2. Check the coupling alignment and fit the coupling guard.\n\nCP-200 Troubleshooting Guide \u203A 3 Mechanical problems \u203A Troubleshooting: excessive vibration\n# 3 Mechanical problems\nVibration above 4.5 mm/s RMS on the bearing housing needs investigation; above 7.1 mm/s RMS, stop the pump.\nCheck the coupling alignment.\n- Worn bearings."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1727",
+          "eval-output-tokens": "198",
+          "eval-total-tokens": "1925",
+          "eval-duration-ms": "45.73"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Apart from missing some minor information, the Response does contain some of the necessary and relevant information from the Ground Truth, but it is not fully complete.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Parallel offset | 0.05 mm |\n| Angular | 0.05 mm per 100 mm |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1470",
+          "eval-output-tokens": "190",
+          "eval-total-tokens": "1660",
+          "eval-duration-ms": "28.09"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0455791,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1727,
+          "outputTokenCount": 198,
+          "totalTokenCount": 1925
+        },
+        "cacheKey": "03B6B0E26C93408285C9CA05704B4412035DFBCB58E98C3BC00173BA42EB763D84E26088A3E91364583A18866DF8311B",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0278368,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1470,
+          "outputTokenCount": 190,
+          "totalTokenCount": 1660
+        },
+        "cacheKey": "69C6DCEDF29E19B762FA9B8EC9B26C3F7242113704241B35477FD7F16971E5DCED61C70E76D405955084CC8E77D537E5",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

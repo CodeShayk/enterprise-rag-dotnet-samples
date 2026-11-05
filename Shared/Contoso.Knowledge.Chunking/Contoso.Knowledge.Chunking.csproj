@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 9: one IChunker per strategy (fixed, recursive, structure-aware, semantic, hierarchical and
+    parent-child), all cutting the canonical model's text projection so that every chunk knows its span, and
+    enrichment that adds context for indexing without changing what the chunk returns. Later chapters index
+    what these chunkers produce.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Chunking</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
+    <PackageReference Include="System.Numerics.Tensors" />
+  </ItemGroup>
+
+</Project>

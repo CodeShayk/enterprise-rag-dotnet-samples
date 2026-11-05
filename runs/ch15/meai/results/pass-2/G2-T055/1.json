@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T055",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:03.4828053Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What replaced PN-2840-A, and under which change notice?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "PN-2840-A was replaced by PN-2840-B. The replacement was made under change notice ECN-2240."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Contoso parts catalog 2027 \u203A Superseded parts\n| Old part | Replaced by | Change notice | Effective | Instruction |\n| PN-2840-A | PN-2840-B | ECN-2240 | 2025-03-01 | Use up bronze rings on pumps above 80 \u00B0C only |\n| PN-6120-A | PN-6120-B | ECN-2305 | 2026-12-01 | Replace at the next oil change |\n\nEngineering change notice ECN-2240: CP-200 casing wear ring material \u203A Engineering change notice ECN-2240\n# Engineering change notice ECN-2240\n| Change notice | ECN-2240 |\nEffective March 1, 2025, casing wear ring PN-2840-A (bronze) is superseded by PN-2840-B (carbon-filled PTFE composite) on all CP-200 pumps.\nFit PN-2840-B whenever a wear ring is replaced.\nAffected parts\n| PN-2840-A | PN-2840-B | Use up stock on pumps above 80 \u00B0C only |\n\nEngineering change notice ECN-2291: CP-200 mechanical seal \u203A Engineering change notice ECN-2291\n# Engineering change notice ECN-2291\n| Change notice | ECN-2291 |\nEffective September 14, 2026, mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps.\nPN-4471-C has a silicon-carbide face rated for higher seal-water temperatures.\nFit PN-4471-C at the next seal replacement and quarantine remaining PN-4471-B stock.\nReason for the change: three PN-4471-B failures in 2026 were traced to wear of the carbon face at seal-water temperatures above 60 \u00B0C.\nThe manual will be revised in 2027; until then, this notice takes precedence over it.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Parts and tools\n- Seal cartridge PN-4471-C\n- New casing gaskets PN-2205-C\nRemaining PN-4471-B stock is quarantined; never fit it."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore: 4"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1666",
+          "eval-output-tokens": "222",
+          "eval-total-tokens": "1888",
+          "eval-duration-ms": "18.31"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that PN-2840-A was replaced by PN-2840-B, and the replacement was made under change notice ECN-2240. This information is partially present in the Ground Truth, which states that PN-2840-A was replaced by PN-2840-B and provides additional details about the change notice ECN-2240 and the date 2025-03-01. However, the Response does not mention the use of bronze rings on pumps above 80 \u00B0C, which is a crucial piece of information in the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| PN-2840-A | PN-2840-B | ECN-2240 | 2025-03-01 | Use up bronze rings on pumps above 80 \u00B0C only |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1435",
+          "eval-output-tokens": "141",
+          "eval-total-tokens": "1576",
+          "eval-duration-ms": "16.20"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0181652,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1666,
+          "outputTokenCount": 222,
+          "totalTokenCount": 1888
+        },
+        "cacheKey": "CE598CF2626C3D250B930676BCA28F871F95DB75A1AE75286540F64921BF1D4EBB905A16CE6D9AA7606269DB18BCF201",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0160054,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1435,
+          "outputTokenCount": 141,
+          "totalTokenCount": 1576
+        },
+        "cacheKey": "9825E69E60054D4557FAD1A00128B33B122122E28A969941B9E31A8A938B0DD4E029A2052B2EDA3E797767A8C56CB010",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 8: unit tests for image preparation (deskew, despeckle, colored-ink dropout), coordinates, ruled-table
+    detection, error rates, word alignment and post-correction, on images drawn in code; and one end-to-end test
+    that reads the M12 torque from the scanned 2009 manual (skipped when the Tesseract model isn't downloaded).
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch08.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Ocr\Contoso.Knowledge.Ocr.csproj" />
+  </ItemGroup>
+
+</Project>

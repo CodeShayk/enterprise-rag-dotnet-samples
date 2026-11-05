@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 23: governance built into the system. A provenance record for every answer in a hash-chained,
+    append-only log; an erasure workflow that asks every store for copies, erases them, counts again, honors legal
+    holds and leaves a tombstone that blocks re-ingestion; retention by document type; a registry of approved models
+    and prompts with a control that checks every answer against it; and a PII scanner for ingestion.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Governance</RootNamespace>
+  </PropertyGroup>
+
+</Project>

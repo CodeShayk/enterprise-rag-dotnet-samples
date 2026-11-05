@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G054",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:34:59.2743352Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What is the reason for the change from PN-4471-B to PN-4471-C on CP-200 pumps?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The reason for the change from PN-4471-B to PN-4471-C on CP-200 pumps is wear of the carbon face at seal-water temperatures above 60 \u00B0C. PN-4471-C has a silicon-carbide face rated for higher seal-water temperatures."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Engineering change notice ECN-2291: CP-200 mechanical seal \u203A Engineering change notice ECN-2291\n|---|---|\n| Change notice | ECN-2291 |\n| Product | CP-200 centrifugal pump, all sizes |\nEffective September 14, 2026, mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps.\nPN-4471-C has a silicon-carbide face rated for higher seal-water temperatures.\nFit PN-4471-C at the next seal replacement and quarantine remaining PN-4471-B stock.\nReason for the change: three PN-4471-B failures in 2026 were traced to wear of the carbon face at seal-water temperatures above 60 \u00B0C.\nAffected documents: CP-200 manual (2009) sections 7.2 and 8.1, and SOP-FS-014.\nAffected parts\n| PN-4471-B | PN-4471-C | Quarantine remaining stock; return to Fabrikam Seals for credit |\n\nSOP-FS-014: Mechanical seal replacement on CP-200 pumps\n# SOP-FS-014: Mechanical seal replacement on CP-200 pumps\nThis revision replaces PN-4471-B with PN-4471-C, following ECN-2291.\n4. Fit mechanical seal PN-4471-C.\nDon\u0027t mix PN-4471-B and PN-4471-C parts.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Fitting PN-4471-C\n## Fitting PN-4471-C\n- Don\u0027t mix PN-4471-B and PN-4471-C parts\nThe old torque of 22 N\u00B7m applied to PN-4471-B.\nFabrikam Seals confirmed 25 N\u00B7m for PN-4471-C.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Why seals fail\nIn 2026, three PN-4471-B failures at Riverside were traced to carbon face wear at seal-water temperatures above 60 \u00B0C.\nThat is why ECN-2291 introduced PN-4471-C with a silicon-carbide face."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1707",
+          "eval-output-tokens": "262",
+          "eval-total-tokens": "1969",
+          "eval-duration-ms": "28778.06"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "three PN-4471-B failures in 2026 were traced to wear of the carbon face at seal-water temperatures above 60 \u00B0C."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1454",
+          "eval-output-tokens": "211",
+          "eval-total-tokens": "1665",
+          "eval-duration-ms": "45903.41"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 28.7776857,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1707,
+          "outputTokenCount": 262,
+          "totalTokenCount": 1969
+        },
+        "cacheKey": "156A76F6BA31B625D2D3CBE2FA6887DAB57AC814CCF7FCB8E6F950D061D5F764EB3CFED07F6E9FC244AE92D60A2760D8",
+        "cacheHit": false
+      },
+      {
+        "latency": 45.903123,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1454,
+          "outputTokenCount": 211,
+          "totalTokenCount": 1665
+        },
+        "cacheKey": "F390A633FB27496CC96C449C21A2BFC91BC5083DE2A457385699C67E5634020331B1E9FFACAF411711B72DB76C2F09B1",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

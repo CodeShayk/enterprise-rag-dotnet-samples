@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 19: a knowledge graph built on the CPU, with provenance. Entities from identifier patterns, a gazetteer and
+    an ONNX NER model; relations from table rows, document-subject rules and a schema-bound small model; resolution to
+    canonical IDs with an audit log; every node and edge tied to the chunks and document versions it came from, with
+    cascading deletes; storage in memory, DuckDB or PostgreSQL; and retrieval by entity linking, k-hop neighborhoods,
+    paths, personalized PageRank and Louvain communities.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Graph</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="DuckDB.NET.Data.Full" />
+    <PackageReference Include="Npgsql" />
+  </ItemGroup>
+
+</Project>

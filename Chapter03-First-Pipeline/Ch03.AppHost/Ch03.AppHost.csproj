@@ -1,0 +1,34 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.4">
+
+  <!--
+    Chapter 3: the Aspire AppHost for the walking skeleton. It starts the API and the Blazor chat
+    with the dashboard, wires them together with service discovery and passes the AI settings
+    from its own configuration to the API. No containers, so it runs without Docker.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch03.AppHost</RootNamespace>
+    <!--
+      Aspire 13.6's template sets AspireUseCliBundle=true, which takes the orchestrator (DCP) and the
+      dashboard from an installed Aspire CLI. The companion code restores them from NuGet instead, so
+      the solution builds on a machine without the CLI; ASPIRE010 says exactly that.
+    -->
+    <AspireUseCliBundle>false</AspireUseCliBundle>
+    <NoWarn>$(NoWarn);ASPIRE010</NoWarn>
+  </PropertyGroup>
+
+  <!--
+    The SDK adds Aspire.Hosting.AppHost implicitly, with its own version. Under central package
+    management that collides with the pin in Directory.Packages.props (NU1009), so the reference is
+    explicit and its version comes from the props file.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch03.Knowledge.Api\Ch03.Knowledge.Api.csproj" />
+    <ProjectReference Include="..\Ch03.Knowledge.Web\Ch03.Knowledge.Web.csproj" />
+  </ItemGroup>
+
+</Project>

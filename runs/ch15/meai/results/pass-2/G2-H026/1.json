@@ -1,0 +1,145 @@
+{
+  "scenarioName": "G2-H026",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:24.3922975Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How should an HG-400 be stored for more than six months?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "For storage longer than six months, fill the gearbox completely with oil. The oil level should be checked weekly. The oil should be changed as specified in the maintenance schedule."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Groundedness",
+        "reason": "The response provides some relevant information about storing the HG-400 gearbox, but it does not directly answer the question of how to store it for more than six months. The response mentions filling the gearbox completely with oil, which is a correct action, but it also includes additional information about checking the oil level weekly, which is not directly related to the question. The response does not fully address the question and introduces extraneous information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Groundedness is less than 4."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HG-400 Helical Gearbox Operating Manual \u203A 3 Installation \u203A 3.1 Transport and storage\n# 3 Installation\n## 3.1 Transport and storage\nStore the gearbox indoors in a dry place.\nFor storage longer than six months, fill it completely with oil and turn the input shaft by hand every month, so that the bearings and gear teeth stay coated.\n\nField service report SR-2026-1213\nEngineer: Kwame Asante.\nDate: December 13, 2026.\nComplaint: a whining noise from the HG-400 gearbox that rose with speed.\nFindings: the oil level was below the sight glass and the oil had darkened; the last oil change was 14 months earlier.\nWork done: drained and flushed the gearbox, refilled it with 18 liters of ISO VG 220 oil and replaced a leaking output shaft seal.\nThe noise dropped to normal.\nRecommended an oil analysis every six months.\n| Equipment | Site | Report |\n|---|---|---|\n| HG-400 gearbox | Woodgrove Foods, Packaging line 2 | SR-2026-1213 |\n\nHG-400 Helical Gearbox Operating Manual \u203A 4 Lubrication \u203A 4.1 Lubrication\n# 4 Lubrication\n## 4.1 Lubrication\nThe HG-400 is filled at the factory with 18 liters of ISO VG 220 mineral gear oil.\nChange the oil after the first 500 operating hours, then every 5,000 operating hours or every 12 months, whichever comes first.\nSynthetic PAO oil of the same viscosity extends the interval to 10,000 hours.\nIn operation, the oil temperature must not exceed 90 \u00B0C.\n\nHG-400 Helical Gearbox Operating Manual \u203A 6 Maintenance\n# 6 Maintenance\nTable 6-1 Maintenance schedule\n| Task | Interval |\n|---|---|\n| Check the oil level at the sight glass | Weekly |\n| Check for leaks and unusual noise | Weekly |\n| Clean the cooling fins | Every 3 months |\n| Oil analysis for viscosity, water and metal particles | Every 6 months |\n| Change the oil | As Table 4-1 |\n| Replace the shaft seals | Every 20,000 h or when leaking |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1681",
+          "eval-output-tokens": "112",
+          "eval-total-tokens": "1793",
+          "eval-duration-ms": "18.06"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 2,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "poor",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Store the gearbox indoors in a dry place. For storage longer than six months, fill it completely with oil and turn the input shaft by hand every month, so that the bearings and gear teeth stay coated."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1443",
+          "eval-output-tokens": "200",
+          "eval-total-tokens": "1643",
+          "eval-duration-ms": "19.14"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0178431,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1681,
+          "outputTokenCount": 112,
+          "totalTokenCount": 1793
+        },
+        "cacheKey": "6B7FBCE725858454627C7E16C7643B61DACF1AD878BF2464E6C033FFC81310A87C56AFE514790A23AB3754AD758C5D49",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0189618,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1443,
+          "outputTokenCount": 200,
+          "totalTokenCount": 1643
+        },
+        "cacheKey": "DF08149082091610ED37CA19873B131D337C91A4C97D61BC7C13B9D2D6F7177D9E501825610EF25E482EEB07414439BE",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 2: scalar vs SIMD vector similarity and brute-force search, measured with BenchmarkDotNet.
+    Always run it in the Release configuration; Section 2.4 of the chapter gives the command.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch02.Benchmarks</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch02.Fundamentals\Ch02.Fundamentals.csproj" />
+  </ItemGroup>
+
+</Project>

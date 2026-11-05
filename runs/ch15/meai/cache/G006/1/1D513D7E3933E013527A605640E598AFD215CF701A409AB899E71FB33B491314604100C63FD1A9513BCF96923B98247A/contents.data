@@ -1,0 +1,30 @@
+{
+  "messages": [
+    {
+      "createdAt": "2026-11-02T16:48:05.7267745+00:00",
+      "role": "assistant",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "<S0>Let's think step by step:</S0>\n\n1. The Response mentions that paid parental leave increases from 16 to 20 weeks, starting from March 1, 2027, and that the six-month service requirement and full pay remain unchanged for employees whose leave starts before March 1, 2027.\n2. The Ground Truth states that from March 1, 2027, paid parental leave increases from 16 to 20 weeks and can be taken in up to three blocks.\n3. The Response does not mention the three-block option for taking paid parental leave, which is present in the Ground Truth.\n4. However, the Response does accurately state the increase in paid parental leave from 16 to 20 weeks and the unchanged six-month service requirement and full pay for employees whose leave starts before March 1, 2027.\n\n<S1>Based on the definitions, I think the Response should receive a Score of 4 because it contains most of the necessary and relevant information with respect to the Ground Truth, but misses the three-block option for taking paid parental leave.</S1>\n\n<S2>4</S2>"
+        }
+      ],
+      "messageId": "2026-11-02T16:48:05.7267745Z"
+    }
+  ],
+  "responseId": "2026-11-02T16:48:05.7267745Z",
+  "modelId": "llama3.2",
+  "createdAt": "2026-11-02T16:48:05.7267745+00:00",
+  "finishReason": "stop",
+  "usage": {
+    "inputTokenCount": 1452,
+    "outputTokenCount": 235,
+    "totalTokenCount": 1687
+  },
+  "additionalProperties": {
+    "load_duration": "00:00:00.0067432",
+    "total_duration": "00:00:18.8124408",
+    "prompt_eval_duration": "00:00:04.7224840",
+    "eval_duration": "00:00:14.0636370"
+  }
+}

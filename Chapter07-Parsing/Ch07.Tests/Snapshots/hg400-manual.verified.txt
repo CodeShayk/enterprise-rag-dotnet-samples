@@ -1,0 +1,58 @@
+paragraph (header): HG-400 Helical Gearbox · Operating Manual · Revision 2
+heading: # HG-400 Helical Gearbox Operating Manual
+paragraph: Revision 2, February 2021. This manual covers the installation, lubrication, operation and maintenance of HG-400 helical gearboxes with two or three stages.
+heading: # 1 Safety
+listitem: - Stop and lock out the driving motor before any work on the gearbox.
+listitem: - Let the gearbox cool before opening a plug: the oil can be hotter than 80 °C.
+listitem: - Fit guards over all rotating shafts and couplings before starting.
+listitem: - Lift the gearbox only by its eyebolts, and never with oil in it.
+heading: # 2 Product description
+paragraph: The HG-400 is a foot-mounted helical gearbox with parallel input and output shafts. Hardened and ground helical gears run in an oil bath, and tapered roller bearings carry the shafts. The housing is cast iron with cooling fins on both sides.
+heading: ## 2.1 Type designation
+paragraph: The type code on the nameplate gives the frame size, the number of stages and the nominal ratio. For example, HG-400-2-12.5 is a two-stage gearbox with a ratio of 12.5 to 1.
+table: Table 2-1 Ratings at 1,500 rpm input /  / | Ratio | Stages | Output torque | Thermal rating | / |---|---|---|---| / | 5.6 | 2 | 4,200 N·m | 55 kW | / | 8 | 2 | 4,400 N·m | 48 kW | / | 12.5 | 2 | 4,600 N·m | 40 kW | / | 16 | 2 | 4,600 N·m | 35 kW | / | 25 | 3 | 4,800 N·m | 28 kW | / | 40 | 3 | 5,000 N·m | 22 kW |
+paragraph: The thermal rating is the power the gearbox can transmit continuously without the oil exceeding 90 °C at an ambient temperature of 25 °C. Above 35 °C ambient, derate it by 10 percent for every 5 °C.
+figure: Figure 2-1 HG-400 exploded view / Labels: 1 Housing; 2 Input shaft; 3 Pinion; 4 Output shaft; 5 Breather plug; 6 Sight glass; 7 Drain plug
+heading: # 3 Installation
+heading: ## 3.1 Transport and storage
+paragraph: Store the gearbox indoors in a dry place. For storage longer than six months, fill it completely with oil and turn the input shaft by hand every month, so that the bearings and gear teeth stay coated.
+heading: ## 3.2 Mounting
+paragraph: Mount the HG-400 on a flat, rigid base; the mounting surface must be flat to within 0.1 mm. Use the four M16 foot bolts of property class 8.8 and tighten them to 195 N·m in a cross pattern.
+paragraph: Put shims under the feet, never under the gearbox housing. After mounting, align the input and output couplings as their installation instructions describe, and check that the breather plug on top of the housing is fitted and open.
+heading: ## 3.3 Shaft connections
+paragraph: Fit couplings and sprockets by heating them to about 100 °C; never hammer them onto the shafts, because the impact damages the bearings. Keep the overhung load on the output shaft within the value on the nameplate.
+heading: ## 3.4 Breather
+paragraph: The gearbox is shipped with a closed transport plug in the breather position. Replace it with the breather plug supplied before filling the gearbox with oil. A blocked breather lets pressure build up in the housing and pushes oil past the shaft seals.
+paragraph (footer): Contoso Industrial, Motion Systems · 1
+paragraph (header): HG-400 Helical Gearbox · Operating Manual · Revision 2
+heading: # 4 Lubrication
+heading: ## 4.1 Lubrication
+paragraph: The HG-400 is filled at the factory with 18 liters of ISO VG 220 mineral gear oil. Change the oil after the first 500 operating hours, then every 5,000 operating hours or every 12 months, whichever comes first. Synthetic PAO oil of the same viscosity extends the interval to 10,000 hours.
+paragraph: Check the oil level weekly at the sight glass with the gearbox stopped. In operation, the oil temperature must not exceed 90 °C.
+heading: ## 4.2 Approved oils
+table: Table 4-1 Approved oils /  / | Oil type | Viscosity grade | Change interval | / |---|---|---| / | Mineral gear oil | ISO VG 220 | 5,000 h or 12 months | / | Synthetic PAO gear oil | ISO VG 220 | 10,000 h or 24 months | / | Food-grade gear oil (NSF H1) | ISO VG 220 | 5,000 h or 12 months |
+paragraph: Don't mix mineral and synthetic oils. When changing from one type to the other, flush the gearbox with the new oil first.
+heading: ## 4.3 Oil change
+listitem: 1. Run the gearbox until the oil is warm, so that it drains completely, then stop and lock out the motor.
+listitem: 2. Remove the breather plug and the drain plug and let the oil drain into a container.
+listitem: 3. Clean the magnetic drain plug and note any metal particles on it in the work order.
+listitem: 4. Refit the drain plug with a new sealing ring and tighten it to 80 N·m.
+listitem: 5. Fill the gearbox through the breather opening until the oil reaches the middle of the sight glass.
+listitem: 6. Refit the breather plug and run the gearbox for ten minutes, then check the level again.
+heading: # 5 Operation
+heading: ## 5.1 Running-in
+paragraph: Run a new gearbox at no more than half load for its first 50 hours. The gears' contact pattern settles during running-in, which is why the first oil change is due after only 500 hours.
+heading: ## 5.2 Operating limits
+paragraph: Stop the gearbox and find the cause if the oil temperature exceeds 90 °C, if the noise changes suddenly or if oil leaks from a shaft seal. A whining noise that rises with speed usually points to a low oil level or worn gear teeth.
+heading: # 6 Maintenance
+table: Table 6-1 Maintenance schedule /  / | Task | Interval | / |---|---| / | Check the oil level at the sight glass | Weekly | / | Check for leaks and unusual noise | Weekly | / | Clean the cooling fins | Every 3 months | / | Oil analysis for viscosity, water and metal particles | Every 6 months | / | Change the oil | As Table 4-1 | / | Replace the shaft seals | Every 20,000 h or when leaking |
+heading: ## 6.1 Replacing a shaft seal
+listitem: 1. Drain the oil below the level of the seal and remove the coupling from the shaft.
+listitem: 2. Pull out the old seal without scratching the shaft or the housing bore.
+listitem: 3. Polish out small scratches on the shaft with fine emery cloth; replace the shaft sleeve if the seal lip has worn a groove.
+listitem: 4. Press in the new seal, lip facing the oil, with a sleeve that bears on its outer ring.
+heading: # 7 Troubleshooting
+table: Table 7-1 Troubleshooting /  / | Symptom | Possible cause | Remedy | / |---|---|---| / | Whining noise that rises with speed | Low oil level or worn gear teeth | Top up the oil; inspect the gears if the noise stays | / | Knocking noise once per revolution | Damaged gear tooth | Stop the gearbox and inspect the gears | / | Oil leaks at a shaft | Worn shaft seal or blocked breather | Clean the breather; replace the seal | / | Oil temperature above 90 °C | Overload, wrong oil or dirty cooling fins | Check the load and the oil; clean the fins | / | Foam in the sight glass | Water in the oil or mixed oils | Change the oil and find the source of water |
+paragraph (footer): Contoso Industrial, Motion Systems · 2
+paragraph (header): HG-400 Helical Gearbox · Operating Manual · Revision 2
+paragraph (footer): Contoso Industrial, Motion Systems · 3

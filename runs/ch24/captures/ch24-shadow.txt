@@ -1,0 +1,3 @@
+Shadow: 204 questions (dev and test, labels unused) through live v4-shipped and v2-child-200, top 4
+  same top span: 204; same documents in the top 4: 166; same spans in the top 4: 147
+  differing spans: 57 questions; the gate's G2-T004, G2-T005 and G2-T020 among them: yes, yes, yes

@@ -1,0 +1,78 @@
+@page "/documents/{Id}/pages/{Page:int}"
+@inject DocumentLibrary Library
+
+@if (_pdf is null)
+{
+    <PageTitle>Not found</PageTitle>
+    <main><p>There's no such page, or it's in a document you can't read.</p></main>
+}
+else
+{
+    <PageTitle>@_pdf.Document.Title, page @Page</PageTitle>
+    <main>
+        <header>
+            <h1>@_pdf.Document.Title</h1>
+            <p class="meta">
+                @Id · page @Page of @_pdf.Pages
+                @if (_citation is not null)
+                {
+                    <span> · the cited region is marked</span>
+                }
+            </p>
+            <nav>
+                @if (Page > 1)
+                {
+                    <a href="@Link(Page - 1)">Previous page</a>
+                }
+                @if (Page < _pdf.Pages)
+                {
+                    <a href="@Link(Page + 1)">Next page</a>
+                }
+            </nav>
+        </header>
+
+        @* The region is drawn over the plain render in percentages of the page, so it stays put at any zoom. *@
+        <div class="page" style="aspect-ratio: @Css(_size.Width) / @Css(_size.Height)">
+            <img src="@($"/documents/{Uri.EscapeDataString(Id)}/pages/{Page}.png?as={Uri.EscapeDataString(As ?? "")}")" alt="Page @Page of @_pdf.Document.Title" />
+            @if (_citation is { } c)
+            {
+                <div class="region" style="left: @Percent(c.Box.Left, _size.Width); top: @Percent(c.Box.Top, _size.Height); width: @Percent(c.Box.Width, _size.Width); height: @Percent(c.Box.Height, _size.Height)"></div>
+            }
+        </div>
+    </main>
+}
+
+@code {
+    [Parameter] public string Id { get; set; } = "";
+
+    [Parameter] public int Page { get; set; }
+
+    [SupplyParameterFromQuery] public string? Box { get; set; }
+
+    [SupplyParameterFromQuery(Name = "as")] public string? As { get; set; }
+
+    [CascadingParameter] public HttpContext? Http { get; set; }
+
+    private LibraryPdf? _pdf;
+    private VisualCitation? _citation;
+    private (double Width, double Height) _size;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _pdf = await Library.OpenAsync(Id, Page, As);
+        if (_pdf is null)
+        {
+            if (Http is not null) Http.Response.StatusCode = StatusCodes.Status404NotFound;
+            return;
+        }
+
+        _size = PageRenders.PageSize(_pdf.Bytes, Page);
+        _citation = VisualCitation.Parse(Id, Page, Box);
+    }
+
+    private string Link(int page) => $"/documents/{Uri.EscapeDataString(Id)}/pages/{page}?as={Uri.EscapeDataString(As ?? "")}";
+
+    private static string Css(double value) => value.ToString("0.##", CultureInfo.InvariantCulture);
+
+    private static string Percent(double value, double of) => Css(100 * value / of) + "%";
+}

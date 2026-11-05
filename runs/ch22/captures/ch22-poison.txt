@@ -1,0 +1,8 @@
+5 poisoned documents added to 219 chunks; 129 dev questions, hybrid re-ranked, top 4
+Document                   tier             in top 4  with the trust filter
+MAIL-2027-0201-STRAINER    Correspondence          2                      0
+UPLOAD-CP200-TORQUE-NOTE   Uploaded                4                      0
+UPLOAD-E217-FAQ            Uploaded                2                      0
+MAIL-2027-0202-SEALKIT     Correspondence          3                      0
+UPLOAD-PUMP-FAQ            Uploaded               19                      0
+trust filter: types asset-record, change-notice, contract, manual, parts-catalog, policy, safety-bulletin, service-report, sop, training, troubleshooting, work-instruction, work-orders; dev questions whose labeled evidence is in a lower tier: 1

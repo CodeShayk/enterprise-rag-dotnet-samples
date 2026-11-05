@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 21: what makes an answer faster and cheaper without making it worse. A cost model from measured CPU time
+    and tokens; answer caches keyed by everything that decides an answer (the evidence the asker's permissions let
+    through, the prompt and the model) and tagged by document; a semantic cache with an identifier guard; a model
+    cascade gated by Chapter 14's validation; per-tenant token budgets; a gate that sheds model calls under load; and a
+    closed-loop load runner.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Performance</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Query\Contoso.Knowledge.Query.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+    <PackageReference Include="System.Numerics.Tensors" />
+    <PackageReference Include="System.Threading.RateLimiting" />
+  </ItemGroup>
+
+</Project>

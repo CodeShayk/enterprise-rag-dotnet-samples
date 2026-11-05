@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G039",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:51.6182211Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What does a new supplier need before Contoso can buy from it?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "A new supplier needs to be qualified after a quality audit and a credit check. A new supplier needs to be approved by the approver, the plant controller, and the CFO for orders above 250,000 USD. A new supplier needs to sign a contract with Contoso, including the supplier contract SC-2024-118. A new supplier needs to be approved by an approver other than the requester for orders up to 25,000 USD."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Supplier contract SC-2024-118: Fabrikam Seals \u203A 3 Delivery\n## 3 Delivery\nThe supplier delivers to the Contoso plant named in each order, carriage paid.\nLate deliveries earn the buyer a credit of 1 percent of the order value per week of delay, up to 10 percent.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 1 Parties\n## 1 Parties\nThis supply agreement is made between Contoso Industrial (the buyer) and Fabrikam Seals (the supplier).\nEach party signs through an authorized representative.\n\nProcurement policy PROC-POL-007: Purchase approvals\n# Procurement policy PROC-POL-007: Purchase approvals\nEvery purchase order needs an approver other than the requester.\nOrders above 25,000 USD need a second approval from the plant controller, and orders above 250,000 USD need the CFO\u0027s approval.\nBuy only from qualified suppliers.\nA new supplier is qualified after a quality audit and a credit check, and Procurement re-qualifies each supplier every three years.\nApproval limits\n| Order value | Approvals needed |\n|---|---|\n| Up to 25,000 USD | One approver other than the requester |\n| 25,000 to 250,000 USD | The approver and the plant controller |\n| Above 250,000 USD | The approver, the plant controller and the CFO |\nSplitting an order to stay under an approval limit is a breach of this policy.\nEmergency orders outside working hours may be placed by the duty manager and approved on the next business day.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 7 Signatures\n## 7 Signatures\nSigned for Contoso Industrial by Grace Liu, procurement lead, and for Fabrikam Seals by its sales director.\n| For Contoso Industrial | For Fabrikam Seals |\n|---|---|\n| Name: Grace Liu | Name: Jordan Avery |\n| Title: Procurement lead | Title: Sales director |\n| Date: June 12, 2024 | Date: June 14, 2024 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1709",
+          "eval-output-tokens": "238",
+          "eval-total-tokens": "1947",
+          "eval-duration-ms": "20.63"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The response partially includes the necessary information from the ground truth, but it misses some key details and statements. The response mentions that a new supplier needs to be approved by the approver, the plant controller, and the CFO for orders above 250,000 USD, which is partially correct. However, it also states that a new supplier needs to sign a contract with Contoso, including the supplier contract SC-2024-118, which is not mentioned in the ground truth. Additionally, the response mentions that a new supplier needs to be approved by an approver other than the requester for orders up to 25,000 USD, which is also not mentioned in the ground truth. The response does not accurately reflect the process of re-qualification of suppliers every three years, which is an important detail in the ground truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "A new supplier is qualified after a quality audit and a credit check, and Procurement re-qualifies each supplier every three years."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1487",
+          "eval-output-tokens": "192",
+          "eval-total-tokens": "1679",
+          "eval-duration-ms": "16.80"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "4 of 4 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0204917,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1709,
+          "outputTokenCount": 238,
+          "totalTokenCount": 1947
+        },
+        "cacheKey": "58FE71372ED04E0C750EA736971C07AC4345216CC545772DA66AE205E15D49D992F5797386DF73D98A4F51C400AB79E0",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0166674,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1487,
+          "outputTokenCount": 192,
+          "totalTokenCount": 1679
+        },
+        "cacheKey": "A8AF6D8230FE4D111D5F85BB22C851EE8E77BB65FA0CA26B73831AE7DD2C22E5A726655D41D047B11F89628570AEB403",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

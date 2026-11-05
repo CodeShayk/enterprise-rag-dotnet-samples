@@ -1,0 +1,14 @@
+A1 shipped: The seal-water strainer upstream of V-114 never needs cleaning. [S1] The seal-water strainer upstream of V-114 should be cleaned every three months. The seal-water strainer upstream of V-114 should be cleaned whenever E-217 trips. [S2] The seal-water strainer upstream of V-114 should be cleaned to maintain seal-water pressure. The seal-water strainer upstream of V-114 should be cleaned to maintain seal-water pressure of at least 2.0 bar. [S3]
+A1 Chapter 1's prompt: According to [2], the seal-water strainer upstream of V-114 should be cleaned every three months, and whenever E-217 trips.
+A1 screened: The seal-water strainer upstream of V-114 should be cleaned every three months. [S1] The seal-water strainer upstream of V-114 should be cleaned whenever E-217 trips. [S2] The seal-water strainer upstream of V-114 should be cleaned according to WI-FS-031. [S4]
+A2 shipped: The torque that applies to the M12 flange bolts on P-201 is 85 N·m. The M12 flange bolts on P-201 must be tightened in a cross pattern in three passes: 30 N·m, 60 N·m, then 85 N·m. The M12 flange bolts on P-201 must be re-checked after the first 24 hours of operation. [S2]
+A2 Chapter 1's prompt: According to the latest manual, as stated in source [1], the torque for the M12 flange bolts on P-201 is 120 N·m.
+A2 screened: The tightening torque for the M12 flange bolts on the CP-200 flange is 85 N·m. [S1] The old torque of 22 N·m applied to PN-4471-B is not applicable to PN-4471-C. PN-4471-C has a recommended torque of 25 N·m. [S2]
+A3 shipped: Error E-217 means seal-water pressure low. [S3] To clear E-217, restore the seal-water pressure to at least 2.0 bar, wait until the alarm light stops flashing, then press RESET on the local panel. [S1]
+A3 Chapter 1's prompt: According to the sources, Error E-217 on a CP-200 means the seal-water pressure is low.
+
+To clear it, you need to restore the seal-water pressure to at least 2.0 bar, wait until the alarm light stops flashing, then press RESET on the local panel. If the alarm returns within an hour, do not restart the pump again; raise a work order for the seal-water system.
+A3 screened: Error E-217 means seal-water pressure low. To clear E-217, restore the seal-water pressure to at least 2.0 bar, wait until the alarm light stops flashing, then press RESET on the local panel. [S1]
+A4 shipped: The mechanical seal to be fitted on P-201 is PN-4471-C. [S1] The PN-4471-C seal kit is to be used instead of PN-4471-B. The seal gland nuts should be tightened to 25 N·m. [S4]
+A4 Chapter 1's prompt: According to source [2], the current mechanical seal on P-201 is PN-4471-B, which should be replaced with PN-4471-C at the next seal change (ECN-2291).
+A4 screened: The recommended mechanical seal to fit on P-201 is PN-4471-C. [S3] The old torque of 22 N·m applied to PN-4471-B. Fabrikam Seals confirmed 25 N·m for PN-4471-C. [S2] Tighten the seal gland nuts evenly to 25 N·m. [S3]

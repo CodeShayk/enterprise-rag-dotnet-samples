@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-F010",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:27.6195594Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "When was change notice ECN-2291 raised?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Engineering change notice ECN-2291 was raised on August 21, 2026."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Engineering change notice ECN-2291: CP-200 mechanical seal \u203A Engineering change notice ECN-2291\n# Engineering change notice ECN-2291\n| Change notice | ECN-2291 |\n| Date raised | August 21, 2026 |\n| Effective | September 14, 2026 |\nEffective September 14, 2026, mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps.\nReason for the change: three PN-4471-B failures in 2026 were traced to wear of the carbon face at seal-water temperatures above 60 \u00B0C.\nThe manual will be revised in 2027; until then, this notice takes precedence over it.\nAffected parts\n\nEngineering change notice ECN-2240: CP-200 casing wear ring material \u203A Engineering change notice ECN-2240\n# Engineering change notice ECN-2240\n| Change notice | ECN-2240 |\n| Date raised | January 27, 2025 |\n| Effective | March 1, 2025 |\nEffective March 1, 2025, casing wear ring PN-2840-A (bronze) is superseded by PN-2840-B (carbon-filled PTFE composite) on all CP-200 pumps.\nFit PN-2840-B whenever a wear ring is replaced.\n\nContoso parts catalog 2027 \u203A Superseded parts\n| Change | Change | Change | Change | Change |\n| Old part | Replaced by | Change notice | Effective | Instruction |\n| PN-2840-A | PN-2840-B | ECN-2240 | 2025-03-01 | Use up bronze rings on pumps above 80 \u00B0C only |\n| PN-4471-B | PN-4471-C | ECN-2291 | 2026-09-14 | Quarantine remaining stock |\n| PN-6120-A | PN-6120-B | ECN-2305 | 2026-12-01 | Replace at the next oil change |\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal\n- Revised for ECN-2291, October 2026"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1653",
+          "eval-output-tokens": "168",
+          "eval-total-tokens": "1821",
+          "eval-duration-ms": "0.94"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions \u0022Engineering change notice ECN-2291 was raised on August 21, 2026,\u0022 which is a specific and accurate piece of information. However, the Response does not provide any additional context or information about the nature of the engineering change notice or its implications. The Ground Truth only provides the date when the ECN-2291 was raised, which is August 21, 2026. The Response seems to be missing some relevant information that is present in the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Date raised | August 21, 2026 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1399",
+          "eval-output-tokens": "128",
+          "eval-total-tokens": "1527",
+          "eval-duration-ms": "4.07"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0008057,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1653,
+          "outputTokenCount": 168,
+          "totalTokenCount": 1821
+        },
+        "cacheKey": "2F4D5E62C6A015F182C73E325012761807BC1ED47396A85B7DCBBCEDB6D9D128A1CF79AC090BD30E177EDE711C7C713B",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0039558,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1399,
+          "outputTokenCount": 128,
+          "totalTokenCount": 1527
+        },
+        "cacheKey": "F514A789B170303827AB642BB0218DAAEC040220D034A66946DB650D1804800678E44BD8A5341AC9D7C85423D3D0EF09",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

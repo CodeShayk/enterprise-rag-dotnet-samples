@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Chapter 14: the assistant's chat in Blazor. It streams the answer from the API's /ask/stream endpoint, shows the
+    sources in a panel as soon as they arrive, turns each [S1] marker into a link to its source with the quote
+    highlighted, and sends a rating to /feedback. Listens on http://localhost:5141; the API runs on 5140.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch14.Knowledge.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Corpus\Contoso.Corpus.csproj" />
+  </ItemGroup>
+
+</Project>

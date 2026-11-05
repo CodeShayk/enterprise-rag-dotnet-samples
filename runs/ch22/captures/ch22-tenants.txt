@@ -1,0 +1,32 @@
+[testcontainers.org 00:00:00.11] Connected to Docker:
+  Host: npipe://./pipe/docker_engine
+  Server Version: 29.5.3
+  Kernel Version: 5.15.153.1-microsoft-standard-WSL2
+  API Version: 1.54
+  Operating System: Docker Desktop
+  Total Memory: 15.47 GB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+[testcontainers.org 00:00:00.60] Docker container 199fb7bb54df created
+[testcontainers.org 00:00:00.69] Start Docker container 199fb7bb54df
+[testcontainers.org 00:00:01.17] Wait for Docker container 199fb7bb54df to complete readiness checks
+[testcontainers.org 00:00:02.23] Docker container 199fb7bb54df ready
+[testcontainers.org 00:00:02.51] Docker container 9b3451acd977 created
+[testcontainers.org 00:00:02.52] Start Docker container 9b3451acd977
+[testcontainers.org 00:00:03.04] Wait for Docker container 9b3451acd977 to complete readiness checks
+[testcontainers.org 00:00:03.06] Execute "pg_isready --host localhost --dbname postgres --username postgres" at Docker container 9b3451acd977
+[testcontainers.org 00:00:04.20] Execute "pg_isready --host localhost --dbname postgres --username postgres" at Docker container 9b3451acd977
+[testcontainers.org 00:00:05.43] Execute "pg_isready --host localhost --dbname postgres --username postgres" at Docker container 9b3451acd977
+[testcontainers.org 00:00:05.53] Docker container 9b3451acd977 ready
+219 chunks of every tenant in one table, PostgreSQL 17 with row-level security, as role knowledge_app
+  SELECT count(*) FROM chunks  (no tenant in the query):
+    app.tenant = fluid        106 rows
+    app.tenant = service       24 rows
+    app.tenant = motion        47 rows
+    app.tenant = corporate     42 rows
+    app.tenant = (not set)      0 rows
+    as the table owner, a superuser:    219 rows (superusers skip the policy)
+  as fluid, INSERT a row for service: 42501 new row violates row-level security policy for table "chunks"
+  top 4 by cosine for fluid, with row-level security: p50 6.46 ms
+  top 4 by cosine for fluid, without it (owner): p50 5.72 ms
+[testcontainers.org 00:00:14.91] Delete Docker container 9b3451acd977

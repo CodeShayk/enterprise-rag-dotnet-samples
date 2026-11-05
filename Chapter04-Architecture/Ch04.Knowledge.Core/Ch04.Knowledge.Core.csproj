@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 4: the core of the Contoso Knowledge Assistant: its domain records, the ports every
+    adapter implements and the two pipelines that use them. It references the Contoso domain and
+    nothing else: no model SDKs, no vector stores, no hosting. The architecture tests in Ch04.Tests
+    keep it that way.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Ch04.Knowledge.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Corpus\Contoso.Corpus.csproj" />
+  </ItemGroup>
+
+</Project>

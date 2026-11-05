@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G2-H007",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:03:39.8658846Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Does Contoso stock seal faces for the CP-200 separately?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Contoso doesn\u0027t stock seal faces separately."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 8 Spare parts \u203A 8.1 Mechanical seal and recommended spares\nThe CP-200 uses cartridge mechanical seal PN-4471-B, supplied by Fabrikam Seals.\nOrder the seal complete; Contoso doesn\u0027t stock seal faces separately.\n|---|---|---|\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Fluid Systems\nPart \u203A Part number: PN-4471-B; Part \u203A Description: Mechanical seal cartridge, carbon face (superseded by PN-4471-C, ECN-2291); Part \u203A Fits: CP-200; Supply \u203A Supplier: Fabrikam Seals; Supply \u203A Lead time (weeks): 6; Supply \u203A Stock at Riverside: 0; Price (USD) \u203A List price: 1,280.00; Price (USD) \u203A Discount: 8%; Price (USD) \u203A Net price: 1,177.60\nPart \u203A Part number: PN-4471-C; Part \u203A Description: Mechanical seal cartridge, silicon-carbide face; Part \u203A Fits: CP-200; Supply \u203A Supplier: Fabrikam Seals; Supply \u203A Lead time (weeks): 6; Supply \u203A Stock at Riverside: 7; Price (USD) \u203A List price: 1,450.00; Price (USD) \u203A Discount: 8%; Price (USD) \u203A Net price: 1,334.00\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Fluid Systems\nPart \u203A Part number: PN-8110-A; Part \u203A Description: Pressure switch PS-31, 0.5 to 6 bar; Part \u203A Fits: CP-200 seal water; Supply \u203A Supplier: Contoso stores; Supply \u203A Lead time (weeks): 3; Supply \u203A Stock at Riverside: 4; Price (USD) \u203A List price: 155.00; Price (USD) \u203A Discount: 0%; Price (USD) \u203A Net price: 155.00\n\nSOP-FS-014: Mechanical seal replacement on CP-200 pumps \u203A Purpose and scope\nIt applies to every CP-200 pump at Contoso plants and to Field Services work on customers\u0027 CP-200 pumps."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1653",
+          "eval-output-tokens": "202",
+          "eval-total-tokens": "1855",
+          "eval-duration-ms": "22662.50"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that Contoso doesn\u0027t stock seal faces separately, which is a crucial piece of information that is also present in the Ground Truth. However, the Response does not provide any additional information about the CP-200 pump or the cartridge mechanical seal PN-4471-B, which is also present in the Ground Truth. The Response seems to be missing some minor details, but it does contain the essential information about Contoso not stocking seal faces separately.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "The CP-200 uses cartridge mechanical seal PN-4471-B, supplied by Fabrikam Seals. Order the seal complete; Contoso doesn\u0027t stock seal faces separately. Keep the spares in Table 8-1 at every site that runs CP-200 pumps."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1433",
+          "eval-output-tokens": "118",
+          "eval-total-tokens": "1551",
+          "eval-duration-ms": "34110.20"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 22.6611718,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1653,
+          "outputTokenCount": 202,
+          "totalTokenCount": 1855
+        },
+        "cacheKey": "DB9E30562DE9BD574B5844453AACB8C58CDC29ADC211A5DC0E99913DF221140E4A270010A1EF5003EEEBEC271C178AB4",
+        "cacheHit": false
+      },
+      {
+        "latency": 34.1100958,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1433,
+          "outputTokenCount": 118,
+          "totalTokenCount": 1551
+        },
+        "cacheKey": "422AF67D14B855D3B971D0E6BFD8D0EA898421B741697F71E7AE761F26DF90C9A2B5BBA5FD4AC3F0C5BD0C4A303B6E4E",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

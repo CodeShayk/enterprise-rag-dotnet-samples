@@ -1,0 +1,16 @@
+ER-2027-003: MAIL-2026-1107-PUMPINGSTA, GDPR Art. 17, request from the data subject; probes: Pat Lee, pat.lee@tailspin.example, duplex strainer so your operators, Sand from the raw-water supply blocks that strainer
+Store                            before  erased  after
+source documents                      1       1      0
+keyword index (chunks)                1       1      0
+vector index                          1       1      0
+knowledge graph (mentions)            3       3      0
+answer cache, 2 nodes                 4       4      0
+captured questions and answers        2       2      0
+recorded model calls                  2       2      0
+golden set                            0       0      0
+provenance log (text)                 0       0      0
+erased in 0.2 s; proven: yes; tombstone ER-2027-003 at 2027-02-01 07:00Z, content abc2ec1a0821
+provenance records whose evidence included it: 2, kept (identifiers and hashes, no text)
+the mail connector offers MAIL-2026-1107-PUMPINGSTA again (same file): refused by the tombstone of ER-2027-003
+ER-2027-004: HR-PL-2024, refused: legal hold (LIT-2026-014); provenance records whose evidence included it: 5, preserved with it
+captured content, 30-day retention on 2027-02-01: 130 entries; erase 63, held (LIT-2026-014) 3, keep 64

@@ -1,0 +1,39 @@
+heading: # Replacing the CP-200 mechanical seal
+listitem: - Fluid Systems maintenance training
+listitem: - Revised for ECN-2291, October 2026
+paragraph (speaker-notes): Welcome the group and ask who has replaced a CP-200 seal before. This course follows SOP-FS-014 revision 3.
+heading: ## Why seals fail
+listitem: - Dry running, even for a few seconds
+listitem: - Seal-water pressure below 1.5 bar (error E-217 trips the pump)
+listitem: - Abrasive particles in the seal water
+listitem: - Carbon face wear above 60 °C seal-water temperature
+paragraph (speaker-notes): In 2026, three PN-4471-B failures at Riverside were traced to carbon face wear at seal-water temperatures above 60 °C. That is why ECN-2291 introduced PN-4471-C with a silicon-carbide face.
+heading: ## Before you start
+listitem: - Lockout/tagout as SB-0932 and SOP-FS-007 require
+listitem: - Verify zero energy
+listitem: - Everyone fits their own lock
+paragraph (speaker-notes): Zero energy means that the motor can't start from the panel, the local pressure gauges read zero and the casing drain is open.
+heading: ## Parts and tools
+listitem: - Seal cartridge PN-4471-C
+listitem: - New casing gaskets PN-2205-C
+listitem: - Torque wrench, 5 to 60 N·m
+paragraph (speaker-notes): Check the part number on the box. Remaining PN-4471-B stock is quarantined; never fit it.
+heading: ## Removing the old seal
+listitem: - Drain the casing and remove the coupling guard
+listitem: - Remove the seal housing and the old seal
+listitem: - Inspect the shaft sleeve for scoring
+paragraph (speaker-notes): Replace a scored shaft sleeve; a new seal won't seal on it.
+heading: ## Fitting PN-4471-C
+listitem: - Fit the cartridge without tilting it
+listitem: - Tighten the gland nuts evenly to 25 N·m
+listitem: - Don't mix PN-4471-B and PN-4471-C parts
+paragraph (speaker-notes): The old torque of 22 N·m applied to PN-4471-B. Fabrikam Seals confirmed 25 N·m for PN-4471-C.
+heading: ## Restarting the pump
+listitem: - Vent the casing
+listitem: - Open the seal-water supply: 2.0 to 3.0 bar at the flush connection
+listitem: - Start as section 5.4 of the manual describes
+paragraph (speaker-notes): Watch the seal for the first hour. A few drops while the faces run in are normal.
+heading: ## Records
+listitem: - Seal part number and operating hours in the work order
+listitem: - Return failed seals for analysis
+paragraph (speaker-notes): Questions about the course go to Nadia Rahman in reliability engineering.

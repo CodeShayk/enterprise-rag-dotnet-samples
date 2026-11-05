@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G2-F006",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:58:08.4193129Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Which mechanical seal is fitted to pump P-202?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The mechanical seal fitted to pump P-202 is PN-4471-B. The mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps, effective September 14, 2026. The next seal change for pump P-202 should use PN-4471-C."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Mechanical seal | PN-4471-B, fitted August 2019; replace with PN-4471-C at the next seal change (ECN-2291) |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1470",
+          "eval-output-tokens": "212",
+          "eval-total-tokens": "1682",
+          "eval-duration-ms": "19539.06"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Asset record: pump P-202\n# Asset record: pump P-202\n|---|---|\n| Tag | P-202 |\n| Model | CP-200 centrifugal pump |\n| Duty | Cooling-water transfer, standby for P-201 |\n| Seal-water valve | V-115 |\n| Mechanical seal | PN-4471-B, fitted August 2019; replace with PN-4471-C at the next seal change (ECN-2291) |\nP-202 is the standby pump for P-201 and runs about 1,200 hours a year, mostly while P-201 is maintained.\nIts manual is the CP-200 Centrifugal Pump Manual (2009).\n\nSOP-FS-014: Mechanical seal replacement on CP-200 pumps\n# SOP-FS-014: Mechanical seal replacement on CP-200 pumps\n1. Apply lockout/tagout to the motor and isolate the seal-water and process lines, as safety bulletin SB-0932 requires.\n4. Fit mechanical seal PN-4471-C.\nDon\u0027t mix PN-4471-B and PN-4471-C parts.\n\nEngineering change notice ECN-2291: CP-200 mechanical seal \u203A Engineering change notice ECN-2291\n| Title | CP-200 mechanical seal |\nEffective September 14, 2026, mechanical seal PN-4471-B is superseded by PN-4471-C on all CP-200 pumps.\nPN-4471-C has a silicon-carbide face rated for higher seal-water temperatures.\nFit PN-4471-C at the next seal replacement and quarantine remaining PN-4471-B stock.\nReason for the change: three PN-4471-B failures in 2026 were traced to wear of the carbon face at seal-water temperatures above 60 \u00B0C.\nAffected parts\n\nAsset record: pump P-201\n# Asset record: pump P-201\n| Tag | P-201 |\n| Model | CP-200 centrifugal pump |\n| Seal-water valve | V-114 |\n| Mechanical seal | PN-4471-C since work order WO-88412 (November 2026) |\nP-201 runs continuously, about 8,400 hours a year.\nIts manual is the CP-200 Centrifugal Pump Manual (2009)."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1708",
+          "eval-output-tokens": "338",
+          "eval-total-tokens": "2046",
+          "eval-duration-ms": "52728.46"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 19.5389031,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1470,
+          "outputTokenCount": 212,
+          "totalTokenCount": 1682
+        },
+        "cacheKey": "C3175D7BD335FD0D890CBAF34F6A1914A376F4E0692FC103119E1640680DA0BED9197126F4CC0F5CDE076F00998ED364",
+        "cacheHit": false
+      },
+      {
+        "latency": 52.7282677,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1708,
+          "outputTokenCount": 338,
+          "totalTokenCount": 2046
+        },
+        "cacheKey": "F0C003FB45CFE6895CBB1944ADC44EAC37C8EDDD42D0D4ABA59D04C6D478B351C3286A4E6FF9337EEA6399CEB2696790",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

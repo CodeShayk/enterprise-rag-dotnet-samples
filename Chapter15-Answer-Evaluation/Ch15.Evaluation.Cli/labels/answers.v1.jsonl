@@ -1,0 +1,60 @@
+{"id": "G2-T038", "correct": true}
+{"id": "G2-T055", "correct": true}
+{"id": "G054", "correct": true}
+{"id": "G2-T009", "correct": true}
+{"id": "G2-T024", "correct": true}
+{"id": "G011", "correct": true}
+{"id": "G2-H025", "correct": true}
+{"id": "G2-T057", "correct": true}
+{"id": "G052", "correct": true}
+{"id": "G2-H019", "correct": true}
+{"id": "G2-H017", "correct": true}
+{"id": "G2-T059", "correct": true}
+{"id": "G2-T034", "correct": true}
+{"id": "G017", "correct": false, "note": "Gives September 13, 2026 as the contract's end; the contract runs to June 30, 2027."}
+{"id": "G2-H026", "correct": false, "note": "Misses turning the input shaft by hand every month."}
+{"id": "G005", "correct": true}
+{"id": "G025", "correct": true, "note": "Right fact, cited to the manual's general rule instead of the service report."}
+{"id": "G2-T070", "correct": true}
+{"id": "G058", "correct": true}
+{"id": "G045", "correct": true}
+{"id": "G2-T047", "correct": false, "note": "Declined, though the catalog row gives both."}
+{"id": "G2-H003", "correct": true}
+{"id": "G2-T031", "correct": true, "note": "Adds the cooling fins from the next row; only the claim labels catch it."}
+{"id": "G006", "correct": false, "note": "Misses that the leave can be taken in up to three blocks."}
+{"id": "G2-H048", "correct": true, "note": "Leads with the 30-day breach notice, which answers a different question."}
+{"id": "G2-T013", "correct": true}
+{"id": "G2-H036", "correct": true}
+{"id": "G2-H029", "correct": true}
+{"id": "G2-H016", "correct": true}
+{"id": "G2-H023", "correct": true}
+{"id": "G2-H004", "correct": true}
+{"id": "G039", "correct": true, "note": "Gives the audit and the credit check, then adds three requirements the policy doesn't set."}
+{"id": "G2-H040", "correct": true}
+{"id": "G036", "correct": true}
+{"id": "G019", "correct": false, "note": "Declined; the AI-use policy forbids pasting company documents into public chatbots."}
+{"id": "G038", "correct": true}
+{"id": "G2-T015", "correct": true}
+{"id": "G2-F006", "correct": true}
+{"id": "G047", "correct": true}
+{"id": "G028", "correct": true}
+{"id": "G012", "correct": true, "note": "Gives cavitation, one of the labeled causes; misses misalignment, the first one to check."}
+{"id": "G029", "correct": true}
+{"id": "G2-T065", "correct": true}
+{"id": "G2-H012", "correct": true}
+{"id": "G051", "correct": true}
+{"id": "G2-H007", "correct": true, "note": "Status not_found, but the text gives the fact."}
+{"id": "G2-H042", "correct": false, "note": "Says the policy doesn't address splitting; it calls splitting a breach."}
+{"id": "G2-T045", "correct": true}
+{"id": "G2-T040", "correct": true, "note": "Gives the cause rather than the name, safe torque off."}
+{"id": "G2-H008", "correct": true}
+{"id": "G009", "correct": true}
+{"id": "G2-T062", "correct": true}
+{"id": "G024", "correct": true, "note": "Riverside without the cooling-water building."}
+{"id": "G2-F010", "correct": true}
+{"id": "G2-T043", "correct": true}
+{"id": "G2-F005", "correct": true}
+{"id": "G2-T007", "correct": true}
+{"id": "G2-T029", "correct": true}
+{"id": "G059", "correct": true}
+{"id": "G2-T011", "correct": true}

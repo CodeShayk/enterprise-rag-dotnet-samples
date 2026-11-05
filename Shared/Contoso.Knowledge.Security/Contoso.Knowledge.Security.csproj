@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 22: the assistant's defenses. A stand-in for Microsoft Entra ID's directory (group object IDs, nested groups,
+    a Graph-like transitive lookup) and the mapping from a validated token's claims to the asker; source permissions kept
+    apart from the index with a change feed and post-filter verification; a rule-based detector for instructions inside
+    documents and questions; safe rendering of answers (Markdown to HTML, then an allow-list); source trust tiers; and a
+    check of model files against their recorded SHA-256 hashes, with the catalog written out as a CycloneDX ML-BOM.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Security</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlSanitizer" />
+    <PackageReference Include="Markdig" />
+  </ItemGroup>
+
+</Project>

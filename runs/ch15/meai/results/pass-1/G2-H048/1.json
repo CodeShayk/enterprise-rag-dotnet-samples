@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G2-H048",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:49:13.520765Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How much notice stops the Fabrikam Seals contract from renewing?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Either party may end the agreement for material breach that is not remedied within 30 days of written notice. The contract runs from July 1, 2024 to June 30, 2027 and renews for one year unless either party gives notice 90 days before it ends."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Supplier contract SC-2024-118: Fabrikam Seals \u203A 6 Termination\n## 6 Termination\nEither party may end the agreement for material breach that is not remedied within 30 days of written notice.\nOrders placed before termination are delivered on the agreed terms.\n\nSupplier contract SC-2024-118: Fabrikam Seals\n# Supplier contract SC-2024-118: Fabrikam Seals\nContoso Industrial and Fabrikam Seals agree on the supply of mechanical seals for CP-200 pumps: PN-4471-B and, from September 2026, PN-4471-C.\nThe contract runs from July 1, 2024 to June 30, 2027 and renews for one year unless either party gives notice 90 days before it ends.\nFabrikam Seals delivers within six weeks of an order and reports any quality incident that affects delivered parts within five business days.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 4 Quality\n## 4 Quality\nThe supplier keeps an ISO 9001 certified quality system and supplies a certificate of conformity with every delivery.\nThe buyer may audit the supplier\u0027s plant with ten business days\u0027 notice.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 2 Products and prices\n## 2 Products and prices\nSchedule A: products and prices\n| Part number | Description | Unit price | Minimum order |\n|---|---|---|---|\n| PN-4471-B | Cartridge mechanical seal for CP-200 (until September 13, 2026) | 1,180 USD | 4 |\n| PN-4471-C | Cartridge mechanical seal for CP-200, silicon-carbide face | 1,340 USD | 4 |\nPrices are fixed for the first 12 months and may then rise by no more than the producer price index for industrial seals, once a year, with 60 days\u0027 notice."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1647",
+          "eval-output-tokens": "200",
+          "eval-total-tokens": "1847",
+          "eval-duration-ms": "23743.65"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Based on the definitions, I think the Response should get a Score of 3 because it contains most of the necessary and relevant information with respect to the Ground Truth, but it misses some minor information, such as the renewal clause and the notice period for renewal.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "The contract runs from July 1, 2024 to June 30, 2027 and renews for one year unless either party gives notice 90 days before it ends. Fabrikam Seals delivers within six weeks of an order and reports any quality incident that affects delivered parts within five business days."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1490",
+          "eval-output-tokens": "249",
+          "eval-total-tokens": "1739",
+          "eval-duration-ms": "43890.01"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 23.7434846,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1647,
+          "outputTokenCount": 200,
+          "totalTokenCount": 1847
+        },
+        "cacheKey": "F2BCFC010E8A96932B0EBFEC0C72E2F542E24E8F80B22E4A55D8AEE22E29401045890DF49EBD2E841592B312787761DE",
+        "cacheHit": false
+      },
+      {
+        "latency": 43.8898863,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1490,
+          "outputTokenCount": 249,
+          "totalTokenCount": 1739
+        },
+        "cacheKey": "B2518144740F417C1797518CB722C54218919CEB5A2C2BA85F13CF63D12D627955424932E85C7B1DAD6AC1301D1207FE",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

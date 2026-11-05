@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G058",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:45:29.9082637Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What model of pump is P-201?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The model of pump P-201 is CP-200 centrifugal pump. The model of pump P-201 is CP-200 centrifugal pump."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Asset record: pump P-201\n# Asset record: pump P-201\n| Field | Value |\n|---|---|\n| Tag | P-201 |\n| Model | CP-200 centrifugal pump |\n| Duty | Cooling-water transfer, 180 m\u00B3/h at 32 m head |\n| Motor | 30 kW, 1,480 rpm |\n| Commissioned | May 2011 |\n| Seal-water valve | V-114 |\n| Mechanical seal | PN-4471-C since work order WO-88412 (November 2026) |\nP-201 runs continuously, about 8,400 hours a year.\nIts manual is the CP-200 Centrifugal Pump Manual (2009).\n\nAsset record: pump P-202\n# Asset record: pump P-202\n|---|---|\n| Tag | P-202 |\n| Model | CP-200 centrifugal pump |\n| Duty | Cooling-water transfer, standby for P-201 |\n| Commissioned | May 2011 |\n| Seal-water valve | V-115 |\n| Mechanical seal | PN-4471-B, fitted August 2019; replace with PN-4471-C at the next seal change (ECN-2291) |\nP-202 is the standby pump for P-201 and runs about 1,200 hours a year, mostly while P-201 is maintained.\nIts manual is the CP-200 Centrifugal Pump Manual (2009).\n\nAsset record: pump P-301\n# Asset record: pump P-301\n|---|---|\n| Tag | P-301 |\n| Model | CP-200 centrifugal pump |\n| Motor | 22 kW, 1,480 rpm |\n| Commissioned | March 2015 |\n| Seal-water valve | V-311 |\n| Mechanical seal | PN-4471-C since work order WO-88454 (December 2026) |\nP-301 runs about 6,000 hours a year.\n\nWI-FS-031: Cleaning the seal-water strainer upstream of V-114\nThe seal-water line to pump P-201 has a Y-strainer with a 100-micron screen upstream of valve V-114.\n1. Stop P-201 and close the isolation valve upstream of the strainer."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1671",
+          "eval-output-tokens": "246",
+          "eval-total-tokens": "1917",
+          "eval-duration-ms": "27005.24"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response and Ground Truth provided are very similar, with the Response repeating the Ground Truth verbatim. However, the Response is missing some context and minor details that are present in the Ground Truth, such as the specific model of pump mentioned in the Ground Truth (\u0022P-201\u0022) being repeated in the Response without any additional information.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Model | CP-200 centrifugal pump |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1408",
+          "eval-output-tokens": "93",
+          "eval-total-tokens": "1501",
+          "eval-duration-ms": "36083.51"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 27.0050243,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1671,
+          "outputTokenCount": 246,
+          "totalTokenCount": 1917
+        },
+        "cacheKey": "DA391E4E16E0745817B731E33D450B07F8C16D0C4B2B313E5A197AEDE908AD4B780F2A7AA29287308365741D97F521D4",
+        "cacheHit": false
+      },
+      {
+        "latency": 36.0833356,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1408,
+          "outputTokenCount": 93,
+          "totalTokenCount": 1501
+        },
+        "cacheKey": "0F1328B1EE71AF7F800B50270B41665CA5E6996875DE0A8D35618347CFA95EA9CC742A30239B7800BF6BFF3D30E3AF9E",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

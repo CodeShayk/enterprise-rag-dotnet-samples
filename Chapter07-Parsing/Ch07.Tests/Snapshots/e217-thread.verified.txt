@@ -1,0 +1,10 @@
+paragraph: Hi Pat, the report from today's visit is attached.
+paragraph: In short: the seal-water strainer was almost fully blocked with sand, and the mechanical seal already showed face wear, so we replaced it with PN-4471-C under ECN-2291. I'd recommend a duplex strainer so your operators can clean one screen while the pump keeps running. I'll send a quote.
+paragraph: Kwame
+paragraph (quote): On Thu, 5 Nov 2026 at 09:40, Kwame Asante <kwame.asante@contoso.example> wrote:
+paragraph (quote): Hi Pat, I can be on site Saturday morning, November 7.
+paragraph (quote): Until then, check that the seal-water valve is fully open and look at the strainer upstream of it. Sand from the raw-water supply blocks that strainer quickly, and a blocked strainer is the most common cause of E-217.
+paragraph (quote): Kwame
+paragraph (quote): On Thu, 5 Nov 2026 at 08:12, Pat Lee <pat.lee@tailspin.example> wrote:
+paragraph (quote): Kwame, the CP-200 at raw-water pumping station 3 has tripped four times since yesterday with error E-217. We reset it each time, but it trips again within a few hours. Can someone come out this week?
+paragraph (quote): Pat Lee, maintenance lead, Tailspin Water Utility

@@ -1,0 +1,18 @@
+# Contoso's maintenance glossary, in Solr's synonym format: the words on one line are interchangeable.
+# Written for Chapter 11 from the acronyms in Contoso's documents and the everyday words people use for a few of
+# their terms. Lowercase, unstemmed; the analyzer stems after expanding.
+
+loto, lockout tagout, lock out tag out
+ppe, personal protective equipment
+sop, standard operating procedure
+ecn, engineering change notice, change notice
+wo, work order
+rms, root mean square
+vfd, variable frequency drive, frequency converter, inverter
+gearbox, gear unit, gear reducer
+bolt, screw
+grease, lubricant
+warranty, guarantee
+supplier, vendor
+overheating, overheat, high temperature
+leave, time off, vacation

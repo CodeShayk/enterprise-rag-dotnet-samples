@@ -1,0 +1,162 @@
+  Determining projects to restore...
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter01-Why-RAG\Ch01.WhyRag\Ch01.WhyRag.csproj (in 2.18 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter01-Why-RAG\Ch01.Tests\Ch01.Tests.csproj (in 2.18 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter07-Parsing\Ch07.Tests\Ch07.Tests.csproj (in 2.19 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter02-Fundamentals\Ch02.Fundamentals\Ch02.Fundamentals.csproj (in 2.18 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter02-Fundamentals\Ch02.Benchmarks\Ch02.Benchmarks.csproj (in 2.19 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter04-Architecture\Ch04.Architecture.Cli\Ch04.Architecture.Cli.csproj (in 2.19 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter04-Architecture\Ch04.Tests\Ch04.Tests.csproj (in 2.18 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Query\Contoso.Knowledge.Query.csproj (in 2.17 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Graph\Contoso.Knowledge.Graph.csproj (in 2.19 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter08-OCR\Ch08.Tests\Ch08.Tests.csproj (in 2.13 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Parsing\Contoso.Knowledge.Parsing.csproj (in 2.15 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter02-Fundamentals\Ch02.Tests\Ch02.Tests.csproj (in 2.17 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Ocr\Contoso.Knowledge.Ocr.csproj (in 2.14 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.Knowledge\Ch03.Knowledge.csproj (in 2.19 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Performance\Contoso.Knowledge.Performance.csproj (in 2.15 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter07-Parsing\Ch07.Parsing.Cli\Ch07.Parsing.Cli.csproj (in 2.11 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter06-Ingestion\Ch06.Ingestion.Worker\Ch06.Ingestion.Worker.csproj (in 2.21 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter08-OCR\Ch08.Ocr.Cli\Ch08.Ocr.Cli.csproj (in 2.13 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Observability\Contoso.Knowledge.Observability.csproj (in 2.21 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter04-Architecture\Ch04.Knowledge.Core\Ch04.Knowledge.Core.csproj (in 41 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Web\Ch14.Knowledge.Web.csproj (in 31 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter04-Architecture\Ch04.Knowledge.Adapters\Ch04.Knowledge.Adapters.csproj (in 231 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.ServiceDefaults\Ch03.ServiceDefaults.csproj (in 301 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter05-Evaluation\Ch05.Evaluation.Cli\Ch05.Evaluation.Cli.csproj (in 248 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.Knowledge.Web\Ch03.Knowledge.Web.csproj (in 303 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter05-Evaluation\Ch05.Tests\Ch05.Tests.csproj (in 251 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter18-Multimodal\Ch18.Knowledge.Web\Ch18.Knowledge.Web.csproj (in 246 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.Knowledge.Api\Ch03.Knowledge.Api.csproj (in 310 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.Baseline.Cli\Ch03.Baseline.Cli.csproj (in 296 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.AppHost\Ch03.AppHost.csproj (in 2.71 sec).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj (in 11 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter19-GraphRAG\Ch19.GraphRAG.Tests\Ch19.GraphRAG.Tests.csproj (in 301 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj (in 20 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Vision\Contoso.Knowledge.Vision.csproj (in 88 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Corpus\Contoso.Corpus.csproj (in 9 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Evaluation\Contoso.Knowledge.Evaluation.csproj (in 37 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Knowledge.Api\Ch14.Knowledge.Api.csproj (in 133 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter17-Agentic-RAG\Ch17.Knowledge.Mcp\Ch17.Knowledge.Mcp.csproj (in 389 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Tests\Ch14.Tests.csproj (in 352 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj (in 113 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter20-Observability\Ch20.Observability.Tests\Ch20.Observability.Tests.csproj (in 381 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Corpus.Generator\Contoso.Corpus.Generator.csproj (in 59 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Security\Contoso.Knowledge.Security.csproj (in 126 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter03-First-Pipeline\Ch03.Tests\Ch03.Tests.csproj (in 387 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj (in 68 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Generation\Contoso.Knowledge.Generation.csproj (in 99 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter17-Agentic-RAG\Ch17.Tests\Ch17.Tests.csproj (in 426 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter10-Embeddings\Ch10.Benchmarks\Ch10.Benchmarks.csproj (in 50 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.AI\Contoso.AI.csproj (in 23 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter06-Ingestion\Ch06.Tests\Ch06.Tests.csproj (in 526 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Agents\Contoso.Knowledge.Agents.csproj (in 167 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Shared\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj (in 157 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter09-Chunking\Ch09.Tests\Ch09.Tests.csproj (in 75 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter09-Chunking\Ch09.Chunking.Cli\Ch09.Chunking.Cli.csproj (in 90 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter21-Performance-and-Cost\Ch21.Performance.Tests\Ch21.Performance.Tests.csproj (in 208 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter21-Performance-and-Cost\Ch21.Benchmarks\Ch21.Benchmarks.csproj (in 165 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter20-Observability\Ch20.Observability.Cli\Ch20.Observability.Cli.csproj (in 554 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter17-Agentic-RAG\Ch17.Agents.Cli\Ch17.Agents.Cli.csproj (in 143 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter16-Corrective-RAG\Ch16.Corrective.Cli\Ch16.Corrective.Cli.csproj (in 173 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter15-Answer-Evaluation\Ch15.Tests\Ch15.Tests.csproj (in 56 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter21-Performance-and-Cost\Ch21.Performance.Cli\Ch21.Performance.Cli.csproj (in 230 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter22-Security\Ch22.Security.Tests\Ch22.Security.Tests.csproj (in 119 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter22-Security\Ch22.Security.Cli\Ch22.Security.Cli.csproj (in 159 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter16-Corrective-RAG\Ch16.Tests\Ch16.Tests.csproj (in 222 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter10-Embeddings\Ch10.Tests\Ch10.Tests.csproj (in 69 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter19-GraphRAG\Ch19.GraphRAG.Cli\Ch19.GraphRAG.Cli.csproj (in 144 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter18-Multimodal\Ch18.Multimodal.Cli\Ch18.Multimodal.Cli.csproj (in 123 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter18-Multimodal\Ch18.Tests\Ch18.Tests.csproj (in 149 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter15-Answer-Evaluation\Ch15.Evaluation.Cli\Ch15.Evaluation.Cli.csproj (in 156 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter14-Grounded-Generation\Ch14.Generation.Cli\Ch14.Generation.Cli.csproj (in 101 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter15-Answer-Evaluation\Ch15.Regression.Tests\Ch15.Regression.Tests.csproj (in 157 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter13-Query-Understanding\Ch13.Tests\Ch13.Tests.csproj (in 91 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter12-Reranking\Ch12.Reranking.Cli\Ch12.Reranking.Cli.csproj (in 136 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter11-Hybrid-Retrieval\Ch11.Tests\Ch11.Tests.csproj (in 117 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter13-Query-Understanding\Ch13.Query.Cli\Ch13.Query.Cli.csproj (in 182 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter11-Hybrid-Retrieval\Ch11.Hybrid.Cli\Ch11.Hybrid.Cli.csproj (in 124 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter12-Reranking\Ch12.Tests\Ch12.Tests.csproj (in 181 ms).
+  Restored C:\Work\Book-Writing\RAG .NET\sample-code\Chapter10-Embeddings\Ch10.Embeddings.Cli\Ch10.Embeddings.Cli.csproj (in 180 ms).
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+   C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+
+The given project `Ch01.Tests` has no vulnerable packages given the current sources.
+The given project `Ch01.WhyRag` has no vulnerable packages given the current sources.
+The given project `Ch02.Benchmarks` has no vulnerable packages given the current sources.
+The given project `Ch02.Fundamentals` has no vulnerable packages given the current sources.
+The given project `Ch02.Tests` has no vulnerable packages given the current sources.
+The given project `Ch03.AppHost` has no vulnerable packages given the current sources.
+The given project `Ch03.Baseline.Cli` has no vulnerable packages given the current sources.
+The given project `Ch03.Knowledge.Api` has no vulnerable packages given the current sources.
+The given project `Ch03.Knowledge.Web` has no vulnerable packages given the current sources.
+The given project `Ch03.Knowledge` has no vulnerable packages given the current sources.
+The given project `Ch03.ServiceDefaults` has no vulnerable packages given the current sources.
+The given project `Ch03.Tests` has no vulnerable packages given the current sources.
+The given project `Ch04.Architecture.Cli` has no vulnerable packages given the current sources.
+The given project `Ch04.Knowledge.Adapters` has no vulnerable packages given the current sources.
+The given project `Ch04.Knowledge.Core` has no vulnerable packages given the current sources.
+The given project `Ch04.Tests` has no vulnerable packages given the current sources.
+The given project `Ch05.Evaluation.Cli` has no vulnerable packages given the current sources.
+The given project `Ch05.Tests` has no vulnerable packages given the current sources.
+The given project `Ch06.Ingestion.Worker` has no vulnerable packages given the current sources.
+The given project `Ch06.Tests` has no vulnerable packages given the current sources.
+The given project `Ch07.Parsing.Cli` has no vulnerable packages given the current sources.
+The given project `Ch07.Tests` has no vulnerable packages given the current sources.
+The given project `Ch08.Ocr.Cli` has no vulnerable packages given the current sources.
+The given project `Ch08.Tests` has no vulnerable packages given the current sources.
+The given project `Ch09.Chunking.Cli` has no vulnerable packages given the current sources.
+The given project `Ch09.Tests` has no vulnerable packages given the current sources.
+The given project `Ch10.Benchmarks` has no vulnerable packages given the current sources.
+The given project `Ch10.Embeddings.Cli` has no vulnerable packages given the current sources.
+The given project `Ch10.Tests` has no vulnerable packages given the current sources.
+The given project `Ch11.Hybrid.Cli` has no vulnerable packages given the current sources.
+The given project `Ch11.Tests` has no vulnerable packages given the current sources.
+The given project `Ch12.Reranking.Cli` has no vulnerable packages given the current sources.
+The given project `Ch12.Tests` has no vulnerable packages given the current sources.
+The given project `Ch13.Query.Cli` has no vulnerable packages given the current sources.
+The given project `Ch13.Tests` has no vulnerable packages given the current sources.
+The given project `Ch14.Generation.Cli` has no vulnerable packages given the current sources.
+The given project `Ch14.Knowledge.Api` has no vulnerable packages given the current sources.
+The given project `Ch14.Knowledge.Web` has no vulnerable packages given the current sources.
+The given project `Ch14.Tests` has no vulnerable packages given the current sources.
+The given project `Ch15.Evaluation.Cli` has no vulnerable packages given the current sources.
+The given project `Ch15.Regression.Tests` has no vulnerable packages given the current sources.
+The given project `Ch15.Tests` has no vulnerable packages given the current sources.
+The given project `Ch16.Corrective.Cli` has no vulnerable packages given the current sources.
+The given project `Ch16.Tests` has no vulnerable packages given the current sources.
+The given project `Ch17.Agents.Cli` has no vulnerable packages given the current sources.
+The given project `Ch17.Knowledge.Mcp` has no vulnerable packages given the current sources.
+The given project `Ch17.Tests` has no vulnerable packages given the current sources.
+The given project `Ch18.Knowledge.Web` has no vulnerable packages given the current sources.
+The given project `Ch18.Multimodal.Cli` has no vulnerable packages given the current sources.
+The given project `Ch18.Tests` has no vulnerable packages given the current sources.
+The given project `Ch19.GraphRAG.Cli` has no vulnerable packages given the current sources.
+The given project `Ch19.GraphRAG.Tests` has no vulnerable packages given the current sources.
+The given project `Ch20.Observability.Cli` has no vulnerable packages given the current sources.
+The given project `Ch20.Observability.Tests` has no vulnerable packages given the current sources.
+The given project `Ch21.Benchmarks` has no vulnerable packages given the current sources.
+The given project `Ch21.Performance.Cli` has no vulnerable packages given the current sources.
+The given project `Ch21.Performance.Tests` has no vulnerable packages given the current sources.
+The given project `Ch22.Security.Cli` has no vulnerable packages given the current sources.
+The given project `Ch22.Security.Tests` has no vulnerable packages given the current sources.
+The given project `Contoso.AI` has no vulnerable packages given the current sources.
+The given project `Contoso.Corpus.Generator` has no vulnerable packages given the current sources.
+The given project `Contoso.Corpus` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Agents` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Chunking` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Correction` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Documents` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Embeddings` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Evaluation` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Generation` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Graph` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Observability` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Ocr` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Parsing` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Performance` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Query` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Retrieval` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Security` has no vulnerable packages given the current sources.
+The given project `Contoso.Knowledge.Vision` has no vulnerable packages given the current sources.

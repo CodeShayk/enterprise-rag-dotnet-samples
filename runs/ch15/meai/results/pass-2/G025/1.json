@@ -1,0 +1,144 @@
+{
+  "scenarioName": "G025",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:29.315363Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What noise was the Woodgrove Foods gearbox making?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The Woodgrove Foods gearbox was making a whining noise that rose with speed. The noise was caused by low oil level or worn gear teeth."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "The RESPONSE provided by the assistant is \u0022The Woodgrove Foods gearbox was making a whining noise that rose with speed. The noise was caused by low oil level or worn gear teeth.\u0022 This answer directly addresses the question \u0022What noise was the Woodgrove Foods gearbox making?\u0022 and provides a clear explanation of the cause of the noise. The answer also includes relevant details from the context, such as the symptoms described in the HG-400 Helical Gearbox Operating Manual. However, the answer does not provide any additional information that is not already present in the context, which is a minor point. Overall, the answer is thorough and accurate, but it does not exceed the expectations of the context.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Field service report SR-2026-1213\n# Field service report SR-2026-1213\nCustomer: Woodgrove Foods, packaging line 2.\nEngineer: Kwame Asante.\nDate: December 13, 2026.\nComplaint: a whining noise from the HG-400 gearbox that rose with speed.\nThe first-stage gear teeth showed light pitting.\nWork done: drained and flushed the gearbox, refilled it with 18 liters of ISO VG 220 oil and replaced a leaking output shaft seal.\nThe noise dropped to normal.\n| Equipment | Site | Report |\n|---|---|---|\n| HG-400 gearbox | Woodgrove Foods, Packaging line 2 | SR-2026-1213 |\n\nField service report SR-2026-1130\n# Field service report SR-2026-1130\nCustomer: Woodgrove Foods, cold store 1.\nEngineer: Kwame Asante.\nDate: November 30, 2026.\nComplaint: the evaporator fan drive stopped several times a night with fault F002.\nFindings: the ramp-down time had been set to 1 second after a controller upgrade, too short for the fan\u0027s inertia.\nWork done: raised parameter 2-11 (ramp-down time) to 20 seconds.\nNo further F002 faults in 48 hours of logging.\n| Equipment | Site | Report |\n|---|---|---|\n| VD-75 drive | Woodgrove Foods, Cold store 1 | SR-2026-1130 |\n\nHG-400 Helical Gearbox Operating Manual \u203A 5 Operation \u203A 5.2 Operating limits\n## 5.2 Operating limits\nStop the gearbox and find the cause if the oil temperature exceeds 90 \u00B0C, if the noise changes suddenly or if oil leaks from a shaft seal.\nA whining noise that rises with speed usually points to a low oil level or worn gear teeth.\n\nLine 2 gearbox noise\nHello Sam, report attached.\nThe oil level was below the sight glass and the oil was 14 months old, so we flushed and refilled the gearbox and replaced a leaking output shaft seal.\nThe first-stage gears show light pitting; please send an oil sample every six months so we can watch it.\nKwame"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1678",
+          "eval-output-tokens": "167",
+          "eval-total-tokens": "1845",
+          "eval-duration-ms": "19.93"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that the Woodgrove Foods gearbox was making a whining noise that rose with speed, and the noise was caused by low oil level or worn gear teeth. This information is partially present in the Ground Truth, which states that the HG-400 gearbox was making a whining noise that rose with speed. However, the Ground Truth does not specify the cause of the noise as low oil level or worn gear teeth. Instead, it mentions that the noise was caused by a problem with the gearbox. This indicates that the Response is missing some relevant information, such as the specific cause of the noise, and is therefore not fully complete.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Complaint: a whining noise from the HG-400 gearbox that rose with speed."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1415",
+          "eval-output-tokens": "156",
+          "eval-total-tokens": "1571",
+          "eval-duration-ms": "17.24"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0197626,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1678,
+          "outputTokenCount": 167,
+          "totalTokenCount": 1845
+        },
+        "cacheKey": "5682F49926B7B01E983E760EF038DBCA7402FA17DF5E87228A63FF9788D49636D78C3314373D282506758DF8C9D47236",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0171084,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1415,
+          "outputTokenCount": 156,
+          "totalTokenCount": 1571
+        },
+        "cacheKey": "3EE2D8F1B96D62BB1FFE0E6DDE91A109F5623075B7B8BB9E7453C49E584E016508255DB70BBEECA49DECF16D5CDC5C11",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G2-T024",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:07.1802135Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What output torque and thermal rating does an HG-400 with a 25 to 1 ratio have?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The HG-400 has a 25 to 1 ratio The thermal rating of an HG-400 with a 25 to 1 ratio is 28 kW The output torque of an HG-400 with a 25 to 1 ratio is 4,800 N\u00B7m"
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HG-400 Helical Gearbox Operating Manual \u203A 2 Product description\n# 2 Product description\nThe HG-400 is a foot-mounted helical gearbox with parallel input and output shafts.\nThe housing is cast iron with cooling fins on both sides.\n## 2.1 Type designation\nThe type code on the nameplate gives the frame size, the number of stages and the nominal ratio.\nFor example, HG-400-2-12.5 is a two-stage gearbox with a ratio of 12.5 to 1.\nTable 2-1 Ratings at 1,500 rpm input\n| Ratio | Stages | Output torque | Thermal rating |\n|---|---|---|---|\n| 5.6 | 2 | 4,200 N\u00B7m | 55 kW |\n| 8 | 2 | 4,400 N\u00B7m | 48 kW |\n| 12.5 | 2 | 4,600 N\u00B7m | 40 kW |\n| 16 | 2 | 4,600 N\u00B7m | 35 kW |\n| 25 | 3 | 4,800 N\u00B7m | 28 kW |\n| 40 | 3 | 5,000 N\u00B7m | 22 kW |\nThe thermal rating is the power the gearbox can transmit continuously without the oil exceeding 90 \u00B0C at an ambient temperature of 25 \u00B0C.\nAbove 35 \u00B0C ambient, derate it by 10 percent for every 5 \u00B0C.\nFigure 2-1 HG-400 exploded view\nLabels: 1 Housing; 2 Input shaft; 3 Pinion; 4 Output shaft; 5 Breather plug; 6 Sight glass; 7 Drain plug\n\nHG-400 Helical Gearbox Operating Manual \u203A 3 Installation \u203A 3.2 Mounting\n## 3.2 Mounting\nMount the HG-400 on a flat, rigid base; the mounting surface must be flat to within 0.1 mm.\nPut shims under the feet, never under the gearbox housing.\n## 3.3 Shaft connections\nFit couplings and sprockets by heating them to about 100 \u00B0C; never hammer them onto the shafts, because the impact damages the bearings.\nKeep the overhung load on the output shaft within the value on the nameplate."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1726",
+          "eval-output-tokens": "237",
+          "eval-total-tokens": "1963",
+          "eval-duration-ms": "17.79"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| 25 | 3 | 4,800 N\u00B7m | 28 kW |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1444",
+          "eval-output-tokens": "202",
+          "eval-total-tokens": "1646",
+          "eval-duration-ms": "16.77"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0176326,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1726,
+          "outputTokenCount": 237,
+          "totalTokenCount": 1963
+        },
+        "cacheKey": "2FE75DE913C363B7915C8F75B04C2B72EE3A820F0BBC3106AD11D5C7000A9441364D89B415D294F33D15B9EDB75EED5D",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0166334,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1444,
+          "outputTokenCount": 202,
+          "totalTokenCount": 1646
+        },
+        "cacheKey": "CD5DF9C906D2A08357E600512A387C6398DA803468A1EAE9443FBB3B074BC719A548EF6FC4F3D6BFF28F33C636A5249B",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

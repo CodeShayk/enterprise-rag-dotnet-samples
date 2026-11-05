@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 21: the cost model's arithmetic; cache keys that change with the evidence and the asker's access and not
+    with the asker's name; HybridCache entries that tag invalidation removes; the semantic cache's identifier guard and
+    scopes; the cascade's acceptance rule; token quotas across a day; the model gate; the closed-loop load runner.
+    Deterministic and offline: no model is called and no container is started.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch21.Performance.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Performance\Contoso.Knowledge.Performance.csproj" />
+  </ItemGroup>
+
+</Project>

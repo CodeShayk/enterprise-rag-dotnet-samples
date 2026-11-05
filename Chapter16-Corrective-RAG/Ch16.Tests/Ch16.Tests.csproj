@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 16: the budget meter, the evidence graders (the LLM grader through a fixed chat client), repair after
+    verification, abstention and escalation, the adaptive router and the workflow's transition table. Deterministic and
+    offline: no model is called.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch16.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch16.Corrective.Cli\Ch16.Corrective.Cli.csproj" />
+  </ItemGroup>
+
+</Project>

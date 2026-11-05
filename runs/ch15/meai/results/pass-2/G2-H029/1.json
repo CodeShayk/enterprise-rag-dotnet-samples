@@ -1,0 +1,143 @@
+{
+  "scenarioName": "G2-H029",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:45.3289834Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What has to be done with the HG-400\u0027s transport plug before filling it with oil?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The transport plug in the breather position must be replaced with the breather plug supplied before filling the gearbox with oil. The breather plug must be refitted after the oil change."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HG-400 Helical Gearbox Operating Manual \u203A 3 Installation \u203A 3.4 Breather\n## 3.4 Breather\nThe gearbox is shipped with a closed transport plug in the breather position.\nReplace it with the breather plug supplied before filling the gearbox with oil.\nA blocked breather lets pressure build up in the housing and pushes oil past the shaft seals.\n\nHG-400 Helical Gearbox Operating Manual \u203A 1 Safety\n# 1 Safety\n- Stop and lock out the driving motor before any work on the gearbox.\n- Let the gearbox cool before opening a plug: the oil can be hotter than 80 \u00B0C.\n- Fit guards over all rotating shafts and couplings before starting.\n- Lift the gearbox only by its eyebolts, and never with oil in it.\n\nHG-400 Helical Gearbox Operating Manual \u203A 3 Installation \u203A 3.1 Transport and storage\n# 3 Installation\n## 3.1 Transport and storage\nStore the gearbox indoors in a dry place.\nFor storage longer than six months, fill it completely with oil and turn the input shaft by hand every month, so that the bearings and gear teeth stay coated.\n\nHG-400 Helical Gearbox Operating Manual \u203A 4 Lubrication \u203A 4.3 Oil change\n## 4.3 Oil change\n1. Run the gearbox until the oil is warm, so that it drains completely, then stop and lock out the motor.\n2. Remove the breather plug and the drain plug and let the oil drain into a container.\n3. Clean the magnetic drain plug and note any metal particles on it in the work order.\n4. Refit the drain plug with a new sealing ring and tighten it to 80 N\u00B7m.\n5. Fill the gearbox through the breather opening until the oil reaches the middle of the sight glass.\n6. Refit the breather plug and run the gearbox for ten minutes, then check the level again."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1619",
+          "eval-output-tokens": "199",
+          "eval-total-tokens": "1818",
+          "eval-duration-ms": "15.21"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "The gearbox is shipped with a closed transport plug in the breather position. Replace it with the breather plug supplied before filling the gearbox with oil. A blocked breather lets pressure build up in the housing and pushes oil past the shaft seals."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1454",
+          "eval-output-tokens": "175",
+          "eval-total-tokens": "1629",
+          "eval-duration-ms": "14.84"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0150171,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1619,
+          "outputTokenCount": 199,
+          "totalTokenCount": 1818
+        },
+        "cacheKey": "6F258E0BF3F02094D77A806B470B633C998538FA7E017BDD4A501BB28F0B0A63639EADBAD056FBDD130986A57C396F03",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0146573,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1454,
+          "outputTokenCount": 175,
+          "totalTokenCount": 1629
+        },
+        "cacheKey": "8BCFA10463217E7CB41A91450FF851476C3D0948AD2B8CA3D2B3588C24C1728BF635845D32CE6F6C507FED01A313C2FB",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

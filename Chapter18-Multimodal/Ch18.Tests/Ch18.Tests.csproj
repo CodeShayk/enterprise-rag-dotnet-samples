@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 18: quotes located on a page (across lines, on a skewed scan, by a row's cells, never across a column
+    gutter), the numeric check's units and question numbers, visual citation links, highlighted renders of a generated
+    scan, CLIP's tokenizer and embeddings (when the models are in sample-code/models) and the document viewer's access
+    rule through an in-memory test server. Deterministic and offline: no chat model is called.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch18.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch18.Knowledge.Web\Ch18.Knowledge.Web.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Vision\Contoso.Knowledge.Vision.csproj" />
+  </ItemGroup>
+
+</Project>

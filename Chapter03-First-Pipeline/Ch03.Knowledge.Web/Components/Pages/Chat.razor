@@ -1,0 +1,62 @@
+@page "/"
+@inject KnowledgeClient Knowledge
+
+<h1>Contoso Knowledge Assistant</h1>
+
+<form @onsubmit="AskAsync">
+    <select @bind="user" aria-label="Ask as">
+        @foreach (var person in People.All)
+        {
+            <option value="@person.Id">@person.Name</option>
+        }
+    </select>
+    <input @bind="question" placeholder="Ask about Contoso's documents" aria-label="Question" />
+    <button type="submit" disabled="@busy">Ask</button>
+</form>
+
+<p class="answer">@answer</p>
+
+@if (sources.Count > 0)
+{
+    <ol class="sources">
+        @foreach (var source in sources)
+        {
+            <li>@source.Title (@source.DocumentId), score @source.Score</li>
+        }
+    </ol>
+}
+
+@code {
+    private static readonly JsonSerializerOptions Json = JsonSerializerOptions.Web;
+
+    private string user = People.Tomas.Id;
+    private string question = "";
+    private string answer = "";
+    private List<SourceView> sources = [];
+    private bool busy;
+
+    private async Task AskAsync()
+    {
+        busy = true;
+        answer = "";
+        sources = [];
+
+        // Sources arrive first, so the user sees what the answer will be based on before it's written.
+        await foreach (var item in Knowledge.AskAsync(user, question))
+        {
+            switch (item.EventType)
+            {
+                case "sources":
+                    sources = JsonSerializer.Deserialize<List<SourceView>>(item.Data, Json) ?? [];
+                    break;
+                case "delta":
+                    answer += JsonSerializer.Deserialize<Delta>(item.Data, Json)?.Text;
+                    break;
+            }
+
+            StateHasChanged();
+        }
+
+        busy = false;
+    }
+}

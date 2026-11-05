@@ -1,0 +1,145 @@
+{
+  "scenarioName": "G2-H016",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:51:32.094368Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What does a running CP-200 do when it loses contact with the plant control system?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The pump keeps running at its last set point. Error E-310 clears itself when communication returns."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response mentions that the pump keeps running at its last set point and that error E-310 clears itself when communication returns. This is partially consistent with the Ground Truth, which also states that the pump keeps running at its last set point. However, the Response does not mention the 30-second timeout period mentioned in the Ground Truth. This suggests that the Response is missing some relevant information, especially the specific detail about the timeout period.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Error E-310 means the controller hasn\u0027t heard from the plant control system for 30 seconds. The pump keeps running at its last set point."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1418",
+          "eval-output-tokens": "114",
+          "eval-total-tokens": "1532",
+          "eval-duration-ms": "10916.44"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Groundedness",
+        "reason": "The response mentions that the pump keeps running at its last set point when the controller loses contact with the plant control system, which aligns with the definition of Error E-310. However, the response also states that Error E-310 clears itself when communication returns, which is not entirely accurate according to the context. The context explicitly states that E-310 clears itself when communication returns, but the response does not provide this information. Additionally, the response does not provide any additional relevant information about the cause of the communication loss or how to resolve the issue.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Groundedness is less than 4."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-310: communication lost\n## Error E-310: communication lost\nError E-310 means the controller hasn\u0027t heard from the plant control system for 30 seconds.\nThe pump keeps running at its last set point.\nCauses, most likely first:\n1. A network fault.\n2. The plant control system was restarted.\nE-310 clears itself when communication returns.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-106: supply undervoltage\n## Error E-106: supply undervoltage\nError E-106 means the supply voltage stayed below 90 percent of its nominal value for more than 5 seconds.\nThe pump restarts by itself 30 seconds after the voltage returns, unless automatic restart is disabled.\nCauses, most likely first:\n1. A weak supply during the start of another large motor.\n2. A failing transformer tap changer.\nE-106 clears itself.\nIf it repeats, record the times and ask the plant electrical engineer to check the supply.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-203: dry running\n## Error E-203: dry running\nError E-203 means the dry-running sensor in the casing detected no liquid.\nThe controller trips the pump at once, because a few seconds of dry running damage the mechanical seal.\nCauses, most likely first:\n1. The casing wasn\u0027t vented after maintenance.\n2. The suction tank ran empty.\nVent the casing until water flows without air, then reset E-203.\nCheck the seal for leaks after the restart.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-102: supply phase missing\n## Error E-102: supply phase missing\nError E-102 means one of the three supply phases is missing.\nThe controller checks the phases at every start and once a second while the pump runs.\nCauses, most likely first:\n1. A blown fuse in the motor feeder.\n2. A loose terminal in the motor control center.\nHave an electrician check the fuses and terminals.\nE-102 clears itself when all three phases return."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1653",
+          "eval-output-tokens": "138",
+          "eval-total-tokens": "1791",
+          "eval-duration-ms": "30120.50"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.9162436,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1418,
+          "outputTokenCount": 114,
+          "totalTokenCount": 1532
+        },
+        "cacheKey": "AE8353E2000C155598CFFA49E808A7B75196C528B183099C329FA423396EB3C96472C84580B072DCDA90DBF3A76CB0B4",
+        "cacheHit": false
+      },
+      {
+        "latency": 30.1202907,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1653,
+          "outputTokenCount": 138,
+          "totalTokenCount": 1791
+        },
+        "cacheKey": "E51733997052F665EE88560C5B306BE66FA38A601D4D2CBC0497DEEF88B2C4796ACBAA7B6B20A2EF317FEEC531335836",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

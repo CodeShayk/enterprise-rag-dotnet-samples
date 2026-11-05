@@ -1,0 +1,30 @@
+{
+  "messages": [
+    {
+      "createdAt": "2026-11-02T17:03:05.7128446+00:00",
+      "role": "assistant",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "<S0>Let's think step by step:</S0>\n\n1. The CONTEXT is about the parental leave policy (2024), and the QUERY is about how the 2027 policy differs from the 2024 one.\n2. The RESPONSE mentions that the 2027 policy increases the paid leave from 16 to 20 weeks and allows taking the leave in up to three blocks, whereas the 2024 policy requires one continuous block within 12 months.\n3. However, the RESPONSE also states that the six-month service requirement and full pay are unchanged, which is correct according to the CONTEXT.\n4. The RESPONSE does not provide any incorrect information or omit key elements mentioned in the CONTEXT.\n\n<S1>Explanation</S1>\n\nThe RESPONSE provides a clear and accurate comparison between the 2024 and 2027 parental leave policies, including the changes in the length of paid leave and the flexibility of taking the leave. Although it does not provide additional details, it does not contain any incorrect information or omit crucial information, which is in line with the definition of Groundedness: 4 (Partially Correct Response).\n\n<S2>Score</S2>\n\n4"
+        }
+      ],
+      "messageId": "2026-11-02T17:03:05.7128446Z"
+    }
+  ],
+  "responseId": "2026-11-02T17:03:05.7128446Z",
+  "modelId": "llama3.2",
+  "createdAt": "2026-11-02T17:03:05.7128446+00:00",
+  "finishReason": "stop",
+  "usage": {
+    "inputTokenCount": 1565,
+    "outputTokenCount": 237,
+    "totalTokenCount": 1802
+  },
+  "additionalProperties": {
+    "load_duration": "00:00:00.0100612",
+    "total_duration": "00:00:38.0365406",
+    "prompt_eval_duration": "00:00:09.1431950",
+    "eval_duration": "00:00:14.3399950"
+  }
+}

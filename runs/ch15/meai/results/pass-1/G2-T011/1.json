@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T011",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T17:11:59.4747806Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What is the speed of a CP-200 pump?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The speed of a CP-200 pump is 1,480 rpm. This speed is specified for the pump at 50 Hz."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The Response provides the speed of a CP-200 pump as 1,480 rpm at 50 Hz, which is exactly the same information as the Ground Truth. The Response does not miss any information and accurately reflects the Ground Truth. However, it does not provide any additional context or details that are present in the Ground Truth, such as the importance of the pump speed at 50 Hz or the implications of this speed on the pump\u0027s performance.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Speed | 1,480 rpm at 50 Hz |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1408",
+          "eval-output-tokens": "117",
+          "eval-total-tokens": "1525",
+          "eval-duration-ms": "10942.42"
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 2 Description\n# 2 Description\nThe CP-200 is a single-stage, end-suction centrifugal pump with a closed impeller, designed for clean or slightly contaminated water at up to 90 \u00B0C.\nThe pump and its motor sit on a common baseplate and are joined by a flexible spacer coupling, so the rotating assembly can be removed without disturbing the pipework.\nThe shaft is sealed by a cartridge mechanical seal flushed with clean seal water from an external supply.\nA controller on the pump skid monitors the motor, the bearing temperatures and the seal-water pressure and trips the pump when a limit is exceeded.\n# 3 Technical data\nTable 3-1 Technical data\n| Item | Value |\n|---|---|\n| Flow range | 40 to 240 m\u00B3/h |\n| Head range | 15 to 55 m |\n| Maximum casing pressure | 16 bar |\n| Maximum liquid temperature | 90 \u00B0C |\n| Speed | 1,480 rpm at 50 Hz |\n| Motor power | 15 to 45 kW |\n| Seal-water pressure | 2.0 to 3.0 bar |\n| Weight of the pump without motor | 310 kg |\n\nAsset record: pump P-201\n# Asset record: pump P-201\n| Field | Value |\n|---|---|\n| Tag | P-201 |\n| Model | CP-200 centrifugal pump |\n| Site | Riverside plant, cooling-water building |\n| Duty | Cooling-water transfer, 180 m\u00B3/h at 32 m head |\n| Motor | 30 kW, 1,480 rpm |\n| Commissioned | May 2011 |\n| Seal-water valve | V-114 |\n| Mechanical seal | PN-4471-C since work order WO-88412 (November 2026) |\nP-201 runs continuously, about 8,400 hours a year.\nIts manual is the CP-200 Centrifugal Pump Manual (2009).\n\nCP-200 Centrifugal Pump Operating and Maintenance Manual\n# CP-200 Centrifugal Pump Operating and Maintenance Manual\nEdition 2009.\nContoso Industrial, Fluid Systems division.\nKeep this manual with the pump for the life of the equipment and pass it on with the pump if it is moved or sold."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1678",
+          "eval-output-tokens": "230",
+          "eval-total-tokens": "1908",
+          "eval-duration-ms": "36530.65"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 10.9422656,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1408,
+          "outputTokenCount": 117,
+          "totalTokenCount": 1525
+        },
+        "cacheKey": "4329466FED53BD634A39FBCEE8B7363E2B3503D6A7200C505B50FFCE333D68CCCF2A23D001D91E50C2F9C4F472C10590",
+        "cacheHit": false
+      },
+      {
+        "latency": 36.5304495,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1678,
+          "outputTokenCount": 230,
+          "totalTokenCount": 1908
+        },
+        "cacheKey": "ABFBC4ECE45B689DF5133502525BB2ED395BD8916F5319EC4128D32531ADE8433CDF6B950D6DDAA0A3230718F83B7873",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

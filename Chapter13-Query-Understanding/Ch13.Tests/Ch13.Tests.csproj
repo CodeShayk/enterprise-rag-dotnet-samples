@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 13: spelling against a vocabulary, identifiers, rule-based filters with asset expansion and untagged
+    documents, the condenser's and rewriter's parsing with a fake chat client, and the planner's short circuit.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch13.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Query\Contoso.Knowledge.Query.csproj" />
+  </ItemGroup>
+
+</Project>

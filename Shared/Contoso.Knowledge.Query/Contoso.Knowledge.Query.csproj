@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 13: query understanding before retrieval. Intent checks with an embedding classifier and an LLM
+    fallback, spelling against the index's own vocabulary, conversational condensation, rewriting, multi-query
+    fusion, decomposition, HyDE, filters read from the question and a semantic router, joined in a QueryPlanner.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Query</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Knowledge.Retrieval\Contoso.Knowledge.Retrieval.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="System.Numerics.Tensors" />
+  </ItemGroup>
+
+</Project>

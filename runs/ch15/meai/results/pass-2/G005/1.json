@@ -1,0 +1,143 @@
+{
+  "scenarioName": "G005",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:27.7327331Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Which mechanical seal should I fit on P-201 now?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "The recommended mechanical seal to fit on P-201 is PN-4471-C. The old torque of 22 N\u00B7m applied to PN-4471-B. Fabrikam Seals confirmed 25 N\u00B7m for PN-4471-C. Tighten the seal gland nuts evenly to 25 N\u00B7m."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "The response provided by the assistant is attempting to answer the query about which mechanical seal should be fitted on P-201, but it contains incorrect information. The assistant mentions that the old torque of 22 N\u00B7m applied to PN-4471-B, but the correct torque for PN-4471-C is 25 N\u00B7m, as confirmed by Fabrikam Seals. Additionally, the assistant advises to tighten the seal gland nuts evenly to 25 N\u00B7m, which is correct. However, the response also contains irrelevant information about the old torque and the need to mix PN-4471-B and PN-4471-C parts, which is not relevant to the query. Therefore, the response is partially correct but contains incorrect information and is not fully complete.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Asset record: pump P-202\n# Asset record: pump P-202\n|---|---|\n| Tag | P-202 |\n| Duty | Cooling-water transfer, standby for P-201 |\n| Commissioned | May 2011 |\n| Seal-water valve | V-115 |\n| Mechanical seal | PN-4471-B, fitted August 2019; replace with PN-4471-C at the next seal change (ECN-2291) |\nP-202 is the standby pump for P-201 and runs about 1,200 hours a year, mostly while P-201 is maintained.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Fitting PN-4471-C\n## Fitting PN-4471-C\n- Fit the cartridge without tilting it\n- Don\u0027t mix PN-4471-B and PN-4471-C parts\nThe old torque of 22 N\u00B7m applied to PN-4471-B.\nFabrikam Seals confirmed 25 N\u00B7m for PN-4471-C.\n\nSOP-FS-014: Mechanical seal replacement on CP-200 pumps\n# SOP-FS-014: Mechanical seal replacement on CP-200 pumps\nThis revision replaces PN-4471-B with PN-4471-C, following ECN-2291.\n1. Apply lockout/tagout to the motor and isolate the seal-water and process lines, as safety bulletin SB-0932 requires.\n2. Drain the casing and remove the coupling guard.\n3. Remove the seal housing and the old seal.\n4. Fit mechanical seal PN-4471-C.\nDon\u0027t mix PN-4471-B and PN-4471-C parts.\n5. Tighten the seal gland nuts evenly to 25 N\u00B7m.\n7. Record the seal\u0027s part number and the operating hours in the work order.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Parts and tools\n## Parts and tools\n- Seal cartridge PN-4471-C\n- New casing gaskets PN-2205-C\n- Torque wrench, 5 to 60 N\u00B7m\nCheck the part number on the box.\nRemaining PN-4471-B stock is quarantined; never fit it."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1714",
+          "eval-output-tokens": "182",
+          "eval-total-tokens": "1896",
+          "eval-duration-ms": "122.13"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 5,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "exceptional",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Fit PN-4471-C at the next seal replacement and quarantine remaining PN-4471-B stock.\nFit mechanical seal PN-4471-C.\n| Mechanical seal | PN-4471-C since work order WO-88412 (November 2026) |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1488",
+          "eval-output-tokens": "226",
+          "eval-total-tokens": "1714",
+          "eval-duration-ms": "57.69"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "4 of 4 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.1219381,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1714,
+          "outputTokenCount": 182,
+          "totalTokenCount": 1896
+        },
+        "cacheKey": "FB0074C8624158731279CFE8872C8943E8D8EBD03B87C39BCC07469DF53D004A6CA237292C99B054C5FEDAFA1B42D77F",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0573011,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1488,
+          "outputTokenCount": 226,
+          "totalTokenCount": 1714
+        },
+        "cacheKey": "5FFEDE70BF7B495EFEC65345F752B1814FCE28A5C5D9939A7B918D117E0A307E7083E9CA8F099B289FDBD0CEFF4A57F2",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

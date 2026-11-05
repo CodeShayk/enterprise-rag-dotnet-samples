@@ -1,0 +1,45 @@
+{
+  "note": "Written for Chapter 13. 'retrieve' searches the documents; 'sql' needs counts or lists from the maintenance database (Chapter 17); 'none' needs no retrieval.",
+  "examples": {
+    "retrieve": [
+      "What torque applies to the M12 flange bolts?",
+      "How do I clear error E-217?",
+      "Which oil goes in the HG-400?",
+      "What does the change notice say about the new seal?",
+      "What must happen before opening the seal housing?",
+      "What is the price of PN-4471-C?"
+    ],
+    "sql": [
+      "How many work orders were overdue last quarter?",
+      "List the open work orders for P-201.",
+      "How many hours did P-202 run in January?",
+      "Which pumps had more than three seal failures this year?",
+      "Count the service reports per customer in 2026."
+    ],
+    "none": [
+      "Thanks!",
+      "Hello",
+      "Can you say that again more briefly?",
+      "Please answer in Spanish from now on."
+    ]
+  },
+  "test": {
+    "retrieve": [
+      "What does fault F012 mean?",
+      "How often should the CP-200 seal be inspected?",
+      "Which supplier provides the PN-4471-C seals?",
+      "What is the procedure for draining the HG-400?"
+    ],
+    "sql": [
+      "How many work orders did Kwame close last month?",
+      "Which assets have overdue preventive maintenance?",
+      "Show the total downtime of P-201 by month.",
+      "How many seal kits were ordered in 2026?"
+    ],
+    "none": [
+      "Good morning",
+      "Make the last answer shorter.",
+      "Thanks, that's all."
+    ]
+  }
+}

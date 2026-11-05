@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 11: the retriever port with filters and degradation (ADR-0006), BM25 from first principles, Lucene.NET
+    keyword search with Contoso's analyzer and glossary, dense and learned sparse retrievers, rank fusion and the
+    hybrid retriever. Chapters 12 and 13 retrieve through it.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Retrieval</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.AI\Contoso.AI.csproj" />
+    <ProjectReference Include="..\Contoso.Corpus\Contoso.Corpus.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lucene.Net" />
+    <PackageReference Include="Lucene.Net.Analysis.Common" />
+    <PackageReference Include="Lucene.Net.Queries" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="System.Numerics.Tensors" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="contoso-glossary.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

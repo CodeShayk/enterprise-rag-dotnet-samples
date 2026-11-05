@@ -1,0 +1,148 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Chapter01-Why-RAG/">
+    <Project Path="Chapter01-Why-RAG/Ch01.Tests/Ch01.Tests.csproj" />
+    <Project Path="Chapter01-Why-RAG/Ch01.WhyRag/Ch01.WhyRag.csproj" />
+  </Folder>
+  <Folder Name="/Chapter02-Fundamentals/">
+    <Project Path="Chapter02-Fundamentals/Ch02.Benchmarks/Ch02.Benchmarks.csproj" />
+    <Project Path="Chapter02-Fundamentals/Ch02.Fundamentals/Ch02.Fundamentals.csproj" />
+    <Project Path="Chapter02-Fundamentals/Ch02.Tests/Ch02.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter03-First-Pipeline/">
+    <Project Path="Chapter03-First-Pipeline/Ch03.AppHost/Ch03.AppHost.csproj" />
+    <Project Path="Chapter03-First-Pipeline/Ch03.Baseline.Cli/Ch03.Baseline.Cli.csproj" />
+    <Project Path="Chapter03-First-Pipeline/Ch03.Knowledge/Ch03.Knowledge.csproj" />
+    <Project Path="Chapter03-First-Pipeline/Ch03.Knowledge.Api/Ch03.Knowledge.Api.csproj" />
+    <Project Path="Chapter03-First-Pipeline/Ch03.Knowledge.Web/Ch03.Knowledge.Web.csproj" />
+    <Project Path="Chapter03-First-Pipeline/Ch03.ServiceDefaults/Ch03.ServiceDefaults.csproj" />
+    <Project Path="Chapter03-First-Pipeline/Ch03.Tests/Ch03.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter04-Architecture/">
+    <Project Path="Chapter04-Architecture/Ch04.Architecture.Cli/Ch04.Architecture.Cli.csproj" />
+    <Project Path="Chapter04-Architecture/Ch04.Knowledge.Adapters/Ch04.Knowledge.Adapters.csproj" />
+    <Project Path="Chapter04-Architecture/Ch04.Knowledge.Core/Ch04.Knowledge.Core.csproj" />
+    <Project Path="Chapter04-Architecture/Ch04.Tests/Ch04.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter05-Evaluation/">
+    <Project Path="Chapter05-Evaluation/Ch05.Evaluation.Cli/Ch05.Evaluation.Cli.csproj" />
+    <Project Path="Chapter05-Evaluation/Ch05.Tests/Ch05.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter06-Ingestion/">
+    <Project Path="Chapter06-Ingestion/Ch06.Ingestion.Worker/Ch06.Ingestion.Worker.csproj" />
+    <Project Path="Chapter06-Ingestion/Ch06.Tests/Ch06.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter07-Parsing/">
+    <Project Path="Chapter07-Parsing/Ch07.Parsing.Cli/Ch07.Parsing.Cli.csproj" />
+    <Project Path="Chapter07-Parsing/Ch07.Tests/Ch07.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter08-OCR/">
+    <Project Path="Chapter08-OCR/Ch08.Ocr.Cli/Ch08.Ocr.Cli.csproj" />
+    <Project Path="Chapter08-OCR/Ch08.Tests/Ch08.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter09-Chunking/">
+    <Project Path="Chapter09-Chunking/Ch09.Chunking.Cli/Ch09.Chunking.Cli.csproj" />
+    <Project Path="Chapter09-Chunking/Ch09.Tests/Ch09.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter10-Embeddings/">
+    <Project Path="Chapter10-Embeddings/Ch10.Benchmarks/Ch10.Benchmarks.csproj" />
+    <Project Path="Chapter10-Embeddings/Ch10.Embeddings.Cli/Ch10.Embeddings.Cli.csproj" />
+    <Project Path="Chapter10-Embeddings/Ch10.Tests/Ch10.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter11-Hybrid-Retrieval/">
+    <Project Path="Chapter11-Hybrid-Retrieval/Ch11.Hybrid.Cli/Ch11.Hybrid.Cli.csproj" />
+    <Project Path="Chapter11-Hybrid-Retrieval/Ch11.Tests/Ch11.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter12-Reranking/">
+    <Project Path="Chapter12-Reranking/Ch12.Reranking.Cli/Ch12.Reranking.Cli.csproj" />
+    <Project Path="Chapter12-Reranking/Ch12.Tests/Ch12.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter13-Query-Understanding/">
+    <Project Path="Chapter13-Query-Understanding/Ch13.Query.Cli/Ch13.Query.Cli.csproj" />
+    <Project Path="Chapter13-Query-Understanding/Ch13.Tests/Ch13.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter14-Grounded-Generation/">
+    <Project Path="Chapter14-Grounded-Generation/Ch14.Generation.Cli/Ch14.Generation.Cli.csproj" />
+    <Project Path="Chapter14-Grounded-Generation/Ch14.Knowledge.Api/Ch14.Knowledge.Api.csproj" />
+    <Project Path="Chapter14-Grounded-Generation/Ch14.Knowledge.Web/Ch14.Knowledge.Web.csproj" />
+    <Project Path="Chapter14-Grounded-Generation/Ch14.Tests/Ch14.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter15-Answer-Evaluation/">
+    <Project Path="Chapter15-Answer-Evaluation/Ch15.Evaluation.Cli/Ch15.Evaluation.Cli.csproj" />
+    <Project Path="Chapter15-Answer-Evaluation/Ch15.Regression.Tests/Ch15.Regression.Tests.csproj" />
+    <Project Path="Chapter15-Answer-Evaluation/Ch15.Tests/Ch15.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter16-Corrective-RAG/">
+    <Project Path="Chapter16-Corrective-RAG/Ch16.Corrective.Cli/Ch16.Corrective.Cli.csproj" />
+    <Project Path="Chapter16-Corrective-RAG/Ch16.Tests/Ch16.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter17-Agentic-RAG/">
+    <Project Path="Chapter17-Agentic-RAG/Ch17.Agents.Cli/Ch17.Agents.Cli.csproj" />
+    <Project Path="Chapter17-Agentic-RAG/Ch17.Knowledge.Mcp/Ch17.Knowledge.Mcp.csproj" />
+    <Project Path="Chapter17-Agentic-RAG/Ch17.Tests/Ch17.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter18-Multimodal/">
+    <Project Path="Chapter18-Multimodal/Ch18.Knowledge.Web/Ch18.Knowledge.Web.csproj" />
+    <Project Path="Chapter18-Multimodal/Ch18.Multimodal.Cli/Ch18.Multimodal.Cli.csproj" />
+    <Project Path="Chapter18-Multimodal/Ch18.Tests/Ch18.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter19-GraphRAG/">
+    <Project Path="Chapter19-GraphRAG/Ch19.GraphRAG.Cli/Ch19.GraphRAG.Cli.csproj" />
+    <Project Path="Chapter19-GraphRAG/Ch19.GraphRAG.Tests/Ch19.GraphRAG.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter20-Observability/">
+    <Project Path="Chapter20-Observability/Ch20.Observability.Cli/Ch20.Observability.Cli.csproj" />
+    <Project Path="Chapter20-Observability/Ch20.Observability.Tests/Ch20.Observability.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter21-Performance-and-Cost/">
+    <Project Path="Chapter21-Performance-and-Cost/Ch21.Benchmarks/Ch21.Benchmarks.csproj" />
+    <Project Path="Chapter21-Performance-and-Cost/Ch21.Performance.Cli/Ch21.Performance.Cli.csproj" />
+    <Project Path="Chapter21-Performance-and-Cost/Ch21.Performance.Tests/Ch21.Performance.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter22-Security/">
+    <Project Path="Chapter22-Security/Ch22.Security.Cli/Ch22.Security.Cli.csproj" />
+    <Project Path="Chapter22-Security/Ch22.Security.Tests/Ch22.Security.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter23-Governance/">
+    <Project Path="Chapter23-Governance/Ch23.Governance.Cli/Ch23.Governance.Cli.csproj" />
+    <Project Path="Chapter23-Governance/Ch23.Governance.Tests/Ch23.Governance.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter24-Deployment/">
+    <Project Path="Chapter24-Deployment/Ch24.Deployment.Cli/Ch24.Deployment.Cli.csproj" />
+    <Project Path="Chapter24-Deployment/Ch24.Deployment.Tests/Ch24.Deployment.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Chapter25-Capstone/">
+    <Project Path="Chapter25-Capstone/Ch25.AppHost/Ch25.AppHost.csproj" />
+    <Project Path="Chapter25-Capstone/Ch25.Knowledge.Api/Ch25.Knowledge.Api.csproj" />
+    <Project Path="Chapter25-Capstone/Ch25.Readiness.Cli/Ch25.Readiness.Cli.csproj" />
+    <Project Path="Chapter25-Capstone/Ch25.Tests/Ch25.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="Shared/Contoso.AI/Contoso.AI.csproj" />
+    <Project Path="Shared/Contoso.Corpus/Contoso.Corpus.csproj" />
+    <Project Path="Shared/Contoso.Corpus.Generator/Contoso.Corpus.Generator.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Agents/Contoso.Knowledge.Agents.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Chunking/Contoso.Knowledge.Chunking.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Correction/Contoso.Knowledge.Correction.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Documents/Contoso.Knowledge.Documents.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Embeddings/Contoso.Knowledge.Embeddings.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Evaluation/Contoso.Knowledge.Evaluation.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Generation/Contoso.Knowledge.Generation.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Governance/Contoso.Knowledge.Governance.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Graph/Contoso.Knowledge.Graph.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Observability/Contoso.Knowledge.Observability.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Ocr/Contoso.Knowledge.Ocr.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Operations/Contoso.Knowledge.Operations.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Parsing/Contoso.Knowledge.Parsing.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Performance/Contoso.Knowledge.Performance.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Query/Contoso.Knowledge.Query.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Retrieval/Contoso.Knowledge.Retrieval.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Security/Contoso.Knowledge.Security.csproj" />
+    <Project Path="Shared/Contoso.Knowledge.Vision/Contoso.Knowledge.Vision.csproj" />
+  </Folder>
+</Solution>

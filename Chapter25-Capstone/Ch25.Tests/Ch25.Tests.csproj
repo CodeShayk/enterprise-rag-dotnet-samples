@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 25: the assembled assistant as tests, in process with the scripted model. A request needs a token from
+    Contoso's tenant and the asker comes from it; every answer leaves a provenance record in a chain that survives a
+    restart; an answer is cached by its evidence until that evidence's document is erased; keyword search answers
+    alone when the embedding model fails; the model's spans stay in the request's trace through the answer cache; and
+    a review check that throws counts as a failure that blocks the release.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch25.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ch25.Readiness.Cli\Ch25.Readiness.Cli.csproj" />
+  </ItemGroup>
+
+</Project>

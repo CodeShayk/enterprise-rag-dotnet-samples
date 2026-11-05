@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 20: the assistant's pipeline with OpenTelemetry end to end. A "why this answer?" view of one trace, answer
+    records built from traces for a whole split, quality metrics, failure points diagnosed from traces against
+    Chapter 15's labels, a replay CLI that reproduces an answer and changes one stage, content capture and sampling,
+    drift and SLO burn rates, and the same telemetry sent to Jaeger and Prometheus in containers. Answers replay from
+    Chapter 14's recordings; new model calls need Ollama with llama3.2.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch20.Observability.Cli</RootNamespace>
+    <UserSecretsId>contoso-ch20-observability-cli</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Documents\Contoso.Knowledge.Documents.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Chunking\Contoso.Knowledge.Chunking.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Embeddings\Contoso.Knowledge.Embeddings.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Correction\Contoso.Knowledge.Correction.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Observability\Contoso.Knowledge.Observability.csproj" />
+    <ProjectReference Include="..\..\Shared\Contoso.AI\Contoso.AI.csproj" />
+    <ProjectReference Include="..\..\Chapter17-Agentic-RAG\Ch17.Agents.Cli\Ch17.Agents.Cli.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" />
+    <PackageReference Include="OllamaSharp" />
+    <PackageReference Include="OpenTelemetry" />
+    <PackageReference Include="OpenTelemetry.Exporter.InMemory" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageReference Include="Testcontainers" />
+  </ItemGroup>
+
+</Project>

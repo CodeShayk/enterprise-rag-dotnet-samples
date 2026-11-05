@@ -1,0 +1,147 @@
+{
+  "scenarioName": "G006",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:12:39.060111Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What changed in the parental leave policy this year?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Paid parental leave increases from 16 to 20 weeks, starting from March 1, 2027. The six-month service requirement and full pay remain unchanged. Employees whose leave starts before March 1, 2027, stay on the 2024 policy."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HR guidance: parental leave changes for 2027\n# HR guidance: parental leave changes for 2027\nThis guidance is restricted to HR and people managers until the change is announced on February 15, 2027.\nFrom March 1, 2027, paid parental leave increases from 16 to 20 weeks and can be taken in up to three blocks.\nThe six-month service requirement and full pay are unchanged.\nEmployees whose leave starts before March 1, 2027 stay on the 2024 policy.\nManagers should send questions to their HR business partner.\n## Questions managers may hear\nEmployees may ask whether they can split leave they have already started.\nThey can\u0027t: the three-block rule applies only to leave that starts on or after March 1, 2027.\nEmployees on fixed-term contracts receive the same leave if their contract runs for at least six months beyond the start of the leave.\n\nParental leave policy (2024)\n# Parental leave policy (2024)\nEmployees with at least six months of service receive 16 weeks of paid parental leave after the birth or adoption of a child.\nThe leave must be taken in one continuous block within 12 months of the birth or adoption, at 100 percent of base salary.\nEmployees agree the start date with their manager at least eight weeks in advance.\nEmployees on parental leave keep their pension contributions and accrue annual leave as if they were working.\n\nContoso parts catalog 2027 \u203A Parts catalog 2027: Motion Systems\nPart \u203A Part number: PN-6211-A; Part \u203A Description: Shaft seal, output, 90 x 120 x 12 mm; Part \u203A Fits: HG-400; Supply \u203A Supplier: Fabrikam Seals; Supply \u203A Lead time (weeks): 2; Supply \u203A Stock at Riverside: 8; Price (USD) \u203A List price: 39.00; Price (USD) \u203A Discount: 5%; Price (USD) \u203A Net price: 37.05"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1635",
+          "eval-output-tokens": "218",
+          "eval-total-tokens": "1853",
+          "eval-duration-ms": "17.41"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "Based on the definitions, I think the Response should receive a Score of 4 because it contains most of the necessary and relevant information with respect to the Ground Truth, but misses the three-block option for taking paid parental leave.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "From March 1, 2027, paid parental leave increases from 16 to 20 weeks and can be taken in up to three blocks."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1452",
+          "eval-output-tokens": "235",
+          "eval-total-tokens": "1687",
+          "eval-duration-ms": "14.38"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0172066,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1635,
+          "outputTokenCount": 218,
+          "totalTokenCount": 1853
+        },
+        "cacheKey": "DF5993573FD3DDB8C1E7661CCE2020362FC48CB2D6848D5CFADA69C269D521772C8FB5CD5BD9A3ED6B27E754B71454BC",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0142439,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1452,
+          "outputTokenCount": 235,
+          "totalTokenCount": 1687
+        },
+        "cacheKey": "1D513D7E3933E013527A605640E598AFD215CF701A409AB899E71FB33B491314604100C63FD1A9513BCF96923B98247A",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

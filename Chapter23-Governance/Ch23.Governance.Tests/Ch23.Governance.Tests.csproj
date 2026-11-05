@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 23: the governance controls as tests that run in CI with no model, container or corpus. The provenance
+    chain catches a changed and a removed record; erasure is proven only when every store counts zero afterward, a
+    held document is refused and a tombstone turns its text away; retention keeps what a hold covers; the registry
+    flags unapproved, retired and early versions; the PII scanner finds and masks addresses, numbers and names.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ch23.Governance.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Contoso.Knowledge.Governance\Contoso.Knowledge.Governance.csproj" />
+  </ItemGroup>
+
+</Project>

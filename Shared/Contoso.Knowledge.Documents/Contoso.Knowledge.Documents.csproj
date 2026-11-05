@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Chapter 6: the canonical document model that every parser produces and every chunker reads.
+    Blocks in reading order (headings, paragraphs, list items, tables, figures, code), document
+    metadata, a reference to the source and anchors back into it (page, box, path, confidence).
+    Markdown and plain text with block offsets are projections of the model, not its source of truth.
+    Chapters 7 and 8 parse into it; Chapter 9 chunks it. No dependencies beyond the BCL.
+  -->
+  <PropertyGroup>
+    <RootNamespace>Contoso.Knowledge.Documents</RootNamespace>
+  </PropertyGroup>
+
+</Project>

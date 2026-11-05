@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T040",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:20.8786655Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What does fault F018 on a VD-75 drive mean, and how do I fix it?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Fault F018 on a VD-75 drive means the safety circuit removed the enable signal. To fix F018, close the safety circuit, then reset the drive."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "VD-75 Variable Frequency Drive: Installation and Fault Guide \u203A 4 Faults\n# 4 Faults\nA fault stops the motor and shows its code on the display.\nReset a fault with the STOP/RESET key once its cause is removed.\n| F001 | DC bus undervoltage | Supply voltage dip or a missing phase | Check the supply; the drive restarts when the voltage returns |\n| F003 | Heatsink overtemperature | Blocked air flow or a failed fan | Clean the air path; check the fan (F016) |\n| F004 | Earth fault | Damaged motor cable or wet motor | Measure the insulation before resetting |\n| F007 | Motor phase loss | Loose motor cable terminal | Tighten the motor terminals |\n| F009 | Brake resistor overload | Too many fast stops | Lengthen the ramp-down time |\n| F010 | Analog input lost | Speed reference below 2 mA on a 4 to 20 mA input | Check the reference cable and its source |\n| F011 | Output short circuit | Short circuit in the motor cable or motor | Disconnect and test the motor cable |\n| F013 | Motor stall | Motor below 5 percent of set speed at full current | Free the jammed load |\n| F015 | Parameter memory error | Corrupt parameters after a power cut during a save | Restore the parameter backup |\n| F016 | Cooling fan failure | Fan blocked or worn out | Replace fan PN-7716-A |\n| F017 | External fault | The external fault input opened | Check the device wired to the input |\n| F018 | Safe torque off active | The safety circuit removed the enable signal | Close the safety circuit, then reset |\n## Fault F012: output overcurrent\nFault F012 means the drive\u0027s output current exceeded 200 percent of its rating.\nA ramp-up time that is too short also causes F012: raise parameter 2-10 (ramp-up time) from 2 to 5 seconds.\nReset F012 with the STOP/RESET key once the cause is removed.\n## Fault F002: DC bus overvoltage\nFault F002 means the voltage of the drive\u0027s internal DC bus exceeded 800 V.\n## Fault F010: analog input lost\nFault F010 means the speed reference on a 4 to 20 mA input fell below 2 mA, which the drive reads as a broken wire."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1706",
+          "eval-output-tokens": "168",
+          "eval-total-tokens": "1874",
+          "eval-duration-ms": "0.80"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| F018 | Safe torque off active | The safety circuit removed the enable signal | Close the safety circuit, then reset |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1427",
+          "eval-output-tokens": "179",
+          "eval-total-tokens": "1606",
+          "eval-duration-ms": "0.70"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0006595,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1706,
+          "outputTokenCount": 168,
+          "totalTokenCount": 1874
+        },
+        "cacheKey": "CAB0D6B4D189E792C9D226755A84AF6297912DF58AA4BF19729E4D7CB5E1F402EF814A35ACA136E4FC10B23707A3214B",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0005813,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1427,
+          "outputTokenCount": 179,
+          "totalTokenCount": 1606
+        },
+        "cacheKey": "325843D39E5DEBE862C3DB71EC0AAFB20D1B0B69FA8E32225CA3AF92130DF11C72E384E7E096D7B984D733AB76D5298E",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

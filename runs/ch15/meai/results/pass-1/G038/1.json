@@ -1,0 +1,151 @@
+{
+  "scenarioName": "G038",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:56:34.474286Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "How long does Fabrikam Seals have to report a quality incident?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Fabrikam Seals reports any quality incident that affects delivered parts within five business days."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "1 of 1 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Supplier contract SC-2024-118: Fabrikam Seals\n# Supplier contract SC-2024-118: Fabrikam Seals\nContoso Industrial and Fabrikam Seals agree on the supply of mechanical seals for CP-200 pumps: PN-4471-B and, from September 2026, PN-4471-C.\nThe contract runs from July 1, 2024 to June 30, 2027 and renews for one year unless either party gives notice 90 days before it ends.\nFabrikam Seals delivers within six weeks of an order and reports any quality incident that affects delivered parts within five business days.\n\nSupplier contract SC-2024-118: Fabrikam Seals \u203A 4 Quality\n## 4 Quality\nThe supplier keeps an ISO 9001 certified quality system and supplies a certificate of conformity with every delivery.\nThe buyer may audit the supplier\u0027s plant with ten business days\u0027 notice.\n## 5 Warranty\nThe supplier warrants each seal against defects in material and workmanship for 12 months from installation or 18 months from delivery, whichever ends first.\nSeals that fail within the warranty are replaced free of charge, and the supplier pays for the failure analysis.\n## 6 Termination\nEither party may end the agreement for material breach that is not remedied within 30 days of written notice.\nOrders placed before termination are delivered on the agreed terms."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1484",
+          "eval-output-tokens": "206",
+          "eval-total-tokens": "1690",
+          "eval-duration-ms": "21165.79"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "name": "Completeness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Completeness has no score."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "Fabrikam Seals delivers within six weeks of an order and reports any quality incident that affects delivered parts within five business days."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Completeness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1412",
+          "eval-output-tokens": "176",
+          "eval-total-tokens": "1588",
+          "eval-duration-ms": "35606.50"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 21.1654704,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1484,
+          "outputTokenCount": 206,
+          "totalTokenCount": 1690
+        },
+        "cacheKey": "EC019085AC7C25025ECC9891408A761EDA2144983B31AA937704096AEBA10F8A4C7BB9D1E6E1004069C22533BC405910",
+        "cacheHit": false
+      },
+      {
+        "latency": 35.6063423,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1412,
+          "outputTokenCount": 176,
+          "totalTokenCount": 1588
+        },
+        "cacheKey": "1BC894FAA506D98E47FF8011F1CC86B73678A0449F5CA57ABD0142D4F7EF0393D369D81AACE3E4DC39FB000674E61DA7",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

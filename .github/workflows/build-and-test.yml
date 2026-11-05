@@ -1,0 +1,87 @@
+# Build every chapter and run the whole test suite.
+#
+# Windows runner, like the reference laptop: Chapter 8's OCR packages ship Windows native libraries (Linux needs
+# OpenCvSharp's Linux runtime and a system Tesseract). The job fetches the model files, cached by the hash of the
+# catalog that records them, and generates the corpus, so the tests that need either run here. Tests never call a
+# chat model. GitHub's Windows runners can't run Linux containers, so Chapter 6's PostgreSQL test skips itself there,
+# and a second job runs Chapter 6's tests on Linux, where it fails if that test skips too.
+
+name: Build and test
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  PYTHONUTF8: "1"
+  SOLUTION: Contoso-Knowledge.slnx
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Models, cached by the catalog that records their hashes
+        uses: actions/cache@v6
+        with:
+          path: models
+          key: models-${{ hashFiles('models/models.json') }}
+
+      - name: Fetch the ONNX models and check their hashes
+        run: python eng/get-models.py
+
+      - name: Build
+        run: dotnet build ${{ env.SOLUTION }}
+
+      - name: Generate the corpus
+        run: dotnet run --no-build --project Shared/Contoso.Corpus.Generator
+
+      - name: Test
+        run: dotnet test --solution ${{ env.SOLUTION }} --no-build --report-xunit-trx --results-directory "${{ github.workspace }}/TestResults"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-results
+          path: TestResults/
+          if-no-files-found: ignore
+
+  container-test:
+    name: Chapter 6's container test (Linux)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Test, with Docker running Linux containers
+        shell: bash
+        run: |
+          dotnet test --project Chapter06-Ingestion/Ch06.Tests | tee test-output.txt
+          grep -q "skipped: 0" test-output.txt || { echo "::error::A test skipped on Linux, where Docker should run it."; exit 1; }

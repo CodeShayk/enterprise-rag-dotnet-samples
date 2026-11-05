@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G2-T031",
+  "iterationName": "1",
+  "executionName": "pass-1",
+  "creationTime": "2026-11-02T16:47:46.9120117Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "An HG-400 gearbox has this problem: oil leaks at a shaft. What could cause it?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "Oil leaks at a shaft may be caused by a worn shaft seal or a blocked breather. Oil leaks at a shaft may also be caused by a problem with the cooling fins."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      },
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "HG-400 Helical Gearbox Operating Manual \u203A 5 Operation \u203A 5.2 Operating limits\n## 5.2 Operating limits\nStop the gearbox and find the cause if the oil temperature exceeds 90 \u00B0C, if the noise changes suddenly or if oil leaks from a shaft seal.\nA whining noise that rises with speed usually points to a low oil level or worn gear teeth.\n# 6 Maintenance\nTable 6-1 Maintenance schedule\n| Task | Interval |\n|---|---|\n| Check the oil level at the sight glass | Weekly |\n| Check for leaks and unusual noise | Weekly |\n| Oil analysis for viscosity, water and metal particles | Every 6 months |\n| Change the oil | As Table 4-1 |\n| Replace the shaft seals | Every 20,000 h or when leaking |\n\nHG-400 Helical Gearbox Operating Manual \u203A 7 Troubleshooting\n# 7 Troubleshooting\nTable 7-1 Troubleshooting\n| Symptom | Possible cause | Remedy |\n|---|---|---|\n| Whining noise that rises with speed | Low oil level or worn gear teeth | Top up the oil; inspect the gears if the noise stays |\n| Knocking noise once per revolution | Damaged gear tooth | Stop the gearbox and inspect the gears |\n| Oil leaks at a shaft | Worn shaft seal or blocked breather | Clean the breather; replace the seal |\n| Oil temperature above 90 \u00B0C | Overload, wrong oil or dirty cooling fins | Check the load and the oil; clean the fins |\n\nField service report SR-2026-1213\nEngineer: Kwame Asante.\nDate: December 13, 2026.\nComplaint: a whining noise from the HG-400 gearbox that rose with speed.\nFindings: the oil level was below the sight glass and the oil had darkened; the last oil change was 14 months earlier.\nThe first-stage gear teeth showed light pitting.\nWork done: drained and flushed the gearbox, refilled it with 18 liters of ISO VG 220 oil and replaced a leaking output shaft seal.\nRecommended an oil analysis every six months.\n| Equipment | Site | Report |\n|---|---|---|\n| HG-400 gearbox | Woodgrove Foods, Packaging line 2 | SR-2026-1213 |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1702",
+          "eval-output-tokens": "234",
+          "eval-total-tokens": "1936",
+          "eval-duration-ms": "26261.56"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "The response mentions two possible causes for oil leaks at a shaft: a worn shaft seal or a blocked breather. However, the ground truth only mentions two causes: a worn shaft seal or a blocked breather, and cleaning the breather; replacing the seal. The response does not mention cleaning the breather; replacing the seal as a possible cause. This indicates that the response is missing some relevant information from the ground truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "| Oil leaks at a shaft | Worn shaft seal or blocked breather | Clean the breather; replace the seal |"
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1429",
+          "eval-output-tokens": "113",
+          "eval-total-tokens": "1542",
+          "eval-duration-ms": "36899.35"
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 26.2612773,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1702,
+          "outputTokenCount": 234,
+          "totalTokenCount": 1936
+        },
+        "cacheKey": "C7912C9D1821A807ED3492A7B8BA0C054B21E78FBC46CBF5A709B778D9306AD6B51CDBDA827062CA92674D97A17C08D3",
+        "cacheHit": false
+      },
+      {
+        "latency": 36.8991508,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1429,
+          "outputTokenCount": 113,
+          "totalTokenCount": 1542
+        },
+        "cacheKey": "7E5EED73E2F6AF2DB4C5CA5C3091A88B40A3C4F5F98EDC391905D8352DD8F9A18DD20D8FF6F788F32CA095BD7A11F386",
+        "cacheHit": false
+      }
+    ]
+  },
+  "formatVersion": 1
+}

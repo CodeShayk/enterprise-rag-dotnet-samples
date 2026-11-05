@@ -1,0 +1,148 @@
+{
+  "scenarioName": "G047",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:03.3832903Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "Which error does a blocked seal-water strainer cause on P-201, and what pressure clears it?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "A blocked seal-water strainer causes Error E-217: seal-water pressure low. The seal-water pressure that clears Error E-217 is at least 2.0 bar."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "name": "Groundedness",
+        "reason": "Explanation",
+        "interpretation": {
+          "rating": "inconclusive",
+          "failed": true,
+          "reason": "Groundedness has no score."
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "WI-FS-031: Cleaning the seal-water strainer upstream of V-114\n# WI-FS-031: Cleaning the seal-water strainer upstream of V-114\nThe seal-water line to pump P-201 has a Y-strainer with a 100-micron screen upstream of valve V-114.\nA blocked screen is the most common cause of error E-217 at the Riverside plant.\n1. Stop P-201 and close the isolation valve upstream of the strainer.\n5. Check that the gauge shows a seal-water pressure of 2.0 to 3.0 bar.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-217: seal-water pressure low\n## Error E-217: seal-water pressure low\nError E-217 means seal-water pressure low.\nThe controller trips the pump when seal-water pressure stays below 1.5 bar for 10 seconds, to protect the mechanical seal.\nCheck that seal-water valve V-114 is open and that its strainer is clean, then reset the alarm at the local panel.\n2. A blocked strainer upstream of V-114 (work instruction WI-FS-031 describes the cleaning).\nTo clear E-217, restore the seal-water pressure to at least 2.0 bar, wait until the alarm light stops flashing, then press RESET on the local panel.\nIf the alarm returns within an hour, don\u0027t restart the pump again; raise a work order for the seal-water system.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-201: suction pressure low\n## Error E-201: suction pressure low\nError E-201 means the suction pressure fell below 0.3 bar.\n2. The suction strainer is blocked.\nOpen the suction valve fully, clean the suction strainer and check the tank level before resetting E-201.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-302: seal-water pressure switch fault\n## Error E-302: seal-water pressure switch fault\nError E-302 means pressure switch PS-31 reports pressure while the seal-water supply is closed.\nThe controller checks PS-31 each time the seal-water valve closes.\nUntil it is replaced, check the seal-water pressure at the local gauge every shift."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          },
+          {
+            "severity": "error",
+            "message": "Failed to parse numeric score for \u0027Groundedness\u0027 from the following text:\r\nScore"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1693",
+          "eval-output-tokens": "220",
+          "eval-total-tokens": "1913",
+          "eval-duration-ms": "0.80"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 3,
+        "name": "Completeness",
+        "reason": "Based on the definitions, I think the Response should get a Score of 3 because it provides a specific solution to clear the error, but it does not provide the same level of detail as the Ground Truth.",
+        "interpretation": {
+          "rating": "average",
+          "failed": true,
+          "reason": "Completeness is less than 4."
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "A blocked screen is the most common cause of error E-217 at the Riverside plant.\nTo clear E-217, restore the seal-water pressure to at least 2.0 bar, wait until the alarm light stops flashing, then press RESET on the local panel."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1458",
+          "eval-output-tokens": "255",
+          "eval-total-tokens": "1713",
+          "eval-duration-ms": "0.61"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "2 of 2 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0006764,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1693,
+          "outputTokenCount": 220,
+          "totalTokenCount": 1913
+        },
+        "cacheKey": "ED68B3966941B4D475AEB73B299A798E781265F96DA106DEDDEB555F160705952B2AA7E061751D465A315AA38B883F92",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0005094,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1458,
+          "outputTokenCount": 255,
+          "totalTokenCount": 1713
+        },
+        "cacheKey": "7D9F5FB1FFA08E5CBD15ED512ECB8D563F0702D0A939B6A576AE1E2A1A3B19AF90B4E4D5F725577EEA376D32522374C4",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}

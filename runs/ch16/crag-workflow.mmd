@@ -1,0 +1,24 @@
+flowchart TD
+  retrieve["retrieve (Start)"];
+  grade["grade"];
+  generate["generate"];
+  abstain["abstain"];
+  correct["correct"];
+  verify["verify"];
+  done["done"];
+  regenerate["regenerate"];
+  retrieve -. conditional .-> grade;
+  retrieve -. conditional .-> generate;
+  retrieve -. conditional .-> abstain;
+  grade -. conditional .-> generate;
+  grade -. conditional .-> correct;
+  grade -. conditional .-> abstain;
+  correct -. conditional .-> grade;
+  generate -. conditional .-> verify;
+  generate -. conditional .-> done;
+  verify -. conditional .-> regenerate;
+  verify -. conditional .-> abstain;
+  verify -. conditional .-> done;
+  regenerate -. conditional .-> verify;
+  regenerate -. conditional .-> done;
+  abstain -. conditional .-> done;

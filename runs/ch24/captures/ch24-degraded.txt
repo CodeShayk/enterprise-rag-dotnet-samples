@@ -1,0 +1,5 @@
+Live index v4-shipped, 129 dev questions (sufficiency over the 123 answerable), hybrid with a 2 s limit per source, re-ranked, top 4
+Embedding model                sufficient  p50 ms  p95 ms  degraded
+answering                            0.98     164     353  no
+down (throws)                        0.96     147     315  dense: HttpRequestException
+slow (3 s a query)                   0.94    2135    2315  dense: no answer within 2000 ms (first 20 questions)

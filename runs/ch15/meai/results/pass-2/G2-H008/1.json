@@ -1,0 +1,143 @@
+{
+  "scenarioName": "G2-H008",
+  "iterationName": "1",
+  "executionName": "pass-2",
+  "creationTime": "2026-11-02T17:13:23.4603963Z",
+  "messages": [
+    {
+      "role": "user",
+      "contents": [
+        {
+          "$type": "text",
+          "text": "What should I check during the first hour after starting a CP-200?"
+        }
+      ]
+    }
+  ],
+  "modelResponse": {
+    "messages": [
+      {
+        "role": "assistant",
+        "contents": [
+          {
+            "$type": "text",
+            "text": "During the first hour after starting a CP-200, check that the bearing temperatures stay below 80 \u00B0C. Listen for cavitation noise during the first hour after starting a CP-200. Watch the seal for the first hour after starting a CP-200."
+          }
+        ]
+      }
+    ]
+  },
+  "evaluationResult": {
+    "metrics": {
+      "Groundedness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Groundedness",
+        "reason": "The response provides two relevant pieces of information that address the query: \u0022check that the bearing temperatures stay below 80 \u00B0C\u0022 and \u0022listen for cavitation noise during the first hour after starting a CP-200.\u0022 These statements directly relate to the context provided and are relevant to the query about what to check during the first hour after starting a CP-200. However, the response also includes an additional piece of information, \u0022watch the seal for the first hour after starting a CP-200,\u0022 which, although related to the context, is not directly answering the query. This makes the response partially correct but not fully complete.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Grounding Context (Groundedness)": {
+            "name": "Grounding Context (Groundedness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "CP-200 Centrifugal Pump Operating and Maintenance Manual \u203A 5 Commissioning \u203A 5.1 Checks before the first start\n# 5 Commissioning\n## 5.1 Checks before the first start\n1. Check that the rotating assembly turns freely by hand.\n2. Check the coupling alignment and fit the coupling guard.\n3. Check that the bearings are greased; pumps leave the factory greased for 4,000 hours.\n## 5.4 Start-up\nBefore the first start, and after any work on the seal or the impeller, prime the pump and check the seal-water supply.\n1. Open the suction valve fully.\n3. Open the seal-water supply and confirm a pressure of 2.0 to 3.0 bar at the seal flush connection.\nThe seal-water pressure must exceed the suction pressure by at least 1 bar.\n4. Open the discharge valve about one quarter.\n5. Jog the motor and confirm the direction of rotation against the arrow on the bearing housing.\n6. Start the pump, then open the discharge valve slowly to the duty point within two minutes.\nDuring the first hour, check that the bearing temperatures stay below 80 \u00B0C and listen for cavitation noise.\n\nReplacing the CP-200 mechanical seal (training) \u203A Replacing the CP-200 mechanical seal \u203A Restarting the pump\n## Restarting the pump\n- Vent the casing\n- Open the seal-water supply: 2.0 to 3.0 bar at the flush connection\n- Start as section 5.4 of the manual describes\nWatch the seal for the first hour.\nA few drops while the faces run in are normal.\n\nCP-200 Troubleshooting Guide \u203A 2 Controller error codes \u203A Error E-104: motor winding temperature high\nError E-104 means the motor\u0027s winding temperature exceeded 155 \u00B0C.\nThe controller trips the pump and blocks a restart until the windings cool below 120 \u00B0C.\nCheck the motor\u0027s cooling fan and fan cover for blockages, and measure the supply voltage on all three phases; an unbalance of more than 2 percent overheats the windings.\nFrequent starts also cause E-104: the CP-200 motor allows no more than six starts per hour.\nReset E-104 at the local panel once the temperature has dropped.\nNever bypass the thermistor relay."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1711",
+          "eval-output-tokens": "153",
+          "eval-total-tokens": "1864",
+          "eval-duration-ms": "0.88"
+        }
+      },
+      "Completeness": {
+        "$type": "numeric",
+        "value": 4,
+        "name": "Completeness",
+        "reason": "The Response and Ground Truth are provided. The Response contains the necessary information about checking bearing temperatures, listening for cavitation noise, and watching the seal during the first hour after starting a CP-200. However, the Response does not explicitly mention the importance of proper hydration and moderate exercise, which are mentioned in the Ground Truth. This suggests that the Response is missing some minor information, especially claims and statements, established in the ground truth.",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        },
+        "context": {
+          "Ground Truth (Completeness)": {
+            "name": "Ground Truth (Completeness)",
+            "contents": [
+              {
+                "$type": "text",
+                "text": "During the first hour, check that the bearing temperatures stay below 80 \u00B0C and listen for cavitation noise."
+              }
+            ]
+          }
+        },
+        "diagnostics": [
+          {
+            "severity": "informational",
+            "message": "Model\u0027s evaluation chain of thought: Let\u0027s think step by step:"
+          }
+        ],
+        "metadata": {
+          "built-in-eval": "True",
+          "eval-model": "llama3.2",
+          "eval-input-tokens": "1444",
+          "eval-output-tokens": "114",
+          "eval-total-tokens": "1558",
+          "eval-duration-ms": "0.71"
+        }
+      },
+      "NLI groundedness": {
+        "$type": "numeric",
+        "value": 1,
+        "name": "NLI groundedness",
+        "reason": "3 of 3 sentences are entailed by the evidence (P(entailment) \u003E= 0.05).",
+        "interpretation": {
+          "rating": "good",
+          "failed": false
+        }
+      }
+    }
+  },
+  "chatDetails": {
+    "turnDetails": [
+      {
+        "latency": 0.0007348,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1711,
+          "outputTokenCount": 153,
+          "totalTokenCount": 1864
+        },
+        "cacheKey": "3A1492325464972286D7B94CFD69F0BF95159118B3C9787B7AA762995BC086BA71287194C493D3A4544C10F79EF6C3EA",
+        "cacheHit": true
+      },
+      {
+        "latency": 0.0005862,
+        "model": "llama3.2",
+        "modelProvider": "ollama",
+        "usage": {
+          "inputTokenCount": 1444,
+          "outputTokenCount": 114,
+          "totalTokenCount": 1558
+        },
+        "cacheKey": "06859B251937621D743737B51525FEC12D4B35E92E4B8682A41ACDBBA85B5EA2CAC2E43DF954A53FD6560D8C5EDA91FF",
+        "cacheHit": true
+      }
+    ]
+  },
+  "formatVersion": 1
+}
